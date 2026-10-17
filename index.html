@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>JeffreyAiFudenna Portfolio</title>
+<meta name="description" content="Jeffrey's AI projects: The Infinite Buddha, a Viggle video reel, AI-remixed camping photos, a blog post and a daily AI news report.">
+<meta property="og:title" content="JeffreyAiFudenna Portfolio">
+<meta property="og:description" content="Jeffrey's AI projects: The Infinite Buddha, a Viggle video reel, AI-remixed camping photos, a blog post and a daily AI news report.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="media/buddha.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse cx='32' cy='54' rx='24' ry='8' fill='%237d8882'/%3E%3Cellipse cx='30' cy='40' rx='17' ry='7' fill='%239aa49e'/%3E%3Cellipse cx='33' cy='28' rx='11' ry='6' fill='%23b6bdb6'/%3E%3Cellipse cx='32' cy='17' rx='7' ry='5' fill='%23c9861a'/%3E%3C/svg%3E">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Gloock&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single column "trail" — projects stacked like stones in a cairn, each a wide row with a visual and its story. */
+:root{
+  --bg:#eef0ec; --surface:#f8f9f6; --ink:#1e2522; --muted:#5c6862; --line:#cfd5cf;
+  --stone1:#9aa49e; --stone2:#7d8882; --stone3:#b6bdb6; --accent:#c9861a; --accent-ink:#7a4d05;
+  --display:"Gloock", Georgia, "Times New Roman", serif;
+  --body:"Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#151a18; --surface:#1d2321; --ink:#e7ebe7; --muted:#9ba69f; --line:#2f3733;
+  --stone1:#5d6862; --stone2:#47514c; --stone3:#77827b; --accent:#e9a43c; --accent-ink:#f2c47a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#151a18; --surface:#1d2321; --ink:#e7ebe7; --muted:#9ba69f; --line:#2f3733;
+  --stone1:#5d6862; --stone2:#47514c; --stone3:#77827b; --accent:#e9a43c; --accent-ink:#f2c47a; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* hero */
+header{padding-block:56px 40px;border-bottom:1px solid var(--line)}
+.hero{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(40px,8vw,84px);line-height:1;margin:12px 0 18px;text-wrap:balance;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--accent)}
+.cairn{display:flex;flex-direction:column;align-items:center;gap:3px;padding-bottom:6px}
+.cairn span{display:block;border-radius:50%;background:var(--stone2)}
+.cairn span:nth-child(1){width:34px;height:20px;background:var(--accent)}
+.cairn span:nth-child(2){width:56px;height:26px;background:var(--stone3);transform:translateX(4px)}
+.cairn span:nth-child(3){width:80px;height:32px;background:var(--stone1);transform:translateX(-5px)}
+.cairn span:nth-child(4){width:112px;height:38px;background:var(--stone2)}
+
+/* project list */
+main{padding-block:16px 64px}
+.count{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:20px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.projects{display:flex;flex-direction:column;gap:28px;list-style:none;margin:0;padding:0}
+.proj{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:32px;align-items:center;padding-block:28px;border-top:1px solid var(--line)}
+.proj:first-child{border-top:0}
+.proj:nth-child(even) .visual{order:2}
+.proj.solo{grid-template-columns:1fr;gap:20px}
+.proj.flip .visual{order:2}
+.visual{aspect-ratio:4/3;max-width:100%;border-radius:14px;overflow:hidden;position:relative;background:var(--surface);border:1px solid var(--line)}
+.visual canvas{width:100%;height:100%;display:block}
+.info{min-width:0;display:flex;flex-direction:column;gap:12px}
+.kind{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink)}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.6vw,36px);line-height:1.1;margin:0;text-wrap:balance}
+.info p{margin:0;max-width:60ch;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.tags li{font-family:var(--mono);font-size:12px;padding:3px 10px;border:1px solid var(--line);border-radius:999px;color:var(--ink)}
+.link{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;font-weight:600;text-decoration:none;padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--bg);transition:transform .15s}
+.link:hover{transform:translateY(-2px)}
+
+
+.visual img{width:100%;height:100%;object-fit:cover;display:block}
+:root{--print:#fdfdfb;--print-edge:#d9ddd7;--note:#f6dc6b;--note-ink:#3d3407}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--print:#e9ebe6;--print-edge:#3a433e;--note:#e8cc55;--note-ink:#2e2704}}
+:root[data-theme="dark"]{--print:#e9ebe6;--print-edge:#3a433e;--note:#e8cc55;--note-ink:#2e2704}
+.print{position:relative;margin:0;padding:12px 12px 44px;background:var(--print);border:1px solid var(--print-edge);border-radius:4px;box-shadow:0 10px 24px -12px rgba(0,0,0,.35);transform:rotate(-1.2deg);max-width:100%}
+.print img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.note{position:absolute;right:-10px;bottom:-14px;padding:14px 18px 16px;background:var(--note);color:var(--note-ink);font-family:"Caveat","Comic Sans MS","Segoe Print",cursive;font-size:26px;font-weight:600;line-height:1;transform:rotate(4deg);box-shadow:0 6px 12px -6px rgba(0,0,0,.4)}
+.note::before{content:"";position:absolute;top:-9px;left:50%;width:54px;height:18px;margin-left:-27px;background:var(--print);opacity:.7;transform:rotate(-3deg)}
+@media (max-width:720px){.print{transform:rotate(-.8deg)}.note{right:-4px}}
+.extra{grid-column:1/-1;min-width:0}
+.gallery{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.gallery button{padding:0;border:0;background:none;cursor:zoom-in;border-radius:10px;overflow:hidden;aspect-ratio:3/4;max-width:100%}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.gallery button:hover img{transform:scale(1.04)}
+.reel{display:grid;grid-template-columns:3.16fr 1fr 1fr 1fr;gap:10px;align-items:start}
+.reel figure{margin:0;display:flex;flex-direction:column;gap:6px;min-width:0}
+.reel figcaption{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.tile{position:relative;display:block;width:100%;max-width:100%;padding:0;border:0;border-radius:10px;overflow:hidden;background:var(--ink);cursor:pointer}
+.tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s,opacity .3s}
+.tile:hover img{transform:scale(1.04);opacity:.85}
+.play{position:absolute;left:50%;top:50%;width:52px;height:52px;margin:-26px 0 0 -26px;border-radius:50%;background:rgba(15,20,18,.6);box-shadow:0 0 0 2px rgba(255,255,255,.85) inset;transition:transform .2s}
+.play::after{content:"";position:absolute;left:21px;top:16px;border-style:solid;border-width:10px 0 10px 16px;border-color:transparent transparent transparent #fff}
+.tile:hover .play{transform:scale(1.1)}
+.dur{position:absolute;right:8px;bottom:8px;font-family:var(--mono);font-size:11px;padding:2px 6px;border-radius:4px;background:rgba(15,20,18,.7);color:#fff}
+.player{position:fixed;inset:0;z-index:30;background:rgba(10,14,12,.95);color:#f1f3ef;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.player video{max-width:100%;max-height:74vh;border-radius:10px;background:#000;display:block}
+.pl-bar{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:13px}
+.pl-title{font-family:var(--display);font-size:22px;min-width:12ch;text-align:center}
+.pl-count{color:#aab3ad}
+.player button{font:600 14px var(--body);padding:9px 16px;border-radius:999px;border:0;background:#f1f3ef;color:#1e2522;cursor:pointer}
+.player button:disabled{opacity:.35;cursor:default}
+.pl-close{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px))}
+.pl-auto{display:flex;align-items:center;gap:6px;color:#aab3ad;cursor:pointer}
+.lightbox{position:fixed;inset:0;z-index:20;background:rgba(10,14,12,.92);display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lightbox img{max-height:88vh;max-width:100%;border-radius:8px}
+.lightbox button{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px));font:600 14px var(--body);padding:8px 14px;border-radius:999px;border:0;background:#f8f9f6;color:#1e2522;cursor:pointer}
+.sched{display:flex;flex-direction:column;justify-content:center;gap:16px;padding:24px;background:var(--surface)}
+.sched-head{display:flex;align-items:center;gap:10px;font-family:var(--display);font-size:22px}
+.sched-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 25%,transparent)}
+.sched-rows{margin:0;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.sched-rows div{display:flex;justify-content:space-between;gap:12px;padding:12px 16px;border-top:1px solid var(--line)}
+.sched-rows div:first-child{border-top:0}
+.sched-rows dt{color:var(--muted)}
+.sched-rows dd{margin:0;font-family:var(--mono);font-size:14px;font-variant-numeric:tabular-nums}
+.sched-next{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink)}
+.prompt{margin:0;padding:14px 16px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 10px 10px 0;font-size:15px;color:var(--ink);max-width:60ch}
+.prompt-label{display:block;margin-bottom:6px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.contact{border-top:1px solid var(--line);background:var(--surface)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:40px;padding-block:56px}
+.contact-intro{display:flex;flex-direction:column;gap:12px;min-width:0}
+.contact-intro p{margin:0;color:var(--muted);max-width:42ch}
+.contact-form{display:flex;flex-direction:column;gap:16px;min-width:0}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.field input,.field textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px;width:100%;box-sizing:border-box}
+.field textarea{resize:vertical;min-height:120px}
+.field input:focus-visible,.field textarea:focus-visible{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
+.field.bad input,.field.bad textarea{border-color:var(--bad)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.form-foot{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.form-foot button{font:600 15px var(--body);padding:12px 22px;border-radius:999px;border:0;background:var(--ink);color:var(--bg);cursor:pointer}
+.form-foot button:disabled{opacity:.45;cursor:default}
+.form-status{margin:0;font-size:14px;color:var(--muted)}
+.form-status.ok{color:var(--accent-ink)}
+.form-status.err{color:var(--bad)}
+:root{--bad:#b3362b}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bad:#ef7a6e}}
+:root[data-theme="dark"]{--bad:#ef7a6e}
+@media (max-width:720px){.contact-grid{grid-template-columns:1fr;gap:24px;padding-block:40px}}
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr}
+  .cairn{display:none}
+  .proj{grid-template-columns:1fr;gap:18px}
+  .proj:nth-child(even) .visual,.proj.flip .visual{order:0}
+  .gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .reel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:8px;-webkit-overflow-scrolling:touch}
+  .reel figure{flex:0 0 auto;scroll-snap-align:start}
+  .reel .tile{height:300px;width:auto}
+  .reel figure:first-child .tile{height:auto;width:min(80vw,420px)}
+}
+@media (prefers-reduced-motion:reduce){.gallery img,.tile img,.play{transition:none}}
+@media (prefers-reduced-motion:reduce){.link{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">JeffreyAiFudenna · AI projects</div>
+      <h1>Things I've made <em>with AI</em></h1>
+    </div>
+    <div class="cairn" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="count"><span>5 projects</span><span>Updated Oct 2026</span></div>
+  <ol class="projects">
+
+    <li class="proj flip">
+      <div class="visual"><img src="media/buddha.jpg" alt="A piece from The Infinite Buddha: a terracotta Buddha meditating in a wooden garden shrine, with ferns, vines and soft light"></div>
+      <div class="info">
+        <div class="kind">Website · generative art</div>
+        <h2>The Infinite Buddha</h2>
+        <p>A website that creates and publishes a new piece of Buddha art every day, all on its own. A Python script asks Gemini for the image, GitHub Actions runs it daily, and the site redeploys automatically.</p>
+        <ul class="tags"><li>Gemini API</li><li>Python</li><li>React + Vite</li><li>GitHub Actions</li><li>Vercel</li></ul>
+        <a class="link" href="https://www.theinfinitebuddha.xyz" target="_blank" rel="noopener">Visit theinfinitebuddha.xyz →</a>
+      </div>
+    </li>
+
+    <li class="proj solo">
+      <div class="info">
+        <div class="kind">Video editing</div>
+        <h2>Cool Moves Reel</h2>
+        <p>Short clips I made with Viggle that put me in scenes I couldn't film for real: dunking in a pro arena, throwing popcorn into a volcano, and hanging out with a crew in monkey masks.</p>
+        <ul class="tags"><li>Viggle</li><li>Short clips</li><li>Editing</li></ul>
+      </div>
+      <div class="extra">
+        <div class="reel">
+          <figure><button type="button" class="tile" data-i="0" style="aspect-ratio:16/9" aria-label="Play Monkey crew, 8s"><img src="media/poster-4.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">0:08</span></button><figcaption>Monkey crew</figcaption></figure>
+          <figure><button type="button" class="tile" data-i="1" style="aspect-ratio:9/16" aria-label="Play Arena dunk, 5s"><img src="media/poster-1.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">0:05</span></button><figcaption>Arena dunk</figcaption></figure>
+          <figure><button type="button" class="tile" data-i="2" style="aspect-ratio:9/16" aria-label="Play Dance moves, 7s"><img src="media/poster-2.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">0:07</span></button><figcaption>Dance moves</figcaption></figure>
+          <figure><button type="button" class="tile" data-i="3" style="aspect-ratio:9/16" aria-label="Play Popcorn volcano, 5s"><img src="media/poster-3.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">0:05</span></button><figcaption>Popcorn volcano</figcaption></figure>
+        </div>
+      </div>
+    </li>
+    <li class="proj">
+      <figure class="print"><img src="media/camp-real.jpg" alt="The original, unedited photo: three stone stacks on granite boulders with a rock spiral in front, at an alpine campsite"><span class="note">Real picture</span></figure>
+      <div class="info">
+        <div class="kind">Image generation</div>
+        <h2>Remixed photos with AI</h2>
+        <p>Part real, part AI generation. I remixed this photo I took from my camping trip to make these AI generated images, adding myself, the tent and backpack into the images.</p>
+        <ul class="tags"><li>Gemini</li><li>Photo remix</li><li>Camping photos</li></ul>
+      </div>
+      <div class="extra">
+        <div class="gallery">
+          <button type="button" data-full="media/camp-1.jpg"><img src="media/camp-1.jpg" alt="Stacking stones beside a campfire on a riverbank at dusk" loading="lazy"></button>
+          <button type="button" data-full="media/camp-2.jpg"><img src="media/camp-2.jpg" alt="Building cairns on a mountain lake shore" loading="lazy"></button>
+          <button type="button" data-full="media/camp-3.jpg"><img src="media/camp-3.jpg" alt="Balancing stones in high desert sagebrush near an orange tent" loading="lazy"></button>
+          <button type="button" data-full="media/camp-4.jpg"><img src="media/camp-4.jpg" alt="Stone stacks and a rock spiral at an alpine camp" loading="lazy"></button>
+          <button type="button" data-full="media/camp-5.jpg"><img src="media/camp-5.jpg" alt="Stacking stones on a granite boulder at a forest camp" loading="lazy"></button>
+        </div>
+      </div>
+    </li>
+
+    <li class="proj">
+      <div class="visual"><canvas id="cv-blog" aria-label="Illustration of a written page"></canvas></div>
+      <div class="info">
+        <div class="kind">Writing</div>
+        <h2>Learning AI, Imaginary Images and The Infinite Buddha</h2>
+        <p>A blog post I drafted with AI and edited myself. It follows my path from remixing camping photos in Gemini, to animating myself in Viggle, to coding a website that paints a new Buddha every night.</p>
+        <ul class="tags"><li>AI drafting</li><li>Human editing</li><li>Blog</li></ul>
+        <a class="link" href="blog.html">Read the post →</a>
+      </div>
+    </li>
+    <li class="proj">
+      <div class="visual sched">
+        <div class="sched-head"><span class="sched-dot" aria-hidden="true"></span>Daily AI news report</div>
+        <dl class="sched-rows">
+          <div><dt>Repeat</dt><dd>Daily</dd></div>
+          <div><dt>Time</dt><dd>8:00 AM</dd></div>
+          <div><dt>Ends</dt><dd>Never</dd></div>
+        </dl>
+        <div class="sched-next">Next report · tomorrow, 8:00 AM</div>
+      </div>
+      <div class="info">
+        <div class="kind">Automation · scheduled task</div>
+        <h2>Daily AI News Report</h2>
+        <p>An AI task I scheduled to research what happened in AI over the past 24 hours and send me a report every morning at 8 AM, so I keep up with new models and tools.</p>
+        <blockquote class="prompt"><span class="prompt-label">The plan it runs on</span>Summarize the most important AI news from the past 24 hours. Cover new model and product launches, big company announcements, notable research, and new AI tools for image, video and website building. Give each item 2–3 sentences, a link to the source, and one line on why it matters. Keep it to the top 5–8 stories, most important first.</blockquote>
+        <ul class="tags"><li>Scheduled task</li><li>Every day at 8 AM</li><li>AI research</li></ul>
+      </div>
+    </li>
+  </ol>
+</main>
+
+<div class="player" id="player" hidden role="dialog" aria-modal="true" aria-label="Video player">
+  <button type="button" class="pl-close" id="pl-close">Close</button>
+  <video id="pl-video" controls playsinline preload="auto"></video>
+  <div class="pl-bar">
+    <button type="button" id="pl-prev">← Previous</button>
+    <div><div class="pl-title" id="pl-title"></div><div class="pl-count" id="pl-count"></div></div>
+    <button type="button" id="pl-next">Next →</button>
+  </div>
+  <label class="pl-auto" for="pl-autonext"><input type="checkbox" id="pl-autonext" checked> Play next clip automatically</label>
+</div>
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer"><button type="button" id="lb-close">Close</button><img id="lb-img" alt=""></div>
+
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-intro">
+      <div class="eyebrow">Contact</div>
+      <h2>Contact me</h2>
+      <p>Want to talk about one of these projects, or build something with AI together? Send me a message and I'll get back to you.</p>
+    </div>
+    <form class="contact-form" id="contact-form" novalidate>
+      <div class="field"><label for="c-name">Name</label><input id="c-name" name="name" type="text" autocomplete="name" maxlength="100" required></div>
+      <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" maxlength="200" required></div>
+      <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" name="message" rows="5" maxlength="3000" required></textarea></div>
+      <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="form-foot">
+        <button type="submit" id="c-send">Send message</button>
+        <p class="form-status" id="c-status" role="status"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><span>JeffreyAiFudenna</span><span>Built with Claude</span></div>
+</footer>
+
+<script>
+(function(){
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  function setup(id){
+    const c=document.getElementById(id); const r=c.getBoundingClientRect();
+    const d=window.devicePixelRatio||1; c.width=Math.max(1,r.width*d); c.height=Math.max(1,r.height*d);
+    const x=c.getContext('2d'); x.scale(d,d); return [x,r.width,r.height];
+  }
+  function blog(){
+    const [x,w,h]=setup('cv-blog');
+    x.fillStyle=css('--surface'); x.fillRect(0,0,w,h);
+    const pw=w*.56, ph=h*.78, px=(w-pw)/2, py=(h-ph)/2;
+    x.fillStyle=css('--bg'); x.fillRect(px,py,pw,ph); x.strokeStyle=css('--line'); x.strokeRect(px,py,pw,ph);
+    x.fillStyle=css('--ink'); x.fillRect(px+pw*.1,py+ph*.1,pw*.6,ph*.06);
+    for(let i=0;i<9;i++){const lw=pw*(.8-(i%3)*.12); x.fillStyle=css('--stone1');
+      x.fillRect(px+pw*.1,py+ph*(.26+i*.07),lw,3);}
+    x.fillStyle=css('--accent'); x.fillRect(px+pw*.1,py+ph*(.26+3*.07)-2,pw*.35,7); x.globalAlpha=1;
+  }
+  function draw(){try{blog();}catch(e){}}
+  draw();
+  let t; addEventListener('resize',()=>{clearTimeout(t);t=setTimeout(draw,150)});
+  try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',draw);}catch(e){}
+  new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(draw);
+})();
+(function(){
+  const lb=document.getElementById('lightbox'), im=document.getElementById('lb-img');
+  let opener=null;
+  document.querySelectorAll('.gallery button').forEach(b=>b.addEventListener('click',()=>{
+    opener=b; im.src=b.dataset.full; im.alt=b.querySelector('img').alt; lb.hidden=false; document.body.style.overflow='hidden'; document.getElementById('lb-close').focus();}));
+  const close=()=>{if(lb.hidden)return; lb.hidden=true; document.body.style.overflow=''; if(opener)opener.focus();};
+  document.getElementById('lb-close').addEventListener('click',close);
+  lb.addEventListener('click',e=>{if(e.target===lb)close()});
+  addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+})();
+(function(){
+  const clips=[["4", "Monkey crew"], ["1", "Arena dunk"], ["2", "Dance moves"], ["3", "Popcorn volcano"]];
+  const pl=document.getElementById('player'), v=document.getElementById('pl-video'),
+    title=document.getElementById('pl-title'), count=document.getElementById('pl-count'),
+    prev=document.getElementById('pl-prev'), next=document.getElementById('pl-next'),
+    auto=document.getElementById('pl-autonext');
+  let cur=0, opener=null;
+  function load(i){
+    cur=i; const c=clips[i];
+    v.src='media/video-'+c[0]+'.mp4'; v.poster='media/poster-'+c[0]+'.jpg';
+    title.textContent=c[1]; count.textContent=(i+1)+' / '+clips.length;
+    prev.disabled=i===0; next.disabled=i===clips.length-1;
+    v.muted=false; const p=v.play(); if(p&&p.catch)p.catch(()=>{});
+  }
+  function open(i,btn){opener=btn; pl.hidden=false; document.body.style.overflow='hidden'; load(i); document.getElementById('pl-close').focus();}
+  function shut(){v.pause(); v.removeAttribute('src'); v.load(); pl.hidden=true; document.body.style.overflow=''; if(opener)opener.focus();}
+  document.querySelectorAll('.tile').forEach(b=>b.addEventListener('click',()=>open(+b.dataset.i,b)));
+  prev.addEventListener('click',()=>{if(cur>0)load(cur-1)});
+  next.addEventListener('click',()=>{if(cur<clips.length-1)load(cur+1)});
+  v.addEventListener('ended',()=>{if(auto.checked&&cur<clips.length-1)load(cur+1)});
+  document.getElementById('pl-close').addEventListener('click',shut);
+  pl.addEventListener('click',e=>{if(e.target===pl)shut()});
+  addEventListener('keydown',e=>{
+    if(pl.hidden)return;
+    if(e.key==='Escape'){shut();return;}
+    if(e.target===v)return;
+    if(e.key==='ArrowRight'&&cur<clips.length-1)load(cur+1);
+    else if(e.key==='ArrowLeft'&&cur>0)load(cur-1);
+  });
+})();
+(function(){
+  /* Paste your Formspree form ID here (the part after formspree.io/f/). */
+const FORMSPREE_ID = "xoejrqqy";
+  const form=document.getElementById('contact-form'), send=document.getElementById('c-send'), status=document.getElementById('c-status');
+  const f={name:document.getElementById('c-name'),email:document.getElementById('c-email'),message:document.getElementById('c-msg')};
+  function say(t,cls){status.textContent=t; status.className='form-status'+(cls?' '+cls:'');}
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const v={name:f.name.value.trim(),email:f.email.value.trim(),message:f.message.value.trim()};
+    let bad=false;
+    for(const k in f){const miss=!v[k]||(k==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v[k]));f[k].parentNode.classList.toggle('bad',miss);if(miss)bad=true;}
+    if(bad){say('Fill in your name, a valid email and a message.','err');return;}
+    if(FORMSPREE_ID==="YOUR_FORM_ID"){say('This form starts sending once the site is live.');return;}
+    send.disabled=true; say('Sending…');
+    try{
+      const r=await fetch('https://formspree.io/f/'+FORMSPREE_ID,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+      if(!r.ok) throw new Error(r.status);
+      form.reset(); say('Message sent. Thanks, I\'ll be in touch!','ok');
+    }catch(err){say('Your message didn\'t send. Check your connection and try again.','err');}
+    send.disabled=false;
+  });
+})();
+</script>
+</body>
+</html>

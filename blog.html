@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Learning AI, Imaginary Images and The Infinite Buddha</title>
+<meta name="description" content="How I went from remixing camping photos with Gemini and animating myself in Viggle to coding The Infinite Buddha, a website that paints itself.">
+<meta property="og:title" content="Learning AI, Imaginary Images and The Infinite Buddha">
+<meta property="og:image" content="media/buddha.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse cx='32' cy='54' rx='24' ry='8' fill='%237d8882'/%3E%3Cellipse cx='30' cy='40' rx='17' ry='7' fill='%239aa49e'/%3E%3Cellipse cx='33' cy='28' rx='11' ry='6' fill='%23b6bdb6'/%3E%3Cellipse cx='32' cy='17' rx='7' ry='5' fill='%23c9861a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Gloock&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column with media that breaks slightly wider than the text. */
+:root{
+  --bg:#eef0ec; --surface:#f8f9f6; --ink:#1e2522; --muted:#5c6862; --line:#cfd5cf;
+  --stone1:#9aa49e; --stone2:#7d8882; --stone3:#b6bdb6; --accent:#c9861a; --accent-ink:#7a4d05;
+  --display:"Gloock", Georgia, "Times New Roman", serif;
+  --body:"Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#151a18; --surface:#1d2321; --ink:#e7ebe7; --muted:#9ba69f; --line:#2f3733;
+  --stone1:#5d6862; --stone2:#47514c; --stone3:#77827b; --accent:#e9a43c; --accent-ink:#f2c47a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#151a18; --surface:#1d2321; --ink:#e7ebe7; --muted:#9ba69f; --line:#2f3733;
+  --stone1:#5d6862; --stone2:#47514c; --stone3:#77827b; --accent:#e9a43c; --accent-ink:#f2c47a; color-scheme:dark}
+:root{--print:#fdfdfb;--print-edge:#d9ddd7;--note:#f6dc6b;--note-ink:#3d3407}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--print:#e9ebe6;--print-edge:#3a433e;--note:#e8cc55;--note-ink:#2e2704}}
+:root[data-theme="dark"]{--print:#e9ebe6;--print-edge:#3a433e;--note:#e8cc55;--note-ink:#2e2704}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+img,video{max-width:100%}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.topbar{border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:16px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.topbar a{text-decoration:none;color:var(--muted)}
+.topbar a:hover{color:var(--ink)}
+header.post{padding-block:48px 28px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(34px,6vw,56px);line-height:1.05;margin:12px 0 16px;text-wrap:balance}
+.byline{font-family:var(--mono);font-size:13px;color:var(--muted)}
+article{padding-block:8px 64px}
+article p{margin:0 0 1.1em}
+article h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,4vw,32px);line-height:1.15;margin:2.2em 0 .6em;text-wrap:balance}
+.lead{font-size:20px;line-height:1.6}
+figure{margin:1.6em 0}
+figure img,figure video{display:block;width:100%;border-radius:12px;background:var(--surface)}
+figcaption{margin-top:8px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:1.6em 0}
+.pair figure{margin:0;min-width:0}
+.pair img{aspect-ratio:3/4;object-fit:cover}
+.clips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:1.6em 0;max-width:520px}
+.clips figure{margin:0;min-width:0}
+.clips video{aspect-ratio:9/16;object-fit:cover;background:var(--ink)}
+.real{position:relative;padding:12px 12px 40px;background:var(--print);border:1px solid var(--print-edge);border-radius:4px;transform:rotate(-1deg);box-shadow:0 10px 24px -12px rgba(0,0,0,.35)}
+.real img{border-radius:0}
+.note{position:absolute;right:-8px;bottom:-12px;padding:12px 16px 14px;background:var(--note);color:var(--note-ink);font-family:"Caveat","Comic Sans MS",cursive;font-size:24px;font-weight:600;line-height:1;transform:rotate(4deg);box-shadow:0 6px 12px -6px rgba(0,0,0,.4)}
+.table-wrap{overflow-x:auto;margin:1.4em 0}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+ol,ul{margin:0 0 1.2em;padding-left:1.4em}
+li{margin-bottom:.4em}
+.cta{margin-top:2.4em;padding:20px 22px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 12px 12px 0}
+.cta p{margin:0}
+.back{display:inline-flex;margin-top:28px;font-weight:600;text-decoration:none;padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--bg)}
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:520px){.pair,.clips{grid-template-columns:1fr 1fr;gap:8px}.lead{font-size:18px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><a href="index.html">← All projects</a><span>JeffreyAiFudenna</span></div></div>
+
+<header class="post wrap">
+  <div class="eyebrow">Blog · Drafted with AI, edited by me</div>
+  <h1>Learning AI, Imaginary Images and The Infinite Buddha</h1>
+  <div class="byline">October 15, 2026 · Jeffrey</div>
+</header>
+
+<article class="wrap">
+  <p class="lead">Every night at 1 AM, a new Buddha appears on the internet, and no one has to press a button. That's <a href="https://www.theinfinitebuddha.xyz" target="_blank" rel="noopener">The Infinite Buddha</a>, a gallery that paints itself one piece a day.</p>
+  <p>It didn't start as a website. It started with me making images in Gemini and movies with Viggle. Then I decided to see what I could do.</p>
+
+  <h2>Starting with Gemini images</h2>
+  <p>My first step was simple: see if I could edit a picture of mine to include myself. I started generating pictures of me setting up rock structures in nature and adding details that didn't exist in my real photos.</p>
+  <p>Here's the real photo from my camping trip that started it all:</p>
+  <figure class="real"><img src="media/camp-real.jpg" alt="The original photo: stone stacks on granite boulders with a rock spiral at an alpine campsite"><span class="note">Real picture</span></figure>
+  <p>And two of the AI remixes, with me, my tent and my backpack added in:</p>
+  <div class="pair">
+    <figure><img src="media/camp-4.jpg" alt="AI remix: stone stacks and a rock spiral at an alpine camp" loading="lazy"><figcaption>AI remix · alpine camp</figcaption></figure>
+    <figure><img src="media/camp-2.jpg" alt="AI remix: building cairns on a mountain lake shore" loading="lazy"><figcaption>AI remix · lake shore</figcaption></figure>
+  </div>
+  <p>See the full set on my <a href="index.html">AI projects portfolio</a>.</p>
+
+  <h2>Adding motion with Viggle</h2>
+  <p>Still images were great, but I wanted to see them move. Viggle let me put myself as a character image and animate it into a short clip in minutes.</p>
+  <p>Seeing myself dancing, throwing popcorn in a volcano and dunking a basketball was just fun to do.</p>
+  <p>The lesson: the AI tools are easy to start with. The creative part is choosing what to make and what to keep.</p>
+  <div class="clips">
+    <figure><video src="media/video-1.mp4" poster="media/poster-1.jpg" controls playsinline preload="none"></video><figcaption>Arena dunk</figcaption></figure>
+    <figure><video src="media/video-3.mp4" poster="media/poster-3.jpg" controls playsinline preload="none"></video><figcaption>Popcorn volcano</figcaption></figure>
+  </div>
+  <p>Watch all the clips in the Cool Moves Reel on my <a href="index.html">AI projects portfolio</a>.</p>
+
+  <h2>Coding The Infinite Buddha</h2>
+  <p>I'm not a professional developer, so I built the site step by step with Claude as my coding partner. I worked on Windows, in PowerShell and VS Code, with the project folder on my Desktop.</p>
+  <p>The pieces:</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Part</th><th>What I used</th><th>What it does</th></tr></thead>
+    <tbody>
+      <tr><td>Art generator</td><td>Python script + Gemini API</td><td>Creates a new Buddha image and a small WebP thumbnail</td></tr>
+      <tr><td>Website</td><td>React, Vite and Tailwind</td><td>Shows the gallery</td></tr>
+      <tr><td>Hosting</td><td>Vercel</td><td>Rebuilds and publishes the site on every push</td></tr>
+      <tr><td>Code</td><td><a href="https://github.com/jeffreyaifudenna/infinite-buddha" target="_blank" rel="noopener">GitHub</a></td><td>Stores everything and tracks changes</td></tr>
+      <tr><td>Domain</td><td>Namecheap</td><td>Points theinfinitebuddha.xyz to Vercel</td></tr>
+    </tbody>
+  </table></div>
+  <figure><img src="media/buddha.jpg" alt="A piece from The Infinite Buddha: a terracotta Buddha meditating in a wooden garden shrine" loading="lazy"><figcaption>One of the Buddhas the site painted</figcaption></figure>
+  <p>The best moment was typing www.theinfinitebuddha.xyz into a browser and seeing my site load.</p>
+
+  <h2>Making it infinite</h2>
+  <p>A gallery I had to update by hand wasn't really infinite. So I set up GitHub Actions to do it for me, every day at 8:00 UTC (1 AM Pacific).</p>
+  <p>Each night, without me:</p>
+  <ol>
+    <li>GitHub starts the workflow and runs the Python generator.</li>
+    <li>Gemini creates a new Buddha, using an API key stored as a repo secret.</li>
+    <li>A bot commits the image, its thumbnail and the updated gallery list.</li>
+    <li>Vercel sees the new commit and redeploys the site.</li>
+  </ol>
+  <p>The site grows on its own, one Buddha a day.</p>
+
+  <h2>What I learned and what's next</h2>
+  <p>The biggest lesson: Have fun and try things out!</p>
+  <p>What's next:</p>
+  <ul>
+    <li>Build a personal website for my AI projects and work. It's started: you're on it.</li>
+    <li>Understand how agents work.</li>
+    <li>Stay balanced.</li>
+  </ul>
+  <div class="cta"><p>Come see what the Buddha made today at <a href="https://www.theinfinitebuddha.xyz" target="_blank" rel="noopener">www.theinfinitebuddha.xyz</a>. Check back tomorrow, there'll be a new one.</p></div>
+  <a class="back" href="index.html">← Back to all projects</a>
+</article>
+
+<footer><div class="wrap"><span>JeffreyAiFudenna</span><span>Built with Claude</span></div></footer>
+</body>
+</html>
