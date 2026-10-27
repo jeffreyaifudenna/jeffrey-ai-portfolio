@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>JeffreyAiFudenna Portfolio</title>
-<meta name="description" content="Jeffrey's AI projects: The Infinite Buddha, a Viggle video reel, AI-remixed camping photos, Fremont by the Numbers, a blog post, a daily AI news report and more.">
+<meta name="description" content="Jeffrey's AI projects: The Infinite Buddha, a Viggle video reel, AI-remixed camping photos, Fremont by the Numbers, a daily AI news report and more.">
 <!-- Link previews: og:image and og:url must be absolute URLs. Update both if the domain changes. -->
 <meta property="og:title" content="JeffreyAiFudenna Portfolio">
-<meta property="og:description" content="Jeffrey's AI projects: The Infinite Buddha, a Viggle video reel, AI-remixed camping photos, Fremont by the Numbers, a blog post, a daily AI news report and more.">
+<meta property="og:description" content="Jeffrey's AI projects: The Infinite Buddha, a Viggle video reel, AI-remixed camping photos, Fremont by the Numbers, a daily AI news report and more.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jeffrey-ai-portfolio.vercel.app/">
 <meta property="og:image" content="https://jeffrey-ai-portfolio.vercel.app/media/buddha.jpg">
@@ -306,17 +306,6 @@ footer a:hover{color:var(--ink)}
     </li>
 
     <li class="proj" data-kind="writing" data-date="2026-10">
-      <div class="visual"><canvas id="cv-blog" aria-label="Illustration of a written page"></canvas></div>
-      <div class="info">
-        <div class="meta"><span class="kind">Writing</span><span class="when">Oct 2026</span></div>
-        <h2>Learning AI, Imaginary Images and The Infinite Buddha</h2>
-        <p>A blog post I drafted with AI and edited myself. It follows my path from remixing camping photos in Gemini, to animating myself in Viggle, to coding a website that paints a new Buddha every night.</p>
-        <ul class="tags"><li>AI drafting</li><li>Human editing</li><li>Blog</li></ul>
-        <a class="link" href="blog.html">Read the post →</a>
-      </div>
-    </li>
-
-    <li class="proj" data-kind="writing" data-date="2026-10">
       <div class="visual"><svg viewBox="0 0 400 300" aria-label="Placeholder illustration of story pages" role="img">
             <rect width="400" height="300" fill="var(--surface)"/>
             <rect x="150" y="60" width="150" height="190" rx="4" fill="var(--bg)" stroke="var(--line)" stroke-width="2" transform="rotate(6 225 155)"/>
@@ -432,31 +421,6 @@ footer a:hover{color:var(--ink)}
   document.getElementById('count').textContent=items.length+' projects';
   const latest=items.map(i=>i.dataset.date||'').sort().pop();
   if(latest){const [y,m]=latest.split('-'); document.getElementById('updated').textContent='Updated '+months[+m-1]+' '+y;}
-})();
-/* Canvas illustration for the blog card. */
-(function(){
-  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
-  function setup(id){
-    const c=document.getElementById(id); const r=c.getBoundingClientRect();
-    const d=window.devicePixelRatio||1; c.width=Math.max(1,r.width*d); c.height=Math.max(1,r.height*d);
-    const x=c.getContext('2d'); x.scale(d,d); return [x,r.width,r.height];
-  }
-  function blog(){
-    const [x,w,h]=setup('cv-blog');
-    x.fillStyle=css('--surface'); x.fillRect(0,0,w,h);
-    const pw=w*.56, ph=h*.78, px=(w-pw)/2, py=(h-ph)/2;
-    x.fillStyle=css('--bg'); x.fillRect(px,py,pw,ph); x.strokeStyle=css('--line'); x.strokeRect(px,py,pw,ph);
-    x.fillStyle=css('--ink'); x.fillRect(px+pw*.1,py+ph*.1,pw*.6,ph*.06);
-    for(let i=0;i<9;i++){const lw=pw*(.8-(i%3)*.12); x.fillStyle=css('--stone1');
-      x.fillRect(px+pw*.1,py+ph*(.26+i*.07),lw,3);}
-    x.fillStyle=css('--accent'); x.fillRect(px+pw*.1,py+ph*(.26+3*.07)-2,pw*.35,7); x.globalAlpha=1;
-  }
-  function draw(){try{blog();}catch(e){}}
-  draw();
-  let t; addEventListener('resize',()=>{clearTimeout(t);t=setTimeout(draw,150)});
-  try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',draw);}catch(e){}
-  new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
-  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(draw);
 })();
 /* Photo lightbox with previous / next and arrow keys. */
 (function(){
