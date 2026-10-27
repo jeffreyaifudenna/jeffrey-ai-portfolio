@@ -49,9 +49,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .top ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
 .top li a{display:block;padding:8px 12px;border-radius:999px;font-size:14px;font-weight:500;text-decoration:none;color:var(--muted)}
 .top li a:hover{color:var(--ink);background:var(--surface)}
-.top li a.gh{display:inline-flex;align-items:center;gap:6px}
-.top li a.gh svg{width:16px;height:16px;fill:currentColor}
-@media (max-width:520px){.top li a{padding:8px 9px;font-size:13px}.top li a.gh span{display:none}}
+@media (max-width:520px){.top li a{padding:8px 9px;font-size:13px}}
 
 /* hero */
 header{padding-block:56px 40px;border-bottom:1px solid var(--line)}
@@ -85,6 +83,7 @@ main{padding-block:16px 64px}
 .proj.solo{grid-template-columns:1fr;gap:20px}
 .proj.flip .visual{order:2}
 .visual{aspect-ratio:4/3;max-width:100%;border-radius:14px;overflow:hidden;position:relative;background:var(--surface);border:1px solid var(--line)}
+.visual svg{width:100%;height:100%;display:block}
 .visual canvas{width:100%;height:100%;display:block}
 .visual.wide{aspect-ratio:1200/630}
 .info{min-width:0;display:flex;flex-direction:column;gap:12px}
@@ -227,7 +226,6 @@ footer a:hover{color:var(--ink)}
     <ul>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#more">In the lab</a></li>
-      <li><a class="gh" href="https://github.com/jeffreyaifudenna" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a></li>
     </ul>
   </div>
 </nav>
@@ -235,9 +233,7 @@ footer a:hover{color:var(--ink)}
 <header id="top">
   <div class="wrap hero">
     <div>
-      <div class="eyebrow">JeffreyAiFudenna · AI projects</div>
-      <h1>Things I've made <em>with AI</em></h1>
-      <p class="bio">I'm Jeffrey. I build small websites, automations and art with AI tools, and this is where I keep what comes out of it.</p>
+      <h1>JeffreyAiFudenna projects <em>with AI</em></h1>
     </div>
     <div class="cairn" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
   </div>
@@ -320,6 +316,29 @@ footer a:hover{color:var(--ink)}
       </div>
     </li>
 
+    <li class="proj" data-kind="writing" data-date="2026-10">
+      <div class="visual"><svg viewBox="0 0 400 300" aria-label="Placeholder illustration of story pages" role="img">
+            <rect width="400" height="300" fill="var(--surface)"/>
+            <rect x="150" y="60" width="150" height="190" rx="4" fill="var(--bg)" stroke="var(--line)" stroke-width="2" transform="rotate(6 225 155)"/>
+            <rect x="120" y="50" width="150" height="190" rx="4" fill="var(--bg)" stroke="var(--line)" stroke-width="2"/>
+            <g fill="var(--stone3)">
+              <rect x="138" y="74" width="80" height="8" rx="4"/>
+              <rect x="138" y="100" width="110" height="4" rx="2"/><rect x="138" y="114" width="96" height="4" rx="2"/><rect x="138" y="128" width="110" height="4" rx="2"/>
+              <rect x="138" y="152" width="104" height="4" rx="2"/><rect x="138" y="166" width="90" height="4" rx="2"/><rect x="138" y="180" width="110" height="4" rx="2"/>
+              <rect x="138" y="204" width="70" height="4" rx="2"/>
+            </g>
+            <rect x="138" y="140" width="50" height="6" rx="3" fill="var(--accent)"/>
+            <circle cx="300" cy="80" r="3" fill="var(--accent)"/><circle cx="330" cy="120" r="2" fill="var(--stone1)"/><circle cx="310" cy="190" r="2.5" fill="var(--stone1)"/>
+          </svg></div>
+      <div class="info">
+        <div class="meta"><span class="kind">Writing · fiction</span><span class="when">Oct 2026</span><span class="pill live">Published</span></div>
+        <h2>11:11, a Science Fiction Short Story</h2>
+        <p>Every night at 11:11 the lights go out worldwide, and nobody makes us. A short story written with AI as a drafting partner, with a note on how I made it and what I changed along the way.</p>
+        <ul class="tags"><li>Short story</li><li>AI drafting</li><li>Process notes</li></ul>
+        <a class="link" href="story.html">Read the story →</a>
+      </div>
+    </li>
+
     <li class="proj" data-kind="automation" data-date="2026-10">
       <div class="visual sched">
         <div class="sched-head"><span class="sched-dot" aria-hidden="true"></span>Daily AI news report</div>
@@ -376,31 +395,6 @@ footer a:hover{color:var(--ink)}
         </div>
       </li>
 
-      <li class="card" data-kind="writing" data-date="2026-10">
-        <div class="card-visual">
-          <svg viewBox="0 0 400 300" aria-label="Placeholder illustration of story pages" role="img">
-            <rect width="400" height="300" fill="var(--surface)"/>
-            <rect x="150" y="60" width="150" height="190" rx="4" fill="var(--bg)" stroke="var(--line)" stroke-width="2" transform="rotate(6 225 155)"/>
-            <rect x="120" y="50" width="150" height="190" rx="4" fill="var(--bg)" stroke="var(--line)" stroke-width="2"/>
-            <g fill="var(--stone3)">
-              <rect x="138" y="74" width="80" height="8" rx="4"/>
-              <rect x="138" y="100" width="110" height="4" rx="2"/><rect x="138" y="114" width="96" height="4" rx="2"/><rect x="138" y="128" width="110" height="4" rx="2"/>
-              <rect x="138" y="152" width="104" height="4" rx="2"/><rect x="138" y="166" width="90" height="4" rx="2"/><rect x="138" y="180" width="110" height="4" rx="2"/>
-              <rect x="138" y="204" width="70" height="4" rx="2"/>
-            </g>
-            <rect x="138" y="140" width="50" height="6" rx="3" fill="var(--accent)"/>
-            <circle cx="300" cy="80" r="3" fill="var(--accent)"/><circle cx="330" cy="120" r="2" fill="var(--stone1)"/><circle cx="310" cy="190" r="2.5" fill="var(--stone1)"/>
-          </svg>
-          <span class="pill live">Published</span>
-        </div>
-        <div class="info">
-          <div class="meta"><span class="kind">Writing · fiction</span><span class="when">2026</span></div>
-          <h3>11:11, a Science Fiction Short Story</h3>
-          <p>Every night at 11:11 the lights go out worldwide, and nobody makes us. A short story written with AI as a drafting partner, with a note on how I made it and what I changed along the way.</p>
-          <ul class="tags"><li>Short story</li><li>AI drafting</li><li>Process notes</li></ul>
-          <a class="link" href="story.html">Read the story →</a>
-        </div>
-      </li>
 
     </ul>
   </section>
