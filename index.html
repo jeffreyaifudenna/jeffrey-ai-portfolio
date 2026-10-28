@@ -347,23 +347,24 @@ footer a:hover{color:var(--ink)}
 
     <li class="proj" data-kind="automation" data-date="2026-10">
       <div class="visual sched">
-        <div class="sched-head"><span class="sched-dot" aria-hidden="true"></span>Daily AI news report</div>
+        <div class="sched-head"><span class="sched-dot" aria-hidden="true"></span>Daily AI news</div>
         <dl class="sched-rows">
-          <div><dt>Repeat</dt><dd>Daily</dd></div>
-          <div><dt>Time</dt><dd>8:00 AM</dd></div>
-          <div><dt>Ends</dt><dd>Never</dd></div>
+          <div><dt>Repeat</dt><dd>Every morning</dd></div>
+          <div><dt>Latest digest</dt><dd id="dn-date">&ndash;</dd></div>
+          <div><dt>Stories today</dt><dd id="dn-count">&ndash;</dd></div>
         </dl>
-        <div class="sched-next">Next report · tomorrow, 8:00 AM</div>
+        <div class="sched-next">Publishes itself · no manual step</div>
       </div>
       <div class="info">
         <div class="meta"><span class="kind">Automation · scheduled task</span><span class="when">Oct 2026</span><span class="pill live">Running</span></div>
-        <h2>Daily AI News Report</h2>
-        <p>An AI task I scheduled to research what happened in AI over the past 24 hours and send me a report every morning at 8 AM, so I keep up with new models and tools.</p>
+        <h2>Daily AI News</h2>
+        <p>An AI task I scheduled finds the day's most important AI stories, checks that every link is real, writes a short summary of each in plain English, and publishes the digest to this site every morning. Stories it can't fully confirm are labeled.</p>
         <details class="prompt-wrap">
           <summary>Show the plan it runs on</summary>
-          <blockquote class="prompt">Summarize the most important AI news from the past 24 hours. Cover new model and product launches, big company announcements, notable research, and new AI tools for image, video and website building. Give each item 2–3 sentences, a link to the source, and one line on why it matters. Keep it to the top 5–8 stories, most important first.</blockquote>
+          <blockquote class="prompt">Find 3 to 5 of the most important AI stories from the past day: new tools to build with, big industry news, policy and safety, and research explained simply. Open every link to make sure it works. Write each summary in your own words, 2 to 3 sentences. Label anything reported by only one outlet as Reported, and anything from rumor as Unconfirmed. Then publish the digest to the News page.</blockquote>
         </details>
-        <ul class="tags"><li>Scheduled task</li><li>Every day at 8 AM</li><li>AI research</li></ul>
+        <ul class="tags"><li>Scheduled task</li><li>Auto-published</li><li>AI research</li></ul>
+        <a class="link" href="news.html">Read today's news →</a>
       </div>
     </li>
   </ol>
@@ -501,11 +502,14 @@ footer a:hover{color:var(--ink)}
 /* Fills the "Latest AI news" strip from news/stories.json. Stays hidden if the file is missing. */
 (function(){
   var box=document.getElementById('latest'); if(!box) return;
+  var dnD=document.getElementById('dn-date'), dnC=document.getElementById('dn-count');
   fetch('news/stories.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
     var day=d&&d.days&&d.days[0]; if(!day||!day.stories||!day.stories.length) return;
     var p=String(day.date).split('-'), dt=new Date(+p[0],+p[1]-1,+p[2]);
     document.getElementById('latest-label').textContent='Latest AI news · '+dt.toLocaleDateString(undefined,{month:'short',day:'numeric'});
     var ul=document.getElementById('latest-list');
+    if(dnD) dnD.textContent=dt.toLocaleDateString(undefined,{month:'short',day:'numeric'});
+    if(dnC) dnC.textContent=String(day.stories.length);
     day.stories.slice(0,3).forEach(function(s){
       var li=document.createElement('li'), a=document.createElement('a'), src=document.createElement('span');
       a.textContent=s.title; a.href='news.html'; src.textContent=s.source||''; li.appendChild(a); li.appendChild(src); ul.appendChild(li);
