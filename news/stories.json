@@ -1,0 +1,37 @@
+{
+  "updated": "2026-10-28",
+  "days": [
+    {
+      "date": "2026-10-28",
+      "stories": [
+        {
+          "title": "Early progress on accelerating drug development with Claude",
+          "source": "Anthropic",
+          "published": "2026-10-27",
+          "kind": "Research",
+          "status": "confirmed",
+          "url": "https://www.anthropic.com/research/early-progress-drug-development",
+          "summary": "Anthropic says it has worked for several months with six drug developers and started its own programs, including one for a rare childhood muscular dystrophy. In one example Claude produced about 35,000 antibody designs for a food-allergy drug in roughly a month, and early lab tests found a few that work. These are early results from Anthropic's own account."
+        },
+        {
+          "title": "Bank of America asks customers not to share banking passwords with AI assistants",
+          "source": "TechCrunch",
+          "published": "2026-10-27",
+          "kind": "Industry",
+          "status": "confirmed",
+          "url": "https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/",
+          "summary": "Bank of America emailed customers telling them never to give their username and password to an AI tool or agent, and warned that customers are responsible for what happens with that access. A bank spokesperson confirmed the email is real. Banks are still working out how agents could safely reach accounts."
+        },
+        {
+          "title": "GitHub Copilot supports server-to-server authentication",
+          "source": "GitHub Changelog",
+          "published": "2026-10-27",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://github.blog/changelog/2026-10-27-github-copilot-supports-server-to-server-authentication",
+          "summary": "In public preview, services and agents built with the Copilot SDK can act for an organization through a GitHub App instead of a signed-in user's credentials. That helps with agents that run unattended. Usage is billed to the organization and its model policies apply."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Daily AI News | JeffreyAiFudenna</title>
+<meta name="description" content="A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.">
+<meta property="og:title" content="Daily AI News">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jeffrey-ai-portfolio.vercel.app/news.html">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse cx='32' cy='54' rx='24' ry='8' fill='%237d8882'/%3E%3Cellipse cx='30' cy='40' rx='17' ry='7' fill='%239aa49e'/%3E%3Cellipse cx='33' cy='28' rx='11' ry='6' fill='%23b6bdb6'/%3E%3Cellipse cx='32' cy='17' rx='7' ry='5' fill='%23c9861a'/%3E%3C/svg%3E">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#eef0ec; --surface:#f8f9f6; --ink:#1e2522; --muted:#5c6862; --line:#cfd5cf;
+  --accent:#c9861a; --accent-ink:#7a4d05; --warn:#8a3b12;
+  --display:"Gloock", Georgia, "Times New Roman", serif;
+  --body:"Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#151a18; --surface:#1d2321; --ink:#e7ebe7; --muted:#9ba69f; --line:#2f3733;
+  --accent:#e9a43c; --accent-ink:#f2c47a; --warn:#f0a27a; color-scheme:dark}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px}
+.top a{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-decoration:none}
+.top a:hover{color:var(--accent-ink)}
+header{padding-block:44px 20px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(36px,7vw,60px);line-height:1.05;margin:10px 0 14px;text-wrap:balance}
+.lede{margin:0;color:var(--muted);max-width:56ch}
+.day{margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
+.day h2{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 6px}
+.story{padding-block:18px;border-top:1px dashed var(--line)}
+.day h2 + .story{border-top:0}
+.story h3{font-family:var(--display);font-weight:400;font-size:clamp(21px,3vw,26px);line-height:1.2;margin:0 0 6px;text-wrap:balance}
+.story h3 a{text-decoration:none}
+.story h3 a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+.byline{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:8px}
+.chip{padding:2px 9px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink)}
+.chip.flag{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 45%,transparent)}
+.story p{margin:0;max-width:62ch;text-wrap:pretty}
+.empty,noscript{display:block;margin-top:32px;color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:56px;padding-block:28px;color:var(--muted);font-size:14px}
+footer p{margin:0 0 6px}
+</style>
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<nav class="top" aria-label="Site"><div class="wrap"><a href="./">&larr; JeffreyAiFudenna</a><a href="./#projects">Projects</a></div></nav>
+
+<header class="wrap">
+  <div class="eyebrow">Updated every morning</div>
+  <h1>Daily AI News</h1>
+  <p class="lede">A short digest of what happened in AI. An AI task I scheduled finds the stories, checks every link and writes the summaries. Each story links to the original source.</p>
+</header>
+
+<main class="wrap" id="days" aria-live="polite">
+  <p class="empty" id="status">Loading stories&hellip;</p>
+</main>
+<noscript><div class="wrap">This page needs JavaScript to show the stories.</div></noscript>
+
+<footer>
+  <div class="wrap">
+    <p>Summaries are written by AI and can contain mistakes. Check the linked source before relying on a story.</p>
+    <p>Stories marked <em>Reported</em> come from a single outlet without official confirmation. Stories marked <em>Unconfirmed</em> are rumor or social media only.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function fmt(iso,long){
+    var p=String(iso||'').split('-'); if(p.length!==3) return '';
+    var d=new Date(+p[0],+p[1]-1,+p[2]);
+    return long
+      ? d.toLocaleDateString(undefined,{weekday:'long',year:'numeric',month:'long',day:'numeric'})
+      : MONTHS[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear();
+  }
+  function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e}
+  function safeUrl(u){return /^https:\/\//i.test(u||'')?u:null}
+  var root=document.getElementById('days'), status=document.getElementById('status');
+  fetch('news/stories.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(data){
+    var days=(data&&data.days)||[]; root.textContent='';
+    if(!days.length){root.appendChild(el('p','empty','No stories yet. Check back tomorrow morning.'));return}
+    days.forEach(function(day){
+      var sec=el('section','day'); sec.appendChild(el('h2',null,fmt(day.date,true)));
+      (day.stories||[]).forEach(function(s){
+        var art=el('article','story'), h=el('h3'), url=safeUrl(s.url);
+        if(url){var a=el('a',null,s.title);a.href=url;a.rel='noopener';a.target='_blank';h.appendChild(a)}else{h.textContent=s.title}
+        art.appendChild(h);
+        var by=el('div','byline');
+        if(s.source)by.appendChild(el('span',null,s.source));
+        if(s.published)by.appendChild(el('span',null,fmt(s.published)));
+        if(s.kind)by.appendChild(el('span','chip',s.kind));
+        if(s.status==='reported'||s.status==='unconfirmed')by.appendChild(el('span','chip flag',s.status==='reported'?'Reported':'Unconfirmed'));
+        art.appendChild(by); art.appendChild(el('p',null,s.summary)); sec.appendChild(art);
+      });
+      root.appendChild(sec);
+    });
+  }).catch(function(){status.textContent='Could not load the stories right now. Try again in a minute.'});
+})();
+</script>
+</body>
+</html>
