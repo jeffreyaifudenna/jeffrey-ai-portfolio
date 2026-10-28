@@ -193,6 +193,17 @@ details.prompt-wrap summary::before{content:"+";display:inline-grid;place-items:
 details[open].prompt-wrap summary::before{content:"–"}
 .prompt{margin:12px 0 0;padding:14px 16px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 10px 10px 0;font-size:15px;color:var(--ink)}
 
+/* latest news strip (filled from news/stories.json) */
+.latest{padding-block:22px;border-bottom:1px solid var(--line)}
+.latest-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:8px}
+.latest-head .eyebrow{color:var(--accent-ink)}
+.latest-head a{font-size:14px;font-weight:600;text-decoration:none;color:var(--ink)}
+.latest-head a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+.latest ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.latest li a{text-decoration:none;color:var(--ink)}
+.latest li a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+.latest li span{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:8px}
+
 /* footer */
 footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
@@ -226,6 +237,7 @@ footer a:hover{color:var(--ink)}
     <ul>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#more">In the lab</a></li>
+      <li><a href="news.html">News</a></li>
     </ul>
   </div>
 </nav>
@@ -238,6 +250,11 @@ footer a:hover{color:var(--ink)}
     <div class="cairn" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
   </div>
 </header>
+
+<aside class="wrap latest" id="latest" aria-label="Latest AI news" hidden>
+  <div class="latest-head"><span class="eyebrow" id="latest-label">Latest AI news</span><a href="news.html">All stories &rarr;</a></div>
+  <ul id="latest-list"></ul>
+</aside>
 
 <main class="wrap" id="projects">
   <!-- Each project has data-kind="website|image|video|writing|automation" and data-date="YYYY-MM". The count and "Updated" date are computed from those. -->
@@ -478,6 +495,23 @@ footer a:hover{color:var(--ink)}
     if(e.key==='ArrowRight'&&cur<clips.length-1)load(cur+1);
     else if(e.key==='ArrowLeft'&&cur>0)load(cur-1);
   });
+})();
+</script>
+<script>
+/* Fills the "Latest AI news" strip from news/stories.json. Stays hidden if the file is missing. */
+(function(){
+  var box=document.getElementById('latest'); if(!box) return;
+  fetch('news/stories.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
+    var day=d&&d.days&&d.days[0]; if(!day||!day.stories||!day.stories.length) return;
+    var p=String(day.date).split('-'), dt=new Date(+p[0],+p[1]-1,+p[2]);
+    document.getElementById('latest-label').textContent='Latest AI news · '+dt.toLocaleDateString(undefined,{month:'short',day:'numeric'});
+    var ul=document.getElementById('latest-list');
+    day.stories.slice(0,3).forEach(function(s){
+      var li=document.createElement('li'), a=document.createElement('a'), src=document.createElement('span');
+      a.textContent=s.title; a.href='news.html'; src.textContent=s.source||''; li.appendChild(a); li.appendChild(src); ul.appendChild(li);
+    });
+    box.hidden=false;
+  }).catch(function(){});
 })();
 </script>
 </body>
