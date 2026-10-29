@@ -140,7 +140,7 @@
     var nav = document.querySelector('.nav-r') || document.querySelector('.top ul') || document.querySelector('.top .wrap, .topbar .wrap');
     if (nav) {
       tog = document.createElement('button'); tog.type = 'button'; tog.className = 'ts-btn';
-      tog.addEventListener('click', function () { tapSecret(); choose(d.getAttribute('data-mode') === 'dark' ? 'light' : 'dark'); });
+      tog.addEventListener('click', function () { choose(d.getAttribute('data-mode') === 'dark' ? 'light' : 'dark'); });
       if (nav.tagName === 'UL') { var li = document.createElement('li'); li.className = 'ts-li'; li.appendChild(tog); nav.appendChild(li); }
       else nav.appendChild(tog);
     }
@@ -162,6 +162,9 @@
           '<label class="ts-hol"><input type="checkbox"><span>Holiday themes<small></small></span></label>' +
         '</div>';
       foot.appendChild(document.createTextNode(' · ')); foot.appendChild(wrap);
+      var pb = document.createElement('button'); pb.type = 'button'; pb.className = 'ts-pad'; pb.setAttribute('aria-label', 'Enter the Konami code'); pb.title = 'Enter the Konami code';
+      pb.innerHTML = PAD_ICON; pb.addEventListener('click', function () { padOpen(pb); });
+      foot.appendChild(document.createTextNode(' ')); foot.appendChild(pb);
       btn = wrap.querySelector('.ts-link'); panel = wrap.querySelector('.ts-panel');
       hbox = panel.querySelector('input'); hnote = panel.querySelector('small');
 
@@ -182,8 +185,8 @@
     sync();
   }
 
-  /* ---- easter egg: ↑ ↑ ↓ ↓ ← → ← → B A (or five quick taps on the light/dark button) unlocks Arcade ---- */
-  var CODE = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'], pos = 0, taps = [];
+  /* ---- easter egg: a footer button opens an on-screen NES-style pad; the Konami code unlocks Arcade ---- */
+  var CODE = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
   function unlock() {
     var first = !unlocked; unlocked = true; put(UKEY, '1');
     var tile = panel && panel.querySelector('[data-id="arcade"]'); if (tile) tile.hidden = false;
@@ -208,16 +211,71 @@
     }
     document.body.appendChild(el); setTimeout(function () { el.remove(); }, 7500);
   }
-  function tapSecret() {
-    var now = Date.now(); taps.push(now); taps = taps.filter(function (t) { return now - t < 2000; });
-    if (taps.length >= 5) { taps = []; setTimeout(unlock, 0); }
+  var PAD_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="7" width="19" height="10" rx="2.5"/><path d="M7 9.5v5M4.5 12h5" stroke-linecap="round"/><circle cx="15.5" cy="13.5" r="1.1" fill="currentColor"/><circle cx="18.5" cy="12" r="1.1" fill="currentColor"/></svg>';
+  var padEl, padOpener, padPos = 0;
+
+  function padHTML() {
+    var b = function (cls, k, label) { return '<button type="button" class="' + cls + '" data-k="' + k + '" aria-label="' + label + '"></button>'; };
+    var dots = ''; for (var i = 0; i < CODE.length; i++) dots += '<i></i>';
+    return '<div class="nes-card" role="dialog" aria-modal="true" aria-labelledby="nes-h">' +
+      '<button type="button" class="nes-x" aria-label="Close">×</button>' +
+      '<h2 id="nes-h">Enter the code</h2><p>Use the buttons below, or your keyboard’s arrow keys, B and A.</p>' +
+      '<div class="nes"><div class="nes-panel"></div>' +
+        b('dp dp-u', 'up', 'Up') + b('dp dp-d', 'down', 'Down') + b('dp dp-l', 'left', 'Left') + b('dp dp-r', 'right', 'Right') + '<span class="dp-c"></span>' +
+        '<button type="button" class="nes-ss nes-sel" data-k="select" aria-label="Select"></button><button type="button" class="nes-ss nes-start" data-k="start" aria-label="Start"></button>' +
+        '<span class="nes-lab" style="left:41.5cqw">SELECT</span><span class="nes-lab" style="left:55cqw">START</span>' +
+        b('nes-ab nes-b', 'b', 'B') + b('nes-ab nes-a', 'a', 'A') +
+        '<span class="nes-lab" style="left:71cqw">B</span><span class="nes-lab" style="left:85cqw">A</span></div>' +
+      '<div class="nes-dots" aria-hidden="true">' + dots + '</div>' +
+      '<p class="nes-status" role="status" aria-live="polite">0 of ' + CODE.length + '</p>' +
+      '<button type="button" class="nes-hint">Need a hint?</button><p class="nes-code" hidden>↑ ↑ ↓ ↓ ← → ← → B A</p></div>';
   }
-  document.addEventListener('keydown', function (e) {
-    var el = e.target, tag = el && el.tagName;
-    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || (el && el.isContentEditable) || e.metaKey || e.ctrlKey || e.altKey) return;
-    var k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
-    if (k === CODE[pos]) { if (++pos === CODE.length) { pos = 0; unlock(); } } else pos = k === CODE[0] ? 1 : 0;
-  });
+
+  function padSet(n, bad) {
+    padPos = n;
+    var dots = padEl.querySelectorAll('.nes-dots i');
+    for (var i = 0; i < dots.length; i++) dots[i].className = i < n ? 'on' : '';
+    padEl.querySelector('.nes-status').textContent = bad ? 'Not quite. Start over.' : n + ' of ' + CODE.length;
+    if (bad) { var pad = padEl.querySelector('.nes'); pad.classList.remove('bad'); void pad.offsetWidth; pad.classList.add('bad'); }
+  }
+
+  function padPress(k) {
+    var el = padEl.querySelector('[data-k="' + k + '"]');
+    if (el) { el.classList.add('on'); setTimeout(function () { el.classList.remove('on'); }, 140); }
+    if (k === CODE[padPos]) {
+      if (padPos + 1 === CODE.length) { padSet(CODE.length); setTimeout(function () { padClose(false); unlock(); }, 450); }
+      else padSet(padPos + 1);
+    } else padSet(k === CODE[0] ? 1 : 0, k !== CODE[0]);
+  }
+
+  function padClose(restoreFocus) {
+    if (!padEl || padEl.hidden) return;
+    padEl.hidden = true; document.documentElement.style.overflow = '';
+    if (restoreFocus !== false && padOpener) padOpener.focus();
+  }
+
+  function padOpen(opener) {
+    padOpener = opener;
+    if (!padEl) {
+      padEl = document.createElement('div'); padEl.className = 'nes-modal'; padEl.innerHTML = padHTML(); document.body.appendChild(padEl);
+      padEl.addEventListener('click', function (e) {
+        if (e.target === padEl || e.target.closest('.nes-x')) return padClose();
+        var k = e.target.closest('[data-k]'); if (k) padPress(k.dataset.k);
+        if (e.target.closest('.nes-hint')) { padEl.querySelector('.nes-code').hidden = false; e.target.closest('.nes-hint').hidden = true; }
+      });
+      padEl.addEventListener('keydown', function (e) {
+        var map = { ArrowUp: 'up', ArrowDown: 'down', ArrowLeft: 'left', ArrowRight: 'right', b: 'b', a: 'a', B: 'b', A: 'a' };
+        if (e.key === 'Escape') { e.preventDefault(); return padClose(); }
+        if (map[e.key] && !e.metaKey && !e.ctrlKey && !e.altKey) { e.preventDefault(); return padPress(map[e.key]); }
+        if (e.key === 'Tab') {   /* keep focus inside the dialog */
+          var f = [].filter.call(padEl.querySelectorAll('button'), function (x) { return !x.hidden; }), i = f.indexOf(document.activeElement);
+          e.preventDefault(); f[(i + (e.shiftKey ? f.length - 1 : 1)) % f.length].focus();
+        }
+      });
+    }
+    padSet(0); padEl.hidden = false; document.documentElement.style.overflow = 'hidden';
+    padEl.querySelector('.nes-x').focus({ preventScroll: true });
+  }
 
   apply(false);
   if (mq.addEventListener) mq.addEventListener('change', function () { if (theme === 'auto') apply(false); });
