@@ -241,7 +241,7 @@
   }
   function banner(sub) {
     var el = document.createElement('div'); el.className = 'lvl'; el.setAttribute('aria-hidden', 'true');
-    el.innerHTML = '<b>QUEST COMPLETE</b><span>' + sub + '</span>'; document.body.appendChild(el); setTimeout(function () { el.remove(); }, 3200);
+    el.innerHTML = '<b>QUEST COMPLETE</b><b class="lu">LEVEL UP!</b><span>' + sub + '</span>'; document.body.appendChild(el); setTimeout(function () { el.remove(); }, 3200);
   }
 
   /* a short square-wave "power-up" arpeggio, only ever played right after the visitor enters the code themselves */
