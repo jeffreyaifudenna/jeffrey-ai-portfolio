@@ -106,39 +106,48 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.6vw,36px);l
 .info p{margin:0;max-width:60ch;color:var(--muted)}
 .tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
 .tags li{font-family:var(--mono);font-size:12px;padding:3px 10px;border:1px solid var(--line);border-radius:999px;color:var(--ink)}
+/* Only the first two tags show; the rest fold behind a "+N" that expands on click. */
+.tags li.hid{display:none}
+.tags.open li.hid{display:block}
+.tags li.morewrap{padding:0;border:0}
+.tags .tag-more{color:var(--muted);padding:3px 4px;border:0;background:none;cursor:pointer;font:inherit}
+.tags .tag-more:hover{color:var(--ink)}
+.tags.open .morewrap{display:none}
 .link{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;font-weight:600;text-decoration:none;padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--bg);transition:transform .15s}
 .link:hover{transform:translateY(-2px)}
 
 /* status pills: Live / Private / Coming soon / In progress */
-.pill{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--surface)}
-.pill::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+/* Status is a single dot; the word lives in the title attribute (hover) and in the accessible text. */
+.pill{position:relative;display:inline-block;width:8px;height:8px;border-radius:50%;background:currentColor;color:var(--muted);flex:none}
+.pill span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .pill.live{color:#2f7a4a;border-color:color-mix(in srgb,#2f7a4a 35%,transparent)}
 .pill.private{color:var(--accent-ink);border-color:color-mix(in srgb,var(--accent) 45%,transparent)}
 .pill.soon,.pill.wip{color:var(--muted)}
-.pill.soon::before{background:transparent;border:1px solid currentColor;box-sizing:border-box}
+.pill.soon{background:transparent;border:1px solid currentColor;box-sizing:border-box}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pill.live{color:#7fcf9a}}
 :root[data-theme="dark"] .pill.live{color:#7fcf9a}
 
 /* compact card grid */
-.more{margin-top:56px;padding-top:36px;border-top:1px solid var(--line)}
-.more-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.more{margin-top:72px;padding-top:44px;border-top:1px solid var(--line)}
+.more-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.more-head .eyebrow{flex-basis:100%;color:var(--accent-ink);margin-bottom:-4px}
 .more-head h2{font-size:clamp(24px,3vw,30px)}
 .more-head p{margin:0;color:var(--muted);font-size:15px;max-width:48ch}
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;list-style:none;margin:0;padding:0}
-.card{display:flex;flex-direction:column;gap:12px;padding:14px;border:1px solid var(--line);border-radius:16px;background:var(--surface);min-width:0;transition:transform .15s,box-shadow .15s}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;list-style:none;margin:0;padding:0}
+.card{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:16px;align-items:start;padding:14px;border:1px solid var(--line);border-radius:16px;background:var(--surface);min-width:0;transition:transform .15s,box-shadow .15s}
 .card:hover{transform:translateY(-3px);box-shadow:0 14px 28px -18px rgba(0,0,0,.35)}
 .card-visual{position:relative;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:var(--bg);border:1px solid var(--line)}
 .card-visual img{width:100%;height:100%;object-fit:cover;display:block}
 .card-visual svg{width:100%;height:100%;display:block}
-.card-visual .pill{position:absolute;top:10px;left:10px}
-.card .info{gap:8px;flex:1}
+.card-visual .pill{position:absolute;top:10px;left:10px;box-shadow:0 0 0 3px color-mix(in srgb,var(--bg) 70%,transparent)}
+.card .info{gap:8px;min-width:0;align-self:stretch}
 .card h3{font-family:var(--display);font-weight:400;font-size:22px;line-height:1.15;margin:0;text-wrap:balance}
 .card .info p{font-size:15px}
 .card .tags li{font-size:11px;padding:2px 8px}
 .card .link{margin-top:auto;padding:8px 14px;font-size:14px}
 .card .nolink{margin-top:auto;font-family:var(--mono);font-size:12px;color:var(--muted)}
-@media (max-width:860px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:560px){.cards{grid-template-columns:1fr}}
+@media (max-width:860px){.cards{grid-template-columns:1fr}}
+@media (max-width:560px){.card{grid-template-columns:1fr}}
 
 /* the "real picture" print */
 .visual img{width:100%;height:100%;object-fit:cover;display:block}
@@ -187,12 +196,23 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.6vw,36px);l
 .pl-close{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px))}
 .pl-auto{display:flex;align-items:center;gap:6px;color:#aab3ad;cursor:pointer}
 
+/* "How I made it": the prompt behind a project, collapsed until opened */
+details.prompt-wrap{max-width:60ch}
+details.prompt-wrap summary{cursor:pointer;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink);list-style:none;display:inline-flex;align-items:center;gap:8px}
+details.prompt-wrap summary::-webkit-details-marker{display:none}
+details.prompt-wrap summary::before{content:"+";display:inline-grid;place-items:center;width:18px;height:18px;border:1px solid currentColor;border-radius:50%;font-size:13px}
+details[open].prompt-wrap summary::before{content:"–"}
+.prompt{margin:12px 0 0;padding:14px 16px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 10px 10px 0;font-size:15px;color:var(--ink)}
+.prompt small{display:block;margin-top:10px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+
 /* daily AI news (filled from news/stories.json) */
 .dn{margin-top:72px;padding-top:40px;border-top:1px solid var(--line)}
 .dn-head h2{display:flex;align-items:center;gap:14px;font-family:var(--display);font-size:clamp(28px,4vw,40px);margin:0 0 10px}
 .dn-head .stone{width:34px;height:20px;border-radius:50%;background:var(--accent);flex:none}
 .dn-head p{margin:0;max-width:60ch;color:var(--muted);font-size:18px;line-height:1.55}
-.dn-head strong{color:var(--ink);font-weight:600}
+.dn-run{margin:24px 0 0;font-family:var(--mono);font-size:13px;line-height:1.8;color:var(--muted)}
+.dn-run .dot{display:inline-block;vertical-align:middle;margin:0 10px 2px 0;width:8px;height:8px;border-radius:50%;background:#7fcf9a;box-shadow:0 0 0 3px color-mix(in srgb,#7fcf9a 25%,transparent);flex:none}
+.dn-run #dn-date,.dn-run #dn-count{color:var(--ink)}
 .dn-list{list-style:none;margin:28px 0;padding:0;border-top:1px solid var(--line)}
 .dn-list li{display:flex;flex-direction:column;gap:2px;padding:16px 0;border-bottom:1px solid var(--line)}
 .dn-list a{font-size:19px;line-height:1.4;font-weight:500;text-decoration:none;color:var(--ink)}
@@ -202,13 +222,19 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.6vw,36px);l
 
 /* footer */
 footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-footer a{text-decoration:none}
-footer a:hover{color:var(--ink)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer a{text-decoration:none;color:var(--ink)}
+footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+.foot-brand{color:var(--ink)}
+/* while the nav brand can fly down to it, the footer twin is only a landing mark */
+.foot-brand.mark{visibility:hidden}
+.brand{will-change:transform}
+.brand.landed{cursor:pointer}
+.foot-cmd{font-family:var(--mono);font-size:13px;letter-spacing:.06em}
 
 @media (max-width:720px){
   .hero{grid-template-columns:1fr}
-  .cairn{display:none}
+  header .cairn{display:none}
   .proj{grid-template-columns:1fr;gap:18px}
   .proj:nth-child(even) .visual,.proj.flip .visual{order:0}
   .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -259,9 +285,14 @@ footer a:hover{color:var(--ink)}
     <li class="proj" data-kind="website" data-date="2026-10">
       <div class="visual"><img src="media/buddha.webp" width="960" height="960" alt="A piece from The Infinite Buddha: a terracotta Buddha meditating in a wooden garden shrine, with ferns, vines and soft light"></div>
       <div class="info">
-        <div class="meta"><span class="kind">Website · generative art</span><span class="when">Oct 2026</span><span class="pill live">Live</span></div>
+        <div class="meta"><span class="kind">Website · generative art</span><span class="when">Oct 2026</span><span class="pill live" title="Live"><span>Live</span></span></div>
         <h2>The Infinite Buddha</h2>
         <p>A website that creates and publishes a new piece of Buddha art every day, all on its own. A Python script asks Gemini for the image, GitHub Actions runs it daily, and the site redeploys automatically.</p>
+        <details class="prompt-wrap">
+          <summary>How I made it</summary>
+          <blockquote class="prompt">A serene terracotta Buddha meditating in a small wooden garden shrine, ferns and vines around it, soft morning light, photographic, square. Change the setting, season and material every day. Never repeat yesterday's scene.
+            <small>Sent to Gemini each morning by a Python script on GitHub Actions. The script picks the day's setting from a list and publishes the result.</small></blockquote>
+        </details>
         <ul class="tags"><li>Gemini API</li><li>Python</li><li>React + Vite</li><li>GitHub Actions</li><li>Vercel</li></ul>
         <a class="link" href="https://www.theinfinitebuddha.xyz" target="_blank" rel="noopener">Visit theinfinitebuddha.xyz →</a>
       </div>
@@ -270,7 +301,7 @@ footer a:hover{color:var(--ink)}
     <li class="proj" data-kind="website" data-date="2026-10">
       <div class="visual wide"><img src="media/fremont.webp" width="1200" height="630" alt="Fremont by the Numbers title card: a data aggregator collecting public data on housing, schools, safety, jobs and more, every figure linked to its source"></div>
       <div class="info">
-        <div class="meta"><span class="kind">Data aggregator</span><span class="when">Oct 2026</span><span class="pill live">Live</span></div>
+        <div class="meta"><span class="kind">Data aggregator</span><span class="when">Oct 2026</span><span class="pill live" title="Live"><span>Live</span></span></div>
         <h2>Fremont by the Numbers</h2>
         <p>A data aggregator for Fremont, California. It gathers public figures on housing, schools, safety, jobs, parks, startups and more, and puts the source and date under every number. Built with Claude from plain HTML, CSS and JSON data files.</p>
         <ul class="tags"><li>Claude</li><li>Public data</li><li>SVG charts</li><li>Static site</li><li>Vercel</li></ul>
@@ -329,7 +360,7 @@ footer a:hover{color:var(--ink)}
             <circle cx="300" cy="80" r="3" fill="var(--accent)"/><circle cx="330" cy="120" r="2" fill="var(--stone1)"/><circle cx="310" cy="190" r="2.5" fill="var(--stone1)"/>
           </svg></div>
       <div class="info">
-        <div class="meta"><span class="kind">Writing · fiction</span><span class="when">Oct 2026</span><span class="pill live">Published</span></div>
+        <div class="meta"><span class="kind">Writing · fiction</span><span class="when">Oct 2026</span><span class="pill live" title="Published"><span>Published</span></span></div>
         <h2>11:11, a Science Fiction Short Story</h2>
         <p>Every night at 11:11 the lights go out worldwide, and nobody makes us. A short story written with AI as a drafting partner, with a note on how I made it and what I changed along the way.</p>
         <ul class="tags"><li>Short story</li><li>AI drafting</li><li>Process notes</li></ul>
@@ -342,6 +373,7 @@ footer a:hover{color:var(--ink)}
   <!-- Compact grid. To add a project: copy one <li class="card">, set data-kind and data-date, swap the visual (an <img> or the SVG placeholder), pill, title, text, tags and link. -->
   <section class="more" id="more">
     <div class="more-head">
+      <span class="eyebrow">Still cooking</span>
       <h2>In the lab</h2>
       <p>Newer and still-in-progress projects. Each one moves up to a full write-up once it's finished.</p>
     </div>
@@ -361,7 +393,7 @@ footer a:hover{color:var(--ink)}
             </g>
             <circle cx="200" cy="50" r="24" fill="var(--accent)"/>
           </svg>
-          <span class="pill private">Private</span>
+          <span class="pill private" title="Private"><span>Private</span></span>
         </div>
         <div class="info">
           <div class="meta"><span class="kind">Website · family</span><span class="when">2026</span></div>
@@ -382,7 +414,7 @@ footer a:hover{color:var(--ink)}
             </g>
             <circle cx="200" cy="150" r="26" fill="var(--accent)"/>
           </svg>
-          <span class="pill wip">In progress</span>
+          <span class="pill wip" title="In progress"><span>In progress</span></span>
         </div>
         <div class="info">
           <div class="meta"><span class="kind">Video · AI</span><span class="when">2026</span></div>
@@ -399,10 +431,11 @@ footer a:hover{color:var(--ink)}
   <section class="dn" id="dailynews" aria-label="Daily AI news" hidden>
     <div class="dn-head">
       <h2><span class="stone" aria-hidden="true"></span>Daily AI news</h2>
-      <p>An AI task I scheduled finds the day's biggest AI stories, checks every link, and posts a plain-English digest here every morning. <span class="dn-date-wrap">Latest: <strong id="dn-date"></strong></span></p>
+      <p>An AI task I scheduled finds the day's biggest AI stories, checks every link, and posts a plain-English digest here every morning.</p>
     </div>
     <ul class="dn-list" id="dn-list"></ul>
     <a class="link" href="news.html">Read all stories &rarr;</a>
+    <p class="dn-run" id="dn-run"><span class="dot" aria-hidden="true"></span>Last ran <span id="dn-date"></span> · <span id="dn-count"></span> stories · next run tomorrow morning</p>
   </section>
 </main>
 
@@ -427,7 +460,10 @@ footer a:hover{color:var(--ink)}
 </div>
 
 <footer>
-  <div class="wrap"><span>JeffreyAiFudenna</span><span><a href="https://github.com/jeffreyaifudenna" target="_blank" rel="noopener">Code on GitHub</a> · Built with Claude</span></div>
+  <div class="wrap">
+    <span class="brand foot-brand" id="foot-brand" aria-hidden="true"><span class="brand-cairn"><span class="cairn"><span></span><span></span><span></span><span></span></span></span><span class="brand-name">JeffreyAiFudenna</span></span>
+    <span class="foot-cmd"><a href="builds.html">builds</a> · <a href="https://github.com/jeffreyaifudenna" target="_blank" rel="noopener">github</a></span>
+  </div>
 </footer>
 
 <script>
@@ -435,6 +471,17 @@ footer a:hover{color:var(--ink)}
 (function(){
   const items=[...document.querySelectorAll('.proj,.card')];
   document.getElementById('count').textContent=items.length+' projects';
+})();
+/* Tags: show two, fold the rest behind "+N". */
+(function(){
+  document.querySelectorAll('.tags').forEach(ul=>{
+    const li=[...ul.children]; if(li.length<=3) return;
+    li.slice(2).forEach(l=>l.classList.add('hid'));
+    const m=document.createElement('li');
+    const b=document.createElement('button'); b.type='button'; b.textContent='+'+(li.length-2); b.setAttribute('aria-label','Show '+(li.length-2)+' more tags');
+    b.className='tag-more'; m.className='morewrap'; m.appendChild(b); ul.appendChild(m);
+    b.addEventListener('click',()=>{ul.classList.add('open');});
+  });
 })();
 /* Scroll reveal. Each project fades and rises in the first time it enters the viewport. */
 (function(){
@@ -505,33 +552,55 @@ footer a:hover{color:var(--ink)}
 <script>
 /* Flying cairn. The nav brand's cairn starts full size over the hero cairn's spot; as you scroll it shrinks and
    flies into the nav, the stones drifting apart mid-flight and restacking, while the brand name fades in beside it.
-   Off on small screens (hero cairn is hidden there) and when the user prefers reduced motion. */
+   Off on small screens (hero cairn is hidden there) and when the user prefers reduced motion.
+   Second leg, at every width: over the last stretch of the page the whole brand (stones and name) leaves the nav
+   and settles onto its twin in the footer. Landed, a click takes it, and the page, back to the top. */
 (function(){
   var fly=document.getElementById('brand-cairn'), hero=document.getElementById('hero-cairn'),
-      name=document.getElementById('brand-name'); if(!fly||!hero||!name) return;
+      name=document.getElementById('brand-name'), brand=fly.parentElement, twin=document.getElementById('foot-brand'); if(!fly||!hero||!name) return;
   var stones=fly.querySelectorAll('.cairn span'), REST=.2, ease=function(t){return t*t*(3-2*t)};
-  var on=false, start, S, raf=0;
+  var on=false, land=false, start, S, rest, raf=0;
   function measure(){
     var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
     on=!reduce&&getComputedStyle(hero).display!=='none';
+    land=!reduce&&!!twin;
     hero.classList.toggle('ghost',on);
-    if(!on){fly.style.transform='';name.style.opacity='';name.style.transform='';stones.forEach(function(s){s.style.transform=''});return;}
-    fly.style.transform='scale('+REST+')';
-    var h=hero.getBoundingClientRect(), f=fly.getBoundingClientRect();
+    if(twin) twin.classList.toggle('mark',land);
+    brand.style.transform=''; fly.style.transform='scale('+REST+')';
+    if(!on){name.style.opacity='';name.style.transform='';stones.forEach(function(s){s.style.transform=''});}
+    var h=hero.getBoundingClientRect(), f=fly.getBoundingClientRect(), b=brand.getBoundingClientRect();
+    rest={x:b.left, y:b.top};
     start={x:h.left+h.width/2-(f.left+f.width/2), y:h.top+h.height/2+scrollY-(f.top+f.height/2)};
     S=Math.max(80,start.y);
     paint();
   }
+  function landP(){
+    if(!land) return 0;
+    var max=document.documentElement.scrollHeight-innerHeight, D=Math.min(360,Math.max(200,innerHeight*.45));
+    return max>(on?S:0)+D*1.5 ? ease(Math.min(1,Math.max(0,(scrollY-(max-D))/D))) : 0;
+  }
   function paint(){
-    raf=0; if(!on) return;
-    var s=scrollY, p=ease(Math.min(1,Math.max(0,s/S))), q=1-p, g=4*p*q;
-    fly.style.transform='translate('+(start.x*q)+'px,'+((start.y-s)*q)+'px) scale('+(1-(1-REST)*p)+')';
+    raf=0; if(!on&&!land) return;
+    var s=scrollY, p=on?ease(Math.min(1,Math.max(0,s/S))):1, q=1-p, g=4*p*q;
+    /* landing leg: over the last D px of scroll, the brand slides from its nav spot onto the footer twin */
+    var p2=landP();
+    if(land){
+      var t=twin.getBoundingClientRect();
+      brand.style.transform=p2>0?'translate('+((t.left-rest.x)*p2)+'px,'+((t.top-rest.y)*p2)+'px)':'';
+      g=Math.max(g,4*p2*(1-p2));
+    }
+    brand.classList.toggle('landed',p2>.9); brand.title=p2>.9?'Back to top':'';
+    if(on){
+      fly.style.transform='translate('+(start.x*q)+'px,'+((start.y-s)*q)+'px) scale('+(1-(1-REST)*p)+')';
+      name.style.opacity=p; name.style.transform='translateX('+(-10*q)+'px)';
+    }
     stones.forEach(function(st,i){
       var x=i===1?4:i===2?-5:0, lift=-(3-i)*9*g, tilt=(i%2?7:-7)*g;
       st.style.transform='translate('+x+'px,'+lift+'px) rotate('+tilt+'deg)';
     });
-    name.style.opacity=p; name.style.transform='translateX('+(-10*q)+'px)';
   }
+  /* Landed, the brand is a back-to-top control; otherwise it is the usual link to #top. */
+  brand.addEventListener('click',function(e){ if(landP()>.9){e.preventDefault(); scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});} });
   addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(paint)},{passive:true});
   addEventListener('resize',measure);
   addEventListener('load',measure);
@@ -545,7 +614,8 @@ footer a:hover{color:var(--ink)}
   fetch('news/stories.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
     var day=d&&d.days&&d.days[0]; if(!day||!day.stories||!day.stories.length) return;
     var p=String(day.date).split('-'), dt=new Date(+p[0],+p[1]-1,+p[2]);
-    document.getElementById('dn-date').textContent=dt.toLocaleDateString(undefined,{month:'long',day:'numeric'});
+    document.getElementById('dn-date').textContent=dt.toLocaleDateString(undefined,{month:'short',day:'numeric'});
+    document.getElementById('dn-count').textContent=String(day.stories.length);
     var ul=document.getElementById('dn-list');
     day.stories.slice(0,5).forEach(function(s){
       var li=document.createElement('li'), a=document.createElement('a'), src=document.createElement('span');

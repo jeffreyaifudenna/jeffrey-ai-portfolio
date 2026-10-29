@@ -9,6 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jeffrey-ai-portfolio.vercel.app/news.html">
 <meta name="twitter:card" content="summary">
+<link rel="alternate" type="application/rss+xml" title="Daily AI News" href="news/feed.xml">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse cx='32' cy='54' rx='24' ry='8' fill='%237d8882'/%3E%3Cellipse cx='30' cy='40' rx='17' ry='7' fill='%239aa49e'/%3E%3Cellipse cx='33' cy='28' rx='11' ry='6' fill='%23b6bdb6'/%3E%3Cellipse cx='32' cy='17' rx='7' ry='5' fill='%23c9861a'/%3E%3C/svg%3E">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}[hidden]{display:none!important}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,6 +48,8 @@ h1{font-family:var(--display);font-weight:400;font-size:clamp(36px,7vw,60px);lin
 .chip{padding:2px 9px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink)}
 .chip.flag{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 45%,transparent)}
 .story p{margin:0;max-width:62ch;text-wrap:pretty}
+.why{margin-top:8px;padding-left:12px;border-left:2px solid var(--accent);color:var(--muted);font-size:15px}
+.why b{font-weight:600;color:var(--accent-ink)}
 .empty,noscript{display:block;margin-top:32px;color:var(--muted)}
 footer{border-top:1px solid var(--line);margin-top:56px;padding-block:28px;color:var(--muted);font-size:14px}
 footer p{margin:0 0 6px}
@@ -72,6 +75,7 @@ footer p{margin:0 0 6px}
   <div class="wrap">
     <p>Summaries are written by AI and can contain mistakes. Check the linked source before relying on a story.</p>
     <p>Stories marked <em>Reported</em> come from a single outlet without official confirmation. Stories marked <em>Unconfirmed</em> are rumor or social media only.</p>
+    <p><a href="news/feed.xml">RSS feed</a> · updated with each morning's digest.</p>
   </div>
 </footer>
 
@@ -102,7 +106,9 @@ footer p{margin:0 0 6px}
         if(s.published)by.appendChild(el('span',null,fmt(s.published)));
         if(s.kind)by.appendChild(el('span','chip',s.kind));
         if(s.status==='reported'||s.status==='unconfirmed')by.appendChild(el('span','chip flag',s.status==='reported'?'Reported':'Unconfirmed'));
-        art.appendChild(by); art.appendChild(el('p',null,s.summary)); sec.appendChild(art);
+        art.appendChild(by); art.appendChild(el('p',null,s.summary));
+        if(s.why){var w=el('p','why'); w.appendChild(el('b',null,'Why it matters ')); w.appendChild(document.createTextNode(s.why)); art.appendChild(w)}
+        sec.appendChild(art);
       });
       root.appendChild(sec);
     });

@@ -11,7 +11,8 @@
           "kind": "Research",
           "status": "confirmed",
           "url": "https://www.anthropic.com/research/early-progress-drug-development",
-          "summary": "Anthropic says it has worked for several months with six drug developers and started its own programs, including one for a rare childhood muscular dystrophy. In one example Claude produced about 35,000 antibody designs for a food-allergy drug in roughly a month, and early lab tests found a few that work. These are early results from Anthropic's own account."
+          "summary": "Anthropic says it has worked for several months with six drug developers and started its own programs, including one for a rare childhood muscular dystrophy. In one example Claude produced about 35,000 antibody designs for a food-allergy drug in roughly a month, and early lab tests found a few that work. These are early results from Anthropic's own account.",
+          "why": "First hard numbers on AI designing real drug candidates, from the company itself. Read it as a claim to be tested, not a result."
         },
         {
           "title": "Bank of America asks customers not to share banking passwords with AI assistants",
@@ -20,7 +21,8 @@
           "kind": "Industry",
           "status": "confirmed",
           "url": "https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/",
-          "summary": "Bank of America emailed customers telling them never to give their username and password to an AI tool or agent, and warned that customers are responsible for what happens with that access. A bank spokesperson confirmed the email is real. Banks are still working out how agents could safely reach accounts."
+          "summary": "Bank of America emailed customers telling them never to give their username and password to an AI tool or agent, and warned that customers are responsible for what happens with that access. A bank spokesperson confirmed the email is real. Banks are still working out how agents could safely reach accounts.",
+          "why": "The first big bank drawing a line on AI agents touching accounts. Expect others to follow, and expect agent products to need a bank-approved way in."
         },
         {
           "title": "GitHub Copilot supports server-to-server authentication",
@@ -29,7 +31,8 @@
           "kind": "Build",
           "status": "confirmed",
           "url": "https://github.blog/changelog/2026-10-27-github-copilot-supports-server-to-server-authentication",
-          "summary": "In public preview, services and agents built with the Copilot SDK can act for an organization through a GitHub App instead of a signed-in user's credentials. That helps with agents that run unattended. Usage is billed to the organization and its model policies apply."
+          "summary": "In public preview, services and agents built with the Copilot SDK can act for an organization through a GitHub App instead of a signed-in user's credentials. That helps with agents that run unattended. Usage is billed to the organization and its model policies apply.",
+          "why": "Unattended agents need their own identity, not a borrowed login. GitHub building that plumbing is a sign agents are becoming normal infrastructure."
         },
         {
           "title": "Google's Genie 4 world model adds audio, more realistic worlds, and real-time steering",
@@ -38,7 +41,8 @@
           "kind": "Research",
           "status": "reported",
           "url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/",
-          "summary": "DeepMind released Genie 4 in research preview. It generates interactive worlds with real-time audio, lets users change the scene mid-simulation with new prompts, and holds scenes for up to two minutes, double Genie 3. Only TechCrunch's report was found, not Google's own post."
+          "summary": "DeepMind released Genie 4 in research preview. It generates interactive worlds with real-time audio, lets users change the scene mid-simulation with new prompts, and holds scenes for up to two minutes, double Genie 3. Only TechCrunch's report was found, not Google's own post.",
+          "why": "Interactive video worlds are moving from demo to tool. Audio and live steering are what games and robot training both need."
         },
         {
           "title": "The October inflection point for vibe game development",
@@ -47,7 +51,8 @@
           "kind": "Build",
           "status": "reported",
           "url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
-          "summary": "Developer Simon Willison writes that Claude Opus 5.5 can now produce genuinely fun games. He shows four browser games, including one built from a single prompt with three.js. It is one developer's first-hand account."
+          "summary": "Developer Simon Willison writes that Claude Opus 5.5 can now produce genuinely fun games. He shows four browser games, including one built from a single prompt with three.js. It is one developer's first-hand account.",
+          "why": "A careful developer saying a model crossed a quality line is a better signal than a benchmark. Worth trying one prompt yourself."
         }
       ]
     }

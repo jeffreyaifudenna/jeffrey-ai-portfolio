@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Builds | JeffreyAiFudenna</title>
+<meta name="description" content="The tools, builds, prompts and working process behind JeffreyAiFudenna's AI projects.">
+<meta property="og:title" content="Builds">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jeffrey-ai-portfolio.vercel.app/builds.html">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse cx='32' cy='54' rx='24' ry='8' fill='%237d8882'/%3E%3Cellipse cx='30' cy='40' rx='17' ry='7' fill='%239aa49e'/%3E%3Cellipse cx='33' cy='28' rx='11' ry='6' fill='%23b6bdb6'/%3E%3Cellipse cx='32' cy='17' rx='7' ry='5' fill='%23c9861a'/%3E%3C/svg%3E">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#eef0ec; --surface:#f8f9f6; --ink:#1e2522; --muted:#5c6862; --line:#cfd5cf;
+  --accent:#c9861a; --accent-ink:#7a4d05;
+  --display:"Gloock", Georgia, "Times New Roman", serif;
+  --body:"Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#151a18; --surface:#1d2321; --ink:#e7ebe7; --muted:#9ba69f; --line:#2f3733;
+  --accent:#e9a43c; --accent-ink:#f2c47a; color-scheme:dark}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px}
+.top a{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-decoration:none}
+.top a:hover{color:var(--accent-ink)}
+header{padding-block:44px 20px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(36px,7vw,60px);line-height:1.05;margin:10px 0 14px;text-wrap:balance}
+.lede{margin:0;color:var(--muted);max-width:56ch}
+section{margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
+section h2{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 16px}
+h3{font-family:var(--display);font-weight:400;font-size:clamp(21px,3vw,26px);line-height:1.2;margin:0 0 6px;text-wrap:balance}
+.rows{list-style:none;margin:0;padding:0}
+.rows li{display:grid;grid-template-columns:minmax(0,11ch) minmax(0,1fr);gap:8px 20px;padding:12px 0;border-top:1px dashed var(--line)}
+.rows li:first-child{border-top:0}
+.rows b{font-weight:600}
+.rows span{color:var(--muted)}
+.build{padding-block:18px;border-top:1px dashed var(--line)}
+section h2 + .build{border-top:0}
+.byline{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:8px}
+.chip{padding:2px 9px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink)}
+.build p{margin:0;max-width:62ch;text-wrap:pretty}
+.build a{text-decoration:none;color:var(--accent-ink)}
+.build a:hover{text-decoration:underline}
+.prompt{margin:0;padding:14px 16px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 10px 10px 0;font-size:15px;color:var(--ink);max-width:62ch}
+.prompt small{display:block;margin-top:10px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.sample{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.steps{margin:0;padding-left:20px;max-width:62ch}
+.steps li{margin-bottom:8px;text-wrap:pretty}
+footer{border-top:1px solid var(--line);margin-top:56px;padding-block:28px;color:var(--muted);font-size:14px}
+footer p{margin:0}
+@media (max-width:520px){.rows li{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="Site"><div class="wrap"><a href="./">&larr; JeffreyAiFudenna</a><a href="./#projects">Projects</a></div></nav>
+
+<header class="wrap">
+  <div class="eyebrow">Behind the projects</div>
+  <h1>Builds</h1>
+  <p class="lede">The tools I use, what I've built with them, the prompts that run things, and how the work actually gets done.</p>
+</header>
+
+<main class="wrap">
+
+  <section id="tools" aria-labelledby="tools-h">
+    <h2 id="tools-h">Tools</h2>
+    <ul class="rows">
+      <li><b>Claude</b><span>Writing, planning, code, and the daily news research task. This site was built with Claude Code.</span></li>
+      <li><b>Gemini</b><span>Image generation for The Infinite Buddha and the remixed camping photos.</span></li>
+      <li><b>Viggle</b><span>Short video clips for the Cool Moves Reel.</span></li>
+      <li><b>Python</b><span>Small scripts: the daily Buddha generator, the RSS feed builder for the news page.</span></li>
+      <li><b>GitHub Actions</b><span>Runs the Buddha generator on a schedule, no server to look after.</span></li>
+      <li><b>Vercel</b><span>Hosts this site and the project sites. Push to GitHub, it redeploys.</span></li>
+      <li><b>React + Vite</b><span>The Infinite Buddha front end. Everything else is plain HTML, no build step.</span></li>
+    </ul>
+  </section>
+
+  <section id="builds" aria-labelledby="builds-h">
+    <h2 id="builds-h">Builds</h2>
+
+    <article class="build">
+      <h3>The Infinite Buddha</h3>
+      <div class="byline"><span>Oct 2026</span><span class="chip">Live</span><span>Gemini API · Python · React + Vite · GitHub Actions · Vercel</span></div>
+      <p>A website that creates and publishes a new piece of Buddha art every day, all on its own. A Python script asks Gemini for the image, GitHub Actions runs it daily, and the site redeploys automatically. <a href="https://www.theinfinitebuddha.xyz" target="_blank" rel="noopener">theinfinitebuddha.xyz &rarr;</a></p>
+    </article>
+
+    <article class="build">
+      <h3>Fremont by the Numbers</h3>
+      <div class="byline"><span>Oct 2026</span><span class="chip">Live</span><span>Claude · Public data · SVG charts · Static site · Vercel</span></div>
+      <p>A data aggregator for Fremont, California. Public figures on housing, schools, safety, jobs, parks and startups, with the source and date under every number. Plain HTML, CSS and JSON data files. <a href="https://fremontcabythenumbers.com" target="_blank" rel="noopener">fremontcabythenumbers.com &rarr;</a></p>
+    </article>
+
+    <article class="build">
+      <h3>Daily AI News</h3>
+      <div class="byline"><span>Oct 2026</span><span class="chip">Running</span><span>Claude scheduled task · JSON · RSS</span></div>
+      <p>A scheduled AI task finds the day's biggest AI stories, checks every link, writes a plain-English summary and a one-line "why it matters" for each, and publishes the digest to this site every morning. <a href="news.html">Today's digest &rarr;</a> · <a href="news/feed.xml">RSS</a></p>
+    </article>
+
+    <article class="build">
+      <h3>11:11, a Science Fiction Short Story</h3>
+      <div class="byline"><span>Oct 2026</span><span class="chip">Published</span><span>Short story · AI drafting · Process notes</span></div>
+      <p>Every night at 11:11 the lights go out worldwide, and nobody makes us. Written with AI as a drafting partner, with a note on what I changed along the way. <a href="story.html">Read the story &rarr;</a></p>
+    </article>
+
+    <article class="build">
+      <h3>Cool Moves Reel</h3>
+      <div class="byline"><span>2026</span><span>Viggle · Short clips · Editing</span></div>
+      <p>Short AI-made video clips, cut together into a reel. On the home page.</p>
+    </article>
+
+    <article class="build">
+      <h3>Remixed photos with AI</h3>
+      <div class="byline"><span>2026</span><span>Gemini · Photo remix</span></div>
+      <p>Camping photos re-imagined with Gemini. On the home page.</p>
+    </article>
+
+    <article class="build">
+      <h3>Family Tree Website</h3>
+      <div class="byline"><span>2026</span><span class="chip">Private</span><span>Family history · Password-protected · Edit history</span></div>
+      <p>A private site where relatives explore our family history together. Profiles with photos, dates and a short story; every edit is tracked so mistakes can be undone.</p>
+    </article>
+
+    <article class="build">
+      <h3>Maker of the Impossible Shot</h3>
+      <div class="byline"><span>2026</span><span class="chip">In progress</span><span>AI video</span></div>
+      <p>Making shots that couldn't be filmed in the real world. Write-up coming once it's finished.</p>
+    </article>
+  </section>
+
+  <section id="prompts" aria-labelledby="prompts-h">
+    <h2 id="prompts-h">Prompts</h2>
+
+    <article class="build">
+      <h3>Daily AI News, the plan it runs on</h3>
+      <blockquote class="prompt">Find 3 to 5 of the most important AI stories from the past day: new tools to build with, big industry news, policy and safety, and research explained simply. Open every link to make sure it works. Write each summary in your own words, 2 to 3 sentences, and add one sentence on why it matters. Label anything reported by only one outlet as Reported, and anything from rumor as Unconfirmed. Then publish the digest to the News page.</blockquote>
+    </article>
+
+    <article class="build">
+      <p class="sample">Sample · real prompt to follow</p>
+      <h3>The Infinite Buddha, the image prompt</h3>
+      <blockquote class="prompt">A serene terracotta Buddha meditating in a small wooden garden shrine, ferns and vines around it, soft morning light, photographic, square. Change the setting, season and material every day. Never repeat yesterday's scene.
+        <small>Sent to Gemini each morning by a Python script on GitHub Actions. The script picks the day's setting from a list and publishes the result.</small></blockquote>
+    </article>
+  </section>
+
+  <section id="process" aria-labelledby="process-h">
+    <h2 id="process-h">How the work gets done</h2>
+    <ol class="steps">
+      <li><b>Start with the thing, not the tool.</b> Each project began as something I wanted to exist: a daily piece of art, a page of real numbers about my city, a story. The AI is picked after.</li>
+      <li><b>Let it run on its own where it can.</b> Two of the builds publish themselves every morning on a schedule. If a project can be automated, it is, so it keeps living after I stop touching it.</li>
+      <li><b>Check what it says.</b> The news task opens every link before it publishes and labels anything that isn't confirmed. Every number on the Fremont site shows its source and date.</li>
+      <li><b>Keep the stack small.</b> Plain HTML, JSON data files, one script where needed. No build step unless the project really needs one.</li>
+      <li><b>Show the prompt.</b> Where a prompt does the work, it's published next to the result, so you can see exactly what the model was asked.</li>
+    </ol>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap"><p>Prompts marked <em>Sample</em> are placeholders until the real one is published.</p></div>
+</footer>
+</body>
+</html>
