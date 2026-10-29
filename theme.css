@@ -138,6 +138,52 @@
 @keyframes ts-toast{0%{opacity:0;transform:translate(-50%,10px)}8%,88%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,0)}}
 @media (prefers-reduced-motion:reduce){.ts-toast{animation:none}}
 
+/* ---- Konami: footer button + on-screen NES-style pad (sizes in cqw so it scales with its width) ---- */
+.ts-pad{display:inline-grid;place-items:center;width:20px;height:20px;padding:0;border:0;background:none;color:var(--muted);cursor:pointer;vertical-align:-4px}
+.ts-pad:hover{color:var(--ink)}
+.ts-pad svg{width:18px;height:18px;display:block}
+.nes-modal{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:16px;background:rgba(8,10,9,.62);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.nes-modal[hidden]{display:none}
+.nes-card{position:relative;width:min(460px,100%);max-height:100%;overflow:auto;padding:22px 20px 18px;border:1px solid var(--line);border-radius:18px;
+  background:var(--surface);color:var(--ink);box-shadow:0 30px 70px -30px rgba(0,0,0,.6);text-align:center;font:15px/1.5 var(--body,system-ui,sans-serif);
+  text-transform:none;letter-spacing:normal}
+.nes-card h2{margin:0 0 4px;font:400 24px/1.2 var(--display,Georgia,serif)}
+.nes-card p{margin:0 0 16px;color:var(--muted);font-size:14px}
+.nes-x{position:absolute;top:10px;right:12px;width:32px;height:32px;padding:0;border:0;border-radius:50%;background:none;color:var(--muted);font-size:24px;line-height:1;cursor:pointer}
+.nes-x:hover{color:var(--ink);background:var(--bg)}
+.nes{container-type:inline-size;position:relative;box-sizing:border-box;width:100%;aspect-ratio:5/2;background:#cfcfc9;border:2px solid #8f8f89;border-radius:10px/14px;
+  box-shadow:inset 0 -5px 0 rgba(0,0,0,.13),0 12px 18px -12px rgba(0,0,0,.55)}
+.nes-panel{position:absolute;left:3cqw;top:5cqw;width:94cqw;height:30cqw;border-radius:1.2cqw;background:#2b2b2d;box-shadow:inset 0 0 0 .5cqw #1a1a1b}
+.nes button{position:absolute;padding:0;border:0;cursor:pointer;transition:transform .06s,filter .06s}
+.nes-ss::before,.nes-ab::before{content:"";position:absolute;inset:-1.2cqw}
+.nes button:focus-visible{outline:2px solid #ffe600;outline-offset:2px}
+.nes button:active,.nes button.on{transform:translateY(.5cqw);filter:brightness(.8)}
+.dp{width:7.5cqw;height:7.5cqw;background:#0d0d0e}
+.dp-u{left:13.25cqw;top:8.75cqw;border-radius:1cqw 1cqw 0 0}.dp-d{left:13.25cqw;top:23.75cqw;border-radius:0 0 1cqw 1cqw}
+.dp-l{left:5.75cqw;top:16.25cqw;border-radius:1cqw 0 0 1cqw}.dp-r{left:20.75cqw;top:16.25cqw;border-radius:0 1cqw 1cqw 0}
+.dp-c{position:absolute;left:13.25cqw;top:16.25cqw;width:7.5cqw;height:7.5cqw;background:#0d0d0e;pointer-events:none}
+.dp-c::after{content:"";position:absolute;inset:2cqw;border-radius:50%;background:radial-gradient(circle,#050505,#1a1a1c)}
+.dp::after{content:"";position:absolute;left:50%;top:50%;width:0;height:0;border:solid transparent;transform:translate(-50%,-50%)}
+.dp-u::after{border-width:0 1cqw 1.5cqw;border-bottom-color:#3f3f42}.dp-d::after{border-width:1.5cqw 1cqw 0;border-top-color:#3f3f42}
+.dp-l::after{border-width:1cqw 1.5cqw 1cqw 0;border-right-color:#3f3f42}.dp-r::after{border-width:1cqw 0 1cqw 1.5cqw;border-left-color:#3f3f42}
+.nes-ss{top:17.6cqw;width:10cqw;height:4.8cqw;border-radius:2.4cqw;background:#76766f;box-shadow:inset 0 -.5cqw 0 rgba(0,0,0,.3)}
+.nes-sel{left:36.5cqw}.nes-start{left:50cqw}
+.nes-ab{top:15cqw;width:10cqw;height:10cqw;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff7266,#d8312a 55%,#a1201b);box-shadow:0 .7cqw 0 #5a0f0c}
+.nes-b{left:66cqw}.nes-a{left:80cqw}
+.nes-ab:active,.nes-ab.on{box-shadow:0 .2cqw 0 #5a0f0c}
+.nes-lab{position:absolute;top:28cqw;transform:translateX(-50%);font:700 1.9cqw/1 var(--mono,monospace);letter-spacing:.12em;color:#d9d9d0;pointer-events:none}
+.nes.bad{animation:nes-bad .35s}
+@keyframes nes-bad{20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
+.nes-dots{display:flex;gap:7px;justify-content:center;margin:16px 0 6px}
+.nes-dots i{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--muted);box-sizing:border-box;transition:background .15s}
+.nes-dots i.on{background:var(--accent);border-color:var(--accent)}
+.nes-card .nes-status{margin:0 0 8px;font:12px var(--mono,monospace)}
+.nes-hint{padding:0;border:0;background:none;color:var(--muted);font:inherit;font-size:13px;text-decoration:underline;cursor:pointer}
+.nes-hint:hover{color:var(--ink)}
+.nes-card .nes-code{margin:0;font:600 17px var(--mono,monospace);color:var(--ink);letter-spacing:.06em}
+.nes-code[hidden],.nes-hint[hidden]{display:none}
+@media (prefers-reduced-motion:reduce){.nes.bad{animation:none}.nes button{transition:none}}
+
 /* smooth color change, only while switching */
 html.theme-anim,html.theme-anim *{transition:background-color .25s,color .25s,border-color .25s,fill .25s!important}
 
