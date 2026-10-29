@@ -128,7 +128,7 @@
 /* falling / rising holiday emoji */
 .hfx{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:5}
 .hfx span{position:absolute;top:0;left:var(--x);font-size:var(--s);opacity:.75;line-height:1;
-  animation:hfall var(--t) linear var(--dl) infinite;will-change:transform}
+  animation:hfall var(--t) linear var(--dl,0s) infinite;will-change:transform}
 .hfx.rise span{top:auto;bottom:0;animation-name:hrise}
 @keyframes hfall{from{transform:translate3d(0,-10vh,0) rotate(0)}to{transform:translate3d(var(--dx),110vh,0) rotate(var(--r))}}
 @keyframes hrise{from{transform:translate3d(0,10vh,0) rotate(0)}to{transform:translate3d(var(--dx),-110vh,0) rotate(var(--r))}}
