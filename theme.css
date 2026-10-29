@@ -1,0 +1,151 @@
+/* Shared themes for every page. theme.js sets data-theme (a palette), data-mode (light|dark, resolved)
+   and data-holiday (a seasonal accent) on <html>. With no data-theme the page follows the OS setting,
+   so it also works without JavaScript. Pages keep only layout and fonts; all colors come from here.
+   `.sw[data-t=...]` lets the picker's swatches borrow each palette's variables. */
+
+/* ---- base palettes ---- */
+:root,.sw[data-t="light"]{
+  --bg:#eef0ec; --surface:#f8f9f6; --ink:#1e2522; --muted:#5c6862; --line:#cfd5cf;
+  --stone1:#9aa49e; --stone2:#7d8882; --stone3:#b6bdb6; --accent:#c9861a; --accent-ink:#7a4d05;
+  --print:#fdfdfb; --print-edge:#d9ddd7; --note:#f6dc6b; --note-ink:#3d3407;
+  --warn:#8a3b12; --live:#2f7a4a; color-scheme:light}
+:root[data-theme="dark"],.sw[data-t="dark"]{
+  --bg:#151a18; --surface:#1d2321; --ink:#e7ebe7; --muted:#9ba69f; --line:#2f3733;
+  --stone1:#5d6862; --stone2:#47514c; --stone3:#77827b; --accent:#e9a43c; --accent-ink:#f2c47a;
+  --print:#e9ebe6; --print-edge:#3a433e; --note:#e8cc55; --note-ink:#2e2704;
+  --warn:#f0a27a; --live:#7fcf9a; color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme]){
+  --bg:#151a18; --surface:#1d2321; --ink:#e7ebe7; --muted:#9ba69f; --line:#2f3733;
+  --stone1:#5d6862; --stone2:#47514c; --stone3:#77827b; --accent:#e9a43c; --accent-ink:#f2c47a;
+  --print:#e9ebe6; --print-edge:#3a433e; --note:#e8cc55; --note-ink:#2e2704;
+  --warn:#f0a27a; --live:#7fcf9a; color-scheme:dark}}
+
+/* ---- fun themes ---- */
+:root[data-theme="sunset"],.sw[data-t="sunset"]{
+  --bg:#2a1620; --surface:#381d2a; --ink:#fbe9dc; --muted:#d1a9a0; --line:#5a3040;
+  --stone1:#7a4458; --stone2:#5e3347; --stone3:#a0687a; --accent:#ff8a5b; --accent-ink:#ffb48a;
+  --print:#fdeee0; --print-edge:#5a3040; --note:#ffc46b; --note-ink:#3a1d05;
+  --warn:#ffab8a; --live:#8be0a8; color-scheme:dark}
+:root[data-theme="terminal"],.sw[data-t="terminal"]{
+  --bg:#050a05; --surface:#0b140b; --ink:#6cf27a; --muted:#43b356; --line:#1d3a1f;
+  --stone1:#1f6b2c; --stone2:#14451d; --stone3:#2f9a41; --accent:#ffb000; --accent-ink:#ffc640;
+  --print:#cfe9d0; --print-edge:#1d3a1f; --note:#ffe46b; --note-ink:#2b2400;
+  --warn:#ff9a6b; --live:#6cf27a;
+  --display:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --body:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace; color-scheme:dark}
+:root[data-theme="synthwave"],.sw[data-t="synthwave"]{
+  --bg:#140a2e; --surface:#1e1145; --ink:#f4e9ff; --muted:#b9a6e0; --line:#3d2a7a;
+  --stone1:#4a2f8f; --stone2:#3a2575; --stone3:#7a56d6; --accent:#ff3ea5; --accent-ink:#ff7ac6;
+  --print:#f1e6ff; --print-edge:#3d2a7a; --note:#2de2e6; --note-ink:#06242a;
+  --warn:#ff9e7a; --live:#5cffb1; color-scheme:dark}
+:root[data-theme="blueprint"],.sw[data-t="blueprint"]{
+  --bg:#1b4f9c; --surface:#174487; --ink:#eaf3ff; --muted:#c4dbfa; --line:#6f9bd8;
+  --stone1:#4f7fc4; --stone2:#3a67a8; --stone3:#7da4e0; --accent:#ffe066; --accent-ink:#ffe680;
+  --print:#f3f8ff; --print-edge:#6f9bd8; --note:#ffe066; --note-ink:#2a2400;
+  --warn:#ffc2ad; --live:#9cf2c0;
+  --display:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace; color-scheme:dark}
+:root[data-theme="gameboy"],.sw[data-t="gameboy"]{
+  --bg:#9bbc0f; --surface:#8bac0f; --ink:#0f380f; --muted:#14381a; --line:#306230;
+  --stone1:#6f9a14; --stone2:#306230; --stone3:#7da413; --accent:#2a5a2a; --accent-ink:#0f380f;
+  --print:#c4d86a; --print-edge:#306230; --note:#0f380f; --note-ink:#9bbc0f;
+  --warn:#5c2d0c; --live:#0f380f;
+  --display:"Pixelify Sans","JetBrains Mono",ui-monospace,monospace; color-scheme:light}
+:root[data-theme="bubblegum"],.sw[data-t="bubblegum"]{
+  --bg:#fff0f6; --surface:#ffffff; --ink:#3b1f3a; --muted:#7a4f78; --line:#f5bfd9;
+  --stone1:#f4a6c8; --stone2:#e58bb5; --stone3:#fbc5dd; --accent:#e0307a; --accent-ink:#b0185f;
+  --print:#ffffff; --print-edge:#f5bfd9; --note:#9be7ff; --note-ink:#05303d;
+  --warn:#b0381f; --live:#14804a; color-scheme:light}
+:root[data-theme="ocean"],.sw[data-t="ocean"]{
+  --bg:#07222b; --surface:#0c3039; --ink:#e3f6f8; --muted:#8fc4cc; --line:#17505c;
+  --stone1:#1d6a78; --stone2:#145262; --stone3:#2f8e9e; --accent:#f6c85f; --accent-ink:#f9d98a;
+  --print:#e8f6f7; --print-edge:#17505c; --note:#ff9f8a; --note-ink:#3a0f05;
+  --warn:#ffab8f; --live:#6fe3b2; color-scheme:dark}
+:root[data-theme="sepia"],.sw[data-t="sepia"]{
+  --bg:#f4ecd8; --surface:#fbf5e6; --ink:#3b2f22; --muted:#6e5d49; --line:#d9cbaa;
+  --stone1:#b9a683; --stone2:#9c8860; --stone3:#cdbd9b; --accent:#b5532a; --accent-ink:#8a3b17;
+  --print:#fffdf6; --print-edge:#d9cbaa; --note:#f6dc6b; --note-ink:#3d3407;
+  --warn:#8a3b12; --live:#2f7a4a;
+  --body:Georgia,"Iowan Old Style","Palatino Linotype",serif; color-scheme:light}
+:root[data-theme="contrast"],.sw[data-t="contrast"]{
+  --bg:#000000; --surface:#0a0a0a; --ink:#ffffff; --muted:#e0e0e0; --line:#ffffff;
+  --stone1:#888888; --stone2:#666666; --stone3:#aaaaaa; --accent:#ffd400; --accent-ink:#ffd400;
+  --print:#ffffff; --print-edge:#ffffff; --note:#ffd400; --note-ink:#000000;
+  --warn:#ff9a6b; --live:#5cff8a; color-scheme:dark}
+
+/* ---- theme extras ---- */
+:root[data-theme="terminal"] body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;
+  background:repeating-linear-gradient(to bottom,rgba(0,0,0,0) 0 2px,rgba(0,0,0,.18) 2px 3px)}
+:root[data-theme="terminal"] h1,:root[data-theme="terminal"] h2{text-shadow:0 0 12px color-mix(in srgb,var(--ink) 45%,transparent)}
+:root[data-theme="terminal"] h1 em{text-shadow:0 0 12px color-mix(in srgb,var(--accent) 55%,transparent)}
+:root[data-theme="synthwave"] h1 em{text-shadow:0 0 18px color-mix(in srgb,var(--accent) 70%,transparent)}
+:root[data-theme="synthwave"] header{background:linear-gradient(to bottom,transparent 55%,color-mix(in srgb,var(--accent) 16%,transparent))}
+:root[data-theme="blueprint"] body{background-image:
+  linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);
+  background-size:24px 24px;background-attachment:fixed}
+:root[data-theme="gameboy"] :is(.btn,.link,.card,.visual,.card-visual,.tags li,.chip,.prompt,.print){border-radius:2px}
+:root[data-theme="gameboy"] h1,:root[data-theme="gameboy"] h2{letter-spacing:.01em}
+:root[data-theme="contrast"] :is(a,button):focus-visible{outline-width:3px}
+:root[data-theme="contrast"] .card,:root[data-theme="contrast"] .visual{border-color:var(--ink)}
+
+/* ---- holidays: tint the accent on top of Auto / Light / Dark ---- */
+:root[data-holiday]{--accent:var(--hl);--accent-ink:var(--hl-ink)}
+:root[data-holiday][data-mode="dark"]{--accent:var(--hl-d);--accent-ink:var(--hl-ink-d)}
+:root[data-holiday="newyear"]{--hl:#a37400;--hl-ink:#7a5a00;--hl-d:#f5c542;--hl-ink-d:#ffe08a;--hl2:#9aa3ad}
+:root[data-holiday="lunar"]{--hl:#c4161c;--hl-ink:#8f0f13;--hl-d:#ff5a4f;--hl-ink-d:#ff9a92;--hl2:#f5c542}
+:root[data-holiday="valentine"]{--hl:#d6336c;--hl-ink:#a01848;--hl-d:#ff6b9d;--hl-ink-d:#ff9fc0;--hl2:#ff9fc0}
+:root[data-holiday="pi"]{--hl:#6c4ccf;--hl-ink:#4a2fa8;--hl-d:#a58bff;--hl-ink-d:#c6b6ff;--hl2:#f5c542}
+:root[data-holiday="stpatrick"]{--hl:#1f8a43;--hl-ink:#14602d;--hl-d:#4ade80;--hl-ink-d:#86efac;--hl2:#f5c542}
+:root[data-holiday="easter"]{--hl:#7e57c2;--hl-ink:#5a3a9a;--hl-d:#b39ddb;--hl-ink-d:#d1c4e9;--hl2:#f6b8d0}
+:root[data-holiday="earth"]{--hl:#1f8a5b;--hl-ink:#14684a;--hl-d:#4ad8a0;--hl-ink-d:#8ff0c8;--hl2:#2b7de9}
+:root[data-holiday="maythe4"]{--hl:#2563eb;--hl-ink:#1d4ed8;--hl-d:#60a5fa;--hl-ink-d:#93c5fd;--hl2:#f5c542}
+:root[data-holiday="july4"]{--hl:#c8102e;--hl-ink:#9a0b22;--hl-d:#ff5d73;--hl-ink-d:#ff9aa8;--hl2:#1f4fbf}
+:root[data-holiday="halloween"]{--hl:#d9630b;--hl-ink:#8a3a00;--hl-d:#ff8a1f;--hl-ink-d:#ffb35c;--hl2:#7c3aed}
+:root[data-holiday="diwali"]{--hl:#b36d00;--hl-ink:#8a4f00;--hl-d:#ffb020;--hl-ink-d:#ffd27a;--hl2:#d6336c}
+:root[data-holiday="thanksgiving"]{--hl:#b5541c;--hl-ink:#8a3b0f;--hl-d:#f0913f;--hl-ink-d:#ffbf85;--hl2:#8a5a2b}
+:root[data-holiday="hanukkah"]{--hl:#1e6fd9;--hl-ink:#134aa1;--hl-d:#6aa8ff;--hl-ink-d:#a9ccff;--hl2:#cfd8e6}
+:root[data-holiday="christmas"]{--hl:#c0392b;--hl-ink:#8f2318;--hl-d:#ff6b5b;--hl-ink-d:#ff9d92;--hl2:#1f8a43}
+:root[data-holiday] body::before{content:"";position:fixed;inset:0 0 auto 0;height:3px;z-index:50;pointer-events:none;
+  background:linear-gradient(90deg,var(--hl),var(--hl2),var(--hl))}
+
+/* falling / rising holiday emoji */
+.hfx{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:5}
+.hfx span{position:absolute;top:0;left:var(--x);font-size:var(--s);opacity:.75;line-height:1;
+  animation:hfall var(--t) linear var(--dl) infinite;will-change:transform}
+.hfx.rise span{top:auto;bottom:0;animation-name:hrise}
+@keyframes hfall{from{transform:translate3d(0,-10vh,0) rotate(0)}to{transform:translate3d(var(--dx),110vh,0) rotate(var(--r))}}
+@keyframes hrise{from{transform:translate3d(0,10vh,0) rotate(0)}to{transform:translate3d(var(--dx),-110vh,0) rotate(var(--r))}}
+@media (prefers-reduced-motion:reduce){.hfx{display:none}}
+
+/* smooth color change, only while switching */
+html.theme-anim,html.theme-anim *{transition:background-color .25s,color .25s,border-color .25s,fill .25s!important}
+
+/* ---- picker ---- */
+.nav-r{display:flex;align-items:center;gap:10px}
+.ts-li{list-style:none;display:flex;align-items:center}
+.theme-switch{position:relative;display:inline-flex;text-transform:none;letter-spacing:normal}
+.ts-btn{display:inline-grid;place-items:center;width:36px;height:36px;padding:0;border:1px solid var(--line);border-radius:50%;
+  background:transparent;color:var(--ink);cursor:pointer}
+.ts-btn:hover,.ts-btn[aria-expanded="true"]{background:var(--surface)}
+.ts-btn svg{width:18px;height:18px;display:block}
+.ts-panel{position:absolute;right:0;top:calc(100% + 10px);z-index:40;width:min(312px,calc(100vw - 32px));padding:14px;
+  background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:14px;
+  box-shadow:0 18px 40px -16px rgba(0,0,0,.45);font:14px/1.4 var(--body,system-ui,sans-serif);text-align:left}
+.ts-panel[hidden]{display:none}
+.ts-h{margin:0 0 8px;font:500 11px var(--mono,monospace);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.ts-h:not(:first-child){margin-top:14px}
+.ts-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.ts-opt{display:flex;flex-direction:column;align-items:center;gap:6px;padding:8px 4px 7px;border:1px solid var(--line);border-radius:10px;
+  background:transparent;color:var(--ink);font:inherit;font-size:12px;cursor:pointer}
+.ts-opt:hover{border-color:var(--muted)}
+.ts-opt[aria-pressed="true"]{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.sw{position:relative;display:flex;width:44px;height:26px;border-radius:7px;overflow:hidden;background:var(--bg);border:1px solid var(--line)}
+.sw i{flex:1;background:var(--bg)}
+.sw::before{content:"";position:absolute;left:5px;bottom:5px;width:11px;height:11px;border-radius:50%;background:var(--accent)}
+.sw::after{content:"";position:absolute;right:5px;top:6px;width:16px;height:3px;border-radius:2px;background:var(--ink);
+  box-shadow:0 5px 0 -0px var(--muted)}
+.sw-auto::before,.sw-auto::after{display:none}
+.sw-auto i:first-child{background:#eef0ec}.sw-auto i:last-child{background:#151a18}
+.ts-hol{display:flex;gap:10px;align-items:flex-start;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);cursor:pointer}
+.ts-hol input{margin:2px 0 0;accent-color:var(--accent)}
+.ts-hol small{display:block;color:var(--muted);font-size:12px}
+@media (prefers-reduced-motion:reduce){html.theme-anim,html.theme-anim *{transition:none!important}}

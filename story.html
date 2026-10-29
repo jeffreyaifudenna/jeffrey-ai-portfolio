@@ -12,24 +12,15 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse cx='32' cy='54' rx='24' ry='8' fill='%237d8882'/%3E%3Cellipse cx='30' cy='40' rx='17' ry='7' fill='%239aa49e'/%3E%3Cellipse cx='33' cy='28' rx='11' ry='6' fill='%23b6bdb6'/%3E%3Cellipse cx='32' cy='17' rx='7' ry='5' fill='%23c9861a'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Gloock&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="theme.css">
+<script src="theme.js"></script>
 <style>
 /* Layout: one reading column with media that breaks slightly wider than the text. */
 :root{
-  --bg:#eef0ec; --surface:#f8f9f6; --ink:#1e2522; --muted:#5c6862; --line:#cfd5cf;
-  --stone1:#9aa49e; --stone2:#7d8882; --stone3:#b6bdb6; --accent:#c9861a; --accent-ink:#7a4d05;
   --display:"Gloock", Georgia, "Times New Roman", serif;
   --body:"Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#151a18; --surface:#1d2321; --ink:#e7ebe7; --muted:#9ba69f; --line:#2f3733;
-  --stone1:#5d6862; --stone2:#47514c; --stone3:#77827b; --accent:#e9a43c; --accent-ink:#f2c47a; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#151a18; --surface:#1d2321; --ink:#e7ebe7; --muted:#9ba69f; --line:#2f3733;
-  --stone1:#5d6862; --stone2:#47514c; --stone3:#77827b; --accent:#e9a43c; --accent-ink:#f2c47a; color-scheme:dark}
-:root{--print:#fdfdfb;--print-edge:#d9ddd7;--note:#f6dc6b;--note-ink:#3d3407}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--print:#e9ebe6;--print-edge:#3a433e;--note:#e8cc55;--note-ink:#2e2704}}
-:root[data-theme="dark"]{--print:#e9ebe6;--print-edge:#3a433e;--note:#e8cc55;--note-ink:#2e2704}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7}
 :root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 img,video{max-width:100%}
@@ -87,7 +78,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
-<div class="topbar"><div class="wrap"><a href="index.html">← All projects</a><span>JeffreyAiFudenna</span></div></div>
+<div class="topbar"><div class="wrap"><a href="index.html">← All projects</a><span class="nav-r">JeffreyAiFudenna</span></div></div>
 
 <header class="post wrap">
   <div class="eyebrow">Short story · Written with AI, shaped by me</div>

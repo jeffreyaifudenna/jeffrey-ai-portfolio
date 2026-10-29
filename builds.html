@@ -13,17 +13,14 @@
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="theme.css">
+<script src="theme.js"></script>
 <style>
 :root{
-  --bg:#eef0ec; --surface:#f8f9f6; --ink:#1e2522; --muted:#5c6862; --line:#cfd5cf;
-  --accent:#c9861a; --accent-ink:#7a4d05;
   --display:"Gloock", Georgia, "Times New Roman", serif;
   --body:"Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
 }
-@media (prefers-color-scheme: dark){:root{
-  --bg:#151a18; --surface:#1d2321; --ink:#e7ebe7; --muted:#9ba69f; --line:#2f3733;
-  --accent:#e9a43c; --accent-ink:#f2c47a; color-scheme:dark}}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
 .wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 a{color:inherit}
@@ -62,7 +59,7 @@ footer p{margin:0}
 </style>
 </head>
 <body>
-<nav class="top" aria-label="Site"><div class="wrap"><a href="./">&larr; JeffreyAiFudenna</a><a href="./#projects">Projects</a></div></nav>
+<nav class="top" aria-label="Site"><div class="wrap"><a href="./">&larr; JeffreyAiFudenna</a><span class="nav-r"><a href="./#projects">Projects</a></span></div></nav>
 
 <header class="wrap">
   <div class="eyebrow">Behind the projects</div>
