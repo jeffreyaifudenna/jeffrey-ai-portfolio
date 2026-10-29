@@ -2,14 +2,15 @@
    Preview without waiting for the date:  ?holiday=halloween   or   ?theme=terminal  (neither is saved). */
 (function () {
   var d = document.documentElement;
-  var KEY = 'jf-theme', HKEY = 'jf-holiday';
+  var KEY = 'jf-theme', HKEY = 'jf-holiday', UKEY = 'jf-arcade';
   var THEMES = [
     { id: 'auto', label: 'Auto', base: 1 }, { id: 'light', label: 'Light', base: 1, mode: 'light' }, { id: 'dark', label: 'Dark', base: 1, mode: 'dark' },
     { id: 'sunset', label: 'Sunset', mode: 'dark' }, { id: 'terminal', label: 'Terminal', mode: 'dark' }, { id: 'synthwave', label: 'Synthwave', mode: 'dark' },
     { id: 'blueprint', label: 'Blueprint', mode: 'dark' },
     { id: 'gameboy', label: 'Game Boy', mode: 'light', font: 'https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&display=swap' },
     { id: 'bubblegum', label: 'Bubblegum', mode: 'light' }, { id: 'ocean', label: 'Ocean', mode: 'dark' }, { id: 'sepia', label: 'Sepia', mode: 'light' },
-    { id: 'contrast', label: 'High contrast', mode: 'dark' }
+    { id: 'contrast', label: 'High contrast', mode: 'dark' },
+    { id: 'arcade', label: 'Arcade', mode: 'dark', hidden: 1, font: 'https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&display=swap' }
   ];
   var BY = {}; THEMES.forEach(function (t) { BY[t.id] = t; });
 
@@ -69,7 +70,8 @@
 
   /* ---- state ---- */
   var saved = get(KEY), preview = q.get('theme');
-  var theme = BY[preview] ? preview : (BY[saved] ? saved : 'auto');
+  var unlocked = get(UKEY) === '1';
+  var theme = BY[preview] ? preview : (BY[saved] && (!BY[saved].hidden || unlocked) ? saved : 'auto');
   var holidayOn = get(HKEY) !== 'off' || !!HBY[q.get('holiday')];   /* a ?holiday= preview shows even if opted out */
   var holiday = today();
   var mq = window.matchMedia ? matchMedia('(prefers-color-scheme: dark)') : { matches: false };
@@ -138,7 +140,7 @@
     var nav = document.querySelector('.nav-r') || document.querySelector('.top ul') || document.querySelector('.top .wrap, .topbar .wrap');
     if (nav) {
       tog = document.createElement('button'); tog.type = 'button'; tog.className = 'ts-btn';
-      tog.addEventListener('click', function () { choose(d.getAttribute('data-mode') === 'dark' ? 'light' : 'dark'); });
+      tog.addEventListener('click', function () { tapSecret(); choose(d.getAttribute('data-mode') === 'dark' ? 'light' : 'dark'); });
       if (nav.tagName === 'UL') { var li = document.createElement('li'); li.className = 'ts-li'; li.appendChild(tog); nav.appendChild(li); }
       else nav.appendChild(tog);
     }
@@ -148,9 +150,9 @@
       var wrap = document.createElement('span'); wrap.className = 'theme-switch';
       var opt = function (t) {
         var sw = t.id === 'auto' ? '<span class="sw sw-auto"><i></i><i></i></span>' : '<span class="sw" data-t="' + t.id + '"></span>';
-        return '<button type="button" class="ts-opt" data-id="' + t.id + '" aria-pressed="false">' + sw + '<span>' + t.label + '</span></button>';
+        return '<button type="button" class="ts-opt" data-id="' + t.id + '" aria-pressed="false"' + (t.hidden && !unlocked ? ' hidden' : '') + '>' + sw + '<span>' + t.label + '</span></button>';
       };
-      var base = THEMES.filter(function (t) { return t.base; }), fun = THEMES.filter(function (t) { return !t.base && t.id !== 'contrast'; });
+      var base = THEMES.filter(function (t) { return t.base; }), fun = THEMES.filter(function (t) { return !t.base && t.id !== 'contrast'; });   /* includes Arcade; its tile stays hidden until unlocked */
       wrap.innerHTML =
         '<button type="button" class="ts-link" aria-expanded="false" aria-haspopup="true">themes</button>' +
         '<div class="ts-panel" role="group" aria-label="Themes" hidden>' +
@@ -179,6 +181,43 @@
     }
     sync();
   }
+
+  /* ---- easter egg: ↑ ↑ ↓ ↓ ← → ← → B A (or five quick taps on the light/dark button) unlocks Arcade ---- */
+  var CODE = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'], pos = 0, taps = [];
+  function unlock() {
+    var first = !unlocked; unlocked = true; put(UKEY, '1');
+    var tile = panel && panel.querySelector('[data-id="arcade"]'); if (tile) tile.hidden = false;
+    choose('arcade');
+    burst(['👾', '🕹️', '🍒', '⭐', '👻']);
+    toast(first ? 'Konami code! Arcade theme unlocked. It now lives in the themes picker.' : 'Arcade mode: on.');
+  }
+  function toast(msg) {
+    var old = document.querySelector('.ts-toast'); if (old) old.remove();
+    var el = document.createElement('div'); el.className = 'ts-toast'; el.setAttribute('role', 'status'); el.textContent = msg;
+    document.body.appendChild(el); setTimeout(function () { el.remove(); }, 4300);
+  }
+  function burst(emoji) {   /* one-off shower, separate from the holiday one */
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var el = document.createElement('div'); el.className = 'hfx'; el.setAttribute('aria-hidden', 'true');
+    for (var i = 0; i < 36; i++) {
+      var s = document.createElement('span'); s.textContent = emoji[i % emoji.length];
+      s.style.cssText = '--x:' + Math.round(Math.random() * 96) + 'vw;--s:' + (18 + Math.round(Math.random() * 18)) + 'px;--t:' + (3 + Math.random() * 3).toFixed(1) +
+        's;--dl:-' + (Math.random() * 1).toFixed(1) + 's;--dx:' + Math.round(Math.random() * 160 - 80) + 'px;--r:' + Math.round(Math.random() * 540 - 270) + 'deg';
+      s.style.animationIterationCount = '1'; s.style.animationDelay = (Math.random() * 1.2).toFixed(2) + 's'; s.style.opacity = '.95';
+      el.appendChild(s);
+    }
+    document.body.appendChild(el); setTimeout(function () { el.remove(); }, 7500);
+  }
+  function tapSecret() {
+    var now = Date.now(); taps.push(now); taps = taps.filter(function (t) { return now - t < 2000; });
+    if (taps.length >= 5) { taps = []; setTimeout(unlock, 0); }
+  }
+  document.addEventListener('keydown', function (e) {
+    var el = e.target, tag = el && el.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || (el && el.isContentEditable) || e.metaKey || e.ctrlKey || e.altKey) return;
+    var k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+    if (k === CODE[pos]) { if (++pos === CODE.length) { pos = 0; unlock(); } } else pos = k === CODE[0] ? 1 : 0;
+  });
 
   apply(false);
   if (mq.addEventListener) mq.addEventListener('change', function () { if (theme === 'auto') apply(false); });

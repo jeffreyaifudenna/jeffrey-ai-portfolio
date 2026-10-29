@@ -72,6 +72,14 @@
   --print:#ffffff; --print-edge:#ffffff; --note:#ffd400; --note-ink:#000000;
   --warn:#ff9a6b; --live:#5cff8a; color-scheme:dark}
 
+/* hidden: unlocked with the Konami code */
+:root[data-theme="arcade"],.sw[data-t="arcade"]{
+  --bg:#05050f; --surface:#0d0d26; --ink:#ffffff; --muted:#b8b8ff; --line:#2a2aa8;
+  --stone1:#2a8fb8; --stone2:#2121de; --stone3:#d070d0; --accent:#ffe600; --accent-ink:#ffe600;
+  --print:#ffffff; --print-edge:#2a2aa8; --note:#ffe600; --note-ink:#000000;
+  --warn:#ffb852; --live:#39ff14;
+  --display:"Pixelify Sans","JetBrains Mono",ui-monospace,monospace; color-scheme:dark}
+
 /* ---- theme extras ---- */
 :root[data-theme="terminal"] body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;
   background:repeating-linear-gradient(to bottom,rgba(0,0,0,0) 0 2px,rgba(0,0,0,.18) 2px 3px)}
@@ -84,6 +92,10 @@
   background-size:24px 24px;background-attachment:fixed}
 :root[data-theme="gameboy"] :is(.btn,.link,.card,.visual,.card-visual,.tags li,.chip,.prompt,.print){border-radius:2px}
 :root[data-theme="gameboy"] h1,:root[data-theme="gameboy"] h2{letter-spacing:.01em}
+:root[data-theme="arcade"] body{background-image:radial-gradient(circle,rgba(255,230,0,.16) 1.5px,transparent 2px);background-size:28px 28px;background-attachment:fixed}
+:root[data-theme="arcade"] h1 em{text-shadow:0 0 14px color-mix(in srgb,var(--accent) 60%,transparent)}
+:root[data-theme="arcade"] :is(.card,.visual,.card-visual,.prompt,.print){border-color:#2a2aa8}
+:root[data-theme="arcade"] :is(.btn,.link,.card,.visual,.card-visual,.tags li,.chip,.prompt,.print){border-radius:2px}
 :root[data-theme="contrast"] :is(a,button):focus-visible{outline-width:3px}
 :root[data-theme="contrast"] .card,:root[data-theme="contrast"] .visual{border-color:var(--ink)}
 
@@ -120,6 +132,12 @@
 @keyframes hrise{from{transform:translate3d(0,10vh,0) rotate(0)}to{transform:translate3d(var(--dx),-110vh,0) rotate(var(--r))}}
 @media (prefers-reduced-motion:reduce){.hfx{display:none}}
 
+.ts-toast{position:fixed;left:50%;bottom:24px;z-index:70;transform:translateX(-50%);max-width:calc(100vw - 32px);padding:10px 16px;
+  border:1px solid var(--accent);border-radius:999px;background:var(--surface);color:var(--ink);font:13px/1.4 var(--mono,monospace);text-align:center;
+  box-shadow:0 14px 30px -14px rgba(0,0,0,.6);animation:ts-toast 4.2s ease forwards}
+@keyframes ts-toast{0%{opacity:0;transform:translate(-50%,10px)}8%,88%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,0)}}
+@media (prefers-reduced-motion:reduce){.ts-toast{animation:none}}
+
 /* smooth color change, only while switching */
 html.theme-anim,html.theme-anim *{transition:background-color .25s,color .25s,border-color .25s,fill .25s!important}
 
@@ -142,6 +160,7 @@ html.theme-anim,html.theme-anim *{transition:background-color .25s,color .25s,bo
 .ts-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
 .ts-opt{display:flex;flex-direction:column;align-items:center;gap:6px;padding:8px 4px 7px;border:1px solid var(--line);border-radius:10px;
   background:transparent;color:var(--ink);font:inherit;font-size:12px;cursor:pointer}
+.ts-opt[hidden]{display:none}
 .ts-opt:hover{border-color:var(--muted)}
 .ts-opt[aria-pressed="true"]{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
 .sw{position:relative;display:flex;width:44px;height:26px;border-radius:7px;overflow:hidden;background:var(--bg);border:1px solid var(--line)}
