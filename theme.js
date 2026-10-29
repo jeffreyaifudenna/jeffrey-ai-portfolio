@@ -77,7 +77,7 @@
   var holidayOn = get(HKEY) !== 'off';
   var holiday = today();
   var mq = window.matchMedia ? matchMedia('(prefers-color-scheme: dark)') : { matches: false };
-  var fxEl, panel, btn, hbox, hnote;
+  var fxEl, panel, btn, hbox, hnote, tog;
 
   function apply(animate) {
     var t = BY[theme], mode = theme === 'auto' ? (mq.matches ? 'dark' : 'light') : t.mode;
@@ -107,10 +107,17 @@
     document.body.appendChild(fxEl);
   }
 
+  var SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>';
+  var MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg>';
+
   function sync() {
     var meta = document.querySelector('meta[name="theme-color"]');
     if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
     var bg = getComputedStyle(d).getPropertyValue('--bg').trim(); if (bg) meta.content = bg;
+    if (tog) {
+      var dark = d.getAttribute('data-mode') === 'dark', msg = dark ? 'Switch to light mode' : 'Switch to dark mode';
+      tog.innerHTML = dark ? SUN : MOON; tog.setAttribute('aria-label', msg); tog.title = msg;
+    }
     if (!panel) return;
     [].forEach.call(panel.querySelectorAll('.ts-opt'), function (b) { b.setAttribute('aria-pressed', String(b.dataset.id === theme)); });
     hbox.checked = holidayOn;
@@ -123,40 +130,50 @@
 
   function choose(id) { theme = id; put(KEY, id === 'auto' ? null : id); apply(true); }
 
-  /* ---- picker UI ---- */
+  /* ---- UI: a light/dark button in the nav, and a "themes" picker in the footer ---- */
   function build() {
-    var host = document.querySelector('.nav-r') || document.querySelector('.top ul') || document.querySelector('.top .wrap, .topbar .wrap');
-    if (!host) return;
-    var wrap = document.createElement('div'); wrap.className = 'theme-switch';
-    function opt(t) {
-      var sw = t.id === 'auto' ? '<span class="sw sw-auto"><i></i><i></i></span>'
-        : '<span class="sw" data-t="' + t.id + '"></span>';
-      return '<button type="button" class="ts-opt" data-id="' + t.id + '" aria-pressed="false">' + sw + '<span>' + t.label + '</span></button>';
+    var nav = document.querySelector('.nav-r') || document.querySelector('.top ul') || document.querySelector('.top .wrap, .topbar .wrap');
+    if (nav) {
+      tog = document.createElement('button'); tog.type = 'button'; tog.className = 'ts-btn';
+      tog.addEventListener('click', function () { choose(d.getAttribute('data-mode') === 'dark' ? 'light' : 'dark'); });
+      if (nav.tagName === 'UL') { var li = document.createElement('li'); li.className = 'ts-li'; li.appendChild(tog); nav.appendChild(li); }
+      else nav.appendChild(tog);
     }
-    var base = THEMES.filter(function (t) { return t.base; }), fun = THEMES.filter(function (t) { return !t.base && t.id !== 'contrast'; });
-    wrap.innerHTML =
-      '<button type="button" class="ts-btn" aria-label="Change theme" aria-expanded="false" aria-haspopup="true" title="Theme">' +
-        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor" stroke="none"/></svg></button>' +
-      '<div class="ts-panel" role="group" aria-label="Theme" hidden>' +
-        '<p class="ts-h">Mode</p><div class="ts-grid">' + base.map(opt).join('') + '</div>' +
-        '<p class="ts-h">Fun themes</p><div class="ts-grid">' + fun.map(opt).join('') + '</div>' +
-        '<p class="ts-h">Accessibility</p><div class="ts-grid">' + opt(BY.contrast) + '</div>' +
-        '<label class="ts-hol"><input type="checkbox"><span>Holiday themes<small></small></span></label>' +
-      '</div>';
-    if (host.tagName === 'UL') { var li = document.createElement('li'); li.className = 'ts-li'; li.appendChild(wrap); host.appendChild(li); }
-    else host.appendChild(wrap);
-    btn = wrap.querySelector('.ts-btn'); panel = wrap.querySelector('.ts-panel');
-    hbox = panel.querySelector('input'); hnote = panel.querySelector('small');
 
-    function open(v) {
-      panel.hidden = !v; btn.setAttribute('aria-expanded', String(v));
-      if (v) { var p = panel.querySelector('[aria-pressed="true"]'); if (p) p.focus(); }
+    var foot = document.querySelector('footer .wrap'); foot = foot && foot.lastElementChild;
+    if (foot) {
+      var wrap = document.createElement('span'); wrap.className = 'theme-switch';
+      var opt = function (t) {
+        var sw = t.id === 'auto' ? '<span class="sw sw-auto"><i></i><i></i></span>' : '<span class="sw" data-t="' + t.id + '"></span>';
+        return '<button type="button" class="ts-opt" data-id="' + t.id + '" aria-pressed="false">' + sw + '<span>' + t.label + '</span></button>';
+      };
+      var base = THEMES.filter(function (t) { return t.base; }), fun = THEMES.filter(function (t) { return !t.base && t.id !== 'contrast'; });
+      wrap.innerHTML =
+        '<button type="button" class="ts-link" aria-expanded="false" aria-haspopup="true">themes</button>' +
+        '<div class="ts-panel" role="group" aria-label="Themes" hidden>' +
+          '<p class="ts-h">Mode</p><div class="ts-grid">' + base.map(opt).join('') + '</div>' +
+          '<p class="ts-h">Fun themes</p><div class="ts-grid">' + fun.map(opt).join('') + '</div>' +
+          '<p class="ts-h">Accessibility</p><div class="ts-grid">' + opt(BY.contrast) + '</div>' +
+          '<label class="ts-hol"><input type="checkbox"><span>Holiday themes<small></small></span></label>' +
+        '</div>';
+      foot.appendChild(document.createTextNode(' · ')); foot.appendChild(wrap);
+      btn = wrap.querySelector('.ts-link'); panel = wrap.querySelector('.ts-panel');
+      hbox = panel.querySelector('input'); hnote = panel.querySelector('small');
+
+      var open = function (v) {
+        panel.hidden = !v; btn.setAttribute('aria-expanded', String(v)); panel.style.transform = '';
+        if (!v) return;
+        var r = panel.getBoundingClientRect(), shift = 0;   /* keep the panel on screen wherever the footer link sits */
+        if (r.left < 8) shift = 8 - r.left; else if (r.right > innerWidth - 8) shift = innerWidth - 8 - r.right;
+        if (shift) panel.style.transform = 'translateX(' + Math.round(shift) + 'px)';
+        var p = panel.querySelector('[aria-pressed="true"]'); if (p) p.focus({ preventScroll: true });
+      };
+      btn.addEventListener('click', function () { open(panel.hidden); });
+      panel.addEventListener('click', function (e) { var b = e.target.closest('.ts-opt'); if (b) choose(b.dataset.id); });
+      hbox.addEventListener('change', function () { holidayOn = hbox.checked; put(HKEY, holidayOn ? null : 'off'); apply(true); });
+      document.addEventListener('click', function (e) { if (!panel.hidden && !wrap.contains(e.target)) open(false); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) { open(false); btn.focus(); } });
     }
-    btn.addEventListener('click', function () { open(panel.hidden); });
-    panel.addEventListener('click', function (e) { var b = e.target.closest('.ts-opt'); if (b) choose(b.dataset.id); });
-    hbox.addEventListener('change', function () { holidayOn = hbox.checked; put(HKEY, holidayOn ? null : 'off'); apply(true); });
-    document.addEventListener('click', function (e) { if (!panel.hidden && !wrap.contains(e.target)) open(false); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) { open(false); btn.focus(); } });
     sync();
   }
 
