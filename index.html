@@ -55,7 +55,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 /* The brand name is the headline's "JeffreyAiFudenna" in miniature. With JS it starts full size over that word in the hero
    (a ghost that keeps the layout) and shrinks up into this slot on scroll; the slot is empty until then. */
 .brand-name{position:relative;display:block}
-.brand-h1{display:block;font-family:var(--display);font-weight:400;font-size:13px;line-height:1.1;letter-spacing:0;white-space:nowrap;color:var(--ink)}
+.brand-h1{display:block;font-family:var(--display);font-weight:400;font-size:19px;line-height:1.1;letter-spacing:0;white-space:nowrap;color:var(--ink)}
 .brand-h1 em{font-style:normal;color:var(--accent)}
 .fly-name .brand-h1{position:absolute;left:0;top:0;transform-origin:0 0;line-height:1;letter-spacing:-.01em;will-change:transform}
 #hero-name.ghost{visibility:hidden}
@@ -113,15 +113,6 @@ main{padding-block:16px 64px}
 .when::before{content:"·";margin-right:10px}
 h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.6vw,36px);line-height:1.1;margin:0;text-wrap:balance}
 .info p{margin:0;max-width:60ch;color:var(--muted)}
-.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
-.tags li{font-family:var(--mono);font-size:12px;padding:3px 10px;border:1px solid var(--line);border-radius:999px;color:var(--ink)}
-/* Only the first two tags show; the rest fold behind a "+N" that expands on click. */
-.tags li.hid{display:none}
-.tags.open li.hid{display:block}
-.tags li.morewrap{padding:0;border:0}
-.tags .tag-more{color:var(--muted);padding:3px 4px;border:0;background:none;cursor:pointer;font:inherit}
-.tags .tag-more:hover{color:var(--ink)}
-.tags.open .morewrap{display:none}
 .link{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;font-weight:600;text-decoration:none;padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--bg);transition:transform .15s}
 .link:hover{transform:translateY(-2px)}
 
@@ -150,7 +141,6 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.6vw,36px);l
 .card .info{gap:8px;min-width:0;align-self:stretch}
 .card h3{font-family:var(--display);font-weight:400;font-size:22px;line-height:1.15;margin:0;text-wrap:balance}
 .card .info p{font-size:15px}
-.card .tags li{font-size:11px;padding:2px 8px}
 .card .link{margin-top:auto;padding:8px 14px;font-size:14px}
 .card .nolink{margin-top:auto;font-family:var(--mono);font-size:12px;color:var(--muted)}
 @media (max-width:860px){.cards{grid-template-columns:1fr}}
@@ -199,15 +189,6 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.6vw,36px);l
 .player button:disabled{opacity:.35;cursor:default}
 .pl-close{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px))}
 .pl-auto{display:flex;align-items:center;gap:6px;color:#aab3ad;cursor:pointer}
-
-/* "How I made it": the prompt behind a project, collapsed until opened */
-details.prompt-wrap{max-width:60ch}
-details.prompt-wrap summary{cursor:pointer;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink);list-style:none;display:inline-flex;align-items:center;gap:8px}
-details.prompt-wrap summary::-webkit-details-marker{display:none}
-details.prompt-wrap summary::before{content:"+";display:inline-grid;place-items:center;width:18px;height:18px;border:1px solid currentColor;border-radius:50%;font-size:13px}
-details[open].prompt-wrap summary::before{content:"–"}
-.prompt{margin:12px 0 0;padding:14px 16px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 10px 10px 0;font-size:15px;color:var(--ink)}
-.prompt small{display:block;margin-top:10px;font-family:var(--mono);font-size:12px;color:var(--muted)}
 
 /* daily AI news (filled from news/stories.json) */
 .dn{margin-top:72px;padding-top:40px;border-top:1px solid var(--line)}
@@ -292,12 +273,6 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
         <div class="meta"><span class="kind">Website · generative art</span><span class="when">Oct 2026</span><span class="pill live" title="Live"><span>Live</span></span></div>
         <h2>The Infinite Buddha</h2>
         <p>A website that creates and publishes a new piece of Buddha art every day, all on its own. A Python script asks Gemini for the image, GitHub Actions runs it daily, and the site redeploys automatically.</p>
-        <details class="prompt-wrap">
-          <summary>How I made it</summary>
-          <blockquote class="prompt">A serene terracotta Buddha meditating in a small wooden garden shrine, ferns and vines around it, soft morning light, photographic, square. Change the setting, season and material every day. Never repeat yesterday's scene.
-            <small>Sent to Gemini each morning by a Python script on GitHub Actions. The script picks the day's setting from a list and publishes the result.</small></blockquote>
-        </details>
-        <ul class="tags"><li>Gemini API</li><li>Python</li><li>React + Vite</li><li>GitHub Actions</li><li>Vercel</li></ul>
         <a class="link" href="https://www.theinfinitebuddha.xyz" target="_blank" rel="noopener">Visit theinfinitebuddha.xyz →</a>
       </div>
     </li>
@@ -308,7 +283,6 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
         <div class="meta"><span class="kind">Data aggregator</span><span class="when">Oct 2026</span><span class="pill live" title="Live"><span>Live</span></span></div>
         <h2>Fremont by the Numbers</h2>
         <p>A data aggregator for Fremont, California. It gathers public figures on housing, schools, safety, jobs, parks, startups and more, and puts the source and date under every number. Built with Claude from plain HTML, CSS and JSON data files.</p>
-        <ul class="tags"><li>Claude</li><li>Public data</li><li>SVG charts</li><li>Static site</li><li>Vercel</li></ul>
         <a class="link" href="https://fremontcabythenumbers.com" target="_blank" rel="noopener">Visit fremontcabythenumbers.com →</a>
       </div>
     </li>
@@ -318,7 +292,6 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
         <div class="meta"><span class="kind">Video editing</span><span class="when">2026</span></div>
         <h2>Cool Moves Reel</h2>
         <p>Short clips I made with Viggle that put me in scenes I couldn't film for real: dunking in a pro arena, throwing popcorn into a volcano, and hanging out with a crew in monkey masks.</p>
-        <ul class="tags"><li>Viggle</li><li>Short clips</li><li>Editing</li></ul>
       </div>
       <div class="extra">
         <div class="reel">
@@ -336,7 +309,6 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
         <div class="meta"><span class="kind">Image generation</span><span class="when">2026</span></div>
         <h2>Remixed photos with AI</h2>
         <p>Part real, part AI generation. I remixed this photo I took from my camping trip to make these AI generated images, adding myself, the tent and backpack into the images.</p>
-        <ul class="tags"><li>Gemini</li><li>Photo remix</li><li>Camping photos</li></ul>
       </div>
       <div class="extra">
         <div class="gallery">
@@ -367,7 +339,6 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
         <div class="meta"><span class="kind">Writing · fiction</span><span class="when">Oct 2026</span><span class="pill live" title="Published"><span>Published</span></span></div>
         <h2>11:11, a Science Fiction Short Story</h2>
         <p>Every night at 11:11 the lights go out worldwide, and nobody makes us. A short story written with AI as a drafting partner, with a note on how I made it and what I changed along the way.</p>
-        <ul class="tags"><li>Short story</li><li>AI drafting</li><li>Process notes</li></ul>
         <a class="link" href="story.html">Read the story →</a>
       </div>
     </li>
@@ -403,7 +374,6 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
           <div class="meta"><span class="kind">Website · family</span><span class="when">2026</span></div>
           <h3>Family Tree Website</h3>
           <p>A private family tree website where relatives can explore our family history together. Each person has a profile with photos, dates and a short story, and every edit is tracked so mistakes can be undone. A shared password keeps it family-only.</p>
-          <ul class="tags"><li>Family history</li><li>Password-protected</li><li>Edit history</li></ul>
           <span class="nolink">Private site · no public link</span>
         </div>
       </li>
@@ -424,7 +394,6 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
           <div class="meta"><span class="kind">Video · AI</span><span class="when">2026</span></div>
           <h3>Maker of the Impossible Shot</h3>
           <p>Work in progress. A project about making shots that couldn't be filmed in the real world. Full write-up coming soon.</p>
-          <ul class="tags"><li>AI video</li><li>In progress</li></ul>
           <span class="nolink">Coming soon · no public link yet</span>
         </div>
       </li>
@@ -475,17 +444,6 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
 (function(){
   const items=[...document.querySelectorAll('.proj,.card')];
   document.getElementById('count').textContent=items.length+' projects';
-})();
-/* Tags: show two, fold the rest behind "+N". */
-(function(){
-  document.querySelectorAll('.tags').forEach(ul=>{
-    const li=[...ul.children]; if(li.length<=3) return;
-    li.slice(2).forEach(l=>l.classList.add('hid'));
-    const m=document.createElement('li');
-    const b=document.createElement('button'); b.type='button'; b.textContent='+'+(li.length-2); b.setAttribute('aria-label','Show '+(li.length-2)+' more tags');
-    b.className='tag-more'; m.className='morewrap'; m.appendChild(b); ul.appendChild(m);
-    b.addEventListener('click',()=>{ul.classList.add('open');});
-  });
 })();
 /* Scroll reveal. Each project fades and rises in the first time it enters the viewport. */
 (function(){
@@ -579,9 +537,9 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
     brand.style.transform=''; fly.style.transform='scale('+REST+')';
     if(!on) stones.forEach(function(s){s.style.transform=''});
     if(onN){
-      /* the mini is the name at the headline's font size, scaled so it is about 13px tall; the slot takes the scaled size.
+      /* the mini is the name at the headline's font size, scaled so it is about 19px tall (15px on small screens); the slot takes the scaled size.
          The hero word is an inline box, so its 1em line box starts (box height - 1em) / 2 below the box top. */
-      var hr=h1.getBoundingClientRect(), fs=parseFloat(getComputedStyle(h1).fontSize); R=(innerWidth<=520?11:13)/fs;
+      var hr=h1.getBoundingClientRect(), fs=parseFloat(getComputedStyle(h1).fontSize); R=(innerWidth<=520?15:19)/fs;
       [name,twinName].forEach(function(n){ if(n){n.style.fontSize=fs+'px'; n.style.transform='scale('+R+')';} });
       [nameBox,twinBox].forEach(function(b){ if(b){b.style.width=(hr.width*R)+'px'; b.style.height=(fs*R)+'px';} });
       var nr=name.getBoundingClientRect();

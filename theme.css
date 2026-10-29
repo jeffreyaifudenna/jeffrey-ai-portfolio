@@ -198,6 +198,7 @@
   padding:.3em .7em .45em;background:rgba(18,13,31,.92);box-shadow:0 0 0 3px #7a4b24,0 0 0 6px #120d1f,0 20px 50px -10px rgba(0,0,0,.7)}
 .lvl b{display:block;font-size:clamp(26px,8.6vw,72px);line-height:1;font-weight:700;color:#f0b429;letter-spacing:.04em;
   text-shadow:.06em .06em 0 #5a4478,-.03em 0 0 #5a4478,.03em -.03em 0 #5a4478}
+.lvl .lu{margin-top:.14em;font-size:1.3em;letter-spacing:.1em;color:#f4e8d0}
 .lvl span{display:block;margin-top:.7em;font-size:clamp(11px,3vw,18px);letter-spacing:.3em;color:#f4e8d0;text-shadow:2px 2px 0 #5a4478}
 @keyframes lvl{0%{opacity:0;transform:translate(-50%,-50%) scale(.2)}12%{opacity:1;transform:translate(-50%,-50%) scale(1.15)}20%{transform:translate(-50%,-50%) scale(1)}
   30%,50%,70%{opacity:1}40%,60%{opacity:.25}85%{opacity:1;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-62%) scale(1)}}
