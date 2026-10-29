@@ -16,6 +16,7 @@ My AI projects, written up. Plain HTML, no build step.
 ## Contact form
 - `contact.html` posts JSON to `api/contact.js`, a Vercel serverless function that sends the message from your Gmail account over SMTP (nodemailer, the site's only dependency, listed in `package.json`). It has a hidden honeypot field and server-side validation.
 - Set these in the Vercel project (Settings, Environment Variables): `GMAIL_USER` (the Gmail address) and `GMAIL_APP_PASSWORD` (create one at myaccount.google.com/apppasswords; it needs 2-step verification on). Optionally `CONTACT_TO` to deliver to a different inbox. Messages arrive with the visitor as reply-to.
+- After the message to you goes out, the function sends the visitor a one-time email linking `guide.html`, a free how-to-use-AI article. The page is `noindex` and left out of the sitemap and nav, so it is reachable only through that email. Edit the wording in `api/contact.js` and the article in `guide.html`.
 - The function only runs on Vercel (or `vercel dev`); `python -m http.server` serves the page but the send will fail.
 
 ## Deploy
