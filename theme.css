@@ -73,7 +73,7 @@
   --warn:#ff9a6b; --live:#5cff8a; color-scheme:dark}
 
 /* hidden: unlocked with the Konami code */
-/* Space dungeon: deep indigo and parchment, gold trim, stars overhead (id stays "arcade") */
+/* Quest: deep indigo and parchment, gold trim, stars overhead (id stays "arcade") */
 :root[data-theme="arcade"],.sw[data-t="arcade"]{
   --bg:#120d1f; --surface:#1d1530; --ink:#f4e8d0; --muted:#c9b8e8; --line:#5a4478;
   --stone1:#6b5aa8; --stone2:#7a4b24; --stone3:#b08a4a; --accent:#f0b429; --accent-ink:#f6c85f;
