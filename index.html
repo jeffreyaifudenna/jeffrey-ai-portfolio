@@ -45,7 +45,12 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px}
 .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.06em}
-.brand svg{width:22px;height:22px}
+/* The brand cairn is the hero cairn: on load it sits over the hero, and scrolling flies it up into this slot. */
+.brand-cairn{position:relative;width:24px;height:26px;transform:scale(.2);will-change:transform}
+.brand-cairn .cairn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding-bottom:0}
+.brand-cairn .cairn span{will-change:transform}
+.brand-name{display:inline-block}
+header .cairn.ghost{visibility:hidden}
 .top ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
 .top li a{display:block;padding:8px 12px;border-radius:999px;font-size:14px;font-weight:500;text-decoration:none;color:var(--muted)}
 .top li a:hover{color:var(--ink);background:var(--surface)}
@@ -215,8 +220,8 @@ footer a:hover{color:var(--ink)}
 <nav class="top" aria-label="Site">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="JeffreyAiFudenna, back to top">
-      <svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="54" rx="24" ry="8" fill="#7d8882"/><ellipse cx="30" cy="40" rx="17" ry="7" fill="#9aa49e"/><ellipse cx="33" cy="28" rx="11" ry="6" fill="#b6bdb6"/><ellipse cx="32" cy="17" rx="7" ry="5" fill="#c9861a"/></svg>
-      JeffreyAiFudenna
+      <span class="brand-cairn" id="brand-cairn" aria-hidden="true"><span class="cairn"><span></span><span></span><span></span><span></span></span></span>
+      <span class="brand-name" id="brand-name">JeffreyAiFudenna</span>
     </a>
     <ul>
       <li><a href="#projects">Projects</a></li>
@@ -231,7 +236,7 @@ footer a:hover{color:var(--ink)}
     <div>
       <h1>JeffreyAiFudenna projects <em>with AI</em></h1>
     </div>
-    <div class="cairn" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <div class="cairn" id="hero-cairn" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
   </div>
 </header>
 
@@ -482,6 +487,42 @@ footer a:hover{color:var(--ink)}
     if(e.key==='ArrowRight'&&cur<clips.length-1)load(cur+1);
     else if(e.key==='ArrowLeft'&&cur>0)load(cur-1);
   });
+})();
+</script>
+<script>
+/* Flying cairn. The nav brand's cairn starts full size over the hero cairn's spot; as you scroll it shrinks and
+   flies into the nav, the stones drifting apart mid-flight and restacking, while the brand name fades in beside it.
+   Off on small screens (hero cairn is hidden there) and when the user prefers reduced motion. */
+(function(){
+  var fly=document.getElementById('brand-cairn'), hero=document.getElementById('hero-cairn'),
+      name=document.getElementById('brand-name'); if(!fly||!hero||!name) return;
+  var stones=fly.querySelectorAll('.cairn span'), REST=.2, ease=function(t){return t*t*(3-2*t)};
+  var on=false, start, S, raf=0;
+  function measure(){
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    on=!reduce&&getComputedStyle(hero).display!=='none';
+    hero.classList.toggle('ghost',on);
+    if(!on){fly.style.transform='';name.style.opacity='';name.style.transform='';stones.forEach(function(s){s.style.transform=''});return;}
+    fly.style.transform='scale('+REST+')';
+    var h=hero.getBoundingClientRect(), f=fly.getBoundingClientRect();
+    start={x:h.left+h.width/2-(f.left+f.width/2), y:h.top+h.height/2+scrollY-(f.top+f.height/2)};
+    S=Math.max(80,start.y);
+    paint();
+  }
+  function paint(){
+    raf=0; if(!on) return;
+    var s=scrollY, p=ease(Math.min(1,Math.max(0,s/S))), q=1-p, g=4*p*q;
+    fly.style.transform='translate('+(start.x*q)+'px,'+((start.y-s)*q)+'px) scale('+(1-(1-REST)*p)+')';
+    stones.forEach(function(st,i){
+      var x=i===1?4:i===2?-5:0, lift=-(3-i)*9*g, tilt=(i%2?7:-7)*g;
+      st.style.transform='translate('+x+'px,'+lift+'px) rotate('+tilt+'deg)';
+    });
+    name.style.opacity=p; name.style.transform='translateX('+(-10*q)+'px)';
+  }
+  addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(paint)},{passive:true});
+  addEventListener('resize',measure);
+  addEventListener('load',measure);
+  measure();
 })();
 </script>
 <script>
