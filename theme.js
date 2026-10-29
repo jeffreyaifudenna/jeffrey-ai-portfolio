@@ -10,7 +10,7 @@
     { id: 'gameboy', label: 'Game Boy', mode: 'light', font: 'https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&display=swap' },
     { id: 'bubblegum', label: 'Bubblegum', mode: 'light' }, { id: 'ocean', label: 'Ocean', mode: 'dark' }, { id: 'sepia', label: 'Sepia', mode: 'light' },
     { id: 'contrast', label: 'High contrast', mode: 'dark' },
-    { id: 'arcade', label: 'Space dungeon', mode: 'dark', hidden: 1, font: 'https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&display=swap' }
+    { id: 'arcade', label: 'Quest', mode: 'dark', hidden: 1, font: 'https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&display=swap' }
   ];
   var BY = {}; THEMES.forEach(function (t) { BY[t.id] = t; });
 
@@ -152,7 +152,7 @@
         var sw = t.id === 'auto' ? '<span class="sw sw-auto"><i></i><i></i></span>' : '<span class="sw" data-t="' + t.id + '"></span>';
         return '<button type="button" class="ts-opt" data-id="' + t.id + '" aria-pressed="false"' + (t.hidden && !unlocked ? ' hidden' : '') + '>' + sw + '<span>' + t.label + '</span></button>';
       };
-      var base = THEMES.filter(function (t) { return t.base; }), fun = THEMES.filter(function (t) { return !t.base && t.id !== 'contrast'; });   /* includes Space dungeon; its tile stays hidden until unlocked */
+      var base = THEMES.filter(function (t) { return t.base; }), fun = THEMES.filter(function (t) { return !t.base && t.id !== 'contrast'; });   /* includes Quest; its tile stays hidden until unlocked */
       wrap.innerHTML =
         '<button type="button" class="ts-link" aria-expanded="false" aria-haspopup="true">themes</button>' +
         '<div class="ts-panel" role="group" aria-label="Themes" hidden>' +
@@ -185,14 +185,14 @@
     sync();
   }
 
-  /* ---- easter egg: a footer button opens an on-screen NES-style pad; the Konami code unlocks the Space dungeon theme ---- */
+  /* ---- easter egg: a footer button opens an on-screen NES-style pad; the Konami code unlocks the Quest theme ---- */
   var CODE = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
   function unlock() {
     var first = !unlocked; unlocked = true; put(UKEY, '1');
     var tile = panel && panel.querySelector('[data-id="arcade"]'); if (tile) tile.hidden = false;
     choose('arcade');
-    burst(); banner(first ? 'MISSION UNLOCKED' : 'DUNGEON MODE'); jingle();
-    toast(first ? 'Konami code! Space dungeon now lives in the themes picker.' : 'Space dungeon: on.');
+    burst(); banner(first ? 'MISSION UNLOCKED' : 'QUEST MODE'); jingle();
+    toast(first ? 'Konami code! The Quest theme now lives in the themes picker.' : 'Quest theme: on.');
   }
   function toast(msg) {
     var old = document.querySelector('.ts-toast'); if (old) old.remove();
