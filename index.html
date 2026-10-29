@@ -52,12 +52,18 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .brand-cairn{position:relative;width:24px;height:26px;transform:scale(.2);will-change:transform}
 .brand-cairn .cairn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding-bottom:0}
 .brand-cairn .cairn span{will-change:transform}
-.brand-name{display:inline-block}
+/* The brand name is the headline's "JeffreyAiFudenna" in miniature. With JS it starts full size over that word in the hero
+   (a ghost that keeps the layout) and shrinks up into this slot on scroll; the slot is empty until then. */
+.brand-name{position:relative;display:block}
+.brand-h1{display:block;font-family:var(--display);font-weight:400;font-size:13px;line-height:1.1;letter-spacing:0;white-space:nowrap;color:var(--ink)}
+.brand-h1 em{font-style:normal;color:var(--accent)}
+.fly-name .brand-h1{position:absolute;left:0;top:0;transform-origin:0 0;line-height:1;letter-spacing:-.01em;will-change:transform}
+#hero-name.ghost{visibility:hidden}
 header .cairn.ghost{visibility:hidden}
 .top ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
-.top li a{display:block;padding:8px 12px;border-radius:999px;font-size:14px;font-weight:500;text-decoration:none;color:var(--muted)}
+.top li a{display:block;padding:8px 12px;border-radius:999px;font-size:14px;font-weight:500;text-decoration:none;color:var(--muted);white-space:nowrap}
 .top li a:hover{color:var(--ink);background:var(--surface)}
-@media (max-width:520px){.top li a{padding:8px 9px;font-size:13px}}
+@media (max-width:520px){.top ul{flex-wrap:wrap;justify-content:flex-end}.top li a{padding:8px 9px;font-size:13px}.brand{gap:8px}}
 
 /* scroll reveal: projects and lab cards rise in as they enter the viewport */
 .js .proj,.js .card{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
@@ -252,7 +258,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
   <div class="wrap">
     <a class="brand" href="#top" aria-label="JeffreyAiFudenna, back to top">
       <span class="brand-cairn" id="brand-cairn" aria-hidden="true"><span class="cairn"><span></span><span></span><span></span><span></span></span></span>
-      <span class="brand-name" id="brand-name">JeffreyAiFudenna</span>
+      <span class="brand-name" id="brand-name"><span class="brand-h1" id="brand-h1">JeffreyAiFudenna</span></span>
     </a>
     <ul>
       <li><a href="#projects">Projects</a></li>
@@ -265,7 +271,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
 <header id="top">
   <div class="wrap hero">
     <div>
-      <h1>JeffreyAiFudenna projects <em>with AI</em></h1>
+      <h1 id="hero-h1"><span id="hero-name">JeffreyAiFudenna</span> projects <em>with AI</em></h1>
       <p class="lede">I'm looking for my next role. These are the things I've built with AI along the way, each one finished and written up.</p>
     </div>
     <div class="cairn" id="hero-cairn" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
@@ -459,7 +465,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
 
 <footer>
   <div class="wrap">
-    <span class="brand foot-brand" id="foot-brand" aria-hidden="true"><span class="brand-cairn"><span class="cairn"><span></span><span></span><span></span><span></span></span></span><span class="brand-name">JeffreyAiFudenna</span></span>
+    <span class="brand foot-brand" id="foot-brand" aria-hidden="true"><span class="brand-cairn"><span class="cairn"><span></span><span></span><span></span><span></span></span></span><span class="brand-name"><span class="brand-h1">JeffreyAiFudenna</span></span></span>
     <span class="foot-cmd"><a href="builds.html">builds</a> · <a href="https://github.com/jeffreyaifudenna" target="_blank" rel="noopener">github</a></span>
   </div>
 </footer>
@@ -548,24 +554,42 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
 })();
 </script>
 <script>
-/* Flying cairn. The nav brand's cairn starts full size over the hero cairn's spot; as you scroll it shrinks and
-   flies into the nav, the stones drifting apart mid-flight and restacking, while the brand name fades in beside it.
-   Off on small screens (hero cairn is hidden there) and when the user prefers reduced motion.
-   Second leg, at every width: over the last stretch of the page the whole brand (stones and name) leaves the nav
-   and settles onto its twin in the footer. Landed, a click takes it, and the page, back to the top. */
+/* Flying brand. The nav brand is the hero cairn plus the headline's "JeffreyAiFudenna": on load both sit full size over
+   the hero, and scrolling shrinks them up into the nav, the stones drifting apart mid-flight and restacking, the name
+   becoming a miniature of itself in the same serif. The nav slot is empty until they arrive. The cairn leg is off on small
+   screens (the hero cairn is hidden there); everything is off when the user prefers reduced motion.
+   Second leg, at every width: over the last stretch of the page the whole brand leaves the nav and settles onto its twin
+   in the footer. Landed, a click takes it, and the page, back to the top. */
 (function(){
   var fly=document.getElementById('brand-cairn'), hero=document.getElementById('hero-cairn'),
-      name=document.getElementById('brand-name'), brand=fly.parentElement, twin=document.getElementById('foot-brand'); if(!fly||!hero||!name) return;
-  var stones=fly.querySelectorAll('.cairn span'), REST=.2, ease=function(t){return t*t*(3-2*t)};
-  var on=false, land=false, start, S, rest, raf=0;
+      name=document.getElementById('brand-h1'), nameBox=document.getElementById('brand-name'), h1=document.getElementById('hero-name'),
+      brand=fly.parentElement, twin=document.getElementById('foot-brand'); if(!fly||!hero||!name||!h1) return;
+  var twinName=twin&&twin.querySelector('.brand-h1'), twinBox=twin&&twin.querySelector('.brand-name');
+  var stones=fly.querySelectorAll('.cairn span'), REST=.2, ease=function(t){return t*t*(3-2*t)}, clamp=function(v){return Math.min(1,Math.max(0,v))};
+  var on=false, onN=false, land=false, start, S, startN, SN, R=1, rest, raf=0;
   function measure(){
     var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
     on=!reduce&&getComputedStyle(hero).display!=='none';
+    onN=!reduce;
     land=!reduce&&!!twin;
     hero.classList.toggle('ghost',on);
+    h1.classList.toggle('ghost',onN);
+    document.documentElement.classList.toggle('fly-name',onN);
     if(twin) twin.classList.toggle('mark',land);
     brand.style.transform=''; fly.style.transform='scale('+REST+')';
-    if(!on){name.style.opacity='';name.style.transform='';stones.forEach(function(s){s.style.transform=''});}
+    if(!on) stones.forEach(function(s){s.style.transform=''});
+    if(onN){
+      /* the mini is the name at the headline's font size, scaled so it is about 13px tall; the slot takes the scaled size.
+         The hero word is an inline box, so its 1em line box starts (box height - 1em) / 2 below the box top. */
+      var hr=h1.getBoundingClientRect(), fs=parseFloat(getComputedStyle(h1).fontSize); R=(innerWidth<=520?11:13)/fs;
+      [name,twinName].forEach(function(n){ if(n){n.style.fontSize=fs+'px'; n.style.transform='scale('+R+')';} });
+      [nameBox,twinBox].forEach(function(b){ if(b){b.style.width=(hr.width*R)+'px'; b.style.height=(fs*R)+'px';} });
+      var nr=name.getBoundingClientRect();
+      startN={x:hr.left-nr.left, y:hr.top+(hr.height-fs)/2+scrollY-nr.top};
+      SN=Math.max(80,startN.y);
+    } else {
+      [name,twinName,nameBox,twinBox].forEach(function(n){ if(n) n.style.cssText=''; });
+    }
     var h=hero.getBoundingClientRect(), f=fly.getBoundingClientRect(), b=brand.getBoundingClientRect();
     rest={x:b.left, y:b.top};
     start={x:h.left+h.width/2-(f.left+f.width/2), y:h.top+h.height/2+scrollY-(f.top+f.height/2)};
@@ -575,11 +599,11 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
   function landP(){
     if(!land) return 0;
     var max=document.documentElement.scrollHeight-innerHeight, D=Math.min(360,Math.max(200,innerHeight*.45));
-    return max>(on?S:0)+D*1.5 ? ease(Math.min(1,Math.max(0,(scrollY-(max-D))/D))) : 0;
+    return max>(on?S:onN?SN:0)+D*1.5 ? ease(clamp((scrollY-(max-D))/D)) : 0;
   }
   function paint(){
-    raf=0; if(!on&&!land) return;
-    var s=scrollY, p=on?ease(Math.min(1,Math.max(0,s/S))):1, q=1-p, g=4*p*q;
+    raf=0; if(!on&&!onN&&!land) return;
+    var s=scrollY, p=on?ease(clamp(s/S)):1, q=1-p, g=4*p*q;
     /* landing leg: over the last D px of scroll, the brand slides from its nav spot onto the footer twin */
     var p2=landP();
     if(land){
@@ -588,9 +612,10 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
       g=Math.max(g,4*p2*(1-p2));
     }
     brand.classList.toggle('landed',p2>.9); brand.title=p2>.9?'Back to top':'';
-    if(on){
-      fly.style.transform='translate('+(start.x*q)+'px,'+((start.y-s)*q)+'px) scale('+(1-(1-REST)*p)+')';
-      name.style.opacity=p; name.style.transform='translateX('+(-10*q)+'px)';
+    if(on) fly.style.transform='translate('+(start.x*q)+'px,'+((start.y-s)*q)+'px) scale('+(1-(1-REST)*p)+')';
+    if(onN){
+      var pn=ease(clamp(s/SN)), qn=1-pn;
+      name.style.transform='translate('+(startN.x*qn)+'px,'+((startN.y-s)*qn)+'px) scale('+(1-(1-R)*pn)+')';
     }
     stones.forEach(function(st,i){
       var x=i===1?4:i===2?-5:0, lift=-(3-i)*9*g, tilt=(i%2?7:-7)*g;
@@ -602,6 +627,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
   addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(paint)},{passive:true});
   addEventListener('resize',measure);
   addEventListener('load',measure);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(measure);
   measure();
 })();
 </script>
