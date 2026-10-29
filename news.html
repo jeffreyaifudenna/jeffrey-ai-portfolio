@@ -51,6 +51,14 @@ h1{font-family:var(--display);font-weight:400;font-size:clamp(36px,7vw,60px);lin
 .empty,noscript{display:block;margin-top:32px;color:var(--muted)}
 footer{border-top:1px solid var(--line);margin-top:56px;padding-block:28px;color:var(--muted);font-size:14px}
 footer p{margin:0 0 6px}
+.src{margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
+.src h2{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
+.src p{margin:0 0 14px;color:var(--muted);max-width:62ch}
+.src dl{margin:0}
+.src dt{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+.src dd{margin:2px 0 0;line-height:1.7}
+.src dd a{text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.src dd a:hover{text-decoration-color:var(--accent)}
 </style>
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
 <script defer src="/_vercel/insights/script.js"></script>
@@ -68,6 +76,21 @@ footer p{margin:0 0 6px}
   <p class="empty" id="status">Loading stories&hellip;</p>
 </main>
 <noscript><div class="wrap">This page needs JavaScript to show the stories.</div></noscript>
+
+<section class="wrap src" aria-labelledby="src-h">
+  <h2 id="src-h">Where the stories come from</h2>
+  <p>The task starts with official sources and works outward, so a story is checked against the original page, not a recap of it.</p>
+  <dl>
+    <dt>Build</dt>
+    <dd><a href="https://www.anthropic.com/news">Anthropic</a> · <a href="https://developers.openai.com/changelog">OpenAI API</a> · <a href="https://ai.google.dev/gemini-api/docs/changelog">Gemini API</a> · <a href="https://github.blog/changelog/">GitHub</a> · <a href="https://vercel.com/changelog">Vercel</a> · <a href="https://huggingface.co/blog">Hugging Face</a> · <a href="https://simonwillison.net">Simon Willison</a> · <a href="https://www.latent.space">Latent Space</a> · <a href="https://news.smol.ai">AINews</a></dd>
+    <dt>Industry</dt>
+    <dd><a href="https://openai.com/news">OpenAI</a> · <a href="https://deepmind.google/discover/blog/">Google DeepMind</a> · <a href="https://ai.meta.com/blog/">Meta AI</a> · <a href="https://mistral.ai/news">Mistral</a> · <a href="https://techcrunch.com/category/artificial-intelligence/">TechCrunch</a> · <a href="https://arstechnica.com/ai/">Ars Technica</a> · <a href="https://www.theverge.com/ai-artificial-intelligence">The Verge</a> · <a href="https://www.technologyreview.com/topic/artificial-intelligence/">MIT Technology Review</a> · <a href="https://www.semianalysis.com">SemiAnalysis</a></dd>
+    <dt>Policy and safety</dt>
+    <dd><a href="https://importai.substack.com">Import AI</a> · <a href="https://www.transformernews.ai">Transformer</a> · <a href="https://www.aisi.gov.uk/blog">UK AI Security Institute</a> · <a href="https://www.nist.gov/caisi">NIST CAISI</a> · <a href="https://metr.org/blog/">METR</a> · <a href="https://cset.georgetown.edu">Georgetown CSET</a> · <a href="https://hai.stanford.edu/news">Stanford HAI</a> · <a href="https://alignment.anthropic.com">Anthropic Alignment</a></dd>
+    <dt>Research</dt>
+    <dd><a href="https://huggingface.co/papers">Hugging Face Papers</a> · <a href="https://www.deeplearning.ai/the-batch/">The Batch</a> · <a href="https://www.interconnects.ai">Interconnects</a> · <a href="https://magazine.sebastianraschka.com">Ahead of AI</a> · <a href="https://epoch.ai">Epoch AI</a> · <a href="https://www.quantamagazine.org/computer-science/">Quanta</a></dd>
+  </dl>
+</section>
 
 <footer>
   <div class="wrap">
