@@ -13,6 +13,11 @@ My AI projects, written up. Plain HTML, no build step.
 - The tab icon is redrawn in the current theme's colors. The small gamepad icon in each footer opens an on-screen NES-style controller; entering the Konami code on it (↑ ↑ ↓ ↓ ← → ← → B A, by tapping or with the keyboard) unlocks a hidden Quest theme, which then appears in the picker.
 - Preview without waiting for the date: `?holiday=halloween` or `?theme=terminal` (neither is saved).
 
+## Contact form
+- `contact.html` posts JSON to `api/contact.js`, a Vercel serverless function that sends the message from your Gmail account over SMTP (nodemailer, the site's only dependency, listed in `package.json`). It has a hidden honeypot field and server-side validation.
+- Set these in the Vercel project (Settings, Environment Variables): `GMAIL_USER` (the Gmail address) and `GMAIL_APP_PASSWORD` (create one at myaccount.google.com/apppasswords; it needs 2-step verification on). Optionally `CONTACT_TO` to deliver to a different inbox. Messages arrive with the visitor as reply-to.
+- The function only runs on Vercel (or `vercel dev`); `python -m http.server` serves the page but the send will fail.
+
 ## Deploy
 Push this folder to a GitHub repo, then import the repo in Vercel.
 Framework preset: Other. No build command, no output directory.

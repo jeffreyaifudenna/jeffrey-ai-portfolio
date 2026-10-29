@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "description": "Portfolio site. The only dependency is for the contact form function in api/contact.js.",
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  }
+}
