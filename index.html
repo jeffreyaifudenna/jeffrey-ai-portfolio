@@ -414,7 +414,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
 
 <footer>
   <div class="wrap">
-    <span class="brand foot-brand" id="foot-brand" aria-hidden="true"><span class="brand-cairn"><span class="cairn"><span></span><span></span><span></span><span></span></span></span><span class="brand-name"><span class="brand-h1">JeffreyAiFudenna</span></span></span>
+    <span class="brand foot-brand" id="foot-brand" aria-hidden="true"><span class="brand-cairn"><span class="cairn"><span></span><span></span><span></span><span></span></span></span></span>
     <span class="foot-cmd"><a href="builds.html">builds</a> · <a href="https://github.com/jeffreyaifudenna" target="_blank" rel="noopener">github</a></span>
   </div>
 </footer>
@@ -496,13 +496,13 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
    the hero, and scrolling shrinks them up into the nav, the stones drifting apart mid-flight and restacking, the name
    becoming a miniature of itself in the same serif. The nav slot is empty until they arrive. The cairn leg is off on small
    screens (the hero cairn is hidden there); everything is off when the user prefers reduced motion.
-   Second leg, at every width: over the last stretch of the page the whole brand leaves the nav and settles onto its twin
+   Second leg, at every width: over the last stretch of the page the cairn alone leaves the nav (the name stays) and settles onto its twin
    in the footer. Landed, a click takes it, and the page, back to the top. */
 (function(){
   var fly=document.getElementById('brand-cairn'), hero=document.getElementById('hero-cairn'),
       name=document.getElementById('brand-h1'), nameBox=document.getElementById('brand-name'), h1=document.getElementById('hero-name'),
       brand=fly.parentElement, twin=document.getElementById('foot-brand'); if(!fly||!hero||!name||!h1) return;
-  var twinName=twin&&twin.querySelector('.brand-h1'), twinBox=twin&&twin.querySelector('.brand-name');
+  var twinFly=twin&&twin.querySelector('.brand-cairn');
   var stones=fly.querySelectorAll('.cairn span'), REST=.2, ease=function(t){return t*t*(3-2*t)}, clamp=function(v){return Math.min(1,Math.max(0,v))};
   var on=false, onN=false, land=false, start, S, startN, SN, R=1, rest, raf=0;
   function measure(){
@@ -514,22 +514,22 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
     h1.classList.toggle('ghost',onN);
     document.documentElement.classList.toggle('fly-name',onN);
     if(twin) twin.classList.toggle('mark',land);
-    brand.style.transform=''; fly.style.transform='scale('+REST+')';
+    fly.style.transform='scale('+REST+')';
     if(!on) stones.forEach(function(s){s.style.transform=''});
     if(onN){
       /* the mini is the name at the headline's font size, scaled so it is about 19px tall (15px on small screens); the slot takes the scaled size.
          The hero word is an inline box, so its 1em line box starts (box height - 1em) / 2 below the box top. */
       var hr=h1.getBoundingClientRect(), fs=parseFloat(getComputedStyle(h1).fontSize); R=(innerWidth<=520?15:19)/fs;
-      [name,twinName].forEach(function(n){ if(n){n.style.fontSize=fs+'px'; n.style.transform='scale('+R+')';} });
-      [nameBox,twinBox].forEach(function(b){ if(b){b.style.width=(hr.width*R)+'px'; b.style.height=(fs*R)+'px';} });
+      name.style.fontSize=fs+'px'; name.style.transform='scale('+R+')';
+      nameBox.style.width=(hr.width*R)+'px'; nameBox.style.height=(fs*R)+'px';
       var nr=name.getBoundingClientRect();
       startN={x:hr.left-nr.left, y:hr.top+(hr.height-fs)/2+scrollY-nr.top};
       SN=Math.max(80,startN.y);
     } else {
-      [name,twinName,nameBox,twinBox].forEach(function(n){ if(n) n.style.cssText=''; });
+      [name,nameBox].forEach(function(n){ n.style.cssText=''; });
     }
-    var h=hero.getBoundingClientRect(), f=fly.getBoundingClientRect(), b=brand.getBoundingClientRect();
-    rest={x:b.left, y:b.top};
+    var h=hero.getBoundingClientRect(), f=fly.getBoundingClientRect();
+    rest={x:f.left+f.width/2, y:f.top+f.height/2};
     start={x:h.left+h.width/2-(f.left+f.width/2), y:h.top+h.height/2+scrollY-(f.top+f.height/2)};
     S=Math.max(80,start.y);
     paint();
@@ -543,14 +543,14 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
     raf=0; if(!on&&!onN&&!land) return;
     var s=scrollY, p=on?ease(clamp(s/S)):1, q=1-p, g=4*p*q;
     /* landing leg: over the last D px of scroll, the brand slides from its nav spot onto the footer twin */
-    var p2=landP();
+    var p2=landP(), lx=0, ly=0;
     if(land){
-      var t=twin.getBoundingClientRect();
-      brand.style.transform=p2>0?'translate('+((t.left-rest.x)*p2)+'px,'+((t.top-rest.y)*p2)+'px)':'';
+      var t=twinFly.getBoundingClientRect();
+      lx=(t.left+t.width/2-rest.x)*p2; ly=(t.top+t.height/2-rest.y)*p2;
       g=Math.max(g,4*p2*(1-p2));
     }
     brand.classList.toggle('landed',p2>.9); brand.title=p2>.9?'Back to top':'';
-    if(on) fly.style.transform='translate('+(start.x*q)+'px,'+((start.y-s)*q)+'px) scale('+(1-(1-REST)*p)+')';
+    if(on||land) fly.style.transform='translate('+((on?start.x*q:0)+lx)+'px,'+((on?(start.y-s)*q:0)+ly)+'px) scale('+(on?1-(1-REST)*p:REST)+')';
     if(onN){
       var pn=ease(clamp(s/SN)), qn=1-pn;
       name.style.transform='translate('+(startN.x*qn)+'px,'+((startN.y-s)*qn)+'px) scale('+(1-(1-R)*pn)+')';
