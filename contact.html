@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <link rel="canonical" href="https://jeffrey-ai-portfolio.vercel.app/contact.html">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Contact</title>
+<title>Contact | JeffreyAiFudenna</title>
 <meta name="description" content="Get in touch with Jeffrey: a role, a project, or a question about the work.">
 <meta property="og:title" content="Contact JeffreyAiFudenna">
 <meta property="og:type" content="website">
@@ -25,7 +25,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font
 :root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 [hidden]{display:none!important}
 a{color:inherit}
-a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--focus,var(--accent));outline-offset:3px;border-radius:4px}
 .wrap{max-width:640px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .topbar{border-bottom:1px solid var(--line)}
 .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:16px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
@@ -38,7 +38,7 @@ h1{font-family:var(--display);font-weight:400;font-size:clamp(34px,6vw,56px);lin
 main{padding-block:8px 64px}
 form{display:flex;flex-direction:column;gap:20px}
 label{display:flex;flex-direction:column;gap:6px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-input,textarea{font:400 17px/1.5 var(--body);letter-spacing:0;text-transform:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;width:100%;box-sizing:border-box}
+input,textarea{font:400 17px/1.5 var(--body);letter-spacing:0;text-transform:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-color:color-mix(in srgb,var(--muted) 80%,var(--surface));border-radius:10px;padding:12px 14px;width:100%;box-sizing:border-box}
 textarea{min-height:160px;resize:vertical}
 input:focus,textarea:focus{border-color:var(--accent)}
 .trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
@@ -47,7 +47,7 @@ button.send:hover{transform:translateY(-2px)}
 button.send:disabled{opacity:.5;cursor:default;transform:none}
 .status{margin:0;font-size:15px}
 .status.err{color:var(--warn)}
-.done{padding:20px 22px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.done{padding:20px 22px;outline:none;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
 .done h2{font-family:var(--display);font-weight:400;font-size:26px;margin:0 0 6px}
 .done p{margin:0;color:var(--muted)}
 footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:14px}
@@ -72,10 +72,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <label>Email<input name="email" type="email" autocomplete="email" maxlength="200" required></label>
     <label>Message<textarea name="message" maxlength="5000" required></textarea></label>
     <label class="trap" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+    <input type="hidden" name="t" value="">
     <button class="send" type="submit">Send message</button>
     <p class="status" id="status" role="status" aria-live="polite"></p>
   </form>
-  <div class="done" id="done" hidden>
+  <div class="done" id="done" role="status" tabindex="-1" hidden>
     <h2>Message sent</h2>
     <p>Thanks. I'll get back to you soon.</p>
   </div>
@@ -85,9 +86,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <script>
 (function(){
-  var form=document.getElementById('form'), status=document.getElementById('status'), btn=form.querySelector('.send');
+  var form=document.getElementById('form'), status=document.getElementById('status'), btn=form.querySelector('.send'),
+      done=document.getElementById('done'), loaded=Date.now();
   form.addEventListener('submit',function(e){
     e.preventDefault();
+    form.elements.t.value=String(Date.now()-loaded);   /* time on page; the server ignores sends faster than a person can type */
     var d={}; new FormData(form).forEach(function(v,k){d[k]=v});
     if(!d.name.trim()||!d.message.trim()||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email.trim())){
       status.className='status err'; status.textContent='Please fill in your name, a valid email and a message.'; return;
@@ -95,8 +98,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     btn.disabled=true; status.className='status'; status.textContent='Sending…';
     fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
       .then(function(r){return r.json().catch(function(){return {}}).then(function(j){if(!r.ok)throw new Error(j.error||'Something went wrong.');})})
-      .then(function(){form.hidden=true; document.getElementById('done').hidden=false;})
-      .catch(function(err){btn.disabled=false; status.className='status err'; status.textContent=err.message;});
+      .then(function(){form.hidden=true; done.hidden=false; done.focus();})
+      .catch(function(err){
+        btn.disabled=false; status.className='status err';
+        status.textContent=err instanceof TypeError ? 'Could not reach the server. Check your connection and try again.' : err.message;
+      });
   });
 })();
 </script>
