@@ -26,7 +26,7 @@
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
 .wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 a{color:inherit}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+a:focus-visible{outline:2px solid var(--focus,var(--accent));outline-offset:3px;border-radius:4px}
 .top{border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px}
 .top a{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-decoration:none}
@@ -72,8 +72,8 @@ footer p{margin:0 0 6px}
   <p class="lede">A short digest of what happened in AI. An AI task I scheduled finds the stories, checks every link and writes the summaries. Each story links to the original source.</p>
 </header>
 
-<main class="wrap" id="days" aria-live="polite">
-  <p class="empty" id="status">Loading stories&hellip;</p>
+<main class="wrap" id="days">
+  <p class="empty" id="status" role="status" aria-live="polite">Loading stories&hellip;</p>
 </main>
 <noscript><div class="wrap">This page needs JavaScript to show the stories.</div></noscript>
 
@@ -104,7 +104,7 @@ footer p{margin:0 0 6px}
 (function(){
   var MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   function fmt(iso,long){
-    var p=String(iso||'').split('-'); if(p.length!==3) return '';
+    var p=String(iso||'').slice(0,10).split('-'); if(p.length!==3) return '';   /* accepts YYYY-MM-DD or a full timestamp */
     var d=new Date(+p[0],+p[1]-1,+p[2]);
     return long
       ? d.toLocaleDateString(undefined,{weekday:'long',year:'numeric',month:'long',day:'numeric'})
@@ -114,8 +114,9 @@ footer p{margin:0 0 6px}
   function safeUrl(u){return /^https:\/\//i.test(u||'')?u:null}
   var root=document.getElementById('days'), status=document.getElementById('status');
   fetch('news/stories.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(data){
-    var days=(data&&data.days)||[]; root.textContent='';
-    if(!days.length){root.appendChild(el('p','empty','No stories yet. Check back tomorrow morning.'));return}
+    var days=(data&&data.days)||[];
+    if(!days.length){status.textContent='No stories yet. Check back tomorrow morning.';return}
+    status.textContent=''; status.hidden=true;
     days.forEach(function(day){
       var sec=el('section','day'); sec.appendChild(el('h2',null,fmt(day.date,true)));
       (day.stories||[]).forEach(function(s){
@@ -133,7 +134,7 @@ footer p{margin:0 0 6px}
       });
       root.appendChild(sec);
     });
-  }).catch(function(){status.textContent='Could not load the stories right now. Try again in a minute.'});
+  }).catch(function(){status.hidden=false; status.textContent='Could not load the stories right now. Try again in a minute.'});
 })();
 </script>
 </body>
