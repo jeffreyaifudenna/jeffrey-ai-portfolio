@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Governor Hochul Signs Nation-Leading Legislation to Protect Kids from AI Chatbots</title>
+      <link>https://www.governor.ny.gov/news/governor-hochul-signs-nation-leading-legislation-protect-kids-ai-chatbots-and-ensure-baby</link>
+      <guid isPermaLink="false">2026-10-29:Governor Hochul Signs Nation-Leading Legislation to Protect Kids from AI Chatbots</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>New York&#x27;s governor signed a law requiring chatbot companies to block certain features for users under 18 and for anyone not confirmed as an adult, such as bots posing as human, claiming romantic ties, or promoting self-harm. Age checks must offer more than one method, and the attorney general can seek civil penalties of up to $25,000 per violation.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If you ship a consumer chatbot, age assurance and behavior limits are now a legal requirement in a large state, not a design choice. Expect other states to copy this template. &#8212; Governor of New York</description>
+    </item>
+    <item>
+      <title>Microsoft recorded $10 billion in revenue from OpenAI last quarter [Reported]</title>
+      <link>https://techcrunch.com/2026/10/28/microsoft-recorded-10-billion-in-revenue-from-openai/</link>
+      <guid isPermaLink="false">2026-10-29:Microsoft recorded $10 billion in revenue from OpenAI last quarter</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>TechCrunch reports that Microsoft&#x27;s quarterly filing shows $10 billion in revenue from its commercial arrangements with OpenAI, close to 11 percent of Microsoft&#x27;s total for the quarter. Amounts OpenAI owed Microsoft rose to $7.2 billion, and Microsoft&#x27;s stake in OpenAI slipped to 24 percent. The filing does not separate revenue sharing from Azure usage.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; The two companies compete for enterprise customers yet remain deeply tied financially. That dependence shapes pricing, model access, and how long the partnership holds. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>NVIDIA Nemotron 3.5 Transcribe and Granary v2: open speech model and dataset</title>
+      <link>https://huggingface.co/blog/nvidia/nemotron-transcribe-granary</link>
+      <guid isPermaLink="false">2026-10-29:NVIDIA Nemotron 3.5 Transcribe and Granary v2: open speech model and dataset</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>NVIDIA released an open-weight speech model that transcribes 40 languages, translates to and from English in 31, labels up to 8 speakers, and answers questions about audio up to an hour long. It serves with vLLM or SGLang-Omni on a single GPU. The companion Granary v2 dataset adds about 463,000 hours of speech across 48 languages.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A single open checkpoint covering transcription, translation, and speaker labeling lowers the cost of building voice features without a paid API. Note it handles recorded audio only, not live streams. &#8212; Hugging Face blog (NVIDIA)</description>
+    </item>
+    <item>
+      <title>Octoverse: Commits, pushes reach new highs in 2026 as developers build with agents</title>
+      <link>https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/</link>
+      <guid isPermaLink="false">2026-10-29:Octoverse: Commits, pushes reach new highs in 2026 as developers build with agents</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>GitHub&#x27;s annual Octoverse report counts 17.9 billion pushes and 1.3 billion merged pull requests in the year to September 30. Agents opened more than 40 percent of pull requests in September, up from 17 percent in March. Paying Copilot users spread their requests across 47 different models, with no single model above 25 percent.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Agent-written code is now a large share of real work on the biggest code host, so review practices and CI need to assume it. The model mix shows developers are not locking into one vendor. &#8212; GitHub</description>
+    </item>
+    <item>
+      <title>As AI agents reshape the web, Google opens Gemini and Search to more apps [Reported]</title>
+      <link>https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/</link>
+      <guid isPermaLink="false">2026-10-29:As AI agents reshape the web, Google opens Gemini and Search to more apps</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>TechCrunch reports Google announced a Connected Apps Platform that lets businesses plug their apps into Gemini and Search so users can take actions inside them. Developers integrate through a cloud-hosted MCP server or Android app functions and manage the connection in a new Google Connected Console. It is a US public preview behind a waitlist.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Being reachable inside Gemini and Search may matter for app discovery the way search ranking once did. The MCP route means an existing server can be a starting point. &#8212; TechCrunch</description>
+    </item>
     <item>
       <title>Early progress on accelerating drug development with Claude</title>
       <link>https://www.anthropic.com/research/early-progress-drug-development</link>
