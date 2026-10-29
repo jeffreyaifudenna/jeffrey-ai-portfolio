@@ -10,7 +10,7 @@ My AI projects, written up. Plain HTML, no build step.
 ## Themes
 - The round button in the nav toggles light and dark. The "themes" link in each footer opens the full picker: Auto, the fun themes (Sunset, Terminal, Synthwave, Blueprint, Game Boy, Bubblegum, Ocean, Sepia), High contrast and the holiday switch. The choice is kept in `localStorage`.
 - Holiday themes tint the accent and drop a few emoji, on the actual day only, and only over Auto, Light and Dark. Edit the `HOLIDAYS` list in `theme.js`; Diwali (`DIWALI`) and Lunar New Year (`LUNAR`) are year tables that need a new year added now and then.
-- The tab icon is redrawn in the current theme's colors. The small gamepad icon in each footer opens an on-screen NES-style controller; entering the Konami code on it (↑ ↑ ↓ ↓ ← → ← → B A, by tapping or with the keyboard) unlocks a hidden Arcade theme, which then appears in the picker.
+- The tab icon is redrawn in the current theme's colors. The small gamepad icon in each footer opens an on-screen NES-style controller; entering the Konami code on it (↑ ↑ ↓ ↓ ← → ← → B A, by tapping or with the keyboard) unlocks a hidden Space dungeon theme (a mix of a space explorer and a dungeon crawler), which then appears in the picker.
 - Preview without waiting for the date: `?holiday=halloween` or `?theme=terminal` (neither is saved).
 
 ## Deploy

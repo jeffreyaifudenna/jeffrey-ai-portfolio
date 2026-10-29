@@ -73,11 +73,12 @@
   --warn:#ff9a6b; --live:#5cff8a; color-scheme:dark}
 
 /* hidden: unlocked with the Konami code */
+/* Space dungeon: deep indigo and parchment, gold trim, stars overhead (id stays "arcade") */
 :root[data-theme="arcade"],.sw[data-t="arcade"]{
-  --bg:#05050f; --surface:#0d0d26; --ink:#ffffff; --muted:#b8b8ff; --line:#2a2aa8;
-  --stone1:#2a8fb8; --stone2:#2121de; --stone3:#d070d0; --accent:#ffe600; --accent-ink:#ffe600;
-  --print:#ffffff; --print-edge:#2a2aa8; --note:#ffe600; --note-ink:#000000;
-  --warn:#ffb852; --live:#39ff14;
+  --bg:#120d1f; --surface:#1d1530; --ink:#f4e8d0; --muted:#c9b8e8; --line:#5a4478;
+  --stone1:#6b5aa8; --stone2:#7a4b24; --stone3:#b08a4a; --accent:#f0b429; --accent-ink:#f6c85f;
+  --print:#f4e8d0; --print-edge:#5a4478; --note:#f0b429; --note-ink:#1c1410;
+  --warn:#ffab8a; --live:#6fe3b2;
   --display:"Pixelify Sans","JetBrains Mono",ui-monospace,monospace; color-scheme:dark}
 
 /* ---- theme extras ---- */
@@ -92,9 +93,9 @@
   background-size:24px 24px;background-attachment:fixed}
 :root[data-theme="gameboy"] :is(.btn,.link,.card,.visual,.card-visual,.tags li,.chip,.prompt,.print){border-radius:2px}
 :root[data-theme="gameboy"] h1,:root[data-theme="gameboy"] h2{letter-spacing:.01em}
-:root[data-theme="arcade"] body{background-image:radial-gradient(circle,rgba(255,230,0,.16) 1.5px,transparent 2px);background-size:28px 28px;background-attachment:fixed}
+:root[data-theme="arcade"] body{background-image:radial-gradient(circle,rgba(244,232,208,.34) 1px,transparent 1.6px),radial-gradient(circle,rgba(244,232,208,.2) 1px,transparent 1.5px);background-size:97px 97px,61px 61px;background-position:0 0,31px 17px;background-attachment:fixed}
 :root[data-theme="arcade"] h1 em{text-shadow:0 0 14px color-mix(in srgb,var(--accent) 60%,transparent)}
-:root[data-theme="arcade"] :is(.card,.visual,.card-visual,.prompt,.print){border-color:#2a2aa8}
+:root[data-theme="arcade"] :is(.card,.visual,.card-visual,.prompt,.print){border-color:var(--line)}
 :root[data-theme="arcade"] :is(.btn,.link,.card,.visual,.card-visual,.tags li,.chip,.prompt,.print){border-radius:2px}
 /* wide fonts: keep the long name on one line without overflowing small screens */
 :root:is([data-theme="arcade"],[data-theme="gameboy"],[data-theme="blueprint"],[data-theme="terminal"]) h1{font-size:clamp(24px,6.2vw,64px);overflow-wrap:anywhere}
@@ -194,10 +195,10 @@
 @keyframes coin-spin{0%{transform:scaleX(1)}50%{transform:scaleX(.12)}100%{transform:scaleX(1)}}
 .lvl{position:fixed;left:50%;top:38%;z-index:75;transform:translate(-50%,-50%);pointer-events:none;text-align:center;white-space:nowrap;
   font-family:"Pixelify Sans","JetBrains Mono",ui-monospace,monospace;animation:lvl 3.1s linear forwards;
-  padding:.3em .7em .45em;background:rgba(5,5,15,.88);box-shadow:0 0 0 3px #2a2aa8,0 0 0 6px #05050f,0 20px 50px -10px rgba(0,0,0,.7)}
-.lvl b{display:block;font-size:clamp(40px,13vw,96px);line-height:1;font-weight:700;color:#ffe600;letter-spacing:.04em;
-  text-shadow:.06em .06em 0 #2a2aa8,-.03em 0 0 #2a2aa8,.03em -.03em 0 #2a2aa8}
-.lvl span{display:block;margin-top:.7em;font-size:clamp(12px,3.4vw,20px);letter-spacing:.3em;color:#fff;text-shadow:2px 2px 0 #2a2aa8}
+  padding:.3em .7em .45em;background:rgba(18,13,31,.92);box-shadow:0 0 0 3px #7a4b24,0 0 0 6px #120d1f,0 20px 50px -10px rgba(0,0,0,.7)}
+.lvl b{display:block;font-size:clamp(26px,8.6vw,72px);line-height:1;font-weight:700;color:#f0b429;letter-spacing:.04em;
+  text-shadow:.06em .06em 0 #5a4478,-.03em 0 0 #5a4478,.03em -.03em 0 #5a4478}
+.lvl span{display:block;margin-top:.7em;font-size:clamp(11px,3vw,18px);letter-spacing:.3em;color:#f4e8d0;text-shadow:2px 2px 0 #5a4478}
 @keyframes lvl{0%{opacity:0;transform:translate(-50%,-50%) scale(.2)}12%{opacity:1;transform:translate(-50%,-50%) scale(1.15)}20%{transform:translate(-50%,-50%) scale(1)}
   30%,50%,70%{opacity:1}40%,60%{opacity:.25}85%{opacity:1;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-62%) scale(1)}}
 @media (prefers-reduced-motion:reduce){.lvl{animation:none}.hfx .spin svg{animation:none}}
