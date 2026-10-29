@@ -78,7 +78,7 @@
 :root[data-theme="terminal"] h1,:root[data-theme="terminal"] h2{text-shadow:0 0 12px color-mix(in srgb,var(--ink) 45%,transparent)}
 :root[data-theme="terminal"] h1 em{text-shadow:0 0 12px color-mix(in srgb,var(--accent) 55%,transparent)}
 :root[data-theme="synthwave"] h1 em{text-shadow:0 0 18px color-mix(in srgb,var(--accent) 70%,transparent)}
-:root[data-theme="synthwave"] header{background:linear-gradient(to bottom,transparent 55%,color-mix(in srgb,var(--accent) 16%,transparent))}
+:root[data-theme="synthwave"] header{background:linear-gradient(to bottom,transparent 35%,color-mix(in srgb,var(--accent) 14%,transparent) 85%,transparent)}
 :root[data-theme="blueprint"] body{background-image:
   linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);
   background-size:24px 24px;background-attachment:fixed}
@@ -98,6 +98,7 @@
 :root[data-holiday="easter"]{--hl:#7e57c2;--hl-ink:#5a3a9a;--hl-d:#b39ddb;--hl-ink-d:#d1c4e9;--hl2:#f6b8d0}
 :root[data-holiday="earth"]{--hl:#1f8a5b;--hl-ink:#14684a;--hl-d:#4ad8a0;--hl-ink-d:#8ff0c8;--hl2:#2b7de9}
 :root[data-holiday="maythe4"]{--hl:#2563eb;--hl-ink:#1d4ed8;--hl-d:#60a5fa;--hl-ink-d:#93c5fd;--hl2:#f5c542}
+:root[data-holiday="pride"]{--hl:#b01fa0;--hl-ink:#8a1280;--hl-d:#e879d8;--hl-ink-d:#f3a8e8;--hl2:#ff8c00}
 :root[data-holiday="july4"]{--hl:#c8102e;--hl-ink:#9a0b22;--hl-d:#ff5d73;--hl-ink-d:#ff9aa8;--hl2:#1f4fbf}
 :root[data-holiday="halloween"]{--hl:#d9630b;--hl-ink:#8a3a00;--hl-d:#ff8a1f;--hl-ink-d:#ffb35c;--hl2:#7c3aed}
 :root[data-holiday="diwali"]{--hl:#b36d00;--hl-ink:#8a4f00;--hl-d:#ffb020;--hl-ink-d:#ffd27a;--hl2:#d6336c}
@@ -106,6 +107,9 @@
 :root[data-holiday="christmas"]{--hl:#c0392b;--hl-ink:#8f2318;--hl-d:#ff6b5b;--hl-ink-d:#ff9d92;--hl2:#1f8a43}
 :root[data-holiday] body::before{content:"";position:fixed;inset:0 0 auto 0;height:3px;z-index:50;pointer-events:none;
   background:linear-gradient(90deg,var(--hl),var(--hl2),var(--hl))}
+
+:root[data-holiday="pride"] body::before{background:linear-gradient(90deg,#e40303,#ff8c00,#ffed00,#008026,#004dff,#750787)}
+:root[data-holiday="pride"] h1 em{background:linear-gradient(90deg,#e40303,#ff8c00,#d9b800,#008026,#004dff,#750787);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* falling / rising holiday emoji */
 .hfx{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:5}

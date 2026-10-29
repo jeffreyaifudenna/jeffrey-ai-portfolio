@@ -16,50 +16,46 @@
   function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
   function put(k, v) { try { if (v == null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) {} }
 
-  /* ---- holidays ---- */
+  /* ---- holidays: each one shows on its actual day only (local date) ---- */
   function md(t) { return (t.getMonth() + 1) * 100 + t.getDate(); }
-  function span(a, b) { return function (t) { var x = md(t); return a <= b ? x >= a && x <= b : x >= a || x <= b; }; }
-  function day(t, y, m, dd) { return new Date(y, m, dd).setHours(0, 0, 0, 0) - new Date(t.getFullYear(), t.getMonth(), t.getDate()).getTime(); }
+  function on(m, dd) { return function (t) { return md(t) === m * 100 + dd; }; }
+  function table(tbl) { return function (t) { var v = tbl[t.getFullYear()]; return !!v && t.getMonth() === v[0] && t.getDate() === v[1]; }; }
   function easter(y) {
     var a = y % 19, b = Math.floor(y / 100), c = y % 100, dd = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25),
         g = Math.floor((b - f + 1) / 3), h = (19 * a + b - dd - g + 15) % 30, i = Math.floor(c / 4), k = c % 4,
         l = (32 + 2 * e + 2 * i - h - k) % 7, m = Math.floor((a + 11 * h + 22 * l) / 451), n = h + l - 7 * m + 114;
     return [Math.floor(n / 31) - 1, (n % 31) + 1];
   }
-  /* Intl knows the Hebrew and Chinese calendars, so those dates stay right every year */
-  function cal(t, ca, opts) {
-    try { return new Intl.DateTimeFormat('en-u-ca-' + ca + '-nu-latn', opts).formatToParts(t); } catch (e) { return []; }
-  }
-  function part(ps, type) { for (var i = 0; i < ps.length; i++) if (ps[i].type === type) return ps[i].value; return ''; }
-  function lunar(t) {
-    function on(x) { var p = cal(x, 'chinese', { month: 'numeric', day: 'numeric' }); return [part(p, 'month'), parseInt(part(p, 'day'), 10)]; }
-    var n = on(t), nx = on(new Date(t.getFullYear(), t.getMonth(), t.getDate() + 1));
-    return (n[0] === '1' && n[1] <= 5) || (nx[0] === '1' && nx[1] === 1);
-  }
+  /* the Hebrew calendar is exact arithmetic, so Intl gives Hanukkah's first day (25 Kislev) correctly every year */
   function hanukkah(t) {
-    var p = cal(t, 'hebrew', { month: 'long', day: 'numeric' }), m = part(p, 'month'), n = parseInt(part(p, 'day'), 10);
-    return (m === 'Kislev' && n >= 24) || (m === 'Tevet' && n <= 2);
+    try {
+      var ps = new Intl.DateTimeFormat('en-u-ca-hebrew-nu-latn', { month: 'long', day: 'numeric', timeZone: 'UTC' })
+        .formatToParts(new Date(Date.UTC(t.getFullYear(), t.getMonth(), t.getDate(), 12))), m = '', n = 0;
+      ps.forEach(function (p) { if (p.type === 'month') m = p.value; if (p.type === 'day') n = parseInt(p.value, 10); });
+      return m === 'Kislev' && n === 25;
+    } catch (e) { return false; }
   }
-  var DIWALI = { 2026: [10, 8], 2027: [9, 29], 2028: [9, 17] };   /* [month index, day]; extend as dates are published */
+  /* [month index, day]. Intl's Chinese calendar can be a day off near midnight, so these are tables; add a year now and then. */
+  var DIWALI = { 2026: [10, 8], 2027: [9, 29], 2028: [9, 17] };
+  var LUNAR = { 2027: [1, 6], 2028: [0, 26], 2029: [1, 13], 2030: [1, 3] };
   var HOLIDAYS = [
-    { id: 'christmas', name: 'Merry Christmas', fx: ['❄️', '🎄', '⭐'], is: span(1218, 1226) },
-    { id: 'diwali', name: 'Happy Diwali', fx: ['🪔', '✨'], rise: 1, is: function (t) {
-        var v = DIWALI[t.getFullYear()]; if (!v) return false; var x = day(t, t.getFullYear(), v[0], v[1]) / 864e5; return x >= -2 && x <= 2; } },
-    { id: 'halloween', name: 'Happy Halloween', fx: ['🎃', '🦇', '👻'], is: span(1024, 1031) },
+    { id: 'christmas', name: 'Merry Christmas', fx: ['❄️', '🎄', '⭐'], is: on(12, 25) },
+    { id: 'diwali', name: 'Happy Diwali', fx: ['🪔', '✨'], rise: 1, is: table(DIWALI) },
+    { id: 'halloween', name: 'Happy Halloween', fx: ['🎃', '🦇', '👻'], is: on(10, 31) },
     { id: 'thanksgiving', name: 'Happy Thanksgiving', fx: ['🍂', '🍁', '🦃'], is: function (t) {
-        var first = new Date(t.getFullYear(), 10, 1), th = 1 + ((4 - first.getDay() + 7) % 7) + 21, x = day(t, t.getFullYear(), 10, th) / 864e5;
-        return x >= -1 && x <= 3; } },
+        var first = new Date(t.getFullYear(), 10, 1).getDay(); return t.getMonth() === 10 && t.getDate() === 1 + ((4 - first + 7) % 7) + 21; } },
     { id: 'hanukkah', name: 'Happy Hanukkah', fx: ['🕎', '✨'], is: hanukkah },
-    { id: 'newyear', name: 'Happy New Year', fx: ['🎉', '✨', '🥂'], is: span(1231, 102) },
-    { id: 'lunar', name: 'Happy Lunar New Year', fx: ['🧧', '🏮'], is: lunar },
-    { id: 'valentine', name: 'Happy Valentine’s Day', fx: ['💕', '❤️'], rise: 1, is: span(212, 214) },
-    { id: 'pi', name: 'Happy Pi Day', fx: ['π', '🥧'], is: span(314, 314) },
-    { id: 'stpatrick', name: 'Happy St. Patrick’s Day', fx: ['🍀'], is: span(315, 317) },
+    { id: 'newyear', name: 'Happy New Year', fx: ['🎉', '✨', '🥂'], is: on(1, 1) },
+    { id: 'lunar', name: 'Happy Lunar New Year', fx: ['🧧', '🏮'], is: table(LUNAR) },
+    { id: 'valentine', name: 'Happy Valentine’s Day', fx: ['💕', '❤️'], rise: 1, is: on(2, 14) },
+    { id: 'pi', name: 'Happy Pi Day', fx: ['π', '🥧'], is: on(3, 14) },
+    { id: 'stpatrick', name: 'Happy St. Patrick’s Day', fx: ['🍀'], is: on(3, 17) },
     { id: 'easter', name: 'Happy Easter', fx: ['🐣', '🌷', '🥚'], is: function (t) {
-        var e = easter(t.getFullYear()), x = day(t, t.getFullYear(), e[0], e[1]) / 864e5; return x >= -1 && x <= 2; } },
-    { id: 'earth', name: 'Happy Earth Day', fx: ['🌍', '🌱'], is: span(422, 422) },
-    { id: 'maythe4', name: 'May the Fourth be with you', fx: ['⭐', '✨'], is: span(504, 504) },
-    { id: 'july4', name: 'Happy Fourth of July', fx: ['🎆', '✨'], rise: 1, is: span(702, 704) }
+        var e = easter(t.getFullYear()); return t.getMonth() === e[0] && t.getDate() === e[1]; } },
+    { id: 'earth', name: 'Happy Earth Day', fx: ['🌍', '🌱'], is: on(4, 22) },
+    { id: 'maythe4', name: 'May the Fourth be with you', fx: ['⭐', '✨'], is: on(5, 4) },
+    { id: 'pride', name: 'Happy Pride', fx: ['🌈', '💖', '✨'], is: on(6, 28) },
+    { id: 'july4', name: 'Happy Fourth of July', fx: ['🎆', '✨'], rise: 1, is: on(7, 4) }
   ];
   var HBY = {}; HOLIDAYS.forEach(function (h) { HBY[h.id] = h; });
 
@@ -74,7 +70,7 @@
   /* ---- state ---- */
   var saved = get(KEY), preview = q.get('theme');
   var theme = BY[preview] ? preview : (BY[saved] ? saved : 'auto');
-  var holidayOn = get(HKEY) !== 'off';
+  var holidayOn = get(HKEY) !== 'off' || !!HBY[q.get('holiday')];   /* a ?holiday= preview shows even if opted out */
   var holiday = today();
   var mq = window.matchMedia ? matchMedia('(prefers-color-scheme: dark)') : { matches: false };
   var fxEl, panel, btn, hbox, hnote, tog;
@@ -114,6 +110,13 @@
     var meta = document.querySelector('meta[name="theme-color"]');
     if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
     var bg = getComputedStyle(d).getPropertyValue('--bg').trim(); if (bg) meta.content = bg;
+    var icon = document.querySelector('link[rel~="icon"]');
+    if (icon) {   /* the tab icon is the cairn in the current theme's stones and accent */
+      var cs = getComputedStyle(d), c = function (n) { return cs.getPropertyValue(n).trim(); };
+      if (c('--stone2') && c('--accent')) icon.href = 'data:image/svg+xml,' + encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><ellipse cx='32' cy='54' rx='24' ry='8' fill='" +
+        c('--stone2') + "'/><ellipse cx='30' cy='40' rx='17' ry='7' fill='" + c('--stone1') + "'/><ellipse cx='33' cy='28' rx='11' ry='6' fill='" + c('--stone3') +
+        "'/><ellipse cx='32' cy='17' rx='7' ry='5' fill='" + c('--accent') + "'/></svg>");
+    }
     if (tog) {
       var dark = d.getAttribute('data-mode') === 'dark', msg = dark ? 'Switch to light mode' : 'Switch to dark mode';
       tog.innerHTML = dark ? SUN : MOON; tog.setAttribute('aria-label', msg); tog.title = msg;
