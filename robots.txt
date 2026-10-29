@@ -1,0 +1,3 @@
+# Everyone is welcome, people and agents alike. A plain-text map of the site is at /llms.txt
+User-agent: *
+Allow: /

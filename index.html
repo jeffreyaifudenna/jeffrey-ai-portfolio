@@ -20,6 +20,15 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Gloock&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="theme.css">
 <script src="theme.js"></script>
+<link rel="alternate" type="text/plain" href="llms.txt" title="llms.txt">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"JeffreyAiFudenna Portfolio","url":"https://jeffrey-ai-portfolio.vercel.app/",
+ "description":"Jeffrey's AI projects, each one finished and written up.",
+ "author":{"@type":"Person","name":"Jeffrey Fudenna","alternateName":"JeffreyAiFudenna","url":"https://jeffrey-ai-portfolio.vercel.app/","sameAs":["https://github.com/jeffreyaifudenna"]},
+ "hasPart":[{"@type":"WebSite","name":"The Infinite Buddha","url":"https://www.theinfinitebuddha.xyz"},
+            {"@type":"WebSite","name":"Fremont by the Numbers","url":"https://fremontcabythenumbers.com"},
+            {"@type":"Blog","name":"Daily AI News","url":"https://jeffrey-ai-portfolio.vercel.app/news.html"}]}
+</script>
 <style>
 /* Layout: a single column "trail" — featured projects stacked like stones in a cairn, each a wide row with a visual and its story,
    then a compact grid of cards for everything else. */
@@ -28,7 +37,7 @@
   --body:"Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
 }
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
 .wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
@@ -266,12 +275,12 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
 <main class="wrap" id="projects">
   <!-- Each project has data-kind="website|image|video|writing|automation" and data-date="YYYY-MM". The count and "Updated" date are computed from those. -->
   <div class="toolbar">
-    <div class="count"><span id="count">7 projects</span></div>
+    <div class="count"><span id="count">7 projects</span><span>2 run on their own</span></div>
   </div>
 
   <ol class="projects">
 
-    <li class="proj" data-kind="website" data-date="2026-10">
+    <li class="proj" id="buddha" data-kind="website" data-date="2026-10">
       <div class="visual"><img src="media/buddha.webp" width="960" height="960" alt="A piece from The Infinite Buddha: a terracotta Buddha meditating in a wooden garden shrine, with ferns, vines and soft light"></div>
       <div class="info">
         <div class="meta"><span class="kind">Website · generative art</span><span class="when">Oct 2026</span><span class="pill live" title="Live"><span>Live</span></span></div>
@@ -287,7 +296,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
       </div>
     </li>
 
-    <li class="proj" data-kind="website" data-date="2026-10">
+    <li class="proj" id="fremont" data-kind="website" data-date="2026-10">
       <div class="visual wide"><img src="media/fremont.webp" width="1200" height="630" alt="Fremont by the Numbers title card: a data aggregator collecting public data on housing, schools, safety, jobs and more, every figure linked to its source"></div>
       <div class="info">
         <div class="meta"><span class="kind">Data aggregator</span><span class="when">Oct 2026</span><span class="pill live" title="Live"><span>Live</span></span></div>
@@ -298,7 +307,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
       </div>
     </li>
 
-    <li class="proj solo" data-kind="video" data-date="2026-09">
+    <li class="proj solo" id="reel" data-kind="video" data-date="2026-09">
       <div class="info">
         <div class="meta"><span class="kind">Video editing</span><span class="when">2026</span></div>
         <h2>Cool Moves Reel</h2>
@@ -315,7 +324,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
       </div>
     </li>
 
-    <li class="proj" data-kind="image" data-date="2026-08">
+    <li class="proj" id="remix" data-kind="image" data-date="2026-08">
       <figure class="print"><img src="media/camp-real.webp" width="960" height="720" alt="The original, unedited photo: three stone stacks on granite boulders with a rock spiral in front, at an alpine campsite"><span class="note">Real picture</span></figure>
       <div class="info">
         <div class="meta"><span class="kind">Image generation</span><span class="when">2026</span></div>
@@ -334,7 +343,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
       </div>
     </li>
 
-    <li class="proj" data-kind="writing" data-date="2026-10">
+    <li class="proj" id="story" data-kind="writing" data-date="2026-10">
       <div class="visual"><svg viewBox="0 0 400 300" aria-label="Placeholder illustration of story pages" role="img">
             <rect width="400" height="300" fill="var(--surface)"/>
             <rect x="150" y="60" width="150" height="190" rx="4" fill="var(--bg)" stroke="var(--line)" stroke-width="2" transform="rotate(6 225 155)"/>
@@ -369,7 +378,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
     <ul class="cards">
 
 
-      <li class="card" data-kind="website" data-date="2026-10">
+      <li class="card" id="family" data-kind="website" data-date="2026-10">
         <div class="card-visual">
           <svg viewBox="0 0 400 300" aria-label="Placeholder family tree illustration" role="img">
             <rect width="400" height="300" fill="var(--surface)"/>
@@ -393,7 +402,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
         </div>
       </li>
 
-      <li class="card" data-kind="video" data-date="2026-10">
+      <li class="card" id="shot" data-kind="video" data-date="2026-10">
         <div class="card-visual">
           <svg viewBox="0 0 400 300" aria-label="Placeholder illustration of a camera shot" role="img">
             <rect width="400" height="300" fill="var(--surface)"/>
