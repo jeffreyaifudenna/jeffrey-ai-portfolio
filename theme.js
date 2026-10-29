@@ -154,7 +154,7 @@
       };
       var base = THEMES.filter(function (t) { return t.base; }), fun = THEMES.filter(function (t) { return !t.base && t.id !== 'contrast'; });   /* includes Quest; its tile stays hidden until unlocked */
       wrap.innerHTML =
-        '<button type="button" class="ts-link" aria-expanded="false" aria-haspopup="true">themes</button>' +
+        '<button type="button" class="ts-link" aria-expanded="false">themes</button>' +
         '<div class="ts-panel" role="group" aria-label="Themes" hidden>' +
           '<p class="ts-h">Mode</p><div class="ts-grid">' + base.map(opt).join('') + '</div>' +
           '<p class="ts-h">Fun themes</p><div class="ts-grid">' + fun.map(opt).join('') + '</div>' +
@@ -269,6 +269,17 @@
   var PAD_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="7" width="19" height="10" rx="2.5"/><path d="M7 9.5v5M4.5 12h5" stroke-linecap="round"/><circle cx="15.5" cy="13.5" r="1.1" fill="currentColor"/><circle cx="18.5" cy="12" r="1.1" fill="currentColor"/></svg>';
   var padEl, padOpener, padPos = 0;
 
+  /* keep Tab inside an open dialog; shared with the page's own dialogs as window.jfTrapTab */
+  function trapTab(box, e) {
+    if (e.key !== 'Tab') return;
+    var f = [].filter.call(box.querySelectorAll('button,a[href],input,select,textarea,video[controls],[tabindex]:not([tabindex="-1"])'),
+      function (x) { return !x.disabled && !x.hidden && x.getClientRects().length; });
+    if (!f.length) return;
+    var i = f.indexOf(document.activeElement);
+    e.preventDefault(); f[(i < 0 ? 0 : i + (e.shiftKey ? f.length - 1 : 1)) % f.length].focus();
+  }
+  window.jfTrapTab = trapTab;
+
   function padHTML() {
     var b = function (cls, k, label) { return '<button type="button" class="' + cls + '" data-k="' + k + '" aria-label="' + label + '"></button>'; };
     var dots = ''; for (var i = 0; i < CODE.length; i++) dots += '<i></i>';
@@ -323,10 +334,7 @@
         var map = { ArrowUp: 'up', ArrowDown: 'down', ArrowLeft: 'left', ArrowRight: 'right', b: 'b', a: 'a', B: 'b', A: 'a' };
         if (e.key === 'Escape') { e.preventDefault(); return padClose(); }
         if (map[e.key] && !e.metaKey && !e.ctrlKey && !e.altKey) { e.preventDefault(); return padPress(map[e.key]); }
-        if (e.key === 'Tab') {   /* keep focus inside the dialog */
-          var f = [].filter.call(padEl.querySelectorAll('button'), function (x) { return !x.hidden; }), i = f.indexOf(document.activeElement);
-          e.preventDefault(); f[(i + (e.shiftKey ? f.length - 1 : 1)) % f.length].focus();
-        }
+        trapTab(padEl, e);
       });
     }
     padSet(0); padEl.hidden = false; document.documentElement.style.overflow = 'hidden';
@@ -334,6 +342,7 @@
   }
 
   apply(false);
-  if (mq.addEventListener) mq.addEventListener('change', function () { if (theme === 'auto') apply(false); });
+  var onScheme = function () { if (theme === 'auto') apply(false); };
+  if (mq.addEventListener) mq.addEventListener('change', onScheme); else if (mq.addListener) mq.addListener(onScheme);   /* Safari < 14 */
   document.addEventListener('DOMContentLoaded', function () { build(); apply(false); });
 })();

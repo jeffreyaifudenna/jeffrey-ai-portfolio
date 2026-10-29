@@ -17,8 +17,9 @@ I'm looking for my next role. This site is the work: websites that publish thems
 ## Behind the work
 
 - [Builds](https://jeffrey-ai-portfolio.vercel.app/builds.html): Tools, builds, the prompts that run things, and how the work gets done.
+- [Contact](https://jeffrey-ai-portfolio.vercel.app/contact.html): A short form for roles, project ideas or questions. Replies come by email.
 - [GitHub](https://github.com/jeffreyaifudenna)
 
 ## About this site
 
-Four HTML pages, one shared theme stylesheet, no framework. Written in Claude Code. Twelve color themes plus holiday accents computed from the Gregorian, Hebrew and Chinese calendars. Structured data in JSON-LD. This file exists so agents can read the site as easily as people do.
+Five HTML pages, one shared theme stylesheet, no framework. Written in Claude Code. Twelve color themes plus holiday accents computed from the Gregorian, Hebrew and Chinese calendars. Structured data in JSON-LD. This file exists so agents can read the site as easily as people do.
