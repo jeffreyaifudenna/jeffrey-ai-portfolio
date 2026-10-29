@@ -159,12 +159,10 @@
           '<p class="ts-h">Mode</p><div class="ts-grid">' + base.map(opt).join('') + '</div>' +
           '<p class="ts-h">Fun themes</p><div class="ts-grid">' + fun.map(opt).join('') + '</div>' +
           '<p class="ts-h">Accessibility</p><div class="ts-grid">' + opt(BY.contrast) + '</div>' +
+          '<button type="button" class="ts-konami">' + PAD_ICON + '<span>Enter the Konami code</span></button>' +
           '<label class="ts-hol"><input type="checkbox"><span>Holiday themes<small></small></span></label>' +
         '</div>';
       foot.appendChild(document.createTextNode(' · ')); foot.appendChild(wrap);
-      var pb = document.createElement('button'); pb.type = 'button'; pb.className = 'ts-pad'; pb.setAttribute('aria-label', 'Enter the Konami code'); pb.title = 'Enter the Konami code';
-      pb.innerHTML = PAD_ICON; pb.addEventListener('click', function () { padOpen(pb); });
-      foot.appendChild(document.createTextNode(' ')); foot.appendChild(pb);
       btn = wrap.querySelector('.ts-link'); panel = wrap.querySelector('.ts-panel');
       hbox = panel.querySelector('input'); hnote = panel.querySelector('small');
 
@@ -177,7 +175,10 @@
         var p = panel.querySelector('[aria-pressed="true"]'); if (p) p.focus({ preventScroll: true });
       };
       btn.addEventListener('click', function () { open(panel.hidden); });
-      panel.addEventListener('click', function (e) { var b = e.target.closest('.ts-opt'); if (b) choose(b.dataset.id); });
+      panel.addEventListener('click', function (e) {
+        var b = e.target.closest('.ts-opt'); if (b) choose(b.dataset.id);
+        var k = e.target.closest('.ts-konami'); if (k) { open(false); padOpen(btn); }
+      });
       hbox.addEventListener('change', function () { holidayOn = hbox.checked; put(HKEY, holidayOn ? null : 'off'); apply(true); });
       document.addEventListener('click', function (e) { if (!panel.hidden && !wrap.contains(e.target)) open(false); });
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) { open(false); btn.focus(); } });
