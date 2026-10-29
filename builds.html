@@ -27,7 +27,7 @@
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
 .wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 a{color:inherit}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+a:focus-visible{outline:2px solid var(--focus,var(--accent));outline-offset:3px;border-radius:4px}
 .top{border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px}
 .top a{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-decoration:none}
@@ -134,7 +134,7 @@ footer p{margin:0}
     <article class="build" id="site">
       <h3>This site</h3>
       <div class="byline"><span>Oct 2026</span><span class="chip">Live</span><span>Claude Code · Plain HTML · Vercel</span></div>
-      <p>Four HTML pages, one shared stylesheet, no framework and no build step. Written in Claude Code, designed by hand. Twelve color themes and a holiday accent that reads the Hebrew and Chinese calendars, and a news section that fills itself from a JSON file the morning task writes. A plain-text map of the site sits alongside the pages so AI agents can read it as easily as people do.</p>
+      <p>Five HTML pages, one shared stylesheet, no framework and no build step. Written in Claude Code, designed by hand. Twelve color themes and a holiday accent that reads the Hebrew and Chinese calendars, and a news section that fills itself from a JSON file the morning task writes. A plain-text map of the site sits alongside the pages so AI agents can read it as easily as people do.</p>
     </article>
 
   </section>

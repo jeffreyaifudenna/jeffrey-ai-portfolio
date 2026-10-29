@@ -8,17 +8,18 @@
   --bg:#eef0ec; --surface:#f8f9f6; --ink:#1e2522; --muted:#5c6862; --line:#cfd5cf;
   --stone1:#9aa49e; --stone2:#7d8882; --stone3:#b6bdb6; --accent:#c9861a; --accent-ink:#7a4d05;
   --print:#fdfdfb; --print-edge:#d9ddd7; --note:#f6dc6b; --note-ink:#3d3407;
-  --warn:#8a3b12; --live:#2f7a4a; color-scheme:light}
+  --warn:#8a3b12; --live:#2f7a4a; color-scheme:light;
+  --focus:var(--accent-ink)}   /* focus ring: --accent is under 3:1 on the light background, --accent-ink is not */
 :root[data-theme="dark"],.sw[data-t="dark"]{
   --bg:#151a18; --surface:#1d2321; --ink:#e7ebe7; --muted:#9ba69f; --line:#2f3733;
   --stone1:#5d6862; --stone2:#47514c; --stone3:#77827b; --accent:#e9a43c; --accent-ink:#f2c47a;
   --print:#e9ebe6; --print-edge:#3a433e; --note:#e8cc55; --note-ink:#2e2704;
-  --warn:#f0a27a; --live:#7fcf9a; color-scheme:dark}
+  --warn:#f0a27a; --live:#7fcf9a; color-scheme:dark; --focus:var(--accent)}
 @media (prefers-color-scheme:dark){:root:not([data-theme]){
   --bg:#151a18; --surface:#1d2321; --ink:#e7ebe7; --muted:#9ba69f; --line:#2f3733;
   --stone1:#5d6862; --stone2:#47514c; --stone3:#77827b; --accent:#e9a43c; --accent-ink:#f2c47a;
   --print:#e9ebe6; --print-edge:#3a433e; --note:#e8cc55; --note-ink:#2e2704;
-  --warn:#f0a27a; --live:#7fcf9a; color-scheme:dark}}
+  --warn:#f0a27a; --live:#7fcf9a; color-scheme:dark; --focus:var(--accent)}}
 
 /* ---- fun themes ---- */
 :root[data-theme="sunset"],.sw[data-t="sunset"]{
