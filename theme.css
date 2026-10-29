@@ -141,10 +141,10 @@
 @keyframes ts-toast{0%{opacity:0;transform:translate(-50%,10px)}8%,88%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,0)}}
 @media (prefers-reduced-motion:reduce){.ts-toast{animation:none}}
 
-/* ---- Konami: footer button + on-screen NES-style pad (sizes in cqw so it scales with its width) ---- */
+/* ---- Konami: themes-panel button + on-screen NES-style pad (sizes in cqw so it scales with its width) ---- */
 .ts-konami{display:grid;place-items:center;width:36px;height:36px;margin:14px 0 0;padding:0;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);font:inherit;font-size:12px;cursor:pointer}
 .ts-konami:hover{background:var(--bg)}
-.ts-konami svg{width:18px;height:18px;flex:none;display:block}
+.ts-konami svg{width:20px;height:20px;flex:none;display:block}
 .nes-modal{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:16px;background:rgba(8,10,9,.62);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
 .nes-modal[hidden]{display:none}
 .nes-card{position:relative;width:min(460px,100%);max-height:100%;overflow:auto;padding:22px 20px 18px;border:1px solid var(--line);border-radius:18px;
@@ -154,29 +154,57 @@
 .nes-card p{margin:0 0 16px;color:var(--muted);font-size:14px}
 .nes-x{position:absolute;top:10px;right:12px;width:32px;height:32px;padding:0;border:0;border-radius:50%;background:none;color:var(--muted);font-size:24px;line-height:1;cursor:pointer}
 .nes-x:hover{color:var(--ink);background:var(--bg)}
-.nes{container-type:inline-size;position:relative;box-sizing:border-box;width:100%;aspect-ratio:5/2;background:#cfcfc9;border:2px solid #8f8f89;border-radius:10px/14px;
-  box-shadow:inset 0 -5px 0 rgba(0,0,0,.13),0 12px 18px -12px rgba(0,0,0,.55)}
-.nes-panel{position:absolute;left:3cqw;top:5cqw;width:94cqw;height:30cqw;border-radius:1.2cqw;background:#2b2b2d;box-shadow:inset 0 0 0 .5cqw #1a1a1b}
-.nes button{position:absolute;padding:0;border:0;cursor:pointer;transition:transform .08s ease-out,filter .12s,box-shadow .08s;-webkit-tap-highlight-color:transparent}
-.nes-ss::before,.nes-ab::before{content:"";position:absolute;inset:-1.2cqw}
+
+/* the controller body: light grey shell, dark face plate, a lighter centre strip for SELECT/START, black wells for B and A */
+.nes{container-type:inline-size;position:relative;box-sizing:border-box;width:100%;aspect-ratio:5/2;border-radius:10px/14px;
+  background:linear-gradient(180deg,#e2e2dc,#c6c6c0);border:2px solid #86867f;
+  box-shadow:inset 0 2px 0 rgba(255,255,255,.7),inset 0 -5px 0 rgba(0,0,0,.14),0 14px 22px -12px rgba(0,0,0,.6)}
+.nes>*{position:absolute}
+.nes-panel{left:3cqw;top:3.5cqw;width:94cqw;height:30.5cqw;border-radius:1.4cqw;background:linear-gradient(180deg,#323235,#232325);
+  box-shadow:inset 0 .4cqw 0 rgba(255,255,255,.08),inset 0 0 0 .5cqw #151516,0 .4cqw 0 rgba(255,255,255,.35)}
+.nes-mid{left:31cqw;top:6cqw;width:29cqw;height:25.5cqw;border-radius:1cqw;background:#c9c9c3;
+  box-shadow:inset 0 .4cqw .8cqw rgba(0,0,0,.35),inset 0 -.3cqw 0 rgba(255,255,255,.5)}
+.nes-mid::before{content:"";position:absolute;left:2cqw;right:2cqw;top:2.2cqw;height:5.6cqw;
+  background:repeating-linear-gradient(180deg,#2b2b2d 0 .9cqw,transparent .9cqw 2.35cqw)}
+.nes-well{top:9.5cqw;width:14cqw;height:16cqw;border-radius:2cqw;background:#111113;box-shadow:inset 0 .3cqw .6cqw rgba(0,0,0,.8),0 .2cqw 0 rgba(255,255,255,.08)}
+.nes-well-b{left:63cqw}.nes-well-a{left:79cqw}
+.nes-logo{left:0;right:0;top:35.2cqw;text-align:center;font:italic 800 2.3cqw/1 var(--body,system-ui,sans-serif);letter-spacing:.06em;color:#c62828;pointer-events:none}
+
+/* buttons: hover and press are painted as colour overlays (--lt / --dk) rather than filters or per-arm transforms, so nothing shifts off its pixel grid */
+.nes button{--lt:0;--dk:0;position:absolute;padding:0;border:0;cursor:pointer;transition:box-shadow .08s ease-out,transform .08s ease-out;-webkit-tap-highlight-color:transparent}
+.nes button::before{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(rgba(255,255,255,var(--lt)),rgba(255,255,255,var(--lt))),linear-gradient(rgba(0,0,0,var(--dk)),rgba(0,0,0,var(--dk)));pointer-events:none}
+.nes-ss::after,.nes-ab::after{content:"";position:absolute;inset:-1.4cqw}   /* generous hit area */
 .nes button:focus-visible{outline:2px solid #ffe600;outline-offset:2px}
-@media (hover:hover){.nes button:hover{filter:brightness(1.18)}}
-.nes button:active,.nes button.on{transform:scale(.94);filter:brightness(.78)}
-.nes-ab:active,.nes-ab.on{transform:translateY(.5cqw)}
-.dp{width:7.5cqw;height:7.5cqw;background:#0d0d0e}
-.dp-u{left:13.25cqw;top:8.75cqw;border-radius:1cqw 1cqw 0 0}.dp-d{left:13.25cqw;top:23.75cqw;border-radius:0 0 1cqw 1cqw}
-.dp-l{left:5.75cqw;top:16.25cqw;border-radius:1cqw 0 0 1cqw}.dp-r{left:20.75cqw;top:16.25cqw;border-radius:0 1cqw 1cqw 0}
-.dp-c{position:absolute;left:13.25cqw;top:16.25cqw;width:7.5cqw;height:7.5cqw;background:#0d0d0e;pointer-events:none}
-.dp-c::after{content:"";position:absolute;inset:2cqw;border-radius:50%;background:radial-gradient(circle,#050505,#1a1a1c)}
-.dp::after{content:"";position:absolute;left:50%;top:50%;width:0;height:0;border:solid transparent;transform:translate(-50%,-50%)}
-.dp-u::after{border-width:0 1cqw 1.5cqw;border-bottom-color:#3f3f42}.dp-d::after{border-width:1.5cqw 1cqw 0;border-top-color:#3f3f42}
-.dp-l::after{border-width:1cqw 1.5cqw 1cqw 0;border-right-color:#3f3f42}.dp-r::after{border-width:1cqw 0 1cqw 1.5cqw;border-left-color:#3f3f42}
-.nes-ss{top:17.6cqw;width:10cqw;height:4.8cqw;border-radius:2.4cqw;background:#76766f;box-shadow:inset 0 -.5cqw 0 rgba(0,0,0,.3)}
-.nes-sel{left:36.5cqw}.nes-start{left:50cqw}
-.nes-ab{top:15cqw;width:10cqw;height:10cqw;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff7266,#d8312a 55%,#a1201b);box-shadow:0 .7cqw 0 #5a0f0c}
-.nes-b{left:66cqw}.nes-a{left:80cqw}
-.nes-ab:active,.nes-ab.on{box-shadow:0 .2cqw 0 #5a0f0c}
-.nes-lab{position:absolute;top:28cqw;transform:translateX(-50%);font:700 1.9cqw/1 var(--mono,monospace);letter-spacing:.12em;color:#d9d9d0;pointer-events:none}
+@media (hover:hover){.nes button:hover{--lt:.12}}
+.nes button:active,.nes button.on{--lt:0;--dk:.22}
+
+/* d-pad: four arms around a fixed centre, bevelled with inset shadows */
+.dp{width:7.5cqw;height:7.5cqw;background:#121214}
+.dp-u{left:13.25cqw;top:8.75cqw;border-radius:1.2cqw 1.2cqw 0 0;box-shadow:inset 0 .35cqw 0 rgba(255,255,255,.14),inset .35cqw 0 0 rgba(255,255,255,.06),inset -.35cqw 0 0 rgba(0,0,0,.5)}
+.dp-d{left:13.25cqw;top:23.75cqw;border-radius:0 0 1.2cqw 1.2cqw;box-shadow:inset 0 -.45cqw 0 rgba(0,0,0,.6),inset .35cqw 0 0 rgba(255,255,255,.06),inset -.35cqw 0 0 rgba(0,0,0,.5)}
+.dp-l{left:5.75cqw;top:16.25cqw;border-radius:1.2cqw 0 0 1.2cqw;box-shadow:inset 0 .35cqw 0 rgba(255,255,255,.14),inset .35cqw 0 0 rgba(255,255,255,.06),inset 0 -.35cqw 0 rgba(0,0,0,.6)}
+.dp-r{left:20.75cqw;top:16.25cqw;border-radius:0 1.2cqw 1.2cqw 0;box-shadow:inset 0 .35cqw 0 rgba(255,255,255,.14),inset -.35cqw 0 0 rgba(0,0,0,.5),inset 0 -.35cqw 0 rgba(0,0,0,.6)}
+.dp-c{left:13.25cqw;top:16.25cqw;width:7.5cqw;height:7.5cqw;background:#121214;pointer-events:none}
+.dp-c::after{content:"";position:absolute;inset:1.9cqw;border-radius:50%;background:radial-gradient(circle at 40% 35%,#2a2a2d,#050506 70%);box-shadow:inset 0 .2cqw .3cqw rgba(0,0,0,.9),0 .15cqw 0 rgba(255,255,255,.1)}
+.dp i{position:absolute;left:50%;top:50%;width:0;height:0;border:solid transparent;transform:translate(-50%,-50%);pointer-events:none}
+.dp-u i{border-width:0 1.1cqw 1.6cqw;border-bottom-color:#47474b}.dp-d i{border-width:1.6cqw 1.1cqw 0;border-top-color:#47474b}
+.dp-l i{border-width:1.1cqw 1.6cqw 1.1cqw 0;border-right-color:#47474b}.dp-r i{border-width:1.1cqw 0 1.1cqw 1.6cqw;border-left-color:#47474b}
+.dp:active,.dp.on{--dk:.35}
+
+/* SELECT / START pills */
+.nes-ss{top:16.8cqw;width:10cqw;height:4.6cqw;border-radius:2.3cqw;background:linear-gradient(180deg,#8a8a84,#5f5f5a);
+  box-shadow:0 .5cqw 0 #2d2d2b,inset 0 .3cqw 0 rgba(255,255,255,.25)}
+.nes-sel{left:34cqw}.nes-start{left:47cqw}
+.nes-ss:active,.nes-ss.on{transform:translateY(.4cqw);box-shadow:0 .1cqw 0 #2d2d2b,inset 0 .3cqw 0 rgba(255,255,255,.15)}
+
+/* B / A: domed red buttons sitting in their wells */
+.nes-ab{top:11.5cqw;width:10cqw;height:10cqw;border-radius:50%;
+  background:radial-gradient(circle at 35% 28%,#ff8a7e,#e0352c 50%,#9c1a15 100%);
+  box-shadow:0 .8cqw 0 #5a0f0c,0 1cqw 1.2cqw rgba(0,0,0,.6),inset 0 .25cqw .4cqw rgba(255,255,255,.35)}
+.nes-b{left:65cqw}.nes-a{left:81cqw}
+.nes-ab:active,.nes-ab.on{transform:translateY(.6cqw);box-shadow:0 .2cqw 0 #5a0f0c,0 .3cqw .5cqw rgba(0,0,0,.5),inset 0 .25cqw .4cqw rgba(255,255,255,.25)}
+
+.nes-lab{top:27.4cqw;transform:translateX(-50%);font:800 2.2cqw/1 var(--mono,monospace);letter-spacing:.14em;color:#d9362c;pointer-events:none}
 .nes.bad{animation:nes-bad .35s}
 @keyframes nes-bad{20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
 .nes-dots{display:flex;gap:7px;justify-content:center;margin:16px 0 6px}

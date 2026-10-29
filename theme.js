@@ -266,21 +266,22 @@
       w.connect(wg); wg.connect(actx.destination); w.start(ws); w.stop(ws + 0.36);
     } catch (e) {}
   }
-  var PAD_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="7" width="19" height="10" rx="2.5"/><path d="M7 9.5v5M4.5 12h5" stroke-linecap="round"/><circle cx="15.5" cy="13.5" r="1.1" fill="currentColor"/><circle cx="18.5" cy="12" r="1.1" fill="currentColor"/></svg>';
+  var PAD_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M6.5 6h11a4.5 4.5 0 0 1 4.4 3.6l1 5A3.3 3.3 0 0 1 17.3 17L14.8 14h-5.6L6.7 17A3.3 3.3 0 0 1 1.1 14.6l1-5A4.5 4.5 0 0 1 6.5 6Z"/><path d="M7 8.5v4M5 10.5h4"/><circle cx="15.6" cy="11.6" r="1.15" fill="currentColor" stroke="none"/><circle cx="18.4" cy="9.8" r="1.15" fill="currentColor" stroke="none"/><path d="M11 8.3h.01M13 8.3h.01" stroke-width="2"/></svg>';
   var padEl, padOpener, padPos = 0;
 
   function padHTML() {
-    var b = function (cls, k, label) { return '<button type="button" class="' + cls + '" data-k="' + k + '" aria-label="' + label + '"></button>'; };
+    var b = function (cls, k, label) { return '<button type="button" class="' + cls + '" data-k="' + k + '" aria-label="' + label + '">' + (cls.indexOf('dp') === 0 ? '<i></i>' : '') + '</button>'; };
     var dots = ''; for (var i = 0; i < CODE.length; i++) dots += '<i></i>';
     return '<div class="nes-card" role="dialog" aria-modal="true" aria-labelledby="nes-h">' +
       '<button type="button" class="nes-x" aria-label="Close">×</button>' +
       '<h2 id="nes-h">Enter the code</h2><p>Use the buttons below, or your keyboard’s arrow keys, B and A.</p>' +
-      '<div class="nes"><div class="nes-panel"></div>' +
+      '<div class="nes"><div class="nes-panel"></div><div class="nes-mid"></div><div class="nes-well nes-well-b"></div><div class="nes-well nes-well-a"></div>' +
         b('dp dp-u', 'up', 'Up') + b('dp dp-d', 'down', 'Down') + b('dp dp-l', 'left', 'Left') + b('dp dp-r', 'right', 'Right') + '<span class="dp-c"></span>' +
         '<button type="button" class="nes-ss nes-sel" data-k="select" aria-label="Select"></button><button type="button" class="nes-ss nes-start" data-k="start" aria-label="Start"></button>' +
-        '<span class="nes-lab" style="left:41.5cqw">SELECT</span><span class="nes-lab" style="left:55cqw">START</span>' +
+        '<span class="nes-lab" style="left:39cqw">SELECT</span><span class="nes-lab" style="left:52cqw">START</span>' +
         b('nes-ab nes-b', 'b', 'B') + b('nes-ab nes-a', 'a', 'A') +
-        '<span class="nes-lab" style="left:71cqw">B</span><span class="nes-lab" style="left:85cqw">A</span></div>' +
+        '<span class="nes-lab" style="left:70cqw">B</span><span class="nes-lab" style="left:86cqw">A</span>' +
+        '<span class="nes-logo">Jeffrey</span></div>' +
       '<div class="nes-dots" aria-hidden="true">' + dots + '</div>' +
       '<p class="nes-status" role="status" aria-live="polite">0 of ' + CODE.length + '</p>' +
       '<button type="button" class="nes-hint">Need a hint?</button><p class="nes-code" hidden>↑ ↑ ↓ ↓ ← → ← → B A</p></div>';
