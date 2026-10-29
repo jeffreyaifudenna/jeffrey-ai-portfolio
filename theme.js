@@ -191,25 +191,67 @@
     var first = !unlocked; unlocked = true; put(UKEY, '1');
     var tile = panel && panel.querySelector('[data-id="arcade"]'); if (tile) tile.hidden = false;
     choose('arcade');
-    burst(['👾', '🕹️', '🍒', '⭐', '👻']);
-    toast(first ? 'Konami code! Arcade theme unlocked. It now lives in the themes picker.' : 'Arcade mode: on.');
+    burst(); banner(first ? 'ARCADE UNLOCKED' : 'ARCADE MODE'); jingle();
+    toast(first ? 'Konami code! Arcade now lives in the themes picker.' : 'Arcade mode: on.');
   }
   function toast(msg) {
     var old = document.querySelector('.ts-toast'); if (old) old.remove();
     var el = document.createElement('div'); el.className = 'ts-toast'; el.setAttribute('role', 'status'); el.textContent = msg;
     document.body.appendChild(el); setTimeout(function () { el.remove(); }, 4300);
   }
-  function burst(emoji) {   /* one-off shower, separate from the holiday one */
+
+  /* pixel sprites: '.' is empty, other characters index into the sprite's own palette */
+  var SPR = {
+    coin: { c: { x: '#8a5a00', Y: '#ffd23f', o: '#fff3a0', s: '#e0a000' },
+      p: ['..xxxx..', '.xYYYYx.', 'xYooYYsx', 'xYoYYYsx', 'xYYYYYsx', 'xYYYYssx', '.xssssx.', '..xxxx..'] },
+    star: { c: { y: '#ffe600', w: '#fff9b0', k: '#b38600' },
+      p: ['....y....', '....y....', '...ywy...', 'yyyywyyyy', '.yyyyyyk.', '..yyyyk..', '..yykyk..', '.yk...yk.', '.k.....k.'] },
+    heart: { c: { r: '#ff3b4e', w: '#ffb3bb', k: '#a3182a' },
+      p: ['.rr...rr.', 'rwrr.rrrr', 'rwrrrrrrk', 'rrrrrrrrk', '.rrrrrrk.', '..rrrrk..', '...rrk...', '....k....'] },
+    gem: { c: { c: '#3de0ff', w: '#d9f8ff', C: '#1b8fd0' },
+      p: ['..cccc..', '.cwcccc.', 'cwccccCC', 'ccccccCC', '.cccCCC.', '..cCCC..', '...CC...', '....C...'] },
+    bolt: { c: { y: '#ffb000', w: '#ffe680' },
+      p: ['...yy..', '..ywy..', '.ywy...', 'ywyyyy.', '..yyy..', '..yy...', '.yy....', '.y.....'] }
+  };
+  function sprite(name) {
+    var sp = SPR[name], h = sp.p.length, w = sp.p[0].length, r = '';
+    for (var y = 0; y < h; y++) for (var x = 0; x < w; x++) { var ch = sp.p[y].charAt(x); if (ch !== '.') r += '<rect x="' + x + '" y="' + y + '" width="1" height="1" fill="' + sp.c[ch] + '"/>'; }
+    return '<svg viewBox="0 0 ' + w + ' ' + h + '" shape-rendering="crispEdges" aria-hidden="true">' + r + '</svg>';
+  }
+  function burst() {   /* one-off rain of coins and power-ups, separate from the holiday emoji */
     if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var el = document.createElement('div'); el.className = 'hfx'; el.setAttribute('aria-hidden', 'true');
-    for (var i = 0; i < 36; i++) {
-      var s = document.createElement('span'); s.textContent = emoji[i % emoji.length];
-      s.style.cssText = '--x:' + Math.round(Math.random() * 96) + 'vw;--s:' + (18 + Math.round(Math.random() * 18)) + 'px;--t:' + (3 + Math.random() * 3).toFixed(1) +
-        's;--dl:-' + (Math.random() * 1).toFixed(1) + 's;--dx:' + Math.round(Math.random() * 160 - 80) + 'px;--r:' + Math.round(Math.random() * 540 - 270) + 'deg';
-      s.style.animationIterationCount = '1'; s.style.animationDelay = (Math.random() * 1.2).toFixed(2) + 's'; s.style.opacity = '.95';
-      el.appendChild(s);
+    var mix = ['coin', 'coin', 'star', 'coin', 'heart', 'coin', 'gem', 'bolt'];
+    var el = document.createElement('div'); el.className = 'hfx px'; el.setAttribute('aria-hidden', 'true');
+    for (var i = 0; i < 30; i++) {
+      var n = mix[i % mix.length], sp = document.createElement('span'); sp.className = n === 'coin' ? 'spr spin' : 'spr'; sp.innerHTML = sprite(n);
+      sp.style.cssText = '--x:' + Math.round(Math.random() * 94) + 'vw;--s:' + (26 + Math.round(Math.random() * 18)) + 'px;--t:' + (2.4 + Math.random() * 1.6).toFixed(1) +
+        's;--dx:' + Math.round(Math.random() * 120 - 60) + 'px;--r:' + Math.round(Math.random() * 120 - 60) + 'deg';
+      sp.style.animationIterationCount = '1'; sp.style.animationDelay = (Math.random() * 1.1).toFixed(2) + 's'; sp.style.opacity = '1';
+      el.appendChild(sp);
     }
-    document.body.appendChild(el); setTimeout(function () { el.remove(); }, 7500);
+    document.body.appendChild(el); setTimeout(function () { el.remove(); }, 5500);
+  }
+  function banner(sub) {
+    var el = document.createElement('div'); el.className = 'lvl'; el.setAttribute('aria-hidden', 'true');
+    el.innerHTML = '<b>LEVEL UP!</b><span>' + sub + '</span>'; document.body.appendChild(el); setTimeout(function () { el.remove(); }, 3200);
+  }
+
+  /* a short square-wave "power-up" arpeggio, only ever played right after the visitor enters the code themselves */
+  var actx;
+  function prepAudio() {
+    try { actx = actx || new (window.AudioContext || window.webkitAudioContext)(); if (actx.state === 'suspended') actx.resume(); } catch (e) {}
+  }
+  function jingle() {
+    if (!actx) return;
+    try {
+      var t0 = actx.currentTime + 0.02, notes = [523.25, 659.25, 783.99, 1046.5, 783.99, 1046.5, 1318.5];
+      notes.forEach(function (f, i) {
+        var o = actx.createOscillator(), g = actx.createGain(), t = t0 + i * 0.075, last = i === notes.length - 1, len = last ? 0.32 : 0.07;
+        o.type = 'square'; o.frequency.setValueAtTime(f, t);
+        g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.05, t + 0.01); g.gain.exponentialRampToValueAtTime(0.0001, t + len);
+        o.connect(g); g.connect(actx.destination); o.start(t); o.stop(t + len + 0.02);
+      });
+    } catch (e) {}
   }
   var PAD_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="7" width="19" height="10" rx="2.5"/><path d="M7 9.5v5M4.5 12h5" stroke-linecap="round"/><circle cx="15.5" cy="13.5" r="1.1" fill="currentColor"/><circle cx="18.5" cy="12" r="1.1" fill="currentColor"/></svg>';
   var padEl, padOpener, padPos = 0;
@@ -240,6 +282,7 @@
   }
 
   function padPress(k) {
+    prepAudio();   /* a tap is the user gesture browsers require before any sound */
     var el = padEl.querySelector('[data-k="' + k + '"]');
     if (el) { el.classList.add('on'); setTimeout(function () { el.classList.remove('on'); }, 140); }
     if (k === CODE[padPos]) {
