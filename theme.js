@@ -10,7 +10,7 @@
     { id: 'gameboy', label: 'Game Boy', mode: 'light', font: 'https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&display=swap' },
     { id: 'bubblegum', label: 'Bubblegum', mode: 'light' }, { id: 'ocean', label: 'Ocean', mode: 'dark' }, { id: 'sepia', label: 'Sepia', mode: 'light' },
     { id: 'contrast', label: 'High contrast', mode: 'dark' },
-    { id: 'arcade', label: 'Arcade', mode: 'dark', hidden: 1, font: 'https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&display=swap' }
+    { id: 'arcade', label: 'Space dungeon', mode: 'dark', hidden: 1, font: 'https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&display=swap' }
   ];
   var BY = {}; THEMES.forEach(function (t) { BY[t.id] = t; });
 
@@ -152,7 +152,7 @@
         var sw = t.id === 'auto' ? '<span class="sw sw-auto"><i></i><i></i></span>' : '<span class="sw" data-t="' + t.id + '"></span>';
         return '<button type="button" class="ts-opt" data-id="' + t.id + '" aria-pressed="false"' + (t.hidden && !unlocked ? ' hidden' : '') + '>' + sw + '<span>' + t.label + '</span></button>';
       };
-      var base = THEMES.filter(function (t) { return t.base; }), fun = THEMES.filter(function (t) { return !t.base && t.id !== 'contrast'; });   /* includes Arcade; its tile stays hidden until unlocked */
+      var base = THEMES.filter(function (t) { return t.base; }), fun = THEMES.filter(function (t) { return !t.base && t.id !== 'contrast'; });   /* includes Space dungeon; its tile stays hidden until unlocked */
       wrap.innerHTML =
         '<button type="button" class="ts-link" aria-expanded="false" aria-haspopup="true">themes</button>' +
         '<div class="ts-panel" role="group" aria-label="Themes" hidden>' +
@@ -185,14 +185,14 @@
     sync();
   }
 
-  /* ---- easter egg: a footer button opens an on-screen NES-style pad; the Konami code unlocks Arcade ---- */
+  /* ---- easter egg: a footer button opens an on-screen NES-style pad; the Konami code unlocks the Space dungeon theme ---- */
   var CODE = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
   function unlock() {
     var first = !unlocked; unlocked = true; put(UKEY, '1');
     var tile = panel && panel.querySelector('[data-id="arcade"]'); if (tile) tile.hidden = false;
     choose('arcade');
-    burst(); banner(first ? 'ARCADE UNLOCKED' : 'ARCADE MODE'); jingle();
-    toast(first ? 'Konami code! Arcade now lives in the themes picker.' : 'Arcade mode: on.');
+    burst(); banner(first ? 'MISSION UNLOCKED' : 'DUNGEON MODE'); jingle();
+    toast(first ? 'Konami code! Space dungeon now lives in the themes picker.' : 'Space dungeon: on.');
   }
   function toast(msg) {
     var old = document.querySelector('.ts-toast'); if (old) old.remove();
@@ -206,12 +206,20 @@
       p: ['..xxxx..', '.xYYYYx.', 'xYooYYsx', 'xYoYYYsx', 'xYYYYYsx', 'xYYYYssx', '.xssssx.', '..xxxx..'] },
     star: { c: { y: '#ffe600', w: '#fff9b0', k: '#b38600' },
       p: ['....y....', '....y....', '...ywy...', 'yyyywyyyy', '.yyyyyyk.', '..yyyyk..', '..yykyk..', '.yk...yk.', '.k.....k.'] },
-    heart: { c: { r: '#ff3b4e', w: '#ffb3bb', k: '#a3182a' },
-      p: ['.rr...rr.', 'rwrr.rrrr', 'rwrrrrrrk', 'rrrrrrrrk', '.rrrrrrk.', '..rrrrk..', '...rrk...', '....k....'] },
-    gem: { c: { c: '#3de0ff', w: '#d9f8ff', C: '#1b8fd0' },
+    potion: { c: { b: '#8a5a2b', g: '#cfe9ff', p: '#d83cf0', P: '#f5a0ff' },
+      p: ['...bb...', '...bb...', '...gg...', '..gggg..', '.gppppg.', 'gpPPpppg', 'gppppppg', '.gppppg.', '..gggg..'] },
+    shield: { c: { k: '#c79a1a', b: '#3b6fe0', r: '#d83a3a' },
+      p: ['kkkkkkkk', 'kbbrrbbk', 'kbbrrbbk', 'krrrrrrk', 'krrrrrrk', '.kbrrbk.', '..kbbk..', '...kk...'] },
+    key: { c: { y: '#f0b429' },
+      p: ['.yyy....', 'y...y...', 'y...y...', '.yyy....', '..y.....', '..yy....', '..y.....', '..yy....'] },
+    ruby: { c: { c: '#ff4d6d', w: '#ffc2cc', C: '#a31d3a' },
       p: ['..cccc..', '.cwcccc.', 'cwccccCC', 'ccccccCC', '.cccCCC.', '..cCCC..', '...CC...', '....C...'] },
-    bolt: { c: { y: '#ffb000', w: '#ffe680' },
-      p: ['...yy..', '..ywy..', '.ywy...', 'ywyyyy.', '..yyy..', '..yy...', '.yy....', '.y.....'] }
+    rocket: { c: { r: '#ff4d4d', w: '#e8eef7', B: '#3aa8ff', f: '#ff9a2e', y: '#ffe066' },
+      p: ['...r...', '..rrr..', '..www..', '..wBw..', '..www..', 'rwwwwwr', 'rr.w.rr', '...f...', '..fyf..'] },
+    planet: { c: { p: '#8c6bff', P: '#c2aeff', d: '#5a3fc0', r: '#ffd166' },
+      p: ['..ppppp..', '.pPppppp.', 'ppPpppppp', 'rrrrrrrrr', 'ppppppddp', '.pppppdp.', '..ppppp..'] },
+    ufo: { c: { g: '#8ff0ff', G: '#d9fbff', s: '#aab4c8', S: '#ffe066', l: '#7a859b' },
+      p: ['...ggg...', '..gGggg..', '.sssssss.', 'sSsSsSsSs', '.sssssss.', '..l...l..'] }
   };
   function sprite(name) {
     var sp = SPR[name], h = sp.p.length, w = sp.p[0].length, r = '';
@@ -220,7 +228,7 @@
   }
   function burst() {   /* one-off rain of coins and power-ups, separate from the holiday emoji */
     if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var mix = ['coin', 'coin', 'star', 'coin', 'heart', 'coin', 'gem', 'bolt'];
+    var mix = ['coin', 'rocket', 'potion', 'star', 'coin', 'planet', 'shield', 'ufo', 'key', 'ruby'];
     var el = document.createElement('div'); el.className = 'hfx px'; el.setAttribute('aria-hidden', 'true');
     for (var i = 0; i < 30; i++) {
       var n = mix[i % mix.length], sp = document.createElement('span'); sp.className = n === 'coin' ? 'spr spin' : 'spr'; sp.innerHTML = sprite(n);
@@ -233,7 +241,7 @@
   }
   function banner(sub) {
     var el = document.createElement('div'); el.className = 'lvl'; el.setAttribute('aria-hidden', 'true');
-    el.innerHTML = '<b>LEVEL UP!</b><span>' + sub + '</span>'; document.body.appendChild(el); setTimeout(function () { el.remove(); }, 3200);
+    el.innerHTML = '<b>QUEST COMPLETE</b><span>' + sub + '</span>'; document.body.appendChild(el); setTimeout(function () { el.remove(); }, 3200);
   }
 
   /* a short square-wave "power-up" arpeggio, only ever played right after the visitor enters the code themselves */
@@ -244,13 +252,17 @@
   function jingle() {
     if (!actx) return;
     try {
-      var t0 = actx.currentTime + 0.02, notes = [523.25, 659.25, 783.99, 1046.5, 783.99, 1046.5, 1318.5];
+      var t0 = actx.currentTime + 0.02, notes = [392, 466.16, 587.33, 784, 587.33, 784, 932.33];
       notes.forEach(function (f, i) {
         var o = actx.createOscillator(), g = actx.createGain(), t = t0 + i * 0.075, last = i === notes.length - 1, len = last ? 0.32 : 0.07;
         o.type = 'square'; o.frequency.setValueAtTime(f, t);
         g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.05, t + 0.01); g.gain.exponentialRampToValueAtTime(0.0001, t + len);
         o.connect(g); g.connect(actx.destination); o.start(t); o.stop(t + len + 0.02);
       });
+      var w = actx.createOscillator(), wg = actx.createGain(), ws = t0 + notes.length * 0.075 + 0.02;   /* rising warp, the "space" half */
+      w.type = 'triangle'; w.frequency.setValueAtTime(300, ws); w.frequency.exponentialRampToValueAtTime(1900, ws + 0.3);
+      wg.gain.setValueAtTime(0.0001, ws); wg.gain.exponentialRampToValueAtTime(0.05, ws + 0.03); wg.gain.exponentialRampToValueAtTime(0.0001, ws + 0.34);
+      w.connect(wg); wg.connect(actx.destination); w.start(ws); w.stop(ws + 0.36);
     } catch (e) {}
   }
   var PAD_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="7" width="19" height="10" rx="2.5"/><path d="M7 9.5v5M4.5 12h5" stroke-linecap="round"/><circle cx="15.5" cy="13.5" r="1.1" fill="currentColor"/><circle cx="18.5" cy="12" r="1.1" fill="currentColor"/></svg>';
