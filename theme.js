@@ -159,7 +159,7 @@
           '<p class="ts-h">Mode</p><div class="ts-grid">' + base.map(opt).join('') + '</div>' +
           '<p class="ts-h">Fun themes</p><div class="ts-grid">' + fun.map(opt).join('') + '</div>' +
           '<p class="ts-h">Accessibility</p><div class="ts-grid">' + opt(BY.contrast) + '</div>' +
-          '<button type="button" class="ts-konami">' + PAD_ICON + '<span>Enter the Konami code</span></button>' +
+          '<button type="button" class="ts-konami" aria-label="Enter the Konami code" title="Enter the Konami code">' + PAD_ICON + '</button>' +
           '<label class="ts-hol"><input type="checkbox"><span>Holiday themes<small></small></span></label>' +
         '</div>';
       foot.appendChild(document.createTextNode(' · ')); foot.appendChild(wrap);

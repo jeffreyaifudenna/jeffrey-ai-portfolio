@@ -142,7 +142,7 @@
 @media (prefers-reduced-motion:reduce){.ts-toast{animation:none}}
 
 /* ---- Konami: footer button + on-screen NES-style pad (sizes in cqw so it scales with its width) ---- */
-.ts-konami{display:flex;align-items:center;gap:8px;width:100%;margin-top:14px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);font:inherit;font-size:12px;cursor:pointer}
+.ts-konami{display:grid;place-items:center;width:36px;height:36px;margin:14px 0 0;padding:0;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);font:inherit;font-size:12px;cursor:pointer}
 .ts-konami:hover{background:var(--bg)}
 .ts-konami svg{width:18px;height:18px;flex:none;display:block}
 .nes-modal{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:16px;background:rgba(8,10,9,.62);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
