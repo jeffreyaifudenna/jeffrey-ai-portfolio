@@ -56,12 +56,18 @@ header .cairn.ghost{visibility:hidden}
 .top li a:hover{color:var(--ink);background:var(--surface)}
 @media (max-width:520px){.top li a{padding:8px 9px;font-size:13px}}
 
+/* scroll reveal: projects and lab cards rise in as they enter the viewport */
+.js .proj,.js .card{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.js .proj.in,.js .card.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .proj,.js .card{opacity:1;transform:none;transition:none}}
+
 /* hero */
 header{padding-block:56px 40px;border-bottom:1px solid var(--line)}
 .hero{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end}
 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 h1{font-family:var(--display);font-weight:400;font-size:clamp(40px,8vw,84px);line-height:1;margin:12px 0 18px;text-wrap:balance;letter-spacing:-.01em}
 h1 em{font-style:normal;color:var(--accent)}
+.lede{margin:0;max-width:44ch;color:var(--muted);font-size:clamp(16px,1.6vw,19px);line-height:1.5}
 .bio{margin:0;max-width:52ch;font-size:18px;color:var(--muted);text-wrap:pretty}
 .hero-links{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
 .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--bg);transition:transform .15s}
@@ -183,7 +189,8 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.6vw,36px);l
 
 /* daily AI news (filled from news/stories.json) */
 .dn{margin-top:72px;padding-top:40px;border-top:1px solid var(--line)}
-.dn-head h2{font-family:var(--display);font-size:clamp(28px,4vw,40px);margin:0 0 10px}
+.dn-head h2{display:flex;align-items:center;gap:14px;font-family:var(--display);font-size:clamp(28px,4vw,40px);margin:0 0 10px}
+.dn-head .stone{width:34px;height:20px;border-radius:50%;background:var(--accent);flex:none}
 .dn-head p{margin:0;max-width:60ch;color:var(--muted);font-size:18px;line-height:1.55}
 .dn-head strong{color:var(--ink);font-weight:600}
 .dn-list{list-style:none;margin:28px 0;padding:0;border-top:1px solid var(--line)}
@@ -235,6 +242,7 @@ footer a:hover{color:var(--ink)}
   <div class="wrap hero">
     <div>
       <h1>JeffreyAiFudenna projects <em>with AI</em></h1>
+      <p class="lede">I'm looking for my next role. These are the things I've built with AI along the way, each one finished and written up.</p>
     </div>
     <div class="cairn" id="hero-cairn" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
   </div>
@@ -243,7 +251,7 @@ footer a:hover{color:var(--ink)}
 <main class="wrap" id="projects">
   <!-- Each project has data-kind="website|image|video|writing|automation" and data-date="YYYY-MM". The count and "Updated" date are computed from those. -->
   <div class="toolbar">
-    <div class="count"><span id="count">7 projects</span><span id="updated">Updated Oct 2026</span></div>
+    <div class="count"><span id="count">7 projects</span></div>
   </div>
 
   <ol class="projects">
@@ -390,7 +398,7 @@ footer a:hover{color:var(--ink)}
 
   <section class="dn" id="dailynews" aria-label="Daily AI news" hidden>
     <div class="dn-head">
-      <h2>Daily AI news</h2>
+      <h2><span class="stone" aria-hidden="true"></span>Daily AI news</h2>
       <p>An AI task I scheduled finds the day's biggest AI stories, checks every link, and posts a plain-English digest here every morning. <span class="dn-date-wrap">Latest: <strong id="dn-date"></strong></span></p>
     </div>
     <ul class="dn-list" id="dn-list"></ul>
@@ -423,13 +431,18 @@ footer a:hover{color:var(--ink)}
 </footer>
 
 <script>
-/* Count and "Updated" date — computed from the project list and data-date on each project. */
+/* Project count — computed from the project list. */
 (function(){
   const items=[...document.querySelectorAll('.proj,.card')];
-  const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   document.getElementById('count').textContent=items.length+' projects';
-  const latest=items.map(i=>i.dataset.date||'').sort().pop();
-  if(latest){const [y,m]=latest.split('-'); document.getElementById('updated').textContent='Updated '+months[+m-1]+' '+y;}
+})();
+/* Scroll reveal. Each project fades and rises in the first time it enters the viewport. */
+(function(){
+  const items=[...document.querySelectorAll('.proj,.card')];
+  if(!('IntersectionObserver' in window)){items.forEach(i=>i.classList.add('in'));return;}
+  document.documentElement.classList.add('js');
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{rootMargin:'0px 0px -8% 0px'});
+  items.forEach(i=>io.observe(i));
 })();
 /* Photo lightbox with previous / next and arrow keys. */
 (function(){
