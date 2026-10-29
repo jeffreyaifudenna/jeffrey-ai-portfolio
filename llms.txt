@@ -1,0 +1,25 @@
+# JeffreyAiFudenna Portfolio
+
+> Jeffrey's AI projects, each one finished and written up. Plain HTML, no build step. Hosted at https://jeffrey-ai-portfolio.vercel.app/
+
+I'm looking for my next role. This site is the work: websites that publish themselves, a city data aggregator, AI video and images, and a short story drafted with AI. Two of the builds run on their own every morning.
+
+## Projects
+
+- [The Infinite Buddha](https://www.theinfinitebuddha.xyz): A website that creates and publishes a new piece of Buddha art every day. Python asks Gemini for the image, GitHub Actions runs it daily, Vercel redeploys. Live.
+- [Fremont by the Numbers](https://fremontcabythenumbers.com): A data aggregator for Fremont, California. Public figures on housing, schools, safety, jobs, parks and startups, with the source and date under every number. Built with Claude. Live.
+- [Daily AI News](https://jeffrey-ai-portfolio.vercel.app/news.html): A scheduled Claude task finds the day's biggest AI stories, checks every link, writes a plain-English summary and a "why it matters" line, and publishes the digest every morning. Data: https://jeffrey-ai-portfolio.vercel.app/news/stories.json. RSS: https://jeffrey-ai-portfolio.vercel.app/news/feed.xml
+- [11:11, a science fiction short story](https://jeffrey-ai-portfolio.vercel.app/story.html): Every night at 11:11 the lights go out worldwide, and nobody makes us. Written with AI as a drafting partner, with notes on what changed.
+- Cool Moves Reel: Short Viggle clips cut into a reel. On the home page.
+- Remixed photos with AI: Camping photos re-imagined with Gemini, next to the real picture. On the home page.
+- Family Tree Website: Private, password-protected, with edit history. No public link.
+- Maker of the Impossible Shot: AI video, in progress.
+
+## Behind the work
+
+- [Builds](https://jeffrey-ai-portfolio.vercel.app/builds.html): Tools, builds, the prompts that run things, and how the work gets done.
+- [GitHub](https://github.com/jeffreyaifudenna)
+
+## About this site
+
+Four HTML pages, one shared theme stylesheet, no framework. Written in Claude Code. Twelve color themes plus holiday accents computed from the Gregorian, Hebrew and Chinese calendars. Structured data in JSON-LD. This file exists so agents can read the site as easily as people do.

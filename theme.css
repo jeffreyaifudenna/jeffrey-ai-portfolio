@@ -151,3 +151,10 @@ html.theme-anim,html.theme-anim *{transition:background-color .25s,color .25s,bo
 .ts-hol input{margin:2px 0 0;accent-color:var(--accent)}
 .ts-hol small{display:block;color:var(--muted);font-size:12px}
 @media (prefers-reduced-motion:reduce){html.theme-anim,html.theme-anim *{transition:none!important}}
+
+/* ---- small shared polish ---- */
+::selection{background:color-mix(in srgb,var(--accent) 38%,transparent);color:var(--ink)}
+/* pages crossfade into each other on browsers that support cross-document view transitions */
+@media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto}
+  ::view-transition-old(root),::view-transition-new(root){animation-duration:.22s}}
+
