@@ -122,14 +122,16 @@ html.theme-anim,html.theme-anim *{transition:background-color .25s,color .25s,bo
 /* ---- picker ---- */
 .nav-r{display:flex;align-items:center;gap:10px}
 .ts-li{list-style:none;display:flex;align-items:center}
-.theme-switch{position:relative;display:inline-flex;text-transform:none;letter-spacing:normal}
+.theme-switch{position:relative;display:inline-block}
 .ts-btn{display:inline-grid;place-items:center;width:36px;height:36px;padding:0;border:1px solid var(--line);border-radius:50%;
   background:transparent;color:var(--ink);cursor:pointer}
-.ts-btn:hover,.ts-btn[aria-expanded="true"]{background:var(--surface)}
+.ts-btn:hover{background:var(--surface)}
 .ts-btn svg{width:18px;height:18px;display:block}
-.ts-panel{position:absolute;right:0;top:calc(100% + 10px);z-index:40;width:min(312px,calc(100vw - 32px));padding:14px;
+.ts-link{padding:0;border:0;background:none;color:var(--ink);font:inherit;letter-spacing:inherit;cursor:pointer}
+.ts-link:hover,.ts-link[aria-expanded="true"]{text-decoration:underline;text-decoration-color:var(--accent)}
+.ts-panel{position:absolute;right:0;bottom:calc(100% + 10px);z-index:40;width:min(312px,calc(100vw - 32px));padding:14px;
   background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:14px;
-  box-shadow:0 18px 40px -16px rgba(0,0,0,.45);font:14px/1.4 var(--body,system-ui,sans-serif);text-align:left}
+  box-shadow:0 18px 40px -16px rgba(0,0,0,.45);font:14px/1.4 var(--body,system-ui,sans-serif);text-align:left;text-transform:none;letter-spacing:normal}
 .ts-panel[hidden]{display:none}
 .ts-h{margin:0 0 8px;font:500 11px var(--mono,monospace);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .ts-h:not(:first-child){margin-top:14px}
