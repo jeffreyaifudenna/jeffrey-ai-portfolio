@@ -13,7 +13,6 @@ I'm looking for my next role. This site is the work: websites that publish thems
 - Cool Moves Reel: Short Viggle clips cut into a reel. On the home page.
 - Remixed photos with AI: Camping photos re-imagined with Gemini, next to the real picture. On the home page.
 - Family Tree Website: Private, password-protected, with edit history. No public link.
-- Maker of the Impossible Shot: AI video, in progress.
 
 ## Behind the work
 

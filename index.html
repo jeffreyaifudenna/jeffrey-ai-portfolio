@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<link rel="canonical" href="https://jeffrey-ai-portfolio.vercel.app/">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>JeffreyAiFudenna Portfolio</title>
 <meta name="description" content="Jeffrey's AI projects: The Infinite Buddha, a Viggle video reel, AI-remixed camping photos, Fremont by the Numbers, a daily AI news report and more.">
@@ -260,14 +261,14 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
 </header>
 
 <main class="wrap" id="projects">
-  <!-- Each project has data-kind="website|image|video|writing|automation" and data-date="YYYY-MM". The count and "Updated" date are computed from those. -->
+  <!-- Each project has data-kind="website|image|video|writing|automation" and data-date="YYYY-MM"; add data-auto to one that runs on a schedule. The counts in the toolbar are computed from those. -->
   <div class="toolbar">
-    <div class="count"><span id="count">7 projects</span><span>2 run on their own</span></div>
+    <div class="count"><span id="count">6 projects</span><span id="auto-count">1 runs on its own</span></div>
   </div>
 
   <ol class="projects">
 
-    <li class="proj" id="buddha" data-kind="website" data-date="2026-10">
+    <li class="proj" id="buddha" data-kind="website" data-date="2026-10" data-auto>
       <div class="visual"><img src="media/buddha.webp" width="960" height="960" alt="A piece from The Infinite Buddha: a terracotta Buddha meditating in a wooden garden shrine, with ferns, vines and soft light"></div>
       <div class="info">
         <div class="meta"><span class="kind">Website · generative art</span><span class="when">Oct 2026</span><span class="pill live" title="Live"><span>Live</span></span></div>
@@ -388,7 +389,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
     </div>
     <ul class="dn-list" id="dn-list"></ul>
     <a class="link" href="news.html">Read all stories &rarr;</a>
-    <p class="dn-run" id="dn-run"><span class="dot" aria-hidden="true"></span>Last ran <span id="dn-date"></span> · <span id="dn-count"></span> stories · next run tomorrow morning</p>
+    <p class="dn-run" id="dn-run"><span class="dot" aria-hidden="true"></span>Last ran <span id="dn-date"></span> · <span id="dn-count"></span> stories · <span id="dn-next">runs every morning</span></p>
   </section>
 </main>
 
@@ -424,6 +425,8 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
 (function(){
   const items=[...document.querySelectorAll('.proj,.card')];
   document.getElementById('count').textContent=items.length+' projects';
+  const auto=items.filter(i=>i.hasAttribute('data-auto')).length+1; /* +1: the Daily AI News task, which lives in its own section */
+  document.getElementById('auto-count').textContent=auto+(auto===1?' runs on its own':' run on their own');
 })();
 /* Scroll reveal. Each project fades and rises in the first time it enters the viewport. */
 (function(){
@@ -578,6 +581,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
     var p=String(day.date).split('-'), dt=new Date(+p[0],+p[1]-1,+p[2]);
     document.getElementById('dn-date').textContent=dt.toLocaleDateString(undefined,{month:'short',day:'numeric'});
     document.getElementById('dn-count').textContent=String(day.stories.length);
+    var now=new Date(); if(dt.getFullYear()===now.getFullYear()&&dt.getMonth()===now.getMonth()&&dt.getDate()===now.getDate()) document.getElementById('dn-next').textContent='next run tomorrow morning';
     var ul=document.getElementById('dn-list');
     day.stories.slice(0,5).forEach(function(s){
       var li=document.createElement('li'), a=document.createElement('a'), src=document.createElement('span');
