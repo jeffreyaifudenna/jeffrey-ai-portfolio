@@ -171,6 +171,7 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.6vw,36px);l
 /* avatar intro */
 .avatar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:center;padding-block:8px 36px}
 .avatar h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,4vw,38px);line-height:1.15;margin:0}
+.avatar-note{margin:8px 0 0;color:var(--muted)}
 .avatar video{display:block;width:min(100%,260px);aspect-ratio:9/16;border-radius:12px;background:#000}
 @media (max-width:720px){.avatar{grid-template-columns:1fr;gap:16px;justify-items:start}}
 
@@ -266,7 +267,10 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
 </header>
 
 <section class="wrap avatar" id="avatar" aria-labelledby="avatar-h">
-  <h2 id="avatar-h">Meet my avatar</h2>
+  <div>
+    <h2 id="avatar-h">Meet my avatar</h2>
+    <p class="avatar-note">Based on me, generated with AI.</p>
+  </div>
   <video src="media/video-5.mp4" poster="media/poster-5.webp" controls playsinline preload="none"></video>
 </section>
 
