@@ -4,17 +4,23 @@
 <meta charset="utf-8">
 <link rel="canonical" href="https://jeffrey-ai-portfolio.vercel.app/">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>JeffreyAiFudenna Portfolio</title>
-<meta name="description" content="Jeffrey's AI projects: The Infinite Buddha, a Viggle video reel, AI-remixed camping photos, Fremont by the Numbers, a daily AI news report and more.">
+<title>Jeffrey Fudenna | AI Projects Portfolio</title>
+<meta name="description" content="AI projects by Jeffrey Fudenna: self-publishing websites, a Fremont data hub, a daily AI news digest, AI video, AI-remixed photos and a sci-fi story.">
+<meta name="author" content="Jeffrey Fudenna">
 <!-- Link previews: og:image and og:url must be absolute URLs. Update both if the domain changes. -->
-<meta property="og:title" content="JeffreyAiFudenna Portfolio">
-<meta property="og:description" content="Jeffrey's AI projects: The Infinite Buddha, a Viggle video reel, AI-remixed camping photos, Fremont by the Numbers, a daily AI news report and more.">
+<meta property="og:site_name" content="JeffreyAiFudenna">
+<meta property="og:title" content="JeffreyAiFudenna: projects with AI">
+<meta property="og:description" content="AI projects by Jeffrey Fudenna: self-publishing websites, a Fremont data hub, a daily AI news digest, AI video, AI-remixed photos and a sci-fi story.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jeffrey-ai-portfolio.vercel.app/">
 <meta property="og:image" content="https://jeffrey-ai-portfolio.vercel.app/media/buddha.jpg">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="A terracotta Buddha meditating in a garden shrine, from The Infinite Buddha">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://jeffrey-ai-portfolio.vercel.app/#site","name":"JeffreyAiFudenna","url":"https://jeffrey-ai-portfolio.vercel.app/","inLanguage":"en","publisher":{"@id":"https://jeffrey-ai-portfolio.vercel.app/#jeffrey"}},{"@type":"ProfilePage","url":"https://jeffrey-ai-portfolio.vercel.app/","name":"Jeffrey Fudenna | AI Projects Portfolio","description":"AI projects by Jeffrey Fudenna: self-publishing websites, a Fremont data hub, a daily AI news digest, AI video, AI-remixed photos and a sci-fi story.","isPartOf":{"@id":"https://jeffrey-ai-portfolio.vercel.app/#site"},"mainEntity":{"@id":"https://jeffrey-ai-portfolio.vercel.app/#jeffrey"},"primaryImageOfPage":"https://jeffrey-ai-portfolio.vercel.app/media/buddha.jpg"},{"@type":"Person","@id":"https://jeffrey-ai-portfolio.vercel.app/#jeffrey","name":"Jeffrey Fudenna","alternateName":"JeffreyAiFudenna","url":"https://jeffrey-ai-portfolio.vercel.app/","description":"Builds websites, automations and media with AI. Open to new roles.","knowsAbout":["Generative AI","Prompt engineering","AI automation","Claude","Gemini","Web development"],"sameAs":["https://github.com/jeffreyaifudenna"]},{"@type":"ItemList","name":"Projects","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebSite","name":"The Infinite Buddha","url":"https://www.theinfinitebuddha.xyz","creator":{"@id":"https://jeffrey-ai-portfolio.vercel.app/#jeffrey"}}},{"@type":"ListItem","position":2,"item":{"@type":"WebSite","name":"Fremont by the Numbers","url":"https://fremontcabythenumbers.com","creator":{"@id":"https://jeffrey-ai-portfolio.vercel.app/#jeffrey"}}},{"@type":"ListItem","position":3,"item":{"@type":"CollectionPage","name":"Daily AI News","url":"https://jeffrey-ai-portfolio.vercel.app/news.html"}},{"@type":"ListItem","position":4,"item":{"@type":"ShortStory","name":"11:11","url":"https://jeffrey-ai-portfolio.vercel.app/story.html"}}]}]}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse cx='32' cy='54' rx='24' ry='8' fill='%237d8882'/%3E%3Cellipse cx='30' cy='40' rx='17' ry='7' fill='%239aa49e'/%3E%3Cellipse cx='33' cy='28' rx='11' ry='6' fill='%23b6bdb6'/%3E%3Cellipse cx='32' cy='17' rx='7' ry='5' fill='%23c9861a'/%3E%3C/svg%3E">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}img{max-width:100%;height:auto}[hidden]{display:none!important}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,14 +28,6 @@
 <link rel="stylesheet" href="theme.css">
 <script src="theme.js"></script>
 <link rel="alternate" type="text/plain" href="llms.txt" title="llms.txt">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"JeffreyAiFudenna Portfolio","url":"https://jeffrey-ai-portfolio.vercel.app/",
- "description":"Jeffrey's AI projects, each one finished and written up.",
- "author":{"@type":"Person","name":"Jeffrey Fudenna","alternateName":"JeffreyAiFudenna","url":"https://jeffrey-ai-portfolio.vercel.app/","sameAs":["https://github.com/jeffreyaifudenna"]},
- "hasPart":[{"@type":"WebSite","name":"The Infinite Buddha","url":"https://www.theinfinitebuddha.xyz"},
-            {"@type":"WebSite","name":"Fremont by the Numbers","url":"https://fremontcabythenumbers.com"},
-            {"@type":"Blog","name":"Daily AI News","url":"https://jeffrey-ai-portfolio.vercel.app/news.html"}]}
-</script>
 <style>
 /* Layout: a single column "trail" — featured projects stacked like stones in a cairn, each a wide row with a visual and its story,
    then a compact grid of cards for everything else. */
@@ -255,7 +253,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
   <div class="wrap hero">
     <div>
       <h1 id="hero-h1"><span id="hero-name">JeffreyAiFudenna</span> projects <em>with AI</em></h1>
-      <p class="lede">I'm looking for my next role. These are the things I've built with AI along the way, each one finished and written up.</p>
+      <p class="lede">I'm looking for my next role. Here's what I've built with AI, each project finished and written up.</p>
     </div>
     <div class="cairn" id="hero-cairn" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
   </div>
@@ -274,7 +272,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
       <div class="info">
         <div class="meta"><span class="kind">Website · generative art</span><span class="when">Oct 2026</span><span class="pill live" title="Live"><span>Live</span></span></div>
         <h2>The Infinite Buddha</h2>
-        <p>A website that creates and publishes a new piece of Buddha art every day, all on its own. A Python script asks Gemini for the image, GitHub Actions runs it daily, and the site redeploys automatically.</p>
+        <p>A website that makes and publishes new Buddha art every day, on its own. A Python script asks Gemini for the image, GitHub Actions runs it daily, and the site redeploys itself.</p>
         <a class="link" href="https://www.theinfinitebuddha.xyz" target="_blank" rel="noopener">Visit theinfinitebuddha.xyz →</a>
       </div>
     </li>
@@ -284,7 +282,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
       <div class="info">
         <div class="meta"><span class="kind">Data aggregator</span><span class="when">Oct 2026</span><span class="pill live" title="Live"><span>Live</span></span></div>
         <h2>Fremont by the Numbers</h2>
-        <p>A data aggregator for Fremont, California. It gathers public figures on housing, schools, safety, jobs, parks, startups and more, and puts the source and date under every number. Built with Claude from plain HTML, CSS and JSON data files.</p>
+        <p>A data hub for Fremont, California: public figures on housing, schools, safety, jobs, parks and startups, with the source and date under every number. Built with Claude in plain HTML, CSS and JSON.</p>
         <a class="link" href="https://fremontcabythenumbers.com" target="_blank" rel="noopener">Visit fremontcabythenumbers.com →</a>
       </div>
     </li>
@@ -293,7 +291,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
       <div class="info">
         <div class="meta"><span class="kind">Video editing</span><span class="when">2026</span></div>
         <h2>Cool Moves Reel</h2>
-        <p>Short clips I made with Viggle that put me in scenes I couldn't film for real: dunking in a pro arena, throwing popcorn into a volcano, and hanging out with a crew in monkey masks.</p>
+        <p>Viggle clips that put me in scenes I couldn't film: dunking in a pro arena, tossing popcorn into a volcano, hanging with a crew in monkey masks.</p>
       </div>
       <div class="extra">
         <div class="reel">
@@ -310,7 +308,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
       <div class="info">
         <div class="meta"><span class="kind">Image generation</span><span class="when">2026</span></div>
         <h2>Remixed photos with AI</h2>
-        <p>Part real, part AI generation. I remixed this photo I took from my camping trip to make these AI-generated images, adding myself, the tent and backpack into the images.</p>
+        <p>Part real, part AI. I took this photo camping, then remixed it with Gemini, adding myself, a tent and a backpack.</p>
       </div>
       <div class="extra">
         <div class="gallery">
@@ -340,7 +338,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
       <div class="info">
         <div class="meta"><span class="kind">Writing · fiction</span><span class="when">Oct 2026</span><span class="pill live" title="Published"><span>Published</span></span></div>
         <h2>11:11, a Science Fiction Short Story</h2>
-        <p>Every night at 11:11 the lights go out worldwide, and nobody makes us. A short story written with AI as a drafting partner, with a note on how I made it and what I changed along the way.</p>
+        <p>Every night at 11:11 the lights go out worldwide, and nobody makes us. A short story drafted with AI, plus notes on how I made it and what I changed.</p>
         <a class="link" href="story.html">Read the story →</a>
       </div>
     </li>
@@ -352,7 +350,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
     <div class="more-head">
       <span class="eyebrow">Still cooking</span>
       <h2>In the lab</h2>
-      <p>Newer and still-in-progress projects. Each one moves up to a full write-up once it's finished.</p>
+      <p>Newer, in-progress work. Each gets a full write-up once it's finished.</p>
     </div>
     <ul class="cards">
 
@@ -375,7 +373,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
         <div class="info">
           <div class="meta"><span class="kind">Website · family</span><span class="when">2026</span></div>
           <h3>Family Tree Website</h3>
-          <p>A private family tree website where relatives can explore our family history together. Each person has a profile with photos, dates and a short story, and every edit is tracked so mistakes can be undone. A shared password keeps it family-only.</p>
+          <p>A private family tree where relatives explore our history together. Each person gets a profile with photos, dates and a short story. Every edit is tracked and undoable, and a shared password keeps it family-only.</p>
           <span class="nolink">Private site · no public link</span>
         </div>
       </li>
@@ -386,7 +384,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
   <section class="dn" id="dailynews" aria-label="Daily AI news" hidden>
     <div class="dn-head">
       <h2><span class="stone" aria-hidden="true"></span>Daily AI news</h2>
-      <p>An AI task I scheduled finds the day's biggest AI stories, checks every link, and posts a plain-English digest here every morning.</p>
+      <p>Each morning a scheduled AI task finds the biggest AI stories, checks every link and posts a plain-English digest.</p>
     </div>
     <ul class="dn-list" id="dn-list"></ul>
     <a class="link" href="news.html">Read all stories &rarr;</a>

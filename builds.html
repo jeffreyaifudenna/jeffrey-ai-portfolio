@@ -4,12 +4,23 @@
 <meta charset="utf-8">
 <link rel="canonical" href="https://jeffrey-ai-portfolio.vercel.app/builds.html">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Builds | JeffreyAiFudenna</title>
-<meta name="description" content="The tools, builds, prompts and working process behind JeffreyAiFudenna's AI projects.">
-<meta property="og:title" content="Builds">
+<title>Builds, Tools and Prompts | Jeffrey Fudenna</title>
+<meta name="description" content="The tools, prompts and process behind Jeffrey Fudenna's AI projects: what each build runs on and how it gets made.">
+<meta name="author" content="Jeffrey Fudenna">
+<!-- Link previews: og:image and og:url must be absolute URLs. Update both if the domain changes. -->
+<meta property="og:site_name" content="JeffreyAiFudenna">
+<meta property="og:title" content="Builds, Tools and Prompts | Jeffrey Fudenna">
+<meta property="og:description" content="The tools, prompts and process behind Jeffrey Fudenna's AI projects: what each build runs on and how it gets made.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jeffrey-ai-portfolio.vercel.app/builds.html">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://jeffrey-ai-portfolio.vercel.app/media/buddha.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="A terracotta Buddha meditating in a garden shrine, from The Infinite Buddha">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"Builds","url":"https://jeffrey-ai-portfolio.vercel.app/builds.html","description":"The tools, prompts and process behind Jeffrey Fudenna's AI projects: what each build runs on and how it gets made.","isPartOf":{"@id":"https://jeffrey-ai-portfolio.vercel.app/#site"},"author":{"@id":"https://jeffrey-ai-portfolio.vercel.app/#jeffrey"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jeffrey-ai-portfolio.vercel.app/"},{"@type":"ListItem","position":2,"name":"Builds","item":"https://jeffrey-ai-portfolio.vercel.app/builds.html"}]}]}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse cx='32' cy='54' rx='24' ry='8' fill='%237d8882'/%3E%3Cellipse cx='30' cy='40' rx='17' ry='7' fill='%239aa49e'/%3E%3Cellipse cx='33' cy='28' rx='11' ry='6' fill='%23b6bdb6'/%3E%3Cellipse cx='32' cy='17' rx='7' ry='5' fill='%23c9861a'/%3E%3C/svg%3E">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,7 +79,7 @@ footer p{margin:0}
 <header class="wrap">
   <div class="eyebrow">Behind the projects</div>
   <h1>Builds</h1>
-  <p class="lede">The tools I use, what I've built with them, the prompts that run things, and how the work actually gets done.</p>
+  <p class="lede">My tools, what I built with them, the prompts that run things, and how the work gets done.</p>
 </header>
 
 <main class="wrap">
@@ -92,7 +103,7 @@ footer p{margin:0}
     <article class="build">
       <h3>The Infinite Buddha</h3>
       <div class="byline"><span>Oct 2026</span><span class="chip">Live</span><span>Gemini API · Python · React + Vite · GitHub Actions · Vercel</span></div>
-      <p>A website that creates and publishes a new piece of Buddha art every day, all on its own. A Python script asks Gemini for the image, GitHub Actions runs it daily, and the site redeploys automatically. <a href="https://www.theinfinitebuddha.xyz" target="_blank" rel="noopener">theinfinitebuddha.xyz &rarr;</a></p>
+      <p>A website that makes and publishes new Buddha art every day, on its own. A Python script asks Gemini for the image, GitHub Actions runs it daily, and the site redeploys itself. <a href="https://www.theinfinitebuddha.xyz" target="_blank" rel="noopener">theinfinitebuddha.xyz &rarr;</a></p>
     </article>
 
     <article class="build">
@@ -104,13 +115,13 @@ footer p{margin:0}
     <article class="build">
       <h3>Daily AI News</h3>
       <div class="byline"><span>Oct 2026</span><span class="chip">Running</span><span>Claude scheduled task · JSON · RSS</span></div>
-      <p>A scheduled AI task finds the day's biggest AI stories, checks every link, writes a plain-English summary and a one-line "why it matters" for each, and publishes the digest to this site every morning. <a href="news.html">Today's digest &rarr;</a> · <a href="news/feed.xml">RSS</a></p>
+      <p>Every morning a scheduled AI task finds the biggest AI stories, checks every link, and publishes each with a plain-English summary and a one-line "why it matters." <a href="news.html">Today's digest &rarr;</a> · <a href="news/feed.xml">RSS</a></p>
     </article>
 
     <article class="build">
       <h3>11:11, a Science Fiction Short Story</h3>
       <div class="byline"><span>Oct 2026</span><span class="chip">Published</span><span>Short story · AI drafting · Process notes</span></div>
-      <p>Every night at 11:11 the lights go out worldwide, and nobody makes us. Written with AI as a drafting partner, with a note on what I changed along the way. <a href="story.html">Read the story &rarr;</a></p>
+      <p>Every night at 11:11 the lights go out worldwide, and nobody makes us. Drafted with AI, with notes on what I changed. <a href="story.html">Read the story &rarr;</a></p>
     </article>
 
     <article class="build">
@@ -134,7 +145,7 @@ footer p{margin:0}
     <article class="build" id="site">
       <h3>This site</h3>
       <div class="byline"><span>Oct 2026</span><span class="chip">Live</span><span>Claude Code · Plain HTML · Vercel</span></div>
-      <p>Five HTML pages, one shared stylesheet, no framework and no build step. Written in Claude Code, designed by hand. Twelve color themes and a holiday accent that reads the Hebrew and Chinese calendars, and a news section that fills itself from a JSON file the morning task writes. A plain-text map of the site sits alongside the pages so AI agents can read it as easily as people do.</p>
+      <p>Five HTML pages, one shared stylesheet, no framework, no build step. Written in Claude Code, designed by hand. Twelve color themes, holiday accents from the Hebrew and Chinese calendars, and a news section the morning task fills from a JSON file. Structured data helps search engines read each page, and a plain-text map lets AI agents read it as easily as people do.</p>
     </article>
 
   </section>

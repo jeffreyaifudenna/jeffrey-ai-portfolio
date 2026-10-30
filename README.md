@@ -19,6 +19,11 @@ My AI projects, written up. Plain HTML, no build step.
 - After the message to you goes out, the function sends the visitor a one-time email linking `guide.html`, a free how-to-use-AI article. The page is `noindex` and left out of the sitemap and nav, so it is reachable only through that email. Edit the wording in `api/contact.js` and the article in `guide.html`.
 - The function only runs on Vercel (or `vercel dev`); `python -m http.server` serves the page but the send will fail.
 
+## SEO
+- Each public page's `<head>` has a title (under 60 characters), a description (under 155), Open Graph and Twitter tags, and a JSON-LD block (Person, WebSite, BreadcrumbList and a page type). The Person `@id` (`/#jeffrey`) is shared across pages; keep it the same.
+- Link previews use `media/buddha.jpg` (absolute URL). Change every page if the domain changes, plus `sitemap.xml`, `robots.txt` and `llms.txt`.
+- Bump `<lastmod>` in `sitemap.xml` when a page's content changes. `guide.html` stays `noindex` and out of the sitemap.
+
 ## Deploy
 Push this folder to a GitHub repo, then import the repo in Vercel.
 Framework preset: Other. No build command, no output directory.
