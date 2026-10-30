@@ -71,7 +71,11 @@ header .cairn.ghost{visibility:hidden}
 
 /* hero */
 header{padding-block:56px 40px;border-bottom:1px solid var(--line)}
-.hero{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:center}
+.hero .cairn{width:max-content;margin-top:28px;padding-bottom:0}
+.avatar{margin:0}
+.avatar video{display:block;width:min(100%,240px);aspect-ratio:9/16;border-radius:12px;background:#000}
+.avatar figcaption{margin-top:8px;font-family:var(--mono);font-size:12px;color:var(--muted)}
 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 h1{font-family:var(--display);font-weight:400;font-size:clamp(40px,8vw,84px);line-height:1;margin:12px 0 18px;text-wrap:balance;letter-spacing:-.01em}
 h1 em{font-style:normal;color:var(--accent)}
@@ -168,13 +172,6 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.6vw,36px);l
 .lb-count{color:#aab3ad}
 .lb-close{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px))}
 
-/* avatar intro */
-.avatar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:center;padding-block:8px 36px}
-.avatar h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,4vw,38px);line-height:1.15;margin:0}
-.avatar-note{margin:8px 0 0;color:var(--muted)}
-.avatar video{display:block;width:min(100%,260px);aspect-ratio:9/16;border-radius:12px;background:#000}
-@media (max-width:720px){.avatar{grid-template-columns:1fr;gap:16px;justify-items:start}}
-
 /* video reel + player */
 .reel{display:grid;grid-template-columns:3.16fr 1fr 1fr 1fr;gap:10px;align-items:start}
 .reel figure{margin:0;display:flex;flex-direction:column;gap:6px;min-width:0}
@@ -225,6 +222,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
 
 @media (max-width:720px){
   .hero{grid-template-columns:1fr}
+  .avatar video{width:min(100%,220px)}
   header .cairn{display:none}
   .proj{grid-template-columns:1fr;gap:18px}
   .proj:nth-child(even) .visual,.proj.flip .visual{order:0}
@@ -261,18 +259,14 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
     <div>
       <h1 id="hero-h1"><span id="hero-name">JeffreyAiFudenna</span> projects <em>with AI</em></h1>
       <p class="lede">I'm looking for my next role. Here's what I've built with AI, each project finished and written up.</p>
+      <div class="cairn" id="hero-cairn" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
     </div>
-    <div class="cairn" id="hero-cairn" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <figure class="avatar">
+      <video src="media/video-5.mp4" poster="media/poster-5.webp" controls playsinline preload="none" aria-label="My avatar, based on me and generated with AI"></video>
+      <figcaption>Based on me, generated with AI.</figcaption>
+    </figure>
   </div>
 </header>
-
-<section class="wrap avatar" id="avatar" aria-labelledby="avatar-h">
-  <div>
-    <h2 id="avatar-h">Meet my avatar</h2>
-    <p class="avatar-note">Based on me, generated with AI.</p>
-  </div>
-  <video src="media/video-5.mp4" poster="media/poster-5.webp" controls playsinline preload="none"></video>
-</section>
 
 <main class="wrap" id="projects">
   <!-- Each project has data-kind="website|image|video|writing|automation" and data-date="YYYY-MM"; add data-auto to one that runs on a schedule. The counts in the toolbar are computed from those. -->
