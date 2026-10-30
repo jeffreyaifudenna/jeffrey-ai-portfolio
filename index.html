@@ -169,7 +169,7 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.6vw,36px);l
 .lb-close{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px))}
 
 /* video reel + player */
-.reel{display:grid;grid-template-columns:3.16fr 1fr 1fr 1fr;gap:10px;align-items:start}
+.reel{display:grid;grid-template-columns:1fr 3.16fr 1fr 1fr 1fr;gap:10px;align-items:start}
 .reel figure{margin:0;display:flex;flex-direction:column;gap:6px;min-width:0}
 .reel figcaption{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .tile{position:relative;display:block;width:100%;max-width:100%;padding:0;border:0;border-radius:10px;overflow:hidden;background:var(--ink);cursor:pointer}
@@ -226,7 +226,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
   .reel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:8px;-webkit-overflow-scrolling:touch}
   .reel figure{flex:0 0 auto;scroll-snap-align:start}
   .reel .tile{height:300px;width:auto}
-  .reel figure:first-child .tile{height:auto;width:min(80vw,420px)}
+  .reel figure.wide .tile{height:auto;width:min(80vw,420px)}
 }
 @media (prefers-reduced-motion:reduce){.gallery img,.tile img,.play,.link,.btn,.card{transition:none}}
 </style>
@@ -295,10 +295,11 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
       </div>
       <div class="extra">
         <div class="reel">
-          <figure><button type="button" class="tile" data-i="0" style="aspect-ratio:16/9" aria-label="Play Monkey crew, 8s"><img src="media/poster-4.webp" width="720" height="406" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">0:08</span></button><figcaption>Monkey crew</figcaption></figure>
-          <figure><button type="button" class="tile" data-i="1" style="aspect-ratio:9/16" aria-label="Play Arena dunk, 5s"><img src="media/poster-1.webp" width="720" height="1280" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">0:05</span></button><figcaption>Arena dunk</figcaption></figure>
-          <figure><button type="button" class="tile" data-i="2" style="aspect-ratio:9/16" aria-label="Play Dance moves, 7s"><img src="media/poster-2.webp" width="720" height="1280" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">0:07</span></button><figcaption>Dance moves</figcaption></figure>
-          <figure><button type="button" class="tile" data-i="3" style="aspect-ratio:9/16" aria-label="Play Popcorn volcano, 5s"><img src="media/poster-3.webp" width="720" height="1260" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">0:05</span></button><figcaption>Popcorn volcano</figcaption></figure>
+          <figure><button type="button" class="tile" data-i="0" style="aspect-ratio:9/16" aria-label="Play Avatar, 7s"><img src="media/poster-5.webp" width="720" height="1280" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">0:07</span></button><figcaption>Avatar</figcaption></figure>
+          <figure class="wide"><button type="button" class="tile" data-i="1" style="aspect-ratio:16/9" aria-label="Play Monkey crew, 8s"><img src="media/poster-4.webp" width="720" height="406" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">0:08</span></button><figcaption>Monkey crew</figcaption></figure>
+          <figure><button type="button" class="tile" data-i="2" style="aspect-ratio:9/16" aria-label="Play Arena dunk, 5s"><img src="media/poster-1.webp" width="720" height="1280" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">0:05</span></button><figcaption>Arena dunk</figcaption></figure>
+          <figure><button type="button" class="tile" data-i="3" style="aspect-ratio:9/16" aria-label="Play Dance moves, 7s"><img src="media/poster-2.webp" width="720" height="1280" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">0:07</span></button><figcaption>Dance moves</figcaption></figure>
+          <figure><button type="button" class="tile" data-i="4" style="aspect-ratio:9/16" aria-label="Play Popcorn volcano, 5s"><img src="media/poster-3.webp" width="720" height="1260" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">0:05</span></button><figcaption>Popcorn volcano</figcaption></figure>
         </div>
       </div>
     </li>
@@ -464,7 +465,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
 })();
 /* Video player. */
 (function(){
-  const clips=[["4", "Monkey crew"], ["1", "Arena dunk"], ["2", "Dance moves"], ["3", "Popcorn volcano"]];
+  const clips=[["5", "Avatar"], ["4", "Monkey crew"], ["1", "Arena dunk"], ["2", "Dance moves"], ["3", "Popcorn volcano"]];
   const pl=document.getElementById('player'), v=document.getElementById('pl-video'),
     title=document.getElementById('pl-title'), count=document.getElementById('pl-count'),
     prev=document.getElementById('pl-prev'), next=document.getElementById('pl-next'),
