@@ -1,6 +1,8 @@
 # JeffreyAiFudenna Portfolio
 
-My AI projects, written up. Plain HTML, no build step.
+**Live site:** https://jeffrey-ai-portfolio.vercel.app
+
+My AI projects, written up. Plain HTML, no build step. Built with Claude Code.
 
 - `index.html` is the portfolio page. `builds.html` is the tools, prompts and process page. `news.html` is the Daily AI News digest. `story.html` is the 11:11 short story.
 - `theme.css` and `theme.js` hold every color theme, the holiday accents and the theme picker, shared by all pages.
@@ -27,3 +29,7 @@ My AI projects, written up. Plain HTML, no build step.
 ## Deploy
 Push this folder to a GitHub repo, then import the repo in Vercel.
 Framework preset: Other. No build command, no output directory.
+
+## License
+
+MIT License. See [LICENSE](LICENSE). Free to use, change and share.
