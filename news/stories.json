@@ -1,6 +1,61 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-10-31",
   "days": [
+    {
+      "date": "2026-10-31",
+      "stories": [
+        {
+          "title": "Building a Haunted House with NVIDIA Nemotron Open Models",
+          "source": "Hugging Face Blog (NVIDIA)",
+          "published": "2026-10-30",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/nvidia/nemotron-halloween",
+          "summary": "An NVIDIA engineer built MonsterHouse, a talking Halloween character projected onto a garage that chats with trick-or-treaters. It runs on one two-GPU workstation using open Nemotron models for speech recognition, conversation and costume spotting, with about 1.7 seconds of median response time.",
+          "why": "It is a concrete recipe for a fully local voice agent built from open models, showing that real-time voice characters no longer need a cloud API."
+        },
+        {
+          "title": "Vercel Daemons can now call services with bindings",
+          "source": "Vercel Changelog",
+          "published": "2026-10-30",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://vercel.com/changelog/vercel-daemons-can-now-call-services-with-bindings",
+          "summary": "Vercel Daemons can now call other private services in the same deployment by declaring a binding in config. Vercel handles the routing, authentication and TLS, and passes the target's address in an environment variable. Bindings work in one direction only.",
+          "why": "Long-running agent workers on Vercel can now talk to private backend services without exposing them publicly or hand-rolling auth."
+        },
+        {
+          "title": "Nvidia weighs playing the cosigner for Nscale's AI data center in West Virginia",
+          "source": "TechCrunch",
+          "published": "2026-10-30",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/",
+          "summary": "Nvidia is reportedly in talks to guarantee billions in debt for Nscale's West Virginia data center, which is contracted to serve Anthropic. If Nscale missed construction payments, Nvidia would temporarily take over the site. The report credits The Information.",
+          "why": "Chipmakers backing their customers' debt shows how much of the AI buildout rests on a few balance sheets, which affects how stable compute supply and prices will be."
+        },
+        {
+          "title": "Was this the AI election?",
+          "source": "Transformer",
+          "published": "2026-10-30",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://www.transformernews.ai/p/was-this-the-ai-election",
+          "summary": "Ahead of the 2026 midterms, Transformer looks at whether AI is a real campaign issue. Polls show very few voters rank it first, but many battleground campaigns mention AI or data centers. The authors argue it feeds worries about jobs, corruption and power bills.",
+          "why": "Data centers and electricity costs are turning AI into a local political issue, which can shape where new compute gets built and how it is regulated."
+        },
+        {
+          "title": "LLM use is acknowledged almost as often as specialized AI tools in biology preprints",
+          "source": "Epoch AI",
+          "published": "2026-10-30",
+          "kind": "Research",
+          "status": "confirmed",
+          "url": "https://epoch.ai/data-insights/biorxiv-llms-vs-ai-tools",
+          "summary": "Epoch AI found that about 17% of bioRxiv biology preprints now acknowledge using large language models, close to the 19% that cite specialized AI tools such as AlphaFold. Use of LLMs for the analysis itself, not just writing, rose to about 4% by September.",
+          "why": "General chat models are quietly becoming part of the scientific workflow, not just a writing aid, which raises the stakes for their accuracy in research settings."
+        }
+      ]
+    },
     {
       "date": "2026-10-29",
       "stories": [
