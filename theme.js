@@ -283,7 +283,7 @@
   function padHTML() {
     var b = function (cls, k, label) { return '<button type="button" class="' + cls + '" data-k="' + k + '" aria-label="' + label + '">' + (cls.indexOf('dp') === 0 ? '<i></i>' : '') + '</button>'; };
     var dots = ''; for (var i = 0; i < CODE.length; i++) dots += '<i></i>';
-    return '<div class="nes-card" role="dialog" aria-modal="true" aria-labelledby="nes-h">' +
+    return '<div class="nes-card" role="dialog" aria-modal="true" aria-labelledby="nes-h" tabindex="-1">' +
       '<button type="button" class="nes-x" aria-label="Close">×</button>' +
       '<h2 id="nes-h">Enter the code</h2><p>Use the buttons below, or your keyboard’s arrow keys, B and A.</p>' +
       '<div class="nes"><div class="nes-panel"></div><div class="nes-mid"></div><div class="nes-well nes-well-b"></div><div class="nes-well nes-well-a"></div>' +
