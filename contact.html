@@ -103,7 +103,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     e.preventDefault();
     form.elements.t.value=String(Date.now()-loaded);   /* time on page; the server ignores sends faster than a person can type */
     var d={}; new FormData(form).forEach(function(v,k){d[k]=v});
-    if(!d.name.trim()||!d.message.trim()||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email.trim())){
+    if(!d.name.trim()||!d.message.trim()||!/^[^\s@,;<>()"\\]+@[^\s@,;<>()"\\]+\.[^\s@,;<>()"\\]+$/.test(d.email.trim())){
       status.className='status err'; status.textContent='Please fill in your name, a valid email and a message.'; return;
     }
     btn.disabled=true; status.className='status'; status.textContent='Sending…';

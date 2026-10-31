@@ -10,7 +10,8 @@
 const nodemailer = require('nodemailer');
 
 const SITE = 'https://jeffrey-ai-portfolio.vercel.app';
-const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+/* One plain address only: no list separators, angle brackets, quotes or comments, which nodemailer would parse as extra syntax. */
+const EMAIL = /^[^\s@,;<>()"\\]+@[^\s@,;<>()"\\]+\.[^\s@,;<>()"\\]+$/;
 const MIN_MS = 3000;                  /* faster than this after page load is a bot */
 const MAX_MS = 24 * 60 * 60 * 1000;   /* a page left open over a day is treated as stale */
 const LIMIT = 5, WINDOW_MS = 10 * 60 * 1000;   /* 5 sends per IP per 10 minutes */
@@ -32,7 +33,7 @@ module.exports = async function handler(req, res) {
 
   if (!sameOrigin(req)) return res.status(403).json({ error: 'Please send the form from the contact page.' });
 
-  const body = typeof req.body === 'string' ? safeParse(req.body) : req.body || {};
+  const body = (typeof req.body === 'string' ? safeParse(req.body) : req.body) || {};
   const name = clean(body.name, 100);
   const email = clean(body.email, 200);
   const message = clean(body.message, 5000);
