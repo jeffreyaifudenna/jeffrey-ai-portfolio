@@ -148,9 +148,10 @@
 .ts-konami svg{width:20px;height:20px;flex:none;display:block}
 .nes-modal{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:16px;background:rgba(8,10,9,.62);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
 .nes-modal[hidden]{display:none}
-.nes-card{position:relative;width:min(460px,100%);max-height:100%;overflow:auto;padding:22px 20px 18px;border:1px solid var(--line);border-radius:18px;
+.nes-card{position:relative;box-sizing:border-box;width:min(460px,100%);max-height:100%;overflow:auto;padding:22px 20px 18px;border:1px solid var(--line);border-radius:18px;
   background:var(--surface);color:var(--ink);box-shadow:0 30px 70px -30px rgba(0,0,0,.6);text-align:center;font:15px/1.5 var(--body,system-ui,sans-serif);
   text-transform:none;letter-spacing:normal}
+.nes-card:focus{outline:none}
 .nes-card h2{margin:0 0 4px;font:400 24px/1.2 var(--display,Georgia,serif)}
 .nes-card p{margin:0 0 16px;color:var(--muted);font-size:14px}
 .nes-x{position:absolute;top:10px;right:12px;width:32px;height:32px;padding:0;border:0;border-radius:50%;background:none;color:var(--muted);font-size:24px;line-height:1;cursor:pointer}
