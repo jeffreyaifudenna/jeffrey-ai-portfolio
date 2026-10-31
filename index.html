@@ -85,7 +85,9 @@ header{padding-block:56px 40px;border-bottom:1px solid var(--line)}
 .avatar video{display:block;width:min(100%,240px);aspect-ratio:9/16;border-radius:12px;background:#000}
 .avatar figcaption{margin-top:8px;font-family:var(--mono);font-size:12px;color:var(--muted)}
 /* tablet and narrow windows: keep the video beside the title, a little smaller, so it is on the first screen */
-@media (max-width:960px){.hero{grid-template-columns:minmax(0,1fr) 220px;gap:28px} h1{font-size:clamp(40px,6.5vw,84px)} .avatar video{width:220px}}
+@media (max-width:960px){.hero{grid-template-columns:minmax(0,1fr) 220px;gap:28px} .hero h1{font-size:clamp(40px,min(8vw,calc((100vw - 320px)/7.7)),84px)} .avatar video{width:220px}} /* the title shrinks just enough that the one-word name fits beside the video */
+/* phone held sideways: shorten the video so it still fits the screen */
+@media (max-width:960px) and (max-height:600px){.hero .avatar{align-self:start} .avatar video{width:auto;height:clamp(200px,calc(100svh - 140px),391px)}}
 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 h1{font-family:var(--display);font-weight:400;font-size:clamp(40px,8vw,84px);line-height:1;margin:12px 0 18px;text-wrap:balance;letter-spacing:-.01em}
 h1 em{font-style:normal;color:var(--accent)}
@@ -233,9 +235,9 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
 @media (max-width:720px){
   /* phone: title, then the avatar video sized so all of it is on the first screen, then the intro text */
   header{padding-block:28px 32px}
-  .hero{grid-template-columns:1fr;gap:18px}
+  .hero{grid-template-columns:minmax(0,1fr);gap:18px}
   .hero>div:first-child{display:contents}
-  .hero h1{margin-bottom:0}
+  .hero h1{margin-bottom:0;font-size:clamp(32px,11.5vw,40px)} /* keeps the one-word name on one line down to 320px */
   .hero .avatar{order:1}
   .hero .lede{order:2}
   .avatar video{width:auto;max-width:100%;height:clamp(220px,calc(100vh - 290px),391px);height:clamp(220px,calc(100svh - 290px),391px)}
