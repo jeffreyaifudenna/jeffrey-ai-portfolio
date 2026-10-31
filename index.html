@@ -261,7 +261,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
   <div class="wrap">
     <a class="brand" href="#top" aria-label="JeffreyAiFudenna, back to top">
       <span class="brand-cairn" id="brand-cairn" aria-hidden="true"><span class="cairn"><span></span><span></span><span></span><span></span></span></span>
-      <span class="brand-name" id="brand-name"><span class="brand-h1" id="brand-h1">JeffreyAiFudenna</span></span>
+      <span class="brand-name" id="brand-name"><span class="brand-h1" id="brand-h1">Jeffrey<em id="brand-ai">Ai</em>Fudenna</span></span>
     </a>
     <ul>
       <li><a href="#projects">Projects</a></li>
@@ -533,7 +533,8 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
 (function(){
   var fly=document.getElementById('brand-cairn'), hero=document.getElementById('hero-cairn'),
       name=document.getElementById('brand-h1'), nameBox=document.getElementById('brand-name'), h1=document.getElementById('hero-name'),
-      brand=fly.parentElement, twin=document.getElementById('foot-brand'); if(!fly||!hero||!name||!h1) return;
+      brand=fly.parentElement, twin=document.getElementById('foot-brand'), ai=document.getElementById('brand-ai'); if(!fly||!hero||!name||!h1) return;
+  var MIX=window.CSS&&CSS.supports&&CSS.supports('color','color-mix(in srgb,red 50%,blue)');
   var twinFly=twin&&twin.querySelector('.brand-cairn');
   var stones=fly.querySelectorAll('.cairn span'), REST=.2, ease=function(t){return t*t*(3-2*t)}, clamp=function(v){return Math.min(1,Math.max(0,v))};
   var on=false, onN=false, land=false, start, S, startN, SN, R=1, rest, raf=0;
@@ -558,7 +559,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
       startN={x:hr.left-nr.left, y:hr.top+(hr.height-fs)/2+scrollY-nr.top};
       SN=Math.max(80,startN.y);
     } else {
-      [name,nameBox].forEach(function(n){ n.style.cssText=''; });
+      [name,nameBox,ai].forEach(function(n){ if(n) n.style.cssText=''; });
     }
     var h=hero.getBoundingClientRect(), f=fly.getBoundingClientRect();
     rest={x:f.left+f.width/2, y:f.top+f.height/2};
@@ -585,7 +586,10 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
     if(on||land) fly.style.transform='translate('+((on?start.x*q:0)+lx)+'px,'+((on?(start.y-s)*q:0)+ly)+'px) scale('+(on?1-(1-REST)*p:REST)+')';
     if(onN){
       var pn=ease(clamp(s/SN)), qn=1-pn;
-      name.style.transform='translate('+(startN.x*qn)+'px,'+((startN.y-s)*qn)+'px) scale('+(1-(1-R)*pn)+')';
+      /* the name swings out to the right in a gentle arc on its way up, and the "Ai" takes the accent colour as it docks */
+      var arc=Math.abs(startN.y)*.28*Math.sin(Math.PI*pn);
+      name.style.transform='translate('+(startN.x*qn+arc)+'px,'+((startN.y-s)*qn)+'px) scale('+(1-(1-R)*pn)+')';
+      if(ai){ var mix=Math.round(clamp((pn-.55)/.45)*100); ai.style.color=MIX?'color-mix(in srgb,var(--accent) '+mix+'%,var(--ink))':(mix>50?'var(--accent)':'var(--ink)'); }
     }
     stones.forEach(function(st,i){
       var x=i===1?4:i===2?-5:0, lift=-(3-i)*9*g, tilt=(i%2?7:-7)*g;
