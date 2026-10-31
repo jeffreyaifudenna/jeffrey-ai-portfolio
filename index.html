@@ -281,7 +281,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
 <main class="wrap" id="projects">
   <!-- Each project has data-kind="website|image|video|writing|automation" and data-date="YYYY-MM"; add data-auto to one that runs on a schedule. The counts in the toolbar are computed from those. -->
   <div class="toolbar">
-    <div class="count"><span id="count">6 projects</span><span id="auto-count">2 run on their own</span></div>
+    <div class="count"><span id="count">7 projects</span><span id="auto-count">2 run on their own</span></div>
   </div>
 
   <ol class="projects">
@@ -442,7 +442,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
 /* Project count — computed from the project list. */
 (function(){
   const items=[...document.querySelectorAll('.proj,.card')];
-  document.getElementById('count').textContent=items.length+' projects';
+  document.getElementById('count').textContent=(items.length+1)+' projects'; /* +1: the Daily AI News task, which lives in its own section */
   const auto=items.filter(i=>i.hasAttribute('data-auto')).length+1; /* +1: the Daily AI News task, which lives in its own section */
   document.getElementById('auto-count').textContent=auto+(auto===1?' runs on its own':' run on their own');
 })();
