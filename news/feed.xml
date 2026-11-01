@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 31 Oct 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Judge allows NAACP lawsuit over xAI data center pollution to move forward [Reported]</title>
+      <link>https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/</link>
+      <guid isPermaLink="false">2026-11-01:Judge allows NAACP lawsuit over xAI data center pollution to move forward</guid>
+      <pubDate>Sat, 31 Oct 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>A federal judge refused to dismiss a Clean Air Act suit accusing xAI of running at least 35 gas turbines at its Memphis-area Colossus site without air permits. She rejected xAI&#x27;s claim that the turbines are mobile and exempt.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Permitting and pollution rules are becoming a real constraint on where AI compute can be built and how fast, not just a local nuisance. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>OpenAI reportedly lowers funding target for new round [Reported]</title>
+      <link>https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/</link>
+      <guid isPermaLink="false">2026-11-01:OpenAI reportedly lowers funding target for new round</guid>
+      <pubDate>Sat, 31 Oct 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>TechCrunch relays reports that OpenAI cut its target to $20 billion from an earlier $30 billion. The Wall Street Journal says $11 billion is secured so far and some large investors were lukewarm. OpenAI had not yet commented.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Investor caution on AI spending could affect how aggressively labs price and expand. The figures are second-hand, via the FT and WSJ. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Anthropic expected to receive high &#x27;junk&#x27; rating from credit agencies following IPO, FT report says [Reported]</title>
+      <link>https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/</link>
+      <guid isPermaLink="false">2026-11-01:Anthropic expected to receive high &#x27;junk&#x27; rating from credit agencies following IPO, FT report says</guid>
+      <pubDate>Fri, 30 Oct 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Per the Financial Times, Blackstone told investors it expects a double-B rating for Anthropic after its IPO, lower than an earlier investment-grade forecast. That would make borrowing for compute costlier. Anthropic and Blackstone declined to comment.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A lab&#x27;s financing costs shape its compute plans and possibly pricing. This is one report&#x27;s expectation, not an actual rating. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Route and orchestrate models with GitHub Copilot Fusion</title>
+      <link>https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion</link>
+      <guid isPermaLink="false">2026-11-01:Route and orchestrate models with GitHub Copilot Fusion</guid>
+      <pubDate>Wed, 28 Oct 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>GitHub made Copilot Fusion generally available. You pick it in the model picker with an effort level, and it chooses models per prompt, using one model, a fallback cascade, or one model critiquing another.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Automatic routing means less manual model picking in Copilot. Benchmark and cost claims are GitHub&#x27;s own, so test it on your work. &#8212; GitHub Changelog</description>
+    </item>
+    <item>
+      <title>How We Took Over ChatGPT Accounts [Reported]</title>
+      <link>https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/</link>
+      <guid isPermaLink="false">2026-11-01:How We Took Over ChatGPT Accounts</guid>
+      <pubDate>Sat, 31 Oct 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>Parameter Labs describes chaining a message handler, an unsandboxed iframe injection and a permissive content security policy to run script on ChatGPT. Per the post, OpenAI fixed it and paid a bounty.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A clear example of AI chat apps inheriting classic web security risks when they render user-made HTML. Worth knowing if you let models generate previewable apps. &#8212; Simon Willison&#x27;s Weblog</description>
+    </item>
     <item>
       <title>Building a Haunted House with NVIDIA Nemotron Open Models</title>
       <link>https://huggingface.co/blog/nvidia/nemotron-halloween</link>

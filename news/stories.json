@@ -1,6 +1,61 @@
 {
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "days": [
+    {
+      "date": "2026-11-01",
+      "stories": [
+        {
+          "title": "Judge allows NAACP lawsuit over xAI data center pollution to move forward",
+          "source": "TechCrunch",
+          "published": "2026-10-31",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/",
+          "summary": "A federal judge refused to dismiss a Clean Air Act suit accusing xAI of running at least 35 gas turbines at its Memphis-area Colossus site without air permits. She rejected xAI's claim that the turbines are mobile and exempt.",
+          "why": "Permitting and pollution rules are becoming a real constraint on where AI compute can be built and how fast, not just a local nuisance."
+        },
+        {
+          "title": "OpenAI reportedly lowers funding target for new round",
+          "source": "TechCrunch",
+          "published": "2026-10-31",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/",
+          "summary": "TechCrunch relays reports that OpenAI cut its target to $20 billion from an earlier $30 billion. The Wall Street Journal says $11 billion is secured so far and some large investors were lukewarm. OpenAI had not yet commented.",
+          "why": "Investor caution on AI spending could affect how aggressively labs price and expand. The figures are second-hand, via the FT and WSJ."
+        },
+        {
+          "title": "Anthropic expected to receive high 'junk' rating from credit agencies following IPO, FT report says",
+          "source": "TechCrunch",
+          "published": "2026-10-30",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/",
+          "summary": "Per the Financial Times, Blackstone told investors it expects a double-B rating for Anthropic after its IPO, lower than an earlier investment-grade forecast. That would make borrowing for compute costlier. Anthropic and Blackstone declined to comment.",
+          "why": "A lab's financing costs shape its compute plans and possibly pricing. This is one report's expectation, not an actual rating."
+        },
+        {
+          "title": "Route and orchestrate models with GitHub Copilot Fusion",
+          "source": "GitHub Changelog",
+          "published": "2026-10-28",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion",
+          "summary": "GitHub made Copilot Fusion generally available. You pick it in the model picker with an effort level, and it chooses models per prompt, using one model, a fallback cascade, or one model critiquing another.",
+          "why": "Automatic routing means less manual model picking in Copilot. Benchmark and cost claims are GitHub's own, so test it on your work."
+        },
+        {
+          "title": "How We Took Over ChatGPT Accounts",
+          "source": "Simon Willison's Weblog",
+          "published": "2026-10-31",
+          "kind": "Research",
+          "status": "reported",
+          "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
+          "summary": "Parameter Labs describes chaining a message handler, an unsandboxed iframe injection and a permissive content security policy to run script on ChatGPT. Per the post, OpenAI fixed it and paid a bounty.",
+          "why": "A clear example of AI chat apps inheriting classic web security risks when they render user-made HTML. Worth knowing if you let models generate previewable apps."
+        }
+      ]
+    },
     {
       "date": "2026-10-31",
       "stories": [
