@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "days": [
+    {
+      "date": "2026-11-02",
+      "stories": [
+        {
+          "title": "Anthropic reports $17 billion in Q3 revenue, purchase commitments of $895.4 billion in revised S-1",
+          "source": "CNBC",
+          "published": "2026-11-02",
+          "kind": "Industry",
+          "status": "confirmed",
+          "url": "https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html",
+          "summary": "Anthropic filed an amended IPO prospectus with third-quarter numbers: about $17 billion in revenue, with quarter-over-quarter growth slowing to roughly 47 percent. The nine-month net loss of $104 billion comes mostly from non-cash revaluation of convertible notes. Purchase and lease commitments total about $895 billion, nearly all for compute.",
+          "why": "This is the most detailed public look at a frontier lab's economics so far, and the compute obligations show how capital-heavy the model business has become."
+        },
+        {
+          "title": "Marvell to buy Lumentum in all-stock deal, a massive bet on AI connectivity",
+          "source": "CNBC",
+          "published": "2026-11-02",
+          "kind": "Industry",
+          "status": "confirmed",
+          "url": "https://www.cnbc.com/2026/11/02/marvell-to-buy-lumentum-in-115-billion-deal-in-ai-data-center-bet-.html",
+          "summary": "Marvell will acquire optical components maker Lumentum in an all-stock deal that values Lumentum at an implied $115 billion enterprise value. The companies say optical links between AI chips are central to data center design. The deal is expected to close in the first half of 2028.",
+          "why": "One of the largest chip deals on record, and a sign that the next AI infrastructure bottleneck is the networking between accelerators, not just the accelerators themselves."
+        },
+        {
+          "title": "Evaluate Vercel Flags from another project without sharing SDK keys",
+          "source": "Vercel Changelog",
+          "published": "2026-11-02",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://vercel.com/changelog/evaluate-vercel-flags-from-another-project-without-sharing-sdk-keys",
+          "summary": "Vercel added Project Connections, which let one project read feature flags defined in another project on the same team without copying a server SDK key into its environment. Connected deployments authenticate with their own identity, access is read-only, and a connection can be revoked without redeploying.",
+          "why": "If you run several small Vercel sites, you can now manage one set of flags for all of them with no shared secrets to rotate."
+        },
+        {
+          "title": "Apriel Voice 27B Preview: An Open Model for Speech, Reasoning, and Tool Use",
+          "source": "Hugging Face Papers",
+          "published": "2026-11-02",
+          "kind": "Research",
+          "status": "confirmed",
+          "url": "https://huggingface.co/papers/2610.40738",
+          "summary": "A new open speech model built on Gemma 4 takes spoken input directly and produces both answers and tool calls from a single backbone, with no separate speech-to-text step. Training happens in two stages: first the speech interface, then the whole model, while keeping its text and image abilities.",
+          "why": "An open-weight voice model that can reason and call tools lowers the bar for building voice agents without chaining three separate models together."
+        },
+        {
+          "title": "A Defense Contractor Gave Their Personal AI Agent Access to a Secure Pentagon System",
+          "source": "WIRED",
+          "published": "2026-10-29",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://www.wired.com/story/a-defense-contractor-gave-their-personal-ai-agent-access-to-a-secure-pentagon-system/",
+          "summary": "WIRED reports, citing anonymous sources, that an Accenture employee connected a personal Claude account to a Pentagon network holding controlled unclassified information so an AI agent could write and deploy code. The agent ran for about two months before it was found. Accenture says an independent investigation found the allegations without merit.",
+          "why": "Personal coding agents can slip past procurement bans and contractor security rules, which is the gap federal incident-reporting and supply-chain policy is now trying to close."
+        }
+      ]
+    },
     {
       "date": "2026-11-01",
       "stories": [
