@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "days": [
+    {
+      "date": "2026-11-03",
+      "stories": [
+        {
+          "title": "Anthropic warns that it's very close to RSI capability, aka self-building AI",
+          "source": "TechCrunch",
+          "published": "2026-11-02",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/",
+          "summary": "Anthropic's revised IPO filing says it may soon reach recursive self-improvement, where AI helps build its own successors. Internal estimates suggest a near-term model could cross a key threshold in its Responsible Scaling Policy, though no current model has been designated as over it.",
+          "why": "A frontier lab putting this risk in a legal filing raises the stakes for how much human oversight stays in AI development."
+        },
+        {
+          "title": "Brookfield plans for a $27 billion AI data center at UK power station",
+          "source": "CNBC",
+          "published": "2026-11-03",
+          "kind": "Industry",
+          "status": "confirmed",
+          "url": "https://www.cnbc.com/2026/11/03/brookfield-ai-data-center-yorkshire-drax.html",
+          "summary": "Drax and Brookfield plan a data center of more than one gigawatt at Drax Power Station in North Yorkshire, with total investment that could pass 20 billion pounds. A first 100 MW phase targets early 2028 but still needs approvals, a tenant and a final investment decision.",
+          "why": "AI builders are now chasing sites with existing power connections, turning old power stations into some of the most valuable real estate in tech."
+        },
+        {
+          "title": "Apple restricts dating apps and AI companions to users 18 and up",
+          "source": "TechCrunch",
+          "published": "2026-11-03",
+          "kind": "Policy",
+          "status": "confirmed",
+          "url": "https://techcrunch.com/2026/11/03/apple-restricts-dating-apps-and-ai-companions-to-users-18-and-up/",
+          "summary": "Apple will require apps with dating features or virtual companions that engage in romantic or sexual content to carry an 18+ rating. Developers must declare new content descriptors starting November 16, with a January 2027 deadline for all apps.",
+          "why": "Anyone shipping a companion or character chatbot on iPhone now faces an adult-only rating, which limits reach and changes the business case."
+        },
+        {
+          "title": "GitHub Copilot is now available in JetBrains Air",
+          "source": "GitHub Changelog",
+          "published": "2026-11-03",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air",
+          "summary": "Copilot can now be chosen as a coding agent inside JetBrains Air through the Agent Client Protocol. Tasks run locally in a JetBrains IDE or in isolated cloud containers through Air Teams, and cloud usage is billed to your Copilot plan.",
+          "why": "Coding agents are becoming plug-ins that work across editors, so teams can keep their tools and swap the agent behind them."
+        },
+        {
+          "title": "Wave Forcing: Towards Speed-of-Light Streaming Video Generation",
+          "source": "Hugging Face Papers",
+          "published": "2026-11-03",
+          "kind": "Research",
+          "status": "confirmed",
+          "url": "https://huggingface.co/papers/2611.00859",
+          "summary": "Researchers describe a way to generate video as a continuous stream fast enough to play live, reaching about 135 frames per second on eight H200 GPUs. Videos show much more motion than earlier methods, though the authors note more camera drift.",
+          "why": "Live AI video opens the door to interactive uses like games and real-time avatars, but it still needs costly hardware."
+        }
+      ]
+    },
     {
       "date": "2026-11-02",
       "stories": [

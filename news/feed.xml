@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Anthropic warns that it&#x27;s very close to RSI capability, aka self-building AI [Reported]</title>
+      <link>https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/</link>
+      <guid isPermaLink="false">2026-11-03:Anthropic warns that it&#x27;s very close to RSI capability, aka self-building AI</guid>
+      <pubDate>Mon, 02 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>Anthropic&#x27;s revised IPO filing says it may soon reach recursive self-improvement, where AI helps build its own successors. Internal estimates suggest a near-term model could cross a key threshold in its Responsible Scaling Policy, though no current model has been designated as over it.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A frontier lab putting this risk in a legal filing raises the stakes for how much human oversight stays in AI development. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Brookfield plans for a $27 billion AI data center at UK power station</title>
+      <link>https://www.cnbc.com/2026/11/03/brookfield-ai-data-center-yorkshire-drax.html</link>
+      <guid isPermaLink="false">2026-11-03:Brookfield plans for a $27 billion AI data center at UK power station</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Drax and Brookfield plan a data center of more than one gigawatt at Drax Power Station in North Yorkshire, with total investment that could pass 20 billion pounds. A first 100 MW phase targets early 2028 but still needs approvals, a tenant and a final investment decision.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; AI builders are now chasing sites with existing power connections, turning old power stations into some of the most valuable real estate in tech. &#8212; CNBC</description>
+    </item>
+    <item>
+      <title>Apple restricts dating apps and AI companions to users 18 and up</title>
+      <link>https://techcrunch.com/2026/11/03/apple-restricts-dating-apps-and-ai-companions-to-users-18-and-up/</link>
+      <guid isPermaLink="false">2026-11-03:Apple restricts dating apps and AI companions to users 18 and up</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>Apple will require apps with dating features or virtual companions that engage in romantic or sexual content to carry an 18+ rating. Developers must declare new content descriptors starting November 16, with a January 2027 deadline for all apps.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Anyone shipping a companion or character chatbot on iPhone now faces an adult-only rating, which limits reach and changes the business case. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>GitHub Copilot is now available in JetBrains Air</title>
+      <link>https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air</link>
+      <guid isPermaLink="false">2026-11-03:GitHub Copilot is now available in JetBrains Air</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Copilot can now be chosen as a coding agent inside JetBrains Air through the Agent Client Protocol. Tasks run locally in a JetBrains IDE or in isolated cloud containers through Air Teams, and cloud usage is billed to your Copilot plan.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Coding agents are becoming plug-ins that work across editors, so teams can keep their tools and swap the agent behind them. &#8212; GitHub Changelog</description>
+    </item>
+    <item>
+      <title>Wave Forcing: Towards Speed-of-Light Streaming Video Generation</title>
+      <link>https://huggingface.co/papers/2611.00859</link>
+      <guid isPermaLink="false">2026-11-03:Wave Forcing: Towards Speed-of-Light Streaming Video Generation</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>Researchers describe a way to generate video as a continuous stream fast enough to play live, reaching about 135 frames per second on eight H200 GPUs. Videos show much more motion than earlier methods, though the authors note more camera drift.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Live AI video opens the door to interactive uses like games and real-time avatars, but it still needs costly hardware. &#8212; Hugging Face Papers</description>
+    </item>
     <item>
       <title>Anthropic reports $17 billion in Q3 revenue, purchase commitments of $895.4 billion in revised S-1</title>
       <link>https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html</link>
