@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>AMD&#x27;s data center revenue nearly doubles in Q3 and CEO Su expects growth to accelerate</title>
+      <link>https://www.cnbc.com/2026/11/03/amd-amd-q3-earnings-report-2026-.html</link>
+      <guid isPermaLink="false">2026-11-04:AMD&#x27;s data center revenue nearly doubles in Q3 and CEO Su expects growth to accelerate</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>AMD reported third-quarter revenue of $13.38 billion, up 45% from a year ago and above estimates. Data center revenue hit a record $8.5 billion and is now about two-thirds of sales. AMD guided to about $17 billion next quarter, and Lisa Su expects server revenue to double in 2027.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; AMD is the main alternative to Nvidia for AI chips, so its growth affects how much compute is available and what it costs. &#8212; CNBC</description>
+    </item>
+    <item>
+      <title>US voters roundly reject data centers in ballot measures [Reported]</title>
+      <link>https://www.semafor.com/article/11/04/2026/us-voters-roundly-reject-data-centers-in-ballot-measures</link>
+      <guid isPermaLink="false">2026-11-04:US voters roundly reject data centers in ballot measures</guid>
+      <pubDate>Wed, 04 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>On Election Day, voters in more than 30 localities across nine states backed moratoriums, bans or other limits on data centers, according to early counts. Edgewater, Florida wrote a ban into its city charter, and Perry, Ohio tightened terms for hyperscaler tax breaks.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Local opposition is becoming a real constraint on where AI compute gets built, which could slow new capacity and shift it to friendlier regions. &#8212; Semafor</description>
+    </item>
+    <item>
+      <title>Progress on provable inference for large language models</title>
+      <link>https://www.anthropic.com/research/provable-inference</link>
+      <guid isPermaLink="false">2026-11-04:Progress on provable inference for large language models</guid>
+      <pubDate>Mon, 02 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>Anthropic released FlashProve, an open-source prototype that uses zero-knowledge proofs to show an output came from a specific set of model weights without revealing them. It is far costlier than normal inference and limited to short contexts, and no lab plans to deploy it yet.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Being able to prove which model produced an answer could help audits and catch providers quietly swapping in cheaper models. &#8212; Anthropic</description>
+    </item>
+    <item>
+      <title>StateBench: Testing how language models track state changes over long documents</title>
+      <link>https://huggingface.co/blog/allenai/statebench</link>
+      <guid isPermaLink="false">2026-11-04:StateBench: Testing how language models track state changes over long documents</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>Ai2 released a benchmark that tests whether models can keep track of things that change across long inputs. Frontier models handle the easier levels but drop to 13% or lower on the hardest, longest problems. In small-model tests, some non-transformer designs generalized far better than transformers.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If your app relies on a model following a long, changing document or session, this shows where that can quietly fail. &#8212; Hugging Face Blog (Ai2)</description>
+    </item>
+    <item>
+      <title>Vercel Security Review now in public beta</title>
+      <link>https://vercel.com/changelog/vercel-security-review-public-beta</link>
+      <guid isPermaLink="false">2026-11-04:Vercel Security Review now in public beta</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Vercel now scans every push to a connected GitHub repo for vulnerabilities, for Pro and Enterprise teams. Each finding comes with a suggested fix and a severity rating, and its agent can open a pull request that still needs approval. Reviews are free until November 10.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Automatic security checks on every push are a cheap safety net for small teams shipping AI-written code quickly. &#8212; Vercel</description>
+    </item>
     <item>
       <title>Anthropic warns that it&#x27;s very close to RSI capability, aka self-building AI [Reported]</title>
       <link>https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/</link>

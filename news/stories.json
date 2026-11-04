@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "days": [
+    {
+      "date": "2026-11-04",
+      "stories": [
+        {
+          "title": "AMD's data center revenue nearly doubles in Q3 and CEO Su expects growth to accelerate",
+          "source": "CNBC",
+          "published": "2026-11-03",
+          "kind": "Industry",
+          "status": "confirmed",
+          "url": "https://www.cnbc.com/2026/11/03/amd-amd-q3-earnings-report-2026-.html",
+          "summary": "AMD reported third-quarter revenue of $13.38 billion, up 45% from a year ago and above estimates. Data center revenue hit a record $8.5 billion and is now about two-thirds of sales. AMD guided to about $17 billion next quarter, and Lisa Su expects server revenue to double in 2027.",
+          "why": "AMD is the main alternative to Nvidia for AI chips, so its growth affects how much compute is available and what it costs."
+        },
+        {
+          "title": "US voters roundly reject data centers in ballot measures",
+          "source": "Semafor",
+          "published": "2026-11-04",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://www.semafor.com/article/11/04/2026/us-voters-roundly-reject-data-centers-in-ballot-measures",
+          "summary": "On Election Day, voters in more than 30 localities across nine states backed moratoriums, bans or other limits on data centers, according to early counts. Edgewater, Florida wrote a ban into its city charter, and Perry, Ohio tightened terms for hyperscaler tax breaks.",
+          "why": "Local opposition is becoming a real constraint on where AI compute gets built, which could slow new capacity and shift it to friendlier regions."
+        },
+        {
+          "title": "Progress on provable inference for large language models",
+          "source": "Anthropic",
+          "published": "2026-11-02",
+          "kind": "Policy",
+          "status": "confirmed",
+          "url": "https://www.anthropic.com/research/provable-inference",
+          "summary": "Anthropic released FlashProve, an open-source prototype that uses zero-knowledge proofs to show an output came from a specific set of model weights without revealing them. It is far costlier than normal inference and limited to short contexts, and no lab plans to deploy it yet.",
+          "why": "Being able to prove which model produced an answer could help audits and catch providers quietly swapping in cheaper models."
+        },
+        {
+          "title": "StateBench: Testing how language models track state changes over long documents",
+          "source": "Hugging Face Blog (Ai2)",
+          "published": "2026-11-03",
+          "kind": "Research",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/allenai/statebench",
+          "summary": "Ai2 released a benchmark that tests whether models can keep track of things that change across long inputs. Frontier models handle the easier levels but drop to 13% or lower on the hardest, longest problems. In small-model tests, some non-transformer designs generalized far better than transformers.",
+          "why": "If your app relies on a model following a long, changing document or session, this shows where that can quietly fail."
+        },
+        {
+          "title": "Vercel Security Review now in public beta",
+          "source": "Vercel",
+          "published": "2026-11-03",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://vercel.com/changelog/vercel-security-review-public-beta",
+          "summary": "Vercel now scans every push to a connected GitHub repo for vulnerabilities, for Pro and Enterprise teams. Each finding comes with a suggested fix and a severity rating, and its agent can open a pull request that still needs approval. Reviews are free until November 10.",
+          "why": "Automatic security checks on every push are a cheap safety net for small teams shipping AI-written code quickly."
+        }
+      ]
+    },
     {
       "date": "2026-11-03",
       "stories": [
