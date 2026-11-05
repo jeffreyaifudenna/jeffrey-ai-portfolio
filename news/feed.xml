@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Dropbox acquires Tigris Data for $350M to bolster its AI infrastructure</title>
+      <link>https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/</link>
+      <guid isPermaLink="false">2026-11-05:Dropbox acquires Tigris Data for $350M to bolster its AI infrastructure</guid>
+      <pubDate>Thu, 05 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Dropbox agreed to buy Tigris Data, a storage startup built for AI workloads, for about $350 million in cash. It also launched DBX Agent Cloud, starting with standalone S3-compatible object storage. Dropbox expects the deal to close in Q4 2026, per its SEC filing and TechCrunch.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A file-sync company buying AI storage shows how much the agent boom is pulling older software firms toward infrastructure. Builders may get another S3-style storage option. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Meta acquires AI coding startup Conductor</title>
+      <link>https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/</link>
+      <guid isPermaLink="false">2026-11-05:Meta acquires AI coding startup Conductor</guid>
+      <pubDate>Wed, 04 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Meta bought Conductor, a startup whose app runs several coding agents side by side in separate workspaces. Meta confirmed the deal but shared no price. Conductor&#x27;s cloud service shuts down November 20, and user cloud data will be deleted after that.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Big labs are buying the tools that orchestrate many agents at once. If you use Conductor, export your cloud data before November 20. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Google faces backlash for plan that would turn off Search for schools that restrict AI</title>
+      <link>https://techcrunch.com/2026/11/04/google-faces-backlash-for-plan-that-would-turn-off-search-for-schools-that-restrict-ai/</link>
+      <guid isPermaLink="false">2026-11-05:Google faces backlash for plan that would turn off Search for schools that restrict AI</guid>
+      <pubDate>Wed, 04 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>Google&#x27;s school software ties Search access to opting in to its AI tools, according to a Google education executive quoted by The New York Times. Senators Bernie Sanders and Richard Blumenthal criticized the plan. Google says Gemini and Search are off by default and schools can switch each on separately.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Bundling AI with basic tools is becoming a fight over choice, especially for kids. Expect more pressure for clear AI opt-outs in education products. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Axiom Math wants to keep AI slop out of mathematics [Reported]</title>
+      <link>https://techcrunch.com/2026/11/05/axiom-math-wants-to-keep-ai-slop-out-of-mathematics/</link>
+      <guid isPermaLink="false">2026-11-05:Axiom Math wants to keep AI slop out of mathematics</guid>
+      <pubDate>Thu, 05 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>Startup Axiom says its AI agents formally checked the Stacks Project, a huge algebraic geometry reference, in the Lean proof language. The company puts it at about 7,654 pages turned into roughly 16 million lines of verified code. Mathematicians quoted say it fills a big gap in formalized math.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Machine-checked proofs are one answer to AI output that sounds right but is not. The claim comes from the company, so watch for independent review. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks</title>
+      <link>https://huggingface.co/blog/phonon-tts</link>
+      <guid isPermaLink="false">2026-11-05:A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks</guid>
+      <pubDate>Thu, 05 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Gradium released Phonon, a small text-to-speech model that runs on the device with no server. It comes in two sizes of about 65 and 75 MB, covers five languages, and ships with over 100 voices. The English model is Apache 2.0, and it now works in Hugging Face Transformers.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A free, tiny voice model lets you add speech to apps that work offline and cost nothing per call. The benchmark wins are the makers&#x27; own claims. &#8212; Hugging Face</description>
+    </item>
     <item>
       <title>AMD&#x27;s data center revenue nearly doubles in Q3 and CEO Su expects growth to accelerate</title>
       <link>https://www.cnbc.com/2026/11/03/amd-amd-q3-earnings-report-2026-.html</link>

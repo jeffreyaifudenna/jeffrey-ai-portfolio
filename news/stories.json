@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "days": [
+    {
+      "date": "2026-11-05",
+      "stories": [
+        {
+          "title": "Dropbox acquires Tigris Data for $350M to bolster its AI infrastructure",
+          "source": "TechCrunch",
+          "published": "2026-11-05",
+          "kind": "Industry",
+          "status": "confirmed",
+          "url": "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/",
+          "summary": "Dropbox agreed to buy Tigris Data, a storage startup built for AI workloads, for about $350 million in cash. It also launched DBX Agent Cloud, starting with standalone S3-compatible object storage. Dropbox expects the deal to close in Q4 2026, per its SEC filing and TechCrunch.",
+          "why": "A file-sync company buying AI storage shows how much the agent boom is pulling older software firms toward infrastructure. Builders may get another S3-style storage option."
+        },
+        {
+          "title": "Meta acquires AI coding startup Conductor",
+          "source": "TechCrunch",
+          "published": "2026-11-04",
+          "kind": "Industry",
+          "status": "confirmed",
+          "url": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/",
+          "summary": "Meta bought Conductor, a startup whose app runs several coding agents side by side in separate workspaces. Meta confirmed the deal but shared no price. Conductor's cloud service shuts down November 20, and user cloud data will be deleted after that.",
+          "why": "Big labs are buying the tools that orchestrate many agents at once. If you use Conductor, export your cloud data before November 20."
+        },
+        {
+          "title": "Google faces backlash for plan that would turn off Search for schools that restrict AI",
+          "source": "TechCrunch",
+          "published": "2026-11-04",
+          "kind": "Policy",
+          "status": "confirmed",
+          "url": "https://techcrunch.com/2026/11/04/google-faces-backlash-for-plan-that-would-turn-off-search-for-schools-that-restrict-ai/",
+          "summary": "Google's school software ties Search access to opting in to its AI tools, according to a Google education executive quoted by The New York Times. Senators Bernie Sanders and Richard Blumenthal criticized the plan. Google says Gemini and Search are off by default and schools can switch each on separately.",
+          "why": "Bundling AI with basic tools is becoming a fight over choice, especially for kids. Expect more pressure for clear AI opt-outs in education products."
+        },
+        {
+          "title": "Axiom Math wants to keep AI slop out of mathematics",
+          "source": "TechCrunch",
+          "published": "2026-11-05",
+          "kind": "Research",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/05/axiom-math-wants-to-keep-ai-slop-out-of-mathematics/",
+          "summary": "Startup Axiom says its AI agents formally checked the Stacks Project, a huge algebraic geometry reference, in the Lean proof language. The company puts it at about 7,654 pages turned into roughly 16 million lines of verified code. Mathematicians quoted say it fills a big gap in formalized math.",
+          "why": "Machine-checked proofs are one answer to AI output that sounds right but is not. The claim comes from the company, so watch for independent review."
+        },
+        {
+          "title": "A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks",
+          "source": "Hugging Face",
+          "published": "2026-11-05",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/phonon-tts",
+          "summary": "Gradium released Phonon, a small text-to-speech model that runs on the device with no server. It comes in two sizes of about 65 and 75 MB, covers five languages, and ships with over 100 voices. The English model is Apache 2.0, and it now works in Hugging Face Transformers.",
+          "why": "A free, tiny voice model lets you add speech to apps that work offline and cost nothing per call. The benchmark wins are the makers' own claims."
+        }
+      ]
+    },
     {
       "date": "2026-11-04",
       "stories": [
