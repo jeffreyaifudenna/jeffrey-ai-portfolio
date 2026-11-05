@@ -287,7 +287,7 @@
       '<button type="button" class="nes-x" aria-label="Close">×</button>' +
       '<h2 id="nes-h">Enter the code</h2><p>Use the buttons below, or your keyboard’s arrow keys, B and A.</p>' +
       '<div class="nes"><div class="nes-panel"></div><div class="nes-mid"></div><div class="nes-well nes-well-b"></div><div class="nes-well nes-well-a"></div>' +
-        b('dp dp-u', 'up', 'Up') + b('dp dp-d', 'down', 'Down') + b('dp dp-l', 'left', 'Left') + b('dp dp-r', 'right', 'Right') + '<span class="dp-c"></span>' +
+        '<span class="dp-x"></span>' + b('dp dp-u', 'up', 'Up') + b('dp dp-d', 'down', 'Down') + b('dp dp-l', 'left', 'Left') + b('dp dp-r', 'right', 'Right') + '<span class="dp-c"></span>' +
         '<button type="button" class="nes-ss nes-sel" data-k="select" aria-label="Select"></button><button type="button" class="nes-ss nes-start" data-k="start" aria-label="Start"></button>' +
         '<span class="nes-lab" style="left:39cqw">SELECT</span><span class="nes-lab" style="left:52cqw">START</span>' +
         b('nes-ab nes-b', 'b', 'B') + b('nes-ab nes-a', 'a', 'A') +
