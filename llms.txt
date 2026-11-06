@@ -10,15 +10,15 @@ I'm looking for my next role. This site is the work: websites that publish thems
 - [Fremont by the Numbers](https://fremontcabythenumbers.com): A data aggregator for Fremont, California. Public figures on housing, schools, safety, jobs, parks and startups, with the source and date under every number. Built with Claude. Live.
 - [Daily AI News](https://jeffrey-ai-portfolio.vercel.app/news.html): A scheduled Claude task finds the day's biggest AI stories, checks every link, writes a plain-English summary and a "why it matters" line, and publishes the digest every morning. Data: https://jeffrey-ai-portfolio.vercel.app/news/stories.json. RSS: https://jeffrey-ai-portfolio.vercel.app/news/feed.xml
 - [AI Job Search Pipeline](https://jeffrey-ai-portfolio.vercel.app/jobsearch.html): Claude ran a team of 37 AI agents that found, double-checked and ranked 829 job listings in under a day. A Python script scores each role 0-100, a separate audit fixed 73 scores and removed 20 listings.
-- [11:11, a science fiction short story](https://jeffrey-ai-portfolio.vercel.app/story.html): Every night at 11:11 the lights go out worldwide, and nobody makes us. Drafted with AI, with notes on what changed.
 - Cool Moves Reel: Short Viggle clips cut into a reel. On the home page.
 - Remixed photos with AI: Camping photos re-imagined with Gemini, next to the real picture. On the home page.
 - Family Tree Website: Private, password-protected, with edit history. No public link.
 
 ## Blog
 
-- [Blog index](https://jeffrey-ai-portfolio.vercel.app/blog/): Short write-ups on everyday problems fixed with AI.
+- [Blog index](https://jeffrey-ai-portfolio.vercel.app/blog/): Write-ups and stories made with AI.
 - [Why random apps kept showing up on my Samsung phone](https://jeffrey-ai-portfolio.vercel.app/blog/samsung-hidden-app-installer.html): A hidden installer, apparently linked to the carrier, was adding apps to a Galaxy S23. How Claude helped find and remove it. Nov 2026.
+- [11:11, a science fiction short story](https://jeffrey-ai-portfolio.vercel.app/blog/11-11.html): Every night at 11:11 the lights go out worldwide, and nobody makes us. Drafted with AI, with notes on what changed.
 
 ## Behind the work
 
