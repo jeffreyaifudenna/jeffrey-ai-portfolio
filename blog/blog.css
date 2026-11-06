@@ -1,0 +1,54 @@
+/* Blog pages: one reading column. Colors come from /theme.css; this file is layout and type only.
+   Used by blog/index.html and every post. To add a post: copy an existing post, change the text,
+   then add a row to blog/index.html and a line to sitemap.xml. */
+:root{
+  --display:"Gloock", Georgia, "Times New Roman", serif;
+  --body:"Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--focus,var(--accent));outline-offset:3px;border-radius:4px}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* top bar: brand on the left, one link on the right (theme.js adds the theme toggle into .nav-r) */
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px}
+.top a{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-decoration:none}
+.top a:hover{color:var(--accent-ink)}
+.nav-r{display:inline-flex;align-items:center;gap:14px}
+
+/* post header */
+header.post{padding-block:44px 20px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(30px,5.4vw,46px);line-height:1.1;margin:12px 0 14px;text-wrap:balance}
+.byline{margin:0;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.lede{margin:0;color:var(--muted);max-width:56ch;font-size:18px}
+
+/* post body */
+article{padding-block:8px 56px}
+article p{margin:0 0 1.1em;max-width:62ch;text-wrap:pretty}
+article h2{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);margin:2.2em 0 .6em}
+article h2:first-child{margin-top:1.2em}
+.steps{margin:0 0 1.2em;padding-left:1.4em;max-width:62ch}
+.steps li{margin-bottom:.5em;text-wrap:pretty}
+.note{margin:2.4em 0 0;padding:18px 22px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 12px 12px 0;font-size:16px}
+.note h2{margin:0 0 .6em}
+.note p{margin:0}
+.back{display:inline-flex;margin-top:36px;font-weight:600;text-decoration:none;padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--bg);transition:transform .15s}
+.back:hover{transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.back{transition:none}}
+
+/* index: one row per post */
+.posts{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--line)}
+.posts li{padding:22px 0;border-bottom:1px solid var(--line)}
+.posts .when{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.posts h2{font-family:var(--display);font-weight:400;font-size:clamp(22px,3.4vw,28px);line-height:1.2;margin:0 0 8px;text-wrap:balance;letter-spacing:0;text-transform:none;color:var(--ink)}
+.posts h2 a{text-decoration:none}
+.posts h2 a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+.posts p{margin:0;color:var(--muted);max-width:60ch;font-size:16px}
+
+footer{border-top:1px solid var(--line);margin-top:24px;padding-block:28px;color:var(--muted);font-size:14px}
+footer p{margin:0}
+footer a{text-decoration:none;color:var(--ink)}
+footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}

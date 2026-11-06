@@ -36,15 +36,21 @@ class Refs(HTMLParser):
 
 
 def check_html():
-    for page in sorted(ROOT.glob("*.html")):
+    pages = list(ROOT.glob("*.html")) + list(ROOT.glob("blog/*.html"))
+    for page in sorted(pages):
         p = Refs()
         p.feed(page.read_text(encoding="utf-8"))
         for ref in p.refs:
             target = ref.split("#")[0].split("?")[0]
             if not target or target.startswith("/_vercel/"):
                 continue  # same-page anchor, or a path Vercel serves itself
-            if not (ROOT / target.lstrip("/")).exists():
-                fail(f"{page.name}: broken local link '{ref}'")
+            # "/x" is from the site root; "x" is next to the page. A folder link ("blog/") needs its index.html.
+            base = ROOT if target.startswith("/") else page.parent
+            path = base / target.lstrip("/")
+            if path.is_dir():
+                path = path / "index.html"
+            if not path.exists():
+                fail(f"{page.relative_to(ROOT).as_posix()}: broken local link '{ref}'")
 
 
 def check_news():

@@ -15,6 +15,11 @@ I'm looking for my next role. This site is the work: websites that publish thems
 - Remixed photos with AI: Camping photos re-imagined with Gemini, next to the real picture. On the home page.
 - Family Tree Website: Private, password-protected, with edit history. No public link.
 
+## Blog
+
+- [Blog index](https://jeffrey-ai-portfolio.vercel.app/blog/): Short write-ups on everyday problems fixed with AI.
+- [Why random apps kept showing up on my Samsung phone](https://jeffrey-ai-portfolio.vercel.app/blog/samsung-hidden-app-installer.html): A hidden installer, apparently linked to the carrier, was adding apps to a Galaxy S23. How Claude helped find and remove it. Nov 2026.
+
 ## Behind the work
 
 - [Builds](https://jeffrey-ai-portfolio.vercel.app/builds.html): Tools, builds, the prompts that run things, and how the work gets done.
@@ -22,4 +27,4 @@ I'm looking for my next role. This site is the work: websites that publish thems
 
 ## About this site
 
-Six HTML pages, one shared theme stylesheet, no framework. Written in Claude Code. Twelve color themes plus holiday accents computed from the Gregorian, Hebrew and Chinese calendars. Structured data in JSON-LD. This file exists so agents can read the site as easily as people do.
+Plain HTML pages plus a small blog folder, one shared theme stylesheet, no framework. Written in Claude Code. Twelve color themes plus holiday accents computed from the Gregorian, Hebrew and Chinese calendars. Structured data in JSON-LD. This file exists so agents can read the site as easily as people do.
