@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "days": [
+    {
+      "date": "2026-11-06",
+      "stories": [
+        {
+          "title": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
+          "source": "TechCrunch",
+          "published": "2026-11-06",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/",
+          "summary": "Ramp's data shows business spending on AI tokens grew just 1.5% across August and September, after 42% in July, then picked up 8.9% in the month to October 23. Its economist blames price cuts and cost controls rather than weak demand.",
+          "why": "If usage keeps rising while spending flattens, tokens are getting cheaper for builders, but the labs' revenue stories get harder to sustain. The data covers Ramp's own customers, not the whole market."
+        },
+        {
+          "title": "OpenAI released a new cybersecurity model. Is that enough?",
+          "source": "TechCrunch",
+          "published": "2026-11-05",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/",
+          "summary": "OpenAI is offering a new model, ChatGPT Cyber, to the top tier of its Daybreak security program, and says it flagged 948 potential Linux kernel issues. Separately, a startup CTO used GPT 5.6 Sol to find a severe Ubuntu flaw, now patched, with no known exploitation.",
+          "why": "Serious bugs are getting cheaper to find, for attackers as well as defenders. If you ship code, expect more vulnerability reports and less time to patch them."
+        },
+        {
+          "title": "Palo Alto Networks in talks to buy AI agent security startup Clutch for $500M",
+          "source": "TechCrunch",
+          "published": "2026-11-05",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/",
+          "summary": "Palo Alto Networks is reportedly negotiating to buy Clutch Security for $500 million in cash plus milestone payments, about 50 times its annual recurring revenue. The terms come from an unnamed source, neither company commented, and no deal has been announced.",
+          "why": "A price that high suggests big security vendors see AI agents and their credentials as a real new risk. Anyone giving agents access to production systems should treat that access as a security question."
+        },
+        {
+          "title": "ToyBlocks: A controlled world for robot learning and evaluation",
+          "source": "Ai2 on Hugging Face",
+          "published": "2026-11-06",
+          "kind": "Research",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/allenai/toyblocks",
+          "summary": "Ai2 released ToyBlocks, an open simulated world of a robot arm and blocks, with about 85,000 demonstrations. Its layered test setup succeeded in 55.5% of simulated runs and 50% of 30 real-world runs. Ai2 says more trials are needed for statistical confidence.",
+          "why": "Robot learning is hard to compare because everyone tests differently, so a shared open benchmark helps. The modest scores are a useful check on hype about general-purpose robots."
+        },
+        {
+          "title": "Gemini Omni 1.2 Flash now available on AI Gateway",
+          "source": "Vercel",
+          "published": "2026-11-05",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://vercel.com/changelog/gemini-omni-1-2-flash-now-available-on-ai-gateway",
+          "summary": "Vercel added Google's Gemini Omni 1.2 Flash to its AI Gateway. The model makes 3 to 15 second videos with native audio, edits clips using up to six reference images, and can extend videos to 30 seconds, at resolutions up to 4K.",
+          "why": "Apps already using the gateway can try video generation by changing a model name, without a separate Google integration. Check Google's pricing first, since this page does not list it."
+        }
+      ]
+    },
     {
       "date": "2026-11-05",
       "stories": [
