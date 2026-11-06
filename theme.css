@@ -187,7 +187,7 @@
    Hover lights only the arrow and a press shades the arm from its outer end, so no arm ever shows as a separate tile. */
 .dp-x{left:8.25cqw;top:8.45cqw;width:22.5cqw;height:22.5cqw;pointer-events:none;
   filter:drop-shadow(0 -.3cqw 0 rgba(255,255,255,.13)) drop-shadow(0 .6cqw 0 #050506)}
-.dp-x::before,.dp-x::after{content:"";position:absolute;background:#151517;border-radius:1.2cqw}
+.dp-x::before,.dp-x::after{content:"";position:absolute;background:#242427;border-radius:1.2cqw}
 .dp-x::before{left:7.5cqw;top:0;width:7.5cqw;height:100%}
 .dp-x::after{left:0;top:7.5cqw;width:100%;height:7.5cqw}
 .dp{--ar:#4b4b50;width:7.5cqw;height:7.5cqw;background:transparent}
@@ -205,7 +205,13 @@
 .dp-u i{border-width:0 1.1cqw 1.6cqw;border-bottom-color:var(--ar)}.dp-d i{border-width:1.6cqw 1.1cqw 0;border-top-color:var(--ar)}
 .dp-l i{border-width:1.1cqw 1.6cqw 1.1cqw 0;border-right-color:var(--ar)}.dp-r i{border-width:1.1cqw 0 1.1cqw 1.6cqw;border-left-color:var(--ar)}
 @media (hover:hover){.nes .dp:hover{--ar:#b4b4bb}}
-.nes .dp:active,.nes .dp.on{--dk:.6;--ar:#e4e4e8}
+.nes .dp:active,.nes .dp.on{--dk:.22;--ar:#e4e4e8}
+/* pressed-in look: an inner shadow on the arm's outer three sides, open at the centre so the cross stays one piece, and the arrow sinks with it */
+.nes .dp-u:active::before,.nes .dp-u.on::before{box-shadow:inset 0 .55cqw .6cqw rgba(0,0,0,.7),inset .3cqw 0 .4cqw rgba(0,0,0,.5),inset -.3cqw 0 .4cqw rgba(0,0,0,.5)}
+.nes .dp-d:active::before,.nes .dp-d.on::before{box-shadow:inset 0 -.55cqw .6cqw rgba(0,0,0,.7),inset .3cqw 0 .4cqw rgba(0,0,0,.5),inset -.3cqw 0 .4cqw rgba(0,0,0,.5)}
+.nes .dp-l:active::before,.nes .dp-l.on::before{box-shadow:inset .55cqw 0 .6cqw rgba(0,0,0,.7),inset 0 .3cqw .4cqw rgba(0,0,0,.5),inset 0 -.3cqw .4cqw rgba(0,0,0,.5)}
+.nes .dp-r:active::before,.nes .dp-r.on::before{box-shadow:inset -.55cqw 0 .6cqw rgba(0,0,0,.7),inset 0 .3cqw .4cqw rgba(0,0,0,.5),inset 0 -.3cqw .4cqw rgba(0,0,0,.5)}
+.nes .dp:active i,.nes .dp.on i{transform:translate(-50%,-50%) scale(.88)}
 
 /* SELECT / START: black rubber pills in a recess, labels printed above */
 .nes-ss{top:17.5cqw;width:9.5cqw;height:4.4cqw;border-radius:2.2cqw;background:linear-gradient(180deg,#303033,#0e0e10);
