@@ -216,6 +216,24 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.6vw,36px);l
 .dn-run{margin:24px 0 0;font-family:var(--mono);font-size:13px;line-height:1.8;color:var(--muted)}
 .dn-run .dot{display:inline-block;vertical-align:middle;margin:0 10px 2px 0;width:8px;height:8px;border-radius:50%;background:var(--live);box-shadow:0 0 0 3px color-mix(in srgb,var(--live) 25%,transparent);flex:none}
 .dn-run #dn-date,.dn-run #dn-count{color:var(--ink)}
+.contact{margin-top:72px;padding-top:40px;border-top:1px solid var(--line);scroll-margin-top:72px}
+.contact h2{margin:0 0 10px}
+.contact .c-lede{margin:0 0 24px;max-width:52ch;color:var(--muted)}
+.contact form{display:flex;flex-direction:column;gap:20px;max-width:640px}
+.contact label{display:flex;flex-direction:column;gap:6px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.contact input,.contact textarea{font:400 17px/1.5 var(--body);letter-spacing:0;text-transform:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-color:color-mix(in srgb,var(--muted) 80%,var(--surface));border-radius:10px;padding:12px 14px;width:100%;box-sizing:border-box}
+.contact textarea{min-height:140px;resize:vertical}
+.contact input:focus,.contact textarea:focus{border-color:var(--accent)}
+.contact .trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.contact button.send{align-self:flex-start;font:600 16px var(--body);padding:11px 22px;border-radius:999px;border:0;background:var(--ink);color:var(--bg);cursor:pointer;transition:transform .15s}
+.contact button.send:hover{transform:translateY(-2px)}
+.contact button.send:disabled{opacity:.5;cursor:default;transform:none}
+.contact .status{margin:0;font-size:15px}
+.contact .status.err{color:var(--warn)}
+.contact .done{max-width:640px;padding:20px 22px;outline:none;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.contact .done h3{font-family:var(--display);font-weight:400;font-size:26px;margin:0 0 6px}
+.contact .done p{margin:0;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.contact button.send{transition:none}}
 .dn-list{list-style:none;margin:28px 0;padding:0;border-top:1px solid var(--line)}
 .dn-list li{display:flex;flex-direction:column;gap:2px;padding:16px 0;border-bottom:1px solid var(--line)}
 .dn-list a{font-size:19px;line-height:1.4;font-weight:500;text-decoration:none;color:var(--ink)}
@@ -270,7 +288,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
       <li><a href="#projects">Projects</a></li>
       <li><a href="#more">In the lab</a></li>
       <li><a href="news.html">News</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
     <span class="nav-r"></span>
   </div>
@@ -304,7 +322,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
         <div class="meta"><span class="kind">Website · generative art</span><span class="when">Oct 2026</span><span class="pill live" title="Live"><span>Live</span></span></div>
         <h2>The Infinite Buddha</h2>
         <p>A website that makes and publishes new Buddha art every day, on its own. A Python script asks Gemini for the image, GitHub Actions runs it daily, and the site redeploys itself.</p>
-        <a class="link" href="https://www.theinfinitebuddha.xyz" target="_blank" rel="noopener">Visit theinfinitebuddha.xyz →</a>
+        <a class="link" href="https://www.theinfinitebuddha.xyz" target="_blank" rel="noopener">Visit The Infinite Buddha →</a>
       </div>
     </li>
 
@@ -431,6 +449,23 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
     <a class="link" href="news.html">Read all stories &rarr;</a>
     <p class="dn-run" id="dn-run"><span class="dot" aria-hidden="true"></span>Last ran <span id="dn-date"></span> · <span id="dn-count"></span> stories · <span id="dn-next">runs every morning</span></p>
   </section>
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Say hello</h2>
+    <p class="c-lede">Hiring, a project idea, or a question about something I built? Send a note and I'll reply by email.</p>
+    <form id="cform" action="/api/contact" method="post" novalidate>
+      <label>Name<input name="name" type="text" autocomplete="name" maxlength="100" required></label>
+      <label>Email<input name="email" type="email" autocomplete="email" maxlength="200" required></label>
+      <label>Message<textarea name="message" maxlength="5000" required></textarea></label>
+      <label class="trap" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <input type="hidden" name="t" value="">
+      <button class="send" type="submit">Send message</button>
+      <p class="status" id="cstatus" role="status" aria-live="polite"></p>
+    </form>
+    <div class="done" id="cdone" role="status" tabindex="-1" hidden>
+      <h3>Message sent</h3>
+      <p>Thanks. I'll get back to you soon. I've also emailed you a link to my free guide, <a href="guide.html">How to get real work out of AI</a>.</p>
+    </div>
+  </section>
 </main>
 
 <div class="player" id="player" hidden role="dialog" aria-modal="true" aria-label="Video player">
@@ -456,7 +491,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
 <footer>
   <div class="wrap">
     <span class="brand foot-brand" id="foot-brand" aria-hidden="true"><span class="brand-cairn"><span class="cairn"><span></span><span></span><span></span><span></span></span></span></span>
-    <span class="foot-cmd"><a href="builds.html">builds</a> · <a href="contact.html">contact</a> · <a href="https://github.com/jeffreyaifudenna" target="_blank" rel="noopener">github</a></span>
+    <span class="foot-cmd"><a href="builds.html">builds</a> · <a href="#contact">contact</a> · <a href="https://github.com/jeffreyaifudenna" target="_blank" rel="noopener">github</a></span>
   </div>
 </footer>
 
@@ -635,6 +670,29 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
     });
     box.hidden=false;
   }).catch(function(){});
+})();
+</script>
+<script>
+/* Contact form (posts to /api/contact). */
+(function(){
+  var form=document.getElementById('cform'); if(!form) return;
+  var status=document.getElementById('cstatus'), btn=form.querySelector('.send'), done=document.getElementById('cdone'), loaded=Date.now();
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    form.elements.t.value=String(Date.now()-loaded);   /* time on page; the server ignores sends faster than a person can type */
+    var d={}; new FormData(form).forEach(function(v,k){d[k]=v});
+    if(!d.name.trim()||!d.message.trim()||!/^[^\s@,;<>()"\\]+@[^\s@,;<>()"\\]+\.[^\s@,;<>()"\\]+$/.test(d.email.trim())){
+      status.className='status err'; status.textContent='Please fill in your name, a valid email and a message.'; return;
+    }
+    btn.disabled=true; status.className='status'; status.textContent='Sending…';
+    fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+      .then(function(r){return r.json().catch(function(){return {}}).then(function(j){if(!r.ok)throw new Error(j.error||'Something went wrong.');})})
+      .then(function(){form.hidden=true; done.hidden=false; done.focus();})
+      .catch(function(err){
+        btn.disabled=false; status.className='status err';
+        status.textContent=err instanceof TypeError ? 'Could not reach the server. Check your connection and try again.' : err.message;
+      });
+  });
 })();
 </script>
 </body>
