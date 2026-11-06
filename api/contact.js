@@ -9,7 +9,6 @@
 
 const nodemailer = require('nodemailer');
 
-const SITE = 'https://jeffrey-ai-portfolio.vercel.app';
 /* One plain address only: no list separators, angle brackets, quotes or comments, which nodemailer would parse as extra syntax. */
 const EMAIL = /^[^\s@,;<>()"\\]+@[^\s@,;<>()"\\]+\.[^\s@,;<>()"\\]+$/;
 const MIN_MS = 3000;                  /* faster than this after page load is a bot */
@@ -28,10 +27,10 @@ module.exports = async function handler(req, res) {
   }
 
   if (!/^application\/json\b/i.test(header(req, 'content-type'))) {
-    return res.status(415).json({ error: 'Please send the form from the contact page.' });
+    return res.status(415).json({ error: 'Please send the form from the site.' });
   }
 
-  if (!sameOrigin(req)) return res.status(403).json({ error: 'Please send the form from the contact page.' });
+  if (!sameOrigin(req)) return res.status(403).json({ error: 'Please send the form from the site.' });
 
   const body = (typeof req.body === 'string' ? safeParse(req.body) : req.body) || {};
   const name = clean(body.name, 100);
@@ -66,23 +65,6 @@ module.exports = async function handler(req, res) {
       subject: 'Portfolio message from ' + name.replace(/[\r\n]+/g, ' '),
       text: 'From: ' + name + ' <' + email + '>\n\n' + message
     });
-    /* One-time thank-you carrying the free guide. The message to you already went out, so a failure here is only logged. */
-    try {
-      await transport.sendMail({
-        from: 'Jeffrey Fudenna <' + user + '>',
-        to: email,
-        replyTo: process.env.CONTACT_TO || user,
-        subject: 'Thanks for writing. Here is the free guide to using AI',
-        text: 'Hi ' + name.replace(/[\r\n]+/g, ' ') + ',\n\n' +
-          'Thanks for your message. I read everything and will reply personally.\n\n' +
-          'In the meantime, here is the short guide I promised: seven habits for getting real work out of AI, a five-minute read.\n\n' +
-          SITE + '/guide.html\n\n' +
-          'Jeffrey\n\n' +
-          'You are getting this once because you used the contact form at ' + SITE + '/contact.html. I will not add you to a list.'
-      });
-    } catch (e) {
-      console.error('guide reply failed:', e.message);
-    }
     return res.status(200).json({ ok: true });
   } catch (e) {
     console.error('contact form send failed:', e.message);
