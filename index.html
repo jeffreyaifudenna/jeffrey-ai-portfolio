@@ -590,7 +590,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
     var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
     on=!reduce&&getComputedStyle(hero).display!=='none';
     onN=!reduce;
-    land=!reduce&&!!twin;
+    land=false;   /* landing leg switched off: the nav cairn stays in the nav; the footer twin is a plain static mark */
     hero.classList.toggle('ghost',on);
     h1.classList.toggle('ghost',onN);
     document.documentElement.classList.toggle('fly-name',onN);
