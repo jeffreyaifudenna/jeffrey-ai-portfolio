@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation [Reported]</title>
+      <link>https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/</link>
+      <guid isPermaLink="false">2026-11-07:OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation</guid>
+      <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Citing a Bloomberg report, TechCrunch says OpenAI has raised $11 billion so far in a round valuing it at $1.25 trillion. The round may reach about $20 billion when it closes, well below the $30 billion target reported in September.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A smaller-than-planned raise, alongside talk of a lower Anthropic IPO valuation, suggests investors are getting pickier about AI lab prices. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Microsoft moves to consolidate its relationships with neoclouds in AI [Reported]</title>
+      <link>https://www.cnbc.com/2026/11/06/microsoft-moves-to-consolidate-its-relationships-with-neoclouds-in-ai.html</link>
+      <guid isPermaLink="false">2026-11-07:Microsoft moves to consolidate its relationships with neoclouds in AI</guid>
+      <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Microsoft plans to cut back the number of neocloud providers it rents AI computing from and lean more on its own data centers, according to people familiar with the matter. It has not yet chosen which partners to drop.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Neoclouds like CoreWeave and Nebius depend on a few big customers, so losing Microsoft business could squeeze GPU capacity and prices for everyone else. &#8212; CNBC</description>
+    </item>
+    <item>
+      <title>Free Chinese AI Models Are Getting Scary Good at Hacking [Reported]</title>
+      <link>https://www.wired.com/story/free-chinese-ai-models-are-getting-scary-good-at-hacking/</link>
+      <guid isPermaLink="false">2026-11-07:Free Chinese AI Models Are Getting Scary Good at Hacking</guid>
+      <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>Testing firm Vals had AI models attack simulated company networks. OpenAI&#x27;s restricted cyber model finished 81 percent of tasks, while the downloadable DeepSeek model managed 73 percent at a fraction of the token cost.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If open models nearly match gated ones at hacking, limiting access to frontier models buys less time, and defenders should plan accordingly. &#8212; WIRED</description>
+    </item>
+    <item>
+      <title>@GitHub in Slack and Teams is generally available and more</title>
+      <link>https://github.blog/changelog/2026-11-06-github-copilot-in-slack-and-teams-is-generally-available/</link>
+      <guid isPermaLink="false">2026-11-07:@GitHub in Slack and Teams is generally available and more</guid>
+      <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>GitHub&#x27;s chat assistant for Slack and Microsoft Teams is now generally available. Teams can investigate bugs, file issues, make code changes and open pull requests from inside a conversation, and issues it creates now note which chat they came from.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Moving coding work into team chat lets non-developers kick off fixes, so it is worth deciding who on your team should have that power. &#8212; GitHub Changelog</description>
+    </item>
+    <item>
+      <title>Egyptian and Nigerian English join the Open ASR Leaderboard</title>
+      <link>https://huggingface.co/blog/open-asr-leaderboard-liva</link>
+      <guid isPermaLink="false">2026-11-07:Egyptian and Nigerian English join the Open ASR Leaderboard</guid>
+      <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>Hugging Face&#x27;s speech recognition leaderboard added private test sets for Egyptian and Nigerian English, supplied by Liva AI. Keeping the test data private makes it harder for models to be tuned to the benchmark, and results are now grouped by accent family.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If your app takes voice input from a global audience, accent-level scores are a better guide for picking a speech model than one overall number. &#8212; Hugging Face</description>
+    </item>
     <item>
       <title>Ramp data shows AI spending stalling just as Anthropic nears its IPO [Reported]</title>
       <link>https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/</link>
