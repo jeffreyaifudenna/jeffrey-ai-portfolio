@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "days": [
+    {
+      "date": "2026-11-08",
+      "stories": [
+        {
+          "title": "Crusoe sells troubled Wyoming data center project to Google",
+          "source": "TechCrunch",
+          "published": "2026-11-06",
+          "kind": "Industry",
+          "status": "confirmed",
+          "url": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/",
+          "summary": "Data center developer Crusoe confirmed it sold an unfinished Wyoming campus to Google, which reportedly had concerns about cost and timing under Crusoe. Google did not say what it paid but plans to invest $17 billion in the site. Crusoe is still building another data center for Google in Texas.",
+          "why": "It shows how hard it is for independent builders to deliver giant AI campuses on time, which shapes who ends up controlling compute capacity."
+        },
+        {
+          "title": "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo",
+          "source": "TechCrunch",
+          "published": "2026-11-07",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/",
+          "summary": "Media reports describe a memo, reportedly based on US intelligence, claiming an executive at Singapore-based Megaspeed was recruited by Chinese intelligence to spy on Nvidia CEO Jensen Huang. Nvidia says it shares no classified information with customers. A separate report questioned a Chinese firm cleared to buy advanced Nvidia chips.",
+          "why": "The memo's claims are unverified, but stories like this feed pressure for tighter controls on who can buy advanced AI chips."
+        },
+        {
+          "title": "World Models Will Soon Be Inescapable. Here's What You Need to Know",
+          "source": "Wired",
+          "published": "2026-11-08",
+          "kind": "Research",
+          "status": "reported",
+          "url": "https://www.wired.com/story/world-models-will-soon-be-inescapable-what-you-need-to-know/",
+          "summary": "An explainer on world models, AI systems that take in images of a scene and predict what happens next, simulating physics instead of predicting words. Companies like Niantic Spatial, Odyssey and Wayve use them to build realistic practice worlds where robots and driverless cars can train safely.",
+          "why": "World models are the next big bet after chatbots; knowing how they differ from language models helps make sense of the coming wave of robot and self-driving news."
+        },
+        {
+          "title": "Copilot code review: API management and review overview updates",
+          "source": "GitHub Changelog",
+          "published": "2026-11-06",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates",
+          "summary": "GitHub now lets teams manage Copilot code review settings through its REST and GraphQL APIs, from enterprise policy down to single repositories. The review summary comment is more compact, and users can say why an overview missed the mark. The update also fixes billing and automatic review bugs.",
+          "why": "Teams can now script AI code review settings across many repos instead of clicking through each one, making it easier to roll out consistently."
+        },
+        {
+          "title": "Meta introduces Spaces, a new way to collaborate with your Muse agent",
+          "source": "TechCrunch",
+          "published": "2026-11-06",
+          "kind": "Industry",
+          "status": "confirmed",
+          "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
+          "summary": "Meta launched Spaces for its Muse agents: project-focused areas like trip planners or gift trackers that Muse builds from a chat description. Spaces can connect to other apps and update themselves in the background. Meta says Muse agents reached 10 million users in the US and Canada within two months.",
+          "why": "Consumer agents are moving from one-off chats to persistent mini-apps they build and maintain, a pattern builders should expect users to want everywhere."
+        }
+      ]
+    },
     {
       "date": "2026-11-07",
       "stories": [

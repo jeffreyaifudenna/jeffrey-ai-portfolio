@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Crusoe sells troubled Wyoming data center project to Google</title>
+      <link>https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/</link>
+      <guid isPermaLink="false">2026-11-08:Crusoe sells troubled Wyoming data center project to Google</guid>
+      <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Data center developer Crusoe confirmed it sold an unfinished Wyoming campus to Google, which reportedly had concerns about cost and timing under Crusoe. Google did not say what it paid but plans to invest $17 billion in the site. Crusoe is still building another data center for Google in Texas.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It shows how hard it is for independent builders to deliver giant AI campuses on time, which shapes who ends up controlling compute capacity. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo [Reported]</title>
+      <link>https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/</link>
+      <guid isPermaLink="false">2026-11-08:Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo</guid>
+      <pubDate>Sat, 07 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>Media reports describe a memo, reportedly based on US intelligence, claiming an executive at Singapore-based Megaspeed was recruited by Chinese intelligence to spy on Nvidia CEO Jensen Huang. Nvidia says it shares no classified information with customers. A separate report questioned a Chinese firm cleared to buy advanced Nvidia chips.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; The memo&#x27;s claims are unverified, but stories like this feed pressure for tighter controls on who can buy advanced AI chips. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>World Models Will Soon Be Inescapable. Here&#x27;s What You Need to Know [Reported]</title>
+      <link>https://www.wired.com/story/world-models-will-soon-be-inescapable-what-you-need-to-know/</link>
+      <guid isPermaLink="false">2026-11-08:World Models Will Soon Be Inescapable. Here&#x27;s What You Need to Know</guid>
+      <pubDate>Sun, 08 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>An explainer on world models, AI systems that take in images of a scene and predict what happens next, simulating physics instead of predicting words. Companies like Niantic Spatial, Odyssey and Wayve use them to build realistic practice worlds where robots and driverless cars can train safely.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; World models are the next big bet after chatbots; knowing how they differ from language models helps make sense of the coming wave of robot and self-driving news. &#8212; Wired</description>
+    </item>
+    <item>
+      <title>Copilot code review: API management and review overview updates</title>
+      <link>https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates</link>
+      <guid isPermaLink="false">2026-11-08:Copilot code review: API management and review overview updates</guid>
+      <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>GitHub now lets teams manage Copilot code review settings through its REST and GraphQL APIs, from enterprise policy down to single repositories. The review summary comment is more compact, and users can say why an overview missed the mark. The update also fixes billing and automatic review bugs.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Teams can now script AI code review settings across many repos instead of clicking through each one, making it easier to roll out consistently. &#8212; GitHub Changelog</description>
+    </item>
+    <item>
+      <title>Meta introduces Spaces, a new way to collaborate with your Muse agent</title>
+      <link>https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/</link>
+      <guid isPermaLink="false">2026-11-08:Meta introduces Spaces, a new way to collaborate with your Muse agent</guid>
+      <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Meta launched Spaces for its Muse agents: project-focused areas like trip planners or gift trackers that Muse builds from a chat description. Spaces can connect to other apps and update themselves in the background. Meta says Muse agents reached 10 million users in the US and Canada within two months.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Consumer agents are moving from one-off chats to persistent mini-apps they build and maintain, a pattern builders should expect users to want everywhere. &#8212; TechCrunch</description>
+    </item>
     <item>
       <title>OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation [Reported]</title>
       <link>https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/</link>
