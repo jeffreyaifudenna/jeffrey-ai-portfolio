@@ -6,7 +6,39 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Automattic debuts a platform to deploy vibe coding apps amid a changing internet [Reported]</title>
+      <link>https://techcrunch.com/2026/11/09/automattic-debuts-a-platform-to-deploy-vibe-coding-apps-amid-a-changing-internet/</link>
+      <guid isPermaLink="false">2026-11-09:Automattic debuts a platform to deploy vibe coding apps amid a changing internet</guid>
+      <pubDate>Mon, 09 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Automattic, the company behind WordPress.com, launched Spacefast, a service for hosting apps made with AI coding tools. It bundles databases, sign-in, file uploads, email and analytics, and competes with Lovable and Emergent.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; AI-built apps still need somewhere to run; hosting with the basics included lowers the barrier for non-developers shipping real projects. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>DeepSeek V4.1 Flash 1017 Ultrafast now available on AI Gateway</title>
+      <link>https://vercel.com/changelog/deepseek-v4-1-flash-1017-ultrafast-now-available-on-ai-gateway</link>
+      <guid isPermaLink="false">2026-11-09:DeepSeek V4.1 Flash 1017 Ultrafast now available on AI Gateway</guid>
+      <pubDate>Sat, 07 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Vercel added a very fast DeepSeek model to its AI Gateway in public preview, served through Fireworks. It can produce over 1,000 tokens per second and has a 1M-token context window.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Speed at this level makes interactive tools and agent loops feel instant, and a gateway lets you try it by changing one model name. &#8212; Vercel Changelog</description>
+    </item>
+    <item>
+      <title>Your Experts Have Partners. There&#x27;s HOPE for Keeping Them Together</title>
+      <link>https://huggingface.co/blog/amazon/higher-order-pruning-experts</link>
+      <guid isPermaLink="false">2026-11-09:Your Experts Have Partners. There&#x27;s HOPE for Keeping Them Together</guid>
+      <pubDate>Mon, 09 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>Amazon researchers describe HOPE, a way to shrink Mixture-of-Experts models by removing experts while accounting for how pairs of experts work together. They report it beat other pruning methods at 50% pruning, including on coding tasks.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Smaller versions of big models are cheaper to run, so better pruning could make strong open models practical on modest hardware. &#8212; Hugging Face Blog (Amazon)</description>
+    </item>
+    <item>
+      <title>Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan&#x27;s Demographics and Financial Context</title>
+      <link>https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan</link>
+      <guid isPermaLink="false">2026-11-09:Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan&#x27;s Demographics and Financial Context</guid>
+      <pubDate>Mon, 09 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Elith and NVIDIA released a synthetic dataset of 9 million Japanese personas with financial details, built from official statistics and licensed CC BY 4.0. A companion personal-data model for Japanese launched the same day.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Synthetic, openly licensed data lets teams test and tune finance tools for a specific country without touching real customer records. &#8212; Hugging Face Blog (NVIDIA)</description>
+    </item>
     <item>
       <title>Crusoe sells troubled Wyoming data center project to Google</title>
       <link>https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/</link>

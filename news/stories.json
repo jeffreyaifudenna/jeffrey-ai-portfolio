@@ -1,6 +1,51 @@
 {
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "days": [
+    {
+      "date": "2026-11-09",
+      "stories": [
+        {
+          "title": "Automattic debuts a platform to deploy vibe coding apps amid a changing internet",
+          "source": "TechCrunch",
+          "published": "2026-11-09",
+          "kind": "Build",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/09/automattic-debuts-a-platform-to-deploy-vibe-coding-apps-amid-a-changing-internet/",
+          "summary": "Automattic, the company behind WordPress.com, launched Spacefast, a service for hosting apps made with AI coding tools. It bundles databases, sign-in, file uploads, email and analytics, and competes with Lovable and Emergent.",
+          "why": "AI-built apps still need somewhere to run; hosting with the basics included lowers the barrier for non-developers shipping real projects."
+        },
+        {
+          "title": "DeepSeek V4.1 Flash 1017 Ultrafast now available on AI Gateway",
+          "source": "Vercel Changelog",
+          "published": "2026-11-07",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://vercel.com/changelog/deepseek-v4-1-flash-1017-ultrafast-now-available-on-ai-gateway",
+          "summary": "Vercel added a very fast DeepSeek model to its AI Gateway in public preview, served through Fireworks. It can produce over 1,000 tokens per second and has a 1M-token context window.",
+          "why": "Speed at this level makes interactive tools and agent loops feel instant, and a gateway lets you try it by changing one model name."
+        },
+        {
+          "title": "Your Experts Have Partners. There's HOPE for Keeping Them Together",
+          "source": "Hugging Face Blog (Amazon)",
+          "published": "2026-11-09",
+          "kind": "Research",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
+          "summary": "Amazon researchers describe HOPE, a way to shrink Mixture-of-Experts models by removing experts while accounting for how pairs of experts work together. They report it beat other pruning methods at 50% pruning, including on coding tasks.",
+          "why": "Smaller versions of big models are cheaper to run, so better pruning could make strong open models practical on modest hardware."
+        },
+        {
+          "title": "Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
+          "source": "Hugging Face Blog (NVIDIA)",
+          "published": "2026-11-09",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan",
+          "summary": "Elith and NVIDIA released a synthetic dataset of 9 million Japanese personas with financial details, built from official statistics and licensed CC BY 4.0. A companion personal-data model for Japanese launched the same day.",
+          "why": "Synthetic, openly licensed data lets teams test and tune finance tools for a specific country without touching real customer records."
+        }
+      ]
+    },
     {
       "date": "2026-11-08",
       "stories": [
