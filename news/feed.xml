@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Claude Fable 5.2 and Mythos 5.2</title>
+      <link>https://www.anthropic.com/claude-fable-and-mythos-5-2</link>
+      <guid isPermaLink="false">2026-11-10:Claude Fable 5.2 and Mythos 5.2</guid>
+      <pubDate>Mon, 09 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Anthropic released Fable 5.2 to all users and a limited-access Mythos 5.2 for vetted organizations. The API name is claude-fable-5-2, priced at $8 per million input tokens and $40 per million output tokens, and it is on AWS, Google Cloud and Azure.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A new top-tier model is available through the API now. The benchmark numbers are Anthropic&#x27;s own, so test it on your own tasks before switching. &#8212; Anthropic</description>
+    </item>
+    <item>
+      <title>Meta releases Muse Ember, a new lightweight model for agent execution [Reported]</title>
+      <link>https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution</link>
+      <guid isPermaLink="false">2026-11-10:Meta releases Muse Ember, a new lightweight model for agent execution</guid>
+      <pubDate>Mon, 09 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Meta&#x27;s Superintelligence Lab launched Muse Ember, its cheapest and lightest model so far. It targets repetitive agent chores such as tool calls, routing and document parsing, at about 10 cents per million input tokens.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Cheap small models for routine agent steps can cut costs when a big model only handles the hard parts. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Adobe brings AI agents and new creative tools to Photoshop, Premiere, and Firefly [Reported]</title>
+      <link>https://techcrunch.com/2026/11/10/adobe-adds-more-ai-to-its-products-and-launches-an-mcp/</link>
+      <guid isPermaLink="false">2026-11-10:Adobe brings AI agents and new creative tools to Photoshop, Premiere, and Firefly</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>At its MAX event Adobe announced new AI features across its creative apps and a local MCP server that lets chatbots like ChatGPT, Claude and Gemini use Creative Cloud features. Firefly also gets a prototyping tool in private beta.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; MCP support means mainstream creative software can now be driven by AI assistants, which opens room for custom workflows. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Cyberattacks threaten to make open-source AI a little less open, Hugging Face exec warns [Reported]</title>
+      <link>https://techcrunch.com/2026/11/10/cyberattacks-threaten-to-make-open-source-ai-a-little-less-open-hugging-face-exec-warns/</link>
+      <guid isPermaLink="false">2026-11-10:Cyberattacks threaten to make open-source AI a little less open, Hugging Face exec warns</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>Hugging Face&#x27;s chief policy officer said recent attacks on AI platforms could push open-source hubs toward tighter controls such as identity checks or developer vetting. Hugging Face says it is rotating admin tokens more often and adding stricter network controls.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If open model hubs add more checks, sharing and downloading models may get slower. Developers should secure their API keys and tokens. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Google broadens its AI hardware portfolio with two new specialized chips [Reported]</title>
+      <link>https://techcrunch.com/2026/11/10/google-broadens-its-ai-hardware-portfolio-with-two-new-specialized-chips/</link>
+      <guid isPermaLink="false">2026-11-10:Google broadens its AI hardware portfolio with two new specialized chips</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Google unveiled two eighth-generation TPU variants. TPU 8tx supports confidential training and inference, and TPU 8i Max packs more memory and bandwidth for large inference workloads.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; More custom chips from cloud providers give AI builders alternatives to Nvidia hardware, which may affect cloud pricing and availability. &#8212; TechCrunch</description>
+    </item>
     <item>
       <title>Automattic debuts a platform to deploy vibe coding apps amid a changing internet [Reported]</title>
       <link>https://techcrunch.com/2026/11/09/automattic-debuts-a-platform-to-deploy-vibe-coding-apps-amid-a-changing-internet/</link>

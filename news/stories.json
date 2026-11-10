@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "days": [
+    {
+      "date": "2026-11-10",
+      "stories": [
+        {
+          "title": "Claude Fable 5.2 and Mythos 5.2",
+          "source": "Anthropic",
+          "published": "2026-11-09",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+          "summary": "Anthropic released Fable 5.2 to all users and a limited-access Mythos 5.2 for vetted organizations. The API name is claude-fable-5-2, priced at $8 per million input tokens and $40 per million output tokens, and it is on AWS, Google Cloud and Azure.",
+          "why": "A new top-tier model is available through the API now. The benchmark numbers are Anthropic's own, so test it on your own tasks before switching."
+        },
+        {
+          "title": "Meta releases Muse Ember, a new lightweight model for agent execution",
+          "source": "TechCrunch",
+          "published": "2026-11-09",
+          "kind": "Build",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution",
+          "summary": "Meta's Superintelligence Lab launched Muse Ember, its cheapest and lightest model so far. It targets repetitive agent chores such as tool calls, routing and document parsing, at about 10 cents per million input tokens.",
+          "why": "Cheap small models for routine agent steps can cut costs when a big model only handles the hard parts."
+        },
+        {
+          "title": "Adobe brings AI agents and new creative tools to Photoshop, Premiere, and Firefly",
+          "source": "TechCrunch",
+          "published": "2026-11-10",
+          "kind": "Build",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/10/adobe-adds-more-ai-to-its-products-and-launches-an-mcp/",
+          "summary": "At its MAX event Adobe announced new AI features across its creative apps and a local MCP server that lets chatbots like ChatGPT, Claude and Gemini use Creative Cloud features. Firefly also gets a prototyping tool in private beta.",
+          "why": "MCP support means mainstream creative software can now be driven by AI assistants, which opens room for custom workflows."
+        },
+        {
+          "title": "Cyberattacks threaten to make open-source AI a little less open, Hugging Face exec warns",
+          "source": "TechCrunch",
+          "published": "2026-11-10",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/10/cyberattacks-threaten-to-make-open-source-ai-a-little-less-open-hugging-face-exec-warns/",
+          "summary": "Hugging Face's chief policy officer said recent attacks on AI platforms could push open-source hubs toward tighter controls such as identity checks or developer vetting. Hugging Face says it is rotating admin tokens more often and adding stricter network controls.",
+          "why": "If open model hubs add more checks, sharing and downloading models may get slower. Developers should secure their API keys and tokens."
+        },
+        {
+          "title": "Google broadens its AI hardware portfolio with two new specialized chips",
+          "source": "TechCrunch",
+          "published": "2026-11-10",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/10/google-broadens-its-ai-hardware-portfolio-with-two-new-specialized-chips/",
+          "summary": "Google unveiled two eighth-generation TPU variants. TPU 8tx supports confidential training and inference, and TPU 8i Max packs more memory and bandwidth for large inference workloads.",
+          "why": "More custom chips from cloud providers give AI builders alternatives to Nvidia hardware, which may affect cloud pricing and availability."
+        }
+      ]
+    },
     {
       "date": "2026-11-09",
       "stories": [
