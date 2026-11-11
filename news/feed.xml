@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Anthropic launches roadshow for proposed initial public offering</title>
+      <link>https://www.anthropic.com/news/roadshow-launch</link>
+      <guid isPermaLink="false">2026-11-11:Anthropic launches roadshow for proposed initial public offering</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Anthropic has started the roadshow for a proposed IPO of 825 million Class A shares, with an expected price of $70 to $78 each. It has applied to list on the Nasdaq under the symbol ANT.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A public Anthropic would disclose far more about costs and revenue, which matters if you build on Claude. &#8212; Anthropic</description>
+    </item>
+    <item>
+      <title>Gemini 4 Carbon in GitHub Copilot</title>
+      <link>https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot</link>
+      <guid isPermaLink="false">2026-11-11:Gemini 4 Carbon in GitHub Copilot</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Google&#x27;s Gemini 4 Carbon is now generally available in GitHub Copilot for Pro+, Max, Business and Enterprise users. It targets demanding coding and agentic work, and is rolling out gradually.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Another frontier model inside Copilot means you can compare models on your own code without switching tools. &#8212; GitHub Changelog</description>
+    </item>
+    <item>
+      <title>OpenAI&#x27;s quarterly revenue reportedly crosses $10B for the first time [Reported]</title>
+      <link>https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/</link>
+      <guid isPermaLink="false">2026-11-11:OpenAI&#x27;s quarterly revenue reportedly crosses $10B for the first time</guid>
+      <pubDate>Wed, 11 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Citing anonymous sources, Bloomberg reported that OpenAI&#x27;s quarterly revenue passed $10 billion, up nearly 50% from the prior quarter. The same report points to heavy operating losses.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Shows demand is still growing fast, but the figures come from anonymous sources and are not confirmed by OpenAI. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Waymo robotaxis kept illegally passing school buses after software fix, feds say [Reported]</title>
+      <link>https://techcrunch.com/2026/11/09/waymo-robotaxis-kept-illegally-passing-school-buses-after-software-fix-feds-say/</link>
+      <guid isPermaLink="false">2026-11-11:Waymo robotaxis kept illegally passing school buses after software fix, feds say</guid>
+      <pubDate>Mon, 09 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>US regulators opened a recall query into Waymo because most reported school-bus passing incidents came after a software update meant to fix them. Waymo says it has improved and will respond.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A real example of regulators checking whether an AI software fix actually worked after deployment. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Apple has new Mac app coming to make running local AI models easy [Unconfirmed]</title>
+      <link>https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/</link>
+      <guid isPermaLink="false">2026-11-11:Apple has new Mac app coming to make running local AI models easy</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>A leaker found evidence of an unreleased Apple app called Harbor that would run AI models on a Mac and could link several Macs together. Apple has not announced it.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If real, it would make local models easier to run, but this rests on a leak only. &#8212; 9to5Mac</description>
+    </item>
     <item>
       <title>Claude Fable 5.2 and Mythos 5.2</title>
       <link>https://www.anthropic.com/claude-fable-and-mythos-5-2</link>
@@ -206,318 +246,6 @@
       <pubDate>Thu, 05 Nov 2026 12:00:00 +0000</pubDate>
       <category>Industry</category>
       <description>Dropbox agreed to buy Tigris Data, a storage startup built for AI workloads, for about $350 million in cash. It also launched DBX Agent Cloud, starting with standalone S3-compatible object storage. Dropbox expects the deal to close in Q4 2026, per its SEC filing and TechCrunch.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A file-sync company buying AI storage shows how much the agent boom is pulling older software firms toward infrastructure. Builders may get another S3-style storage option. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Meta acquires AI coding startup Conductor</title>
-      <link>https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/</link>
-      <guid isPermaLink="false">2026-11-05:Meta acquires AI coding startup Conductor</guid>
-      <pubDate>Wed, 04 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Meta bought Conductor, a startup whose app runs several coding agents side by side in separate workspaces. Meta confirmed the deal but shared no price. Conductor&#x27;s cloud service shuts down November 20, and user cloud data will be deleted after that.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Big labs are buying the tools that orchestrate many agents at once. If you use Conductor, export your cloud data before November 20. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Google faces backlash for plan that would turn off Search for schools that restrict AI</title>
-      <link>https://techcrunch.com/2026/11/04/google-faces-backlash-for-plan-that-would-turn-off-search-for-schools-that-restrict-ai/</link>
-      <guid isPermaLink="false">2026-11-05:Google faces backlash for plan that would turn off Search for schools that restrict AI</guid>
-      <pubDate>Wed, 04 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>Google&#x27;s school software ties Search access to opting in to its AI tools, according to a Google education executive quoted by The New York Times. Senators Bernie Sanders and Richard Blumenthal criticized the plan. Google says Gemini and Search are off by default and schools can switch each on separately.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Bundling AI with basic tools is becoming a fight over choice, especially for kids. Expect more pressure for clear AI opt-outs in education products. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Axiom Math wants to keep AI slop out of mathematics [Reported]</title>
-      <link>https://techcrunch.com/2026/11/05/axiom-math-wants-to-keep-ai-slop-out-of-mathematics/</link>
-      <guid isPermaLink="false">2026-11-05:Axiom Math wants to keep AI slop out of mathematics</guid>
-      <pubDate>Thu, 05 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>Startup Axiom says its AI agents formally checked the Stacks Project, a huge algebraic geometry reference, in the Lean proof language. The company puts it at about 7,654 pages turned into roughly 16 million lines of verified code. Mathematicians quoted say it fills a big gap in formalized math.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Machine-checked proofs are one answer to AI output that sounds right but is not. The claim comes from the company, so watch for independent review. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks</title>
-      <link>https://huggingface.co/blog/phonon-tts</link>
-      <guid isPermaLink="false">2026-11-05:A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks</guid>
-      <pubDate>Thu, 05 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Gradium released Phonon, a small text-to-speech model that runs on the device with no server. It comes in two sizes of about 65 and 75 MB, covers five languages, and ships with over 100 voices. The English model is Apache 2.0, and it now works in Hugging Face Transformers.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A free, tiny voice model lets you add speech to apps that work offline and cost nothing per call. The benchmark wins are the makers&#x27; own claims. &#8212; Hugging Face</description>
-    </item>
-    <item>
-      <title>AMD&#x27;s data center revenue nearly doubles in Q3 and CEO Su expects growth to accelerate</title>
-      <link>https://www.cnbc.com/2026/11/03/amd-amd-q3-earnings-report-2026-.html</link>
-      <guid isPermaLink="false">2026-11-04:AMD&#x27;s data center revenue nearly doubles in Q3 and CEO Su expects growth to accelerate</guid>
-      <pubDate>Tue, 03 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>AMD reported third-quarter revenue of $13.38 billion, up 45% from a year ago and above estimates. Data center revenue hit a record $8.5 billion and is now about two-thirds of sales. AMD guided to about $17 billion next quarter, and Lisa Su expects server revenue to double in 2027.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; AMD is the main alternative to Nvidia for AI chips, so its growth affects how much compute is available and what it costs. &#8212; CNBC</description>
-    </item>
-    <item>
-      <title>US voters roundly reject data centers in ballot measures [Reported]</title>
-      <link>https://www.semafor.com/article/11/04/2026/us-voters-roundly-reject-data-centers-in-ballot-measures</link>
-      <guid isPermaLink="false">2026-11-04:US voters roundly reject data centers in ballot measures</guid>
-      <pubDate>Wed, 04 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>On Election Day, voters in more than 30 localities across nine states backed moratoriums, bans or other limits on data centers, according to early counts. Edgewater, Florida wrote a ban into its city charter, and Perry, Ohio tightened terms for hyperscaler tax breaks.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Local opposition is becoming a real constraint on where AI compute gets built, which could slow new capacity and shift it to friendlier regions. &#8212; Semafor</description>
-    </item>
-    <item>
-      <title>Progress on provable inference for large language models</title>
-      <link>https://www.anthropic.com/research/provable-inference</link>
-      <guid isPermaLink="false">2026-11-04:Progress on provable inference for large language models</guid>
-      <pubDate>Mon, 02 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>Anthropic released FlashProve, an open-source prototype that uses zero-knowledge proofs to show an output came from a specific set of model weights without revealing them. It is far costlier than normal inference and limited to short contexts, and no lab plans to deploy it yet.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Being able to prove which model produced an answer could help audits and catch providers quietly swapping in cheaper models. &#8212; Anthropic</description>
-    </item>
-    <item>
-      <title>StateBench: Testing how language models track state changes over long documents</title>
-      <link>https://huggingface.co/blog/allenai/statebench</link>
-      <guid isPermaLink="false">2026-11-04:StateBench: Testing how language models track state changes over long documents</guid>
-      <pubDate>Tue, 03 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>Ai2 released a benchmark that tests whether models can keep track of things that change across long inputs. Frontier models handle the easier levels but drop to 13% or lower on the hardest, longest problems. In small-model tests, some non-transformer designs generalized far better than transformers.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If your app relies on a model following a long, changing document or session, this shows where that can quietly fail. &#8212; Hugging Face Blog (Ai2)</description>
-    </item>
-    <item>
-      <title>Vercel Security Review now in public beta</title>
-      <link>https://vercel.com/changelog/vercel-security-review-public-beta</link>
-      <guid isPermaLink="false">2026-11-04:Vercel Security Review now in public beta</guid>
-      <pubDate>Tue, 03 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Vercel now scans every push to a connected GitHub repo for vulnerabilities, for Pro and Enterprise teams. Each finding comes with a suggested fix and a severity rating, and its agent can open a pull request that still needs approval. Reviews are free until November 10.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Automatic security checks on every push are a cheap safety net for small teams shipping AI-written code quickly. &#8212; Vercel</description>
-    </item>
-    <item>
-      <title>Anthropic warns that it&#x27;s very close to RSI capability, aka self-building AI [Reported]</title>
-      <link>https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/</link>
-      <guid isPermaLink="false">2026-11-03:Anthropic warns that it&#x27;s very close to RSI capability, aka self-building AI</guid>
-      <pubDate>Mon, 02 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>Anthropic&#x27;s revised IPO filing says it may soon reach recursive self-improvement, where AI helps build its own successors. Internal estimates suggest a near-term model could cross a key threshold in its Responsible Scaling Policy, though no current model has been designated as over it.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A frontier lab putting this risk in a legal filing raises the stakes for how much human oversight stays in AI development. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Brookfield plans for a $27 billion AI data center at UK power station</title>
-      <link>https://www.cnbc.com/2026/11/03/brookfield-ai-data-center-yorkshire-drax.html</link>
-      <guid isPermaLink="false">2026-11-03:Brookfield plans for a $27 billion AI data center at UK power station</guid>
-      <pubDate>Tue, 03 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Drax and Brookfield plan a data center of more than one gigawatt at Drax Power Station in North Yorkshire, with total investment that could pass 20 billion pounds. A first 100 MW phase targets early 2028 but still needs approvals, a tenant and a final investment decision.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; AI builders are now chasing sites with existing power connections, turning old power stations into some of the most valuable real estate in tech. &#8212; CNBC</description>
-    </item>
-    <item>
-      <title>Apple restricts dating apps and AI companions to users 18 and up</title>
-      <link>https://techcrunch.com/2026/11/03/apple-restricts-dating-apps-and-ai-companions-to-users-18-and-up/</link>
-      <guid isPermaLink="false">2026-11-03:Apple restricts dating apps and AI companions to users 18 and up</guid>
-      <pubDate>Tue, 03 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>Apple will require apps with dating features or virtual companions that engage in romantic or sexual content to carry an 18+ rating. Developers must declare new content descriptors starting November 16, with a January 2027 deadline for all apps.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Anyone shipping a companion or character chatbot on iPhone now faces an adult-only rating, which limits reach and changes the business case. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>GitHub Copilot is now available in JetBrains Air</title>
-      <link>https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air</link>
-      <guid isPermaLink="false">2026-11-03:GitHub Copilot is now available in JetBrains Air</guid>
-      <pubDate>Tue, 03 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Copilot can now be chosen as a coding agent inside JetBrains Air through the Agent Client Protocol. Tasks run locally in a JetBrains IDE or in isolated cloud containers through Air Teams, and cloud usage is billed to your Copilot plan.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Coding agents are becoming plug-ins that work across editors, so teams can keep their tools and swap the agent behind them. &#8212; GitHub Changelog</description>
-    </item>
-    <item>
-      <title>Wave Forcing: Towards Speed-of-Light Streaming Video Generation</title>
-      <link>https://huggingface.co/papers/2611.00859</link>
-      <guid isPermaLink="false">2026-11-03:Wave Forcing: Towards Speed-of-Light Streaming Video Generation</guid>
-      <pubDate>Tue, 03 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>Researchers describe a way to generate video as a continuous stream fast enough to play live, reaching about 135 frames per second on eight H200 GPUs. Videos show much more motion than earlier methods, though the authors note more camera drift.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Live AI video opens the door to interactive uses like games and real-time avatars, but it still needs costly hardware. &#8212; Hugging Face Papers</description>
-    </item>
-    <item>
-      <title>Anthropic reports $17 billion in Q3 revenue, purchase commitments of $895.4 billion in revised S-1</title>
-      <link>https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html</link>
-      <guid isPermaLink="false">2026-11-02:Anthropic reports $17 billion in Q3 revenue, purchase commitments of $895.4 billion in revised S-1</guid>
-      <pubDate>Mon, 02 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Anthropic filed an amended IPO prospectus with third-quarter numbers: about $17 billion in revenue, with quarter-over-quarter growth slowing to roughly 47 percent. The nine-month net loss of $104 billion comes mostly from non-cash revaluation of convertible notes. Purchase and lease commitments total about $895 billion, nearly all for compute.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; This is the most detailed public look at a frontier lab&#x27;s economics so far, and the compute obligations show how capital-heavy the model business has become. &#8212; CNBC</description>
-    </item>
-    <item>
-      <title>Marvell to buy Lumentum in all-stock deal, a massive bet on AI connectivity</title>
-      <link>https://www.cnbc.com/2026/11/02/marvell-to-buy-lumentum-in-115-billion-deal-in-ai-data-center-bet-.html</link>
-      <guid isPermaLink="false">2026-11-02:Marvell to buy Lumentum in all-stock deal, a massive bet on AI connectivity</guid>
-      <pubDate>Mon, 02 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Marvell will acquire optical components maker Lumentum in an all-stock deal that values Lumentum at an implied $115 billion enterprise value. The companies say optical links between AI chips are central to data center design. The deal is expected to close in the first half of 2028.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; One of the largest chip deals on record, and a sign that the next AI infrastructure bottleneck is the networking between accelerators, not just the accelerators themselves. &#8212; CNBC</description>
-    </item>
-    <item>
-      <title>Evaluate Vercel Flags from another project without sharing SDK keys</title>
-      <link>https://vercel.com/changelog/evaluate-vercel-flags-from-another-project-without-sharing-sdk-keys</link>
-      <guid isPermaLink="false">2026-11-02:Evaluate Vercel Flags from another project without sharing SDK keys</guid>
-      <pubDate>Mon, 02 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Vercel added Project Connections, which let one project read feature flags defined in another project on the same team without copying a server SDK key into its environment. Connected deployments authenticate with their own identity, access is read-only, and a connection can be revoked without redeploying.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If you run several small Vercel sites, you can now manage one set of flags for all of them with no shared secrets to rotate. &#8212; Vercel Changelog</description>
-    </item>
-    <item>
-      <title>Apriel Voice 27B Preview: An Open Model for Speech, Reasoning, and Tool Use</title>
-      <link>https://huggingface.co/papers/2610.40738</link>
-      <guid isPermaLink="false">2026-11-02:Apriel Voice 27B Preview: An Open Model for Speech, Reasoning, and Tool Use</guid>
-      <pubDate>Mon, 02 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>A new open speech model built on Gemma 4 takes spoken input directly and produces both answers and tool calls from a single backbone, with no separate speech-to-text step. Training happens in two stages: first the speech interface, then the whole model, while keeping its text and image abilities.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; An open-weight voice model that can reason and call tools lowers the bar for building voice agents without chaining three separate models together. &#8212; Hugging Face Papers</description>
-    </item>
-    <item>
-      <title>A Defense Contractor Gave Their Personal AI Agent Access to a Secure Pentagon System [Reported]</title>
-      <link>https://www.wired.com/story/a-defense-contractor-gave-their-personal-ai-agent-access-to-a-secure-pentagon-system/</link>
-      <guid isPermaLink="false">2026-11-02:A Defense Contractor Gave Their Personal AI Agent Access to a Secure Pentagon System</guid>
-      <pubDate>Thu, 29 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>WIRED reports, citing anonymous sources, that an Accenture employee connected a personal Claude account to a Pentagon network holding controlled unclassified information so an AI agent could write and deploy code. The agent ran for about two months before it was found. Accenture says an independent investigation found the allegations without merit.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Personal coding agents can slip past procurement bans and contractor security rules, which is the gap federal incident-reporting and supply-chain policy is now trying to close. &#8212; WIRED</description>
-    </item>
-    <item>
-      <title>Judge allows NAACP lawsuit over xAI data center pollution to move forward [Reported]</title>
-      <link>https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/</link>
-      <guid isPermaLink="false">2026-11-01:Judge allows NAACP lawsuit over xAI data center pollution to move forward</guid>
-      <pubDate>Sat, 31 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>A federal judge refused to dismiss a Clean Air Act suit accusing xAI of running at least 35 gas turbines at its Memphis-area Colossus site without air permits. She rejected xAI&#x27;s claim that the turbines are mobile and exempt.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Permitting and pollution rules are becoming a real constraint on where AI compute can be built and how fast, not just a local nuisance. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>OpenAI reportedly lowers funding target for new round [Reported]</title>
-      <link>https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/</link>
-      <guid isPermaLink="false">2026-11-01:OpenAI reportedly lowers funding target for new round</guid>
-      <pubDate>Sat, 31 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>TechCrunch relays reports that OpenAI cut its target to $20 billion from an earlier $30 billion. The Wall Street Journal says $11 billion is secured so far and some large investors were lukewarm. OpenAI had not yet commented.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Investor caution on AI spending could affect how aggressively labs price and expand. The figures are second-hand, via the FT and WSJ. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Anthropic expected to receive high &#x27;junk&#x27; rating from credit agencies following IPO, FT report says [Reported]</title>
-      <link>https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/</link>
-      <guid isPermaLink="false">2026-11-01:Anthropic expected to receive high &#x27;junk&#x27; rating from credit agencies following IPO, FT report says</guid>
-      <pubDate>Fri, 30 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Per the Financial Times, Blackstone told investors it expects a double-B rating for Anthropic after its IPO, lower than an earlier investment-grade forecast. That would make borrowing for compute costlier. Anthropic and Blackstone declined to comment.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A lab&#x27;s financing costs shape its compute plans and possibly pricing. This is one report&#x27;s expectation, not an actual rating. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Route and orchestrate models with GitHub Copilot Fusion</title>
-      <link>https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion</link>
-      <guid isPermaLink="false">2026-11-01:Route and orchestrate models with GitHub Copilot Fusion</guid>
-      <pubDate>Wed, 28 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>GitHub made Copilot Fusion generally available. You pick it in the model picker with an effort level, and it chooses models per prompt, using one model, a fallback cascade, or one model critiquing another.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Automatic routing means less manual model picking in Copilot. Benchmark and cost claims are GitHub&#x27;s own, so test it on your work. &#8212; GitHub Changelog</description>
-    </item>
-    <item>
-      <title>How We Took Over ChatGPT Accounts [Reported]</title>
-      <link>https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/</link>
-      <guid isPermaLink="false">2026-11-01:How We Took Over ChatGPT Accounts</guid>
-      <pubDate>Sat, 31 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>Parameter Labs describes chaining a message handler, an unsandboxed iframe injection and a permissive content security policy to run script on ChatGPT. Per the post, OpenAI fixed it and paid a bounty.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A clear example of AI chat apps inheriting classic web security risks when they render user-made HTML. Worth knowing if you let models generate previewable apps. &#8212; Simon Willison&#x27;s Weblog</description>
-    </item>
-    <item>
-      <title>Building a Haunted House with NVIDIA Nemotron Open Models</title>
-      <link>https://huggingface.co/blog/nvidia/nemotron-halloween</link>
-      <guid isPermaLink="false">2026-10-31:Building a Haunted House with NVIDIA Nemotron Open Models</guid>
-      <pubDate>Fri, 30 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>An NVIDIA engineer built MonsterHouse, a talking Halloween character projected onto a garage that chats with trick-or-treaters. It runs on one two-GPU workstation using open Nemotron models for speech recognition, conversation and costume spotting, with about 1.7 seconds of median response time.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It is a concrete recipe for a fully local voice agent built from open models, showing that real-time voice characters no longer need a cloud API. &#8212; Hugging Face Blog (NVIDIA)</description>
-    </item>
-    <item>
-      <title>Vercel Daemons can now call services with bindings</title>
-      <link>https://vercel.com/changelog/vercel-daemons-can-now-call-services-with-bindings</link>
-      <guid isPermaLink="false">2026-10-31:Vercel Daemons can now call services with bindings</guid>
-      <pubDate>Fri, 30 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Vercel Daemons can now call other private services in the same deployment by declaring a binding in config. Vercel handles the routing, authentication and TLS, and passes the target&#x27;s address in an environment variable. Bindings work in one direction only.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Long-running agent workers on Vercel can now talk to private backend services without exposing them publicly or hand-rolling auth. &#8212; Vercel Changelog</description>
-    </item>
-    <item>
-      <title>Nvidia weighs playing the cosigner for Nscale&#x27;s AI data center in West Virginia [Reported]</title>
-      <link>https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/</link>
-      <guid isPermaLink="false">2026-10-31:Nvidia weighs playing the cosigner for Nscale&#x27;s AI data center in West Virginia</guid>
-      <pubDate>Fri, 30 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Nvidia is reportedly in talks to guarantee billions in debt for Nscale&#x27;s West Virginia data center, which is contracted to serve Anthropic. If Nscale missed construction payments, Nvidia would temporarily take over the site. The report credits The Information.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Chipmakers backing their customers&#x27; debt shows how much of the AI buildout rests on a few balance sheets, which affects how stable compute supply and prices will be. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Was this the AI election? [Reported]</title>
-      <link>https://www.transformernews.ai/p/was-this-the-ai-election</link>
-      <guid isPermaLink="false">2026-10-31:Was this the AI election?</guid>
-      <pubDate>Fri, 30 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>Ahead of the 2026 midterms, Transformer looks at whether AI is a real campaign issue. Polls show very few voters rank it first, but many battleground campaigns mention AI or data centers. The authors argue it feeds worries about jobs, corruption and power bills.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Data centers and electricity costs are turning AI into a local political issue, which can shape where new compute gets built and how it is regulated. &#8212; Transformer</description>
-    </item>
-    <item>
-      <title>LLM use is acknowledged almost as often as specialized AI tools in biology preprints</title>
-      <link>https://epoch.ai/data-insights/biorxiv-llms-vs-ai-tools</link>
-      <guid isPermaLink="false">2026-10-31:LLM use is acknowledged almost as often as specialized AI tools in biology preprints</guid>
-      <pubDate>Fri, 30 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>Epoch AI found that about 17% of bioRxiv biology preprints now acknowledge using large language models, close to the 19% that cite specialized AI tools such as AlphaFold. Use of LLMs for the analysis itself, not just writing, rose to about 4% by September.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; General chat models are quietly becoming part of the scientific workflow, not just a writing aid, which raises the stakes for their accuracy in research settings. &#8212; Epoch AI</description>
-    </item>
-    <item>
-      <title>Governor Hochul Signs Nation-Leading Legislation to Protect Kids from AI Chatbots</title>
-      <link>https://www.governor.ny.gov/news/governor-hochul-signs-nation-leading-legislation-protect-kids-ai-chatbots-and-ensure-baby</link>
-      <guid isPermaLink="false">2026-10-29:Governor Hochul Signs Nation-Leading Legislation to Protect Kids from AI Chatbots</guid>
-      <pubDate>Wed, 28 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>New York&#x27;s governor signed a law requiring chatbot companies to block certain features for users under 18 and for anyone not confirmed as an adult, such as bots posing as human, claiming romantic ties, or promoting self-harm. Age checks must offer more than one method, and the attorney general can seek civil penalties of up to $25,000 per violation.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If you ship a consumer chatbot, age assurance and behavior limits are now a legal requirement in a large state, not a design choice. Expect other states to copy this template. &#8212; Governor of New York</description>
-    </item>
-    <item>
-      <title>Microsoft recorded $10 billion in revenue from OpenAI last quarter [Reported]</title>
-      <link>https://techcrunch.com/2026/10/28/microsoft-recorded-10-billion-in-revenue-from-openai/</link>
-      <guid isPermaLink="false">2026-10-29:Microsoft recorded $10 billion in revenue from OpenAI last quarter</guid>
-      <pubDate>Wed, 28 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>TechCrunch reports that Microsoft&#x27;s quarterly filing shows $10 billion in revenue from its commercial arrangements with OpenAI, close to 11 percent of Microsoft&#x27;s total for the quarter. Amounts OpenAI owed Microsoft rose to $7.2 billion, and Microsoft&#x27;s stake in OpenAI slipped to 24 percent. The filing does not separate revenue sharing from Azure usage.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; The two companies compete for enterprise customers yet remain deeply tied financially. That dependence shapes pricing, model access, and how long the partnership holds. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>NVIDIA Nemotron 3.5 Transcribe and Granary v2: open speech model and dataset</title>
-      <link>https://huggingface.co/blog/nvidia/nemotron-transcribe-granary</link>
-      <guid isPermaLink="false">2026-10-29:NVIDIA Nemotron 3.5 Transcribe and Granary v2: open speech model and dataset</guid>
-      <pubDate>Wed, 28 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>NVIDIA released an open-weight speech model that transcribes 40 languages, translates to and from English in 31, labels up to 8 speakers, and answers questions about audio up to an hour long. It serves with vLLM or SGLang-Omni on a single GPU. The companion Granary v2 dataset adds about 463,000 hours of speech across 48 languages.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A single open checkpoint covering transcription, translation, and speaker labeling lowers the cost of building voice features without a paid API. Note it handles recorded audio only, not live streams. &#8212; Hugging Face blog (NVIDIA)</description>
-    </item>
-    <item>
-      <title>Octoverse: Commits, pushes reach new highs in 2026 as developers build with agents</title>
-      <link>https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/</link>
-      <guid isPermaLink="false">2026-10-29:Octoverse: Commits, pushes reach new highs in 2026 as developers build with agents</guid>
-      <pubDate>Wed, 28 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>GitHub&#x27;s annual Octoverse report counts 17.9 billion pushes and 1.3 billion merged pull requests in the year to September 30. Agents opened more than 40 percent of pull requests in September, up from 17 percent in March. Paying Copilot users spread their requests across 47 different models, with no single model above 25 percent.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Agent-written code is now a large share of real work on the biggest code host, so review practices and CI need to assume it. The model mix shows developers are not locking into one vendor. &#8212; GitHub</description>
-    </item>
-    <item>
-      <title>As AI agents reshape the web, Google opens Gemini and Search to more apps [Reported]</title>
-      <link>https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/</link>
-      <guid isPermaLink="false">2026-10-29:As AI agents reshape the web, Google opens Gemini and Search to more apps</guid>
-      <pubDate>Wed, 28 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>TechCrunch reports Google announced a Connected Apps Platform that lets businesses plug their apps into Gemini and Search so users can take actions inside them. Developers integrate through a cloud-hosted MCP server or Android app functions and manage the connection in a new Google Connected Console. It is a US public preview behind a waitlist.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Being reachable inside Gemini and Search may matter for app discovery the way search ranking once did. The MCP route means an existing server can be a starting point. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Early progress on accelerating drug development with Claude</title>
-      <link>https://www.anthropic.com/research/early-progress-drug-development</link>
-      <guid isPermaLink="false">2026-10-28:Early progress on accelerating drug development with Claude</guid>
-      <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>Anthropic says it has worked for several months with six drug developers and started its own programs, including one for a rare childhood muscular dystrophy. In one example Claude produced about 35,000 antibody designs for a food-allergy drug in roughly a month, and early lab tests found a few that work. These are early results from Anthropic&#x27;s own account.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; First hard numbers on AI designing real drug candidates, from the company itself. Read it as a claim to be tested, not a result. &#8212; Anthropic</description>
-    </item>
-    <item>
-      <title>Bank of America asks customers not to share banking passwords with AI assistants</title>
-      <link>https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/</link>
-      <guid isPermaLink="false">2026-10-28:Bank of America asks customers not to share banking passwords with AI assistants</guid>
-      <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Bank of America emailed customers telling them never to give their username and password to an AI tool or agent, and warned that customers are responsible for what happens with that access. A bank spokesperson confirmed the email is real. Banks are still working out how agents could safely reach accounts.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; The first big bank drawing a line on AI agents touching accounts. Expect others to follow, and expect agent products to need a bank-approved way in. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>GitHub Copilot supports server-to-server authentication</title>
-      <link>https://github.blog/changelog/2026-10-27-github-copilot-supports-server-to-server-authentication</link>
-      <guid isPermaLink="false">2026-10-28:GitHub Copilot supports server-to-server authentication</guid>
-      <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>In public preview, services and agents built with the Copilot SDK can act for an organization through a GitHub App instead of a signed-in user&#x27;s credentials. That helps with agents that run unattended. Usage is billed to the organization and its model policies apply.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Unattended agents need their own identity, not a borrowed login. GitHub building that plumbing is a sign agents are becoming normal infrastructure. &#8212; GitHub Changelog</description>
-    </item>
-    <item>
-      <title>Google&#x27;s Genie 4 world model adds audio, more realistic worlds, and real-time steering [Reported]</title>
-      <link>https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/</link>
-      <guid isPermaLink="false">2026-10-28:Google&#x27;s Genie 4 world model adds audio, more realistic worlds, and real-time steering</guid>
-      <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>DeepMind released Genie 4 in research preview. It generates interactive worlds with real-time audio, lets users change the scene mid-simulation with new prompts, and holds scenes for up to two minutes, double Genie 3. Only TechCrunch&#x27;s report was found, not Google&#x27;s own post.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Interactive video worlds are moving from demo to tool. Audio and live steering are what games and robot training both need. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>The October inflection point for vibe game development [Reported]</title>
-      <link>https://simonwillison.net/2026/Oct/28/vibe-game-development/</link>
-      <guid isPermaLink="false">2026-10-28:The October inflection point for vibe game development</guid>
-      <pubDate>Wed, 28 Oct 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Developer Simon Willison writes that Claude Opus 5.5 can now produce genuinely fun games. He shows four browser games, including one built from a single prompt with three.js. It is one developer&#x27;s first-hand account.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A careful developer saying a model crossed a quality line is a better signal than a benchmark. Worth trying one prompt yourself. &#8212; Simon Willison&#x27;s Weblog</description>
     </item>
   </channel>
 </rss>

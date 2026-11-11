@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "days": [
+    {
+      "date": "2026-11-11",
+      "stories": [
+        {
+          "title": "Anthropic launches roadshow for proposed initial public offering",
+          "source": "Anthropic",
+          "published": "2026-11-10",
+          "kind": "Industry",
+          "status": "confirmed",
+          "url": "https://www.anthropic.com/news/roadshow-launch",
+          "summary": "Anthropic has started the roadshow for a proposed IPO of 825 million Class A shares, with an expected price of $70 to $78 each. It has applied to list on the Nasdaq under the symbol ANT.",
+          "why": "A public Anthropic would disclose far more about costs and revenue, which matters if you build on Claude."
+        },
+        {
+          "title": "Gemini 4 Carbon in GitHub Copilot",
+          "source": "GitHub Changelog",
+          "published": "2026-11-10",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot",
+          "summary": "Google's Gemini 4 Carbon is now generally available in GitHub Copilot for Pro+, Max, Business and Enterprise users. It targets demanding coding and agentic work, and is rolling out gradually.",
+          "why": "Another frontier model inside Copilot means you can compare models on your own code without switching tools."
+        },
+        {
+          "title": "OpenAI's quarterly revenue reportedly crosses $10B for the first time",
+          "source": "TechCrunch",
+          "published": "2026-11-11",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/",
+          "summary": "Citing anonymous sources, Bloomberg reported that OpenAI's quarterly revenue passed $10 billion, up nearly 50% from the prior quarter. The same report points to heavy operating losses.",
+          "why": "Shows demand is still growing fast, but the figures come from anonymous sources and are not confirmed by OpenAI."
+        },
+        {
+          "title": "Waymo robotaxis kept illegally passing school buses after software fix, feds say",
+          "source": "TechCrunch",
+          "published": "2026-11-09",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/09/waymo-robotaxis-kept-illegally-passing-school-buses-after-software-fix-feds-say/",
+          "summary": "US regulators opened a recall query into Waymo because most reported school-bus passing incidents came after a software update meant to fix them. Waymo says it has improved and will respond.",
+          "why": "A real example of regulators checking whether an AI software fix actually worked after deployment."
+        },
+        {
+          "title": "Apple has new Mac app coming to make running local AI models easy",
+          "source": "9to5Mac",
+          "published": "2026-11-10",
+          "kind": "Build",
+          "status": "unconfirmed",
+          "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
+          "summary": "A leaker found evidence of an unreleased Apple app called Harbor that would run AI models on a Mac and could link several Macs together. Apple has not announced it.",
+          "why": "If real, it would make local models easier to run, but this rests on a leak only."
+        }
+      ]
+    },
     {
       "date": "2026-11-10",
       "stories": [
