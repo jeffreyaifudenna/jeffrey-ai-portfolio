@@ -1,12 +1,14 @@
 """Builds news/feed.xml (RSS 2.0) from news/stories.json. Run after each digest is published:
     python news/build_feed.py
 A story missing its title, url or date is skipped with a warning instead of stopping the build.
+Only the newest MAX_ITEMS stories go in the feed; stories.json keeps the full archive.
 """
 import json, html, os, sys
 from email.utils import format_datetime
 from datetime import datetime, timezone
 
 BASE = "https://jeffrey-ai-portfolio.vercel.app/"
+MAX_ITEMS = 30
 here = os.path.dirname(os.path.abspath(__file__))
 data = json.load(open(os.path.join(here, "stories.json"), encoding="utf-8"))
 
@@ -47,6 +49,7 @@ for day in data.get("days") or []:
         if s.get("kind"): lines.append(f"      <category>{esc(s['kind'])}</category>")
         lines += [f"      <description>{body}</description>", "    </item>"]
         items.append("\n".join(lines))
+items = items[:MAX_ITEMS]   # stories.json is newest day first, so this keeps the newest
 
 days = data.get("days") or []
 built = when(data.get("updated")) or (when(days[0].get("date")) if days else None) or datetime.now(timezone.utc)

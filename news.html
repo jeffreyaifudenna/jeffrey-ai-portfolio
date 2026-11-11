@@ -59,6 +59,10 @@ h1{font-family:var(--display);font-weight:400;font-size:clamp(36px,7vw,60px);lin
 .story p{margin:0;max-width:62ch;text-wrap:pretty}
 .why{margin-top:8px;padding-left:12px;border-left:2px solid var(--accent);color:var(--muted);font-size:15px}
 .why b{font-weight:600;color:var(--accent-ink)}
+.more{display:block;margin:32px auto 0;padding:10px 20px;font:500 13px/1 var(--mono);letter-spacing:.06em;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;cursor:pointer;min-height:44px}
+.more:hover{border-color:var(--accent);color:var(--accent-ink)}
+.more:focus-visible{outline:2px solid var(--focus,var(--accent));outline-offset:3px}
+.day h2:focus{outline:none}
 .empty,noscript{display:block;margin-top:32px;color:var(--muted)}
 footer{border-top:1px solid var(--line);margin-top:56px;padding-block:28px;color:var(--muted);font-size:14px}
 footer p{margin:0 0 6px}
@@ -128,8 +132,9 @@ footer p{margin:0 0 6px}
     var days=(data&&data.days)||[];
     if(!days.length){status.textContent='No stories yet. Check back tomorrow morning.';return}
     status.textContent=''; status.hidden=true;
-    days.forEach(function(day){
-      var sec=el('section','day'); sec.appendChild(el('h2',null,fmt(day.date,true)));
+    var PAGE=7, secs=[];   /* show the latest 7 days; "Show older" reveals 7 more per click */
+    days.forEach(function(day,i){
+      var sec=el('section','day'); sec.hidden=i>=PAGE; secs.push(sec); sec.appendChild(el('h2',null,fmt(day.date,true)));
       (day.stories||[]).forEach(function(s){
         var art=el('article','story'), h=el('h3'), url=safeUrl(s.url);
         if(url){var a=el('a',null,s.title);a.href=url;a.rel='noopener';a.target='_blank';h.appendChild(a)}else{h.textContent=s.title}
@@ -145,6 +150,20 @@ footer p{margin:0 0 6px}
       });
       root.appendChild(sec);
     });
+    if(secs.length>PAGE){
+      var shown=PAGE, more=el('button','more');
+      more.type='button';
+      function label(){var left=secs.length-shown;more.textContent='Show older ('+left+(left===1?' day':' days')+')'}
+      label();
+      more.addEventListener('click',function(){
+        var first=secs[shown];
+        secs.slice(shown,shown+PAGE).forEach(function(s){s.hidden=false});
+        shown+=PAGE;
+        if(shown>=secs.length) more.remove(); else label();
+        var h=first.querySelector('h2'); h.tabIndex=-1; h.focus({preventScroll:true});   /* keep keyboard users at the newly shown days */
+      });
+      root.appendChild(more);
+    }
   }).catch(function(){status.hidden=false; status.textContent='Could not load the stories right now. Try again in a minute.'});
 })();
 </script>
