@@ -1,16 +1,18 @@
 /* Google Apps Script that receives blog subscribers and adds them to a Google Sheet.
-   This file is not run by the site. You paste it into Google once (steps below).
+   This file is not run by the site. It is a copy of the script deployed in Google (kept here for reference).
+   The real SECRET and SHEET_ID live only in Google and in Vercel, never in git: the values below are placeholders.
 
-   One-time setup
-   1. Create a new Google Sheet (name it e.g. "Blog subscribers"). In row 1 type: Date | Email
-   2. In the Sheet: Extensions > Apps Script. Delete the sample code and paste this whole file.
-   3. Change SECRET below to a long random string (it is only a password between this script and the site).
-   4. Deploy > New deployment > type "Web app". Execute as: Me. Who has access: Anyone. Deploy, and allow access when asked.
-   5. Copy the Web app URL (ends in /exec).
-   6. In Vercel > Project > Settings > Environment Variables add SHEETS_URL (that URL) and SHEETS_SECRET (the same SECRET), then redeploy.
-   Do not put the URL or secret in this file's copy in git: keep SECRET below as a placeholder here and set the real one in Google only. */
+   Setup (already done once)
+   1. Create a Google Sheet "Blog subscribers" with row 1: Date | Email.
+   2. At script.google.com create a new project and paste this file. Set SECRET to a long random string and
+      SHEET_ID to the id in the sheet's URL (docs.google.com/spreadsheets/d/<SHEET_ID>/edit).
+   3. Deploy > New deployment > Web app. Execute as: Me. Who has access: Anyone. Authorize when asked.
+   4. In Vercel > Project > Settings > Environment Variables add SHEETS_URL (the Web app URL ending in /exec) and
+      SHEETS_SECRET (the same SECRET), then redeploy.
+   If you edit the script later, use Deploy > Manage deployments > edit > New version so the URL stays the same. */
 
-var SECRET = 'CHANGE-ME';
+var SECRET = '';     /* set in Google only */
+var SHEET_ID = '';   /* set in Google only */
 
 function doPost(e) {
   var out = function (o) {
@@ -25,7 +27,7 @@ function doPost(e) {
     var lock = LockService.getScriptLock();
     lock.waitLock(10000);
     try {
-      var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+      var sheet = SpreadsheetApp.openById(SHEET_ID).getSheets()[0];
       var last = sheet.getLastRow();
       var existing = last > 1 ? sheet.getRange(2, 2, last - 1, 1).getValues() : [];
       for (var i = 0; i < existing.length; i++) {
