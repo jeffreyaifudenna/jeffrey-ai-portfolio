@@ -12,12 +12,12 @@ I'm looking for my next role. This site is the work: websites that publish thems
 - [AI Job Search Pipeline](https://jeffrey-ai-portfolio.vercel.app/jobsearch.html): Claude ran a team of 37 AI agents that found, double-checked and ranked 829 job listings in under a day. A Python script scores each role 0-100, a separate audit fixed 73 scores and removed 20 listings.
 - Cool Moves Reel: Short Viggle clips cut into a reel. In the blog.
 - Remixed photos with AI: Camping photos re-imagined with Gemini, next to the real picture. In the blog.
+- [Experimenting with simple games](https://jeffrey-ai-portfolio.vercel.app/games.html): In the lab. Six small browser games built with Claude to learn and have fun, often with a 5-year-old, with screenshots. Nov 2026.
 - Family Tree Website: Private, password-protected, with edit history. No public link.
 
 ## Blog
 
 - [Blog index](https://jeffrey-ai-portfolio.vercel.app/blog/): Write-ups and stories made with AI.
-- [Experimenting with simple games](https://jeffrey-ai-portfolio.vercel.app/blog/simple-games.html): Six small browser games built by describing them to AI, with screenshots. Nov 2026.
 - [Why random apps kept showing up on my Samsung phone](https://jeffrey-ai-portfolio.vercel.app/blog/samsung-hidden-app-installer.html): A hidden installer, apparently linked to the carrier, was adding apps to a Galaxy S23. How Claude helped find and remove it. Nov 2026.
 - [11:11, a science fiction short story](https://jeffrey-ai-portfolio.vercel.app/blog/11-11.html): Every night at 11:11 the lights go out worldwide, and nobody makes us. Drafted with AI, with notes on what changed.
 - [Cool Moves Reel](https://jeffrey-ai-portfolio.vercel.app/blog/cool-moves-reel.html): Short Viggle clips that put me in scenes I couldn't film. Oct 2026.
