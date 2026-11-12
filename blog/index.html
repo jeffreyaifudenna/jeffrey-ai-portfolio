@@ -40,6 +40,18 @@
 </header>
 
 <main class="wrap">
+  <section class="subscribe" aria-labelledby="sub-h">
+    <h2 id="sub-h">Subscribe to my blog</h2>
+    <form id="sform" action="/api/subscribe" method="post" novalidate>
+      <label class="sr" for="semail">Email address</label>
+      <input id="semail" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+      <input class="trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="hidden" name="t" value="">
+      <button type="submit" class="send">Subscribe</button>
+      <p class="status" id="sstatus" role="status" aria-live="polite"></p>
+    </form>
+    <p class="done" id="sdone" role="status" tabindex="-1" hidden>Thanks! You&rsquo;re on the list. I&rsquo;ll email you when I post.</p>
+  </section>
   <!-- Newest first. To add a post: copy one <li>, update the date, link, title and one-line summary. -->
   <ul class="posts">
     <li>
@@ -68,5 +80,28 @@
 <footer>
   <div class="wrap"><p><a href="/">Built by JeffreyAiFudenna</a> &middot; <a href="/builds.html">builds</a> &middot; <a href="/#contact">contact</a></p></div>
 </footer>
+<script>
+/* Subscribe form (posts to /api/subscribe). */
+(function(){
+  var form=document.getElementById('sform'); if(!form) return;
+  var status=document.getElementById('sstatus'), btn=form.querySelector('.send'), done=document.getElementById('sdone'), loaded=Date.now();
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    form.elements.t.value=String(Date.now()-loaded);
+    var d={}; new FormData(form).forEach(function(v,k){d[k]=v});
+    if(!/^[^\s@,;<>()"\\]+@[^\s@,;<>()"\\]+\.[^\s@,;<>()"\\]+$/.test(String(d.email).trim())){
+      status.className='status err'; status.textContent='Please enter a valid email address.'; return;
+    }
+    btn.disabled=true; status.className='status'; status.textContent='Subscribing…';
+    fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+      .then(function(r){return r.json().catch(function(){return {}}).then(function(j){if(!r.ok)throw new Error(j.error||'Something went wrong.');})})
+      .then(function(){form.hidden=true; done.hidden=false; done.focus();})
+      .catch(function(err){
+        btn.disabled=false; status.className='status err';
+        status.textContent=err instanceof TypeError ? 'Could not reach the server. Check your connection and try again.' : err.message;
+      });
+  });
+})();
+</script>
 </body>
 </html>
