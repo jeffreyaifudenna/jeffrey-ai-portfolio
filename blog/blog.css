@@ -2,7 +2,7 @@
    Used by blog/index.html and every post. To add a post: copy an existing post, change the text,
    then add a row to blog/index.html and a line to sitemap.xml. */
 :root{
-  --display:"Gloock", Georgia, "Times New Roman", serif;
+  --display:"Archivo", ui-sans-serif, system-ui, sans-serif;
   --body:"Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
 }

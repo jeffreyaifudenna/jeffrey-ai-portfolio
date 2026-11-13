@@ -302,3 +302,80 @@ html.theme-anim,html.theme-anim *{transition:background-color .25s,color .25s,bo
 @media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto}
   ::view-transition-old(root),::view-transition-new(root){animation-duration:.22s}}
 
+
+/* ================= Skin: bold, flat, sticker-style (cream paper, thick ink edges, hard shadows) =================
+   Colors come from the variables above; pages keep their own layout. Fun themes keep their own palette but share the shapes. */
+:root{--edge:var(--ink);--pink:#ff5fa8;--yellow:#ffd23f;--teal:#2ec4a6;--on-pop:#1c1b24;
+  --hero:#6e7cf6;--hero-ink:#1c1b24;--hard:5px 5px 0 var(--edge)}
+:root[data-theme="light"],.sw[data-t="light"]{--bg:#fff6e8;--surface:#ffffff;--ink:#1c1b24;--muted:#4d4a5c;--line:#e3d6bf;
+  --stone1:#6e7cf6;--stone2:#ff5fa8;--stone3:#2ec4a6;--accent:#6e7cf6;--accent-ink:#3a45c4;--live:#12783a;--focus:#3a45c4}
+:root[data-theme="dark"],.sw[data-t="dark"]{--bg:#17161e;--surface:#24232e;--ink:#fff6e8;--muted:#c5c1d3;--line:#3a384a;
+  --stone1:#6e7cf6;--stone2:#ff5fa8;--stone3:#2ec4a6;--accent:#8b97ff;--accent-ink:#aab3ff;--live:#5fe08f;--hero:#2b2a5e;--hero-ink:#fff6e8}
+:root:not([data-theme]){--bg:#fff6e8;--surface:#ffffff;--ink:#1c1b24;--muted:#4d4a5c;--line:#e3d6bf;
+  --stone1:#6e7cf6;--stone2:#ff5fa8;--stone3:#2ec4a6;--accent:#6e7cf6;--accent-ink:#3a45c4;--live:#12783a;--focus:#3a45c4}
+@media (prefers-color-scheme:dark){:root:not([data-theme]){--bg:#17161e;--surface:#24232e;--ink:#fff6e8;--muted:#c5c1d3;--line:#3a384a;
+  --stone1:#6e7cf6;--stone2:#ff5fa8;--stone3:#2ec4a6;--accent:#8b97ff;--accent-ink:#aab3ff;--live:#5fe08f;--focus:var(--accent);--hero:#2b2a5e;--hero-ink:#fff6e8}}
+:root[data-theme]:not([data-theme="light"]):not([data-theme="dark"]){--hero:var(--surface);--hero-ink:var(--ink)}
+:root[data-theme="gameboy"],:root[data-theme="sepia"],:root[data-theme="bubblegum"]{--on-pop:#1c1b24}
+
+body{background-image:radial-gradient(circle,color-mix(in srgb,var(--ink) 14%,transparent) 1px,transparent 1.4px);background-size:22px 22px}
+::selection{background:var(--yellow);color:var(--on-pop)}
+
+/* type: heavy, tight headlines */
+:root h1,:root h2,:root h3,html:root .posts h2,html:root .subscribe h2{font-weight:900;letter-spacing:-.035em}
+:root h1,html:root .posts h2{line-height:.95;letter-spacing:-.045em}
+:root h2{font-weight:800}
+:root h3{font-weight:800;letter-spacing:-.02em}
+:root h1 em{font-style:normal;display:inline-block;background:var(--yellow);color:var(--on-pop);padding:0 .14em .04em;border:3px solid var(--edge);border-radius:.18em;transform:rotate(-1.5deg);text-shadow:none;-webkit-background-clip:border-box;background-clip:border-box}
+:root[data-holiday="pride"] h1 em{color:var(--on-pop);-webkit-background-clip:border-box;background:var(--yellow)}
+
+/* nav */
+:root .top{background:var(--bg);backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:2.5px solid var(--edge)}
+:root .top li a{font-weight:700;color:var(--ink);border:2px solid transparent}
+:root .top li a:hover{background:var(--yellow);color:var(--on-pop);border-color:var(--edge)}
+:root .brand-h1{font-weight:900;letter-spacing:-.03em}
+
+/* hero: a coloured panel */
+:root header:has(.hero){background-color:var(--hero);background-image:radial-gradient(circle,color-mix(in srgb,var(--hero-ink) 18%,transparent) 1.2px,transparent 1.6px);background-size:22px 22px;color:var(--hero-ink);border-bottom:2.5px solid var(--edge)}
+:root header:has(.hero) .lede{color:var(--hero-ink);font-weight:500;opacity:.9}
+:root header:has(.hero) h1,:root header:has(.hero) .brand-h1{color:var(--hero-ink)}
+:root .avatar video{border:3px solid var(--edge);border-radius:18px;box-shadow:8px 8px 0 var(--edge)}
+:root .avatar figcaption{display:inline-block;margin-top:14px;padding:3px 10px;background:var(--bg);color:var(--ink);border:2px solid var(--edge);border-radius:999px;font-weight:500}
+:root header .cairn span{border:2.5px solid var(--edge)}
+:root header .cairn span:nth-child(1){background:var(--yellow)}
+:root header .cairn span:nth-child(2){background:var(--pink)}
+:root header .cairn span:nth-child(3){background:var(--teal)}
+:root header .cairn span:nth-child(4){background:var(--bg)}
+:root .brand-cairn .cairn span{border:0}
+
+/* buttons */
+:root .btn,:root .link,:root .contact button.send{background:var(--pink);color:var(--on-pop);border:2.5px solid var(--edge);border-radius:12px;font-weight:800;box-shadow:4px 4px 0 var(--edge);
+  transition:transform .12s ease,box-shadow .12s ease}
+:root .btn.ghost{background:var(--surface);color:var(--ink)}
+:root .btn:hover,:root .link:hover,:root .contact button.send:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--edge)}
+:root .btn:active,:root .link:active,:root .contact button.send:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--edge)}
+:root .contact button.send:disabled{box-shadow:4px 4px 0 var(--edge);transform:none}
+
+/* cards and visuals */
+:root .visual,:root .card-visual{border:2.5px solid var(--edge);border-radius:16px;box-shadow:var(--hard)}
+:root .card-visual{box-shadow:none;border-radius:12px}
+:root .card,:root .contact .done{border:2.5px solid var(--edge);border-radius:18px;box-shadow:var(--hard);background:var(--surface)}
+html .card:hover,html.js .card.in:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--edge)}
+:root .contact input,:root .contact textarea{border:2.5px solid var(--edge);border-radius:12px;background:var(--surface)}
+:root .contact input:focus,:root .contact textarea:focus{box-shadow:4px 4px 0 var(--accent);border-color:var(--edge)}
+
+/* little labels become stickers */
+:root .kind,:root .eyebrow:not(header .eyebrow),:root .count span{display:inline-block;padding:2px 10px;background:var(--yellow);color:var(--on-pop);border:2px solid var(--edge);border-radius:999px;font-weight:700;letter-spacing:.06em}
+:root .proj:nth-child(3n+2) .kind,:root .card:nth-child(3n+2) .kind,:root .count span:nth-child(2){background:var(--teal)}
+:root .proj:nth-child(3n) .kind,:root .card:nth-child(3n) .kind{background:var(--pink)}
+:root .when{font-weight:500}
+:root .when::before{content:none}
+:root .more-head .eyebrow{color:var(--on-pop)}
+
+/* sections and footer */
+:root .more,:root .dn,:root .contact{border-top:2.5px solid var(--edge)}
+:root .proj{border-top:0}
+:root footer{border-top:2.5px solid var(--edge);background:var(--surface)}
+:root .dn-list,:root .dn-list li{border-color:var(--edge)}
+
+@media (prefers-reduced-motion:reduce){.btn,.link,.card,.contact button.send{transition:none}}
