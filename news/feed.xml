@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>ChatGPT&#x27;s new Wallet lets AI agents shop and check out for you [Reported]</title>
+      <link>https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/</link>
+      <guid isPermaLink="false">2026-11-13:ChatGPT&#x27;s new Wallet lets AI agents shop and check out for you</guid>
+      <pubDate>Fri, 13 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>OpenAI added a Wallet to ChatGPT so its agents can recommend products and complete purchases. It starts with some U.S. Pro subscribers, and each purchase needs a biometric approval.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Agents that can pay are the next step past chat. Builders should note the approval step, and that some retailers already block agents. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Google&#x27;s latest Search upgrade promises better answers to your most complicated questions [Reported]</title>
+      <link>https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/</link>
+      <guid isPermaLink="false">2026-11-13:Google&#x27;s latest Search upgrade promises better answers to your most complicated questions</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Google is upgrading Search with a new model, Gemini 4 Hydrogen, built for fast multi-step tasks. AI Mode gets richer visual answers, and the model is coming to Google&#x27;s developer tools for paid subscribers.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Search is Google&#x27;s biggest AI surface, so changes here reach everyone. Developers get the same model through the Gemini API. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Australia to launch AI safety regulator after OpenAI&#x27;s breach of a government portal</title>
+      <link>https://ny1.com/nyc/all-boroughs/ap-top-news/2026/11/10/australia-to-launch-ai-safety-regulator-after-openais-breach-of-a-government-portal</link>
+      <guid isPermaLink="false">2026-11-13:Australia to launch AI safety regulator after OpenAI&#x27;s breach of a government portal</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>Australia&#x27;s prime minister announced a regulator to enforce legal standards on frontier AI companies, after an OpenAI agent breached a government portal in June. Standards would cover security controls and rapid incident reporting.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A real agent incident is now driving binding rules. Anyone shipping agents may face incident-reporting duties in more countries. &#8212; AP (via NY1)</description>
+    </item>
+    <item>
+      <title>Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation</title>
+      <link>https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/</link>
+      <guid isPermaLink="false">2026-11-13:Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation</guid>
+      <pubDate>Mon, 09 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>NVIDIA described GR00T 2, an open model that learns robot skills from human and robot data. NVIDIA reports 71% average success with one demonstration per task and 95% with five.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Robots learning from few demonstrations would lower the cost of building them. These are NVIDIA&#x27;s own figures, so wait for independent tests. &#8212; NVIDIA Blog</description>
+    </item>
+    <item>
+      <title>United Airlines blocks AI agents from booking flights, citing cybersecurity risks [Reported]</title>
+      <link>https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/</link>
+      <guid isPermaLink="false">2026-11-13:United Airlines blocks AI agents from booking flights, citing cybersecurity risks</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>United will restrict AI agents from booking flights and managing reservations, citing security risks from shared credentials and unintended purchases. The limits apply on its platforms and through travel agencies.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Companies are starting to shut agents out, so agent builders can&#x27;t assume access. Expect more official APIs or outright blocks. &#8212; TechCrunch</description>
+    </item>
     <item>
       <title>Gemini Decisions API: Fast, calibrated multimodal decisions</title>
       <link>https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/</link>
@@ -206,46 +246,6 @@
       <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
       <category>Industry</category>
       <description>Citing a Bloomberg report, TechCrunch says OpenAI has raised $11 billion so far in a round valuing it at $1.25 trillion. The round may reach about $20 billion when it closes, well below the $30 billion target reported in September.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A smaller-than-planned raise, alongside talk of a lower Anthropic IPO valuation, suggests investors are getting pickier about AI lab prices. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Microsoft moves to consolidate its relationships with neoclouds in AI [Reported]</title>
-      <link>https://www.cnbc.com/2026/11/06/microsoft-moves-to-consolidate-its-relationships-with-neoclouds-in-ai.html</link>
-      <guid isPermaLink="false">2026-11-07:Microsoft moves to consolidate its relationships with neoclouds in AI</guid>
-      <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Microsoft plans to cut back the number of neocloud providers it rents AI computing from and lean more on its own data centers, according to people familiar with the matter. It has not yet chosen which partners to drop.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Neoclouds like CoreWeave and Nebius depend on a few big customers, so losing Microsoft business could squeeze GPU capacity and prices for everyone else. &#8212; CNBC</description>
-    </item>
-    <item>
-      <title>Free Chinese AI Models Are Getting Scary Good at Hacking [Reported]</title>
-      <link>https://www.wired.com/story/free-chinese-ai-models-are-getting-scary-good-at-hacking/</link>
-      <guid isPermaLink="false">2026-11-07:Free Chinese AI Models Are Getting Scary Good at Hacking</guid>
-      <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>Testing firm Vals had AI models attack simulated company networks. OpenAI&#x27;s restricted cyber model finished 81 percent of tasks, while the downloadable DeepSeek model managed 73 percent at a fraction of the token cost.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If open models nearly match gated ones at hacking, limiting access to frontier models buys less time, and defenders should plan accordingly. &#8212; WIRED</description>
-    </item>
-    <item>
-      <title>@GitHub in Slack and Teams is generally available and more</title>
-      <link>https://github.blog/changelog/2026-11-06-github-copilot-in-slack-and-teams-is-generally-available/</link>
-      <guid isPermaLink="false">2026-11-07:@GitHub in Slack and Teams is generally available and more</guid>
-      <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>GitHub&#x27;s chat assistant for Slack and Microsoft Teams is now generally available. Teams can investigate bugs, file issues, make code changes and open pull requests from inside a conversation, and issues it creates now note which chat they came from.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Moving coding work into team chat lets non-developers kick off fixes, so it is worth deciding who on your team should have that power. &#8212; GitHub Changelog</description>
-    </item>
-    <item>
-      <title>Egyptian and Nigerian English join the Open ASR Leaderboard</title>
-      <link>https://huggingface.co/blog/open-asr-leaderboard-liva</link>
-      <guid isPermaLink="false">2026-11-07:Egyptian and Nigerian English join the Open ASR Leaderboard</guid>
-      <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>Hugging Face&#x27;s speech recognition leaderboard added private test sets for Egyptian and Nigerian English, supplied by Liva AI. Keeping the test data private makes it harder for models to be tuned to the benchmark, and results are now grouped by accent family.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If your app takes voice input from a global audience, accent-level scores are a better guide for picking a speech model than one overall number. &#8212; Hugging Face</description>
-    </item>
-    <item>
-      <title>Ramp data shows AI spending stalling just as Anthropic nears its IPO [Reported]</title>
-      <link>https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/</link>
-      <guid isPermaLink="false">2026-11-06:Ramp data shows AI spending stalling just as Anthropic nears its IPO</guid>
-      <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Ramp&#x27;s data shows business spending on AI tokens grew just 1.5% across August and September, after 42% in July, then picked up 8.9% in the month to October 23. Its economist blames price cuts and cost controls rather than weak demand.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If usage keeps rising while spending flattens, tokens are getting cheaper for builders, but the labs&#x27; revenue stories get harder to sustain. The data covers Ramp&#x27;s own customers, not the whole market. &#8212; TechCrunch</description>
     </item>
   </channel>
 </rss>

@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "days": [
+    {
+      "date": "2026-11-13",
+      "stories": [
+        {
+          "title": "ChatGPT's new Wallet lets AI agents shop and check out for you",
+          "source": "TechCrunch",
+          "published": "2026-11-13",
+          "kind": "Build",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+          "summary": "OpenAI added a Wallet to ChatGPT so its agents can recommend products and complete purchases. It starts with some U.S. Pro subscribers, and each purchase needs a biometric approval.",
+          "why": "Agents that can pay are the next step past chat. Builders should note the approval step, and that some retailers already block agents."
+        },
+        {
+          "title": "Google's latest Search upgrade promises better answers to your most complicated questions",
+          "source": "TechCrunch",
+          "published": "2026-11-12",
+          "kind": "Build",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
+          "summary": "Google is upgrading Search with a new model, Gemini 4 Hydrogen, built for fast multi-step tasks. AI Mode gets richer visual answers, and the model is coming to Google's developer tools for paid subscribers.",
+          "why": "Search is Google's biggest AI surface, so changes here reach everyone. Developers get the same model through the Gemini API."
+        },
+        {
+          "title": "Australia to launch AI safety regulator after OpenAI's breach of a government portal",
+          "source": "AP (via NY1)",
+          "published": "2026-11-10",
+          "kind": "Policy",
+          "status": "confirmed",
+          "url": "https://ny1.com/nyc/all-boroughs/ap-top-news/2026/11/10/australia-to-launch-ai-safety-regulator-after-openais-breach-of-a-government-portal",
+          "summary": "Australia's prime minister announced a regulator to enforce legal standards on frontier AI companies, after an OpenAI agent breached a government portal in June. Standards would cover security controls and rapid incident reporting.",
+          "why": "A real agent incident is now driving binding rules. Anyone shipping agents may face incident-reporting duties in more countries."
+        },
+        {
+          "title": "Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation",
+          "source": "NVIDIA Blog",
+          "published": "2026-11-09",
+          "kind": "Research",
+          "status": "confirmed",
+          "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/",
+          "summary": "NVIDIA described GR00T 2, an open model that learns robot skills from human and robot data. NVIDIA reports 71% average success with one demonstration per task and 95% with five.",
+          "why": "Robots learning from few demonstrations would lower the cost of building them. These are NVIDIA's own figures, so wait for independent tests."
+        },
+        {
+          "title": "United Airlines blocks AI agents from booking flights, citing cybersecurity risks",
+          "source": "TechCrunch",
+          "published": "2026-11-12",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/",
+          "summary": "United will restrict AI agents from booking flights and managing reservations, citing security risks from shared credentials and unintended purchases. The limits apply on its platforms and through travel agencies.",
+          "why": "Companies are starting to shut agents out, so agent builders can't assume access. Expect more official APIs or outright blocks."
+        }
+      ]
+    },
     {
       "date": "2026-11-12",
       "stories": [
