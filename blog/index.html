@@ -40,18 +40,6 @@
 </header>
 
 <main class="wrap">
-  <section class="subscribe" aria-labelledby="sub-h">
-    <h2 id="sub-h">Subscribe to my blog</h2>
-    <form id="sform" action="/api/subscribe" method="post" novalidate>
-      <label class="sr" for="semail">Email address</label>
-      <input id="semail" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
-      <input class="trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <input type="hidden" name="t" value="">
-      <button type="submit" class="send">Subscribe</button>
-      <p class="status" id="sstatus" role="status" aria-live="polite"></p>
-    </form>
-    <p class="done" id="sdone" role="status" tabindex="-1" hidden>Thanks! You&rsquo;re on the list. I&rsquo;ll email you when I post.</p>
-  </section>
   <!-- Newest first. To add a post: copy one <li>, update the date, link, title and one-line summary. -->
   <ul class="posts">
     <li>
@@ -75,6 +63,18 @@
       <p>A camping photo of mine, remixed with Gemini to add me, a tent and a backpack, next to the real picture.</p>
     </li>
   </ul>
+  <section class="subscribe" aria-labelledby="sub-h">
+    <h2 id="sub-h">Subscribe to my blog</h2>
+    <form id="sform" action="/api/subscribe" method="post" novalidate>
+      <label class="sr" for="semail">Email address</label>
+      <input id="semail" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+      <input class="trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="hidden" name="t" value="">
+      <button type="submit" class="send">Subscribe</button>
+      <p class="status" id="sstatus" role="status" aria-live="polite"></p>
+    </form>
+    <p class="done" id="sdone" role="status" tabindex="-1" hidden>Thanks! You&rsquo;re on the list. I&rsquo;ll email you when I post.</p>
+  </section>
 </main>
 
 <footer>
