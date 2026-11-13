@@ -1,10 +1,9 @@
 /* Blog subscribe endpoint (Vercel serverless function).
-   Adds each new subscriber to a Google Sheet through a small Google Apps Script web app (see scripts/subscribe-sheet.gs).
-   Environment variables (Vercel project settings):
-     SHEETS_URL          the Apps Script web app URL ending in /exec
-     SHEETS_SECRET       the same secret string you put in the script, so only this function can add rows
-   If SHEETS_URL is not set, it falls back to emailing each address to you (needs the same Gmail variables as api/contact.js):
-     GMAIL_USER, GMAIL_APP_PASSWORD, and optionally CONTACT_TO
+   Emails each new subscriber address to you from your Gmail account. It keeps no list: the emails in your inbox are the list.
+   Uses the same environment variables as api/contact.js (Vercel project settings):
+     GMAIL_USER          required, the Gmail address that sends (and by default receives)
+     GMAIL_APP_PASSWORD  required, a Google app password (not your normal password)
+     CONTACT_TO          optional, a different inbox to deliver to
 
    Abuse limits, no extra services: same-origin check, JSON only, a honeypot field, a minimum time on the page,
    and a small per-IP rate limit. */
@@ -50,22 +49,6 @@ module.exports = async function handler(req, res) {
   }
 
   if (!EMAIL.test(email)) return res.status(400).json({ error: 'Please enter a valid email address.' });
-
-  if (process.env.SHEETS_URL) {
-    try {
-      const r = await fetch(process.env.SHEETS_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify({ secret: process.env.SHEETS_SECRET || '', email: email })
-      });
-      const j = await r.json().catch(function () { return {}; });
-      if (!r.ok || !j.ok) throw new Error('sheet rejected the row: ' + (j.error || r.status));
-      return res.status(200).json({ ok: true });
-    } catch (e) {
-      console.error('subscribe sheet write failed:', e.message);
-      return res.status(502).json({ error: 'Could not subscribe right now. Please try again later.' });
-    }
-  }
 
   const user = process.env.GMAIL_USER, pass = process.env.GMAIL_APP_PASSWORD;
   if (!user || !pass) return res.status(503).json({ error: 'Subscribing is not set up yet.' });
