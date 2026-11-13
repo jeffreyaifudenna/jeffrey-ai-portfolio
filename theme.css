@@ -309,12 +309,12 @@ html.theme-anim,html.theme-anim *{transition:background-color .25s,color .25s,bo
   --hero:#6e7cf6;--hero-ink:#1c1b24;--hard:5px 5px 0 var(--edge)}
 :root[data-theme="light"],.sw[data-t="light"]{--bg:#fff6e8;--surface:#ffffff;--ink:#1c1b24;--muted:#4d4a5c;--line:#e3d6bf;
   --stone1:#6e7cf6;--stone2:#ff5fa8;--stone3:#2ec4a6;--accent:#6e7cf6;--accent-ink:#3a45c4;--live:#12783a;--focus:#3a45c4}
-:root[data-theme="dark"],.sw[data-t="dark"]{--bg:#17161e;--surface:#24232e;--ink:#fff6e8;--muted:#c5c1d3;--line:#3a384a;
-  --stone1:#6e7cf6;--stone2:#ff5fa8;--stone3:#2ec4a6;--accent:#8b97ff;--accent-ink:#aab3ff;--live:#5fe08f;--hero:#2b2a5e;--hero-ink:#fff6e8}
+:root[data-theme="dark"],.sw[data-t="dark"]{--bg:#1f1d44;--surface:#2d2b5e;--ink:#fff6e8;--muted:#cfcce8;--line:#3d3b78;--edge:#0b0a1f;
+  --stone1:#6e7cf6;--stone2:#ff5fa8;--stone3:#2ec4a6;--accent:#9aa4ff;--accent-ink:#b9c0ff;--live:#5fe08f;--hero:#4a49c2;--hero-ink:#fff6e8}
 :root:not([data-theme]){--bg:#fff6e8;--surface:#ffffff;--ink:#1c1b24;--muted:#4d4a5c;--line:#e3d6bf;
   --stone1:#6e7cf6;--stone2:#ff5fa8;--stone3:#2ec4a6;--accent:#6e7cf6;--accent-ink:#3a45c4;--live:#12783a;--focus:#3a45c4}
-@media (prefers-color-scheme:dark){:root:not([data-theme]){--bg:#17161e;--surface:#24232e;--ink:#fff6e8;--muted:#c5c1d3;--line:#3a384a;
-  --stone1:#6e7cf6;--stone2:#ff5fa8;--stone3:#2ec4a6;--accent:#8b97ff;--accent-ink:#aab3ff;--live:#5fe08f;--focus:var(--accent);--hero:#2b2a5e;--hero-ink:#fff6e8}}
+@media (prefers-color-scheme:dark){:root:not([data-theme]){--bg:#1f1d44;--surface:#2d2b5e;--ink:#fff6e8;--muted:#cfcce8;--line:#3d3b78;--edge:#0b0a1f;
+  --stone1:#6e7cf6;--stone2:#ff5fa8;--stone3:#2ec4a6;--accent:#9aa4ff;--accent-ink:#b9c0ff;--live:#5fe08f;--focus:var(--accent);--hero:#4a49c2;--hero-ink:#fff6e8}}
 :root[data-theme]:not([data-theme="light"]):not([data-theme="dark"]){--hero:var(--surface);--hero-ink:var(--ink)}
 :root[data-theme="gameboy"],:root[data-theme="sepia"],:root[data-theme="bubblegum"]{--on-pop:#1c1b24}
 
@@ -370,7 +370,7 @@ html .card:hover,html.js .card.in:hover{transform:translate(-2px,-2px);box-shado
 :root .proj:nth-child(3n) .kind,:root .card:nth-child(3n) .kind{background:var(--pink)}
 :root .when{font-weight:500}
 :root .when::before{content:none}
-:root .more-head .eyebrow{color:var(--on-pop)}
+:root .more-head .eyebrow{color:var(--on-pop);flex-basis:auto;margin:0 100% 4px 0}
 
 /* sections and footer */
 :root .more,:root .dn,:root .contact{border-top:2.5px solid var(--edge)}
