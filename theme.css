@@ -305,16 +305,16 @@ html.theme-anim,html.theme-anim *{transition:background-color .25s,color .25s,bo
 
 /* ================= Skin: bold, flat, sticker-style (cream paper, thick ink edges, hard shadows) =================
    Colors come from the variables above; pages keep their own layout. Fun themes keep their own palette but share the shapes. */
-:root{--edge:var(--ink);--pink:#ff5fa8;--yellow:#ffd23f;--teal:#2ec4a6;--on-pop:#1c1b24;
-  --hero:#6e7cf6;--hero-ink:#1c1b24;--hard:5px 5px 0 var(--edge)}
-:root[data-theme="light"],.sw[data-t="light"]{--bg:#fff6e8;--surface:#ffffff;--ink:#1c1b24;--muted:#4d4a5c;--line:#e3d6bf;
-  --stone1:#6e7cf6;--stone2:#ff5fa8;--stone3:#2ec4a6;--accent:#6e7cf6;--accent-ink:#3a45c4;--live:#12783a;--focus:#3a45c4}
-:root[data-theme="dark"],.sw[data-t="dark"]{--bg:#1f1d44;--surface:#2d2b5e;--ink:#fff6e8;--muted:#cfcce8;--line:#3d3b78;--edge:#0b0a1f;
-  --stone1:#6e7cf6;--stone2:#ff5fa8;--stone3:#2ec4a6;--accent:#9aa4ff;--accent-ink:#b9c0ff;--live:#5fe08f;--hero:#4a49c2;--hero-ink:#fff6e8}
-:root:not([data-theme]){--bg:#fff6e8;--surface:#ffffff;--ink:#1c1b24;--muted:#4d4a5c;--line:#e3d6bf;
-  --stone1:#6e7cf6;--stone2:#ff5fa8;--stone3:#2ec4a6;--accent:#6e7cf6;--accent-ink:#3a45c4;--live:#12783a;--focus:#3a45c4}
-@media (prefers-color-scheme:dark){:root:not([data-theme]){--bg:#1f1d44;--surface:#2d2b5e;--ink:#fff6e8;--muted:#cfcce8;--line:#3d3b78;--edge:#0b0a1f;
-  --stone1:#6e7cf6;--stone2:#ff5fa8;--stone3:#2ec4a6;--accent:#9aa4ff;--accent-ink:#b9c0ff;--live:#5fe08f;--focus:var(--accent);--hero:#4a49c2;--hero-ink:#fff6e8}}
+:root{--edge:var(--ink);--pink:#ff7a2f;--yellow:#ffd23f;--teal:#9be564;--on-pop:#1c1b24;
+  --hero:#4cc9f0;--hero-ink:#102a43;--hard:5px 5px 0 var(--edge)}
+:root[data-theme="light"],.sw[data-t="light"]{--bg:#f2fbff;--surface:#ffffff;--ink:#102a43;--muted:#3d5a75;--line:#cfe6f2;
+  --stone1:#4cc9f0;--stone2:#ff7a2f;--stone3:#9be564;--accent:#4cc9f0;--accent-ink:#0b6a9c;--live:#12783a;--focus:#0b6a9c}
+:root[data-theme="dark"],.sw[data-t="dark"]{--bg:#0e2238;--surface:#16324f;--ink:#fff6e8;--muted:#c3d6e6;--line:#274a6b;--edge:#050e18;
+  --stone1:#4cc9f0;--stone2:#ff7a2f;--stone3:#9be564;--accent:#7dd3fc;--accent-ink:#a5e0fd;--live:#5fe08f;--hero:#1d6f96;--hero-ink:#fff6e8}
+:root:not([data-theme]){--bg:#f2fbff;--surface:#ffffff;--ink:#102a43;--muted:#3d5a75;--line:#cfe6f2;
+  --stone1:#4cc9f0;--stone2:#ff7a2f;--stone3:#9be564;--accent:#4cc9f0;--accent-ink:#0b6a9c;--live:#12783a;--focus:#0b6a9c}
+@media (prefers-color-scheme:dark){:root:not([data-theme]){--bg:#0e2238;--surface:#16324f;--ink:#fff6e8;--muted:#c3d6e6;--line:#274a6b;--edge:#050e18;
+  --stone1:#4cc9f0;--stone2:#ff7a2f;--stone3:#9be564;--accent:#7dd3fc;--accent-ink:#a5e0fd;--live:#5fe08f;--focus:var(--accent);--hero:#1d6f96;--hero-ink:#fff6e8}}
 :root[data-theme]:not([data-theme="light"]):not([data-theme="dark"]){--hero:var(--surface);--hero-ink:var(--ink)}
 :root[data-theme="gameboy"],:root[data-theme="sepia"],:root[data-theme="bubblegum"]{--on-pop:#1c1b24}
 
