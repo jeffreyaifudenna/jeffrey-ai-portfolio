@@ -1,6 +1,51 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "days": [
+    {
+      "date": "2026-11-14",
+      "stories": [
+        {
+          "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+          "source": "Hugging Face Blog (ggml-org)",
+          "published": "2026-11-13",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+          "summary": "The llama.cpp and ggml projects reached version 1.0.0 and adopted semantic versioning, so breaking changes to the public C API will now show up as major version bumps. The post also lists wide platform packaging and hardware CI support.",
+          "why": "If you run or embed local models, version numbers now signal when an upgrade may break your code."
+        },
+        {
+          "title": "AI agent startup LangChain hits $3B valuation",
+          "source": "TechCrunch",
+          "published": "2026-11-13",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
+          "summary": "LangChain raised a $300 million Series C led by CapitalG at a $3 billion valuation, more than double its level a year earlier. It says its LangSmith agent-management product has 7,000 customers.",
+          "why": "Money is flowing to the tooling layer around agents, not just the models, which hints at where builders are spending effort."
+        },
+        {
+          "title": "Export-banned Nvidia chips are behind China's most powerful AI models — uh-oh, Jensen!",
+          "source": "TechCrunch",
+          "published": "2026-11-13",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
+          "summary": "A researcher's analysis of open model weights from several Chinese labs reportedly shows traces of training on banned Blackwell chips. The article notes this does not prove export laws were broken.",
+          "why": "It shows how hard chip export limits are to enforce, which could shape future rules and the open models you can use."
+        },
+        {
+          "title": "XYBench: Helping with the problem behind the question",
+          "source": "Hugging Face Blog (Ai2)",
+          "published": "2026-11-13",
+          "kind": "Research",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/allenai/xybench",
+          "summary": "Ai2 released a benchmark of 8,115 questions that tests whether AI assistants notice when a user asks about a flawed approach. On Stack Overflow questions, the tested models usually answered the literal request rather than the underlying goal.",
+          "why": "Assistants that answer exactly what you typed can steer you wrong, so state your real goal in prompts."
+        }
+      ]
+    },
     {
       "date": "2026-11-13",
       "stories": [

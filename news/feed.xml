@@ -6,7 +6,39 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem</title>
+      <link>https://huggingface.co/blog/ggml-org/llama-cpp-v1</link>
+      <guid isPermaLink="false">2026-11-14:llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem</guid>
+      <pubDate>Fri, 13 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>The llama.cpp and ggml projects reached version 1.0.0 and adopted semantic versioning, so breaking changes to the public C API will now show up as major version bumps. The post also lists wide platform packaging and hardware CI support.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If you run or embed local models, version numbers now signal when an upgrade may break your code. &#8212; Hugging Face Blog (ggml-org)</description>
+    </item>
+    <item>
+      <title>AI agent startup LangChain hits $3B valuation [Reported]</title>
+      <link>https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/</link>
+      <guid isPermaLink="false">2026-11-14:AI agent startup LangChain hits $3B valuation</guid>
+      <pubDate>Fri, 13 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>LangChain raised a $300 million Series C led by CapitalG at a $3 billion valuation, more than double its level a year earlier. It says its LangSmith agent-management product has 7,000 customers.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Money is flowing to the tooling layer around agents, not just the models, which hints at where builders are spending effort. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Export-banned Nvidia chips are behind China&#x27;s most powerful AI models — uh-oh, Jensen! [Reported]</title>
+      <link>https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/</link>
+      <guid isPermaLink="false">2026-11-14:Export-banned Nvidia chips are behind China&#x27;s most powerful AI models — uh-oh, Jensen!</guid>
+      <pubDate>Fri, 13 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>A researcher&#x27;s analysis of open model weights from several Chinese labs reportedly shows traces of training on banned Blackwell chips. The article notes this does not prove export laws were broken.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It shows how hard chip export limits are to enforce, which could shape future rules and the open models you can use. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>XYBench: Helping with the problem behind the question</title>
+      <link>https://huggingface.co/blog/allenai/xybench</link>
+      <guid isPermaLink="false">2026-11-14:XYBench: Helping with the problem behind the question</guid>
+      <pubDate>Fri, 13 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>Ai2 released a benchmark of 8,115 questions that tests whether AI assistants notice when a user asks about a flawed approach. On Stack Overflow questions, the tested models usually answered the literal request rather than the underlying goal.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Assistants that answer exactly what you typed can steer you wrong, so state your real goal in prompts. &#8212; Hugging Face Blog (Ai2)</description>
+    </item>
     <item>
       <title>ChatGPT&#x27;s new Wallet lets AI agents shop and check out for you [Reported]</title>
       <link>https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/</link>
@@ -214,38 +246,6 @@
       <pubDate>Sat, 07 Nov 2026 12:00:00 +0000</pubDate>
       <category>Policy</category>
       <description>Media reports describe a memo, reportedly based on US intelligence, claiming an executive at Singapore-based Megaspeed was recruited by Chinese intelligence to spy on Nvidia CEO Jensen Huang. Nvidia says it shares no classified information with customers. A separate report questioned a Chinese firm cleared to buy advanced Nvidia chips.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; The memo&#x27;s claims are unverified, but stories like this feed pressure for tighter controls on who can buy advanced AI chips. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>World Models Will Soon Be Inescapable. Here&#x27;s What You Need to Know [Reported]</title>
-      <link>https://www.wired.com/story/world-models-will-soon-be-inescapable-what-you-need-to-know/</link>
-      <guid isPermaLink="false">2026-11-08:World Models Will Soon Be Inescapable. Here&#x27;s What You Need to Know</guid>
-      <pubDate>Sun, 08 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>An explainer on world models, AI systems that take in images of a scene and predict what happens next, simulating physics instead of predicting words. Companies like Niantic Spatial, Odyssey and Wayve use them to build realistic practice worlds where robots and driverless cars can train safely.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; World models are the next big bet after chatbots; knowing how they differ from language models helps make sense of the coming wave of robot and self-driving news. &#8212; Wired</description>
-    </item>
-    <item>
-      <title>Copilot code review: API management and review overview updates</title>
-      <link>https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates</link>
-      <guid isPermaLink="false">2026-11-08:Copilot code review: API management and review overview updates</guid>
-      <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>GitHub now lets teams manage Copilot code review settings through its REST and GraphQL APIs, from enterprise policy down to single repositories. The review summary comment is more compact, and users can say why an overview missed the mark. The update also fixes billing and automatic review bugs.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Teams can now script AI code review settings across many repos instead of clicking through each one, making it easier to roll out consistently. &#8212; GitHub Changelog</description>
-    </item>
-    <item>
-      <title>Meta introduces Spaces, a new way to collaborate with your Muse agent</title>
-      <link>https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/</link>
-      <guid isPermaLink="false">2026-11-08:Meta introduces Spaces, a new way to collaborate with your Muse agent</guid>
-      <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Meta launched Spaces for its Muse agents: project-focused areas like trip planners or gift trackers that Muse builds from a chat description. Spaces can connect to other apps and update themselves in the background. Meta says Muse agents reached 10 million users in the US and Canada within two months.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Consumer agents are moving from one-off chats to persistent mini-apps they build and maintain, a pattern builders should expect users to want everywhere. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation [Reported]</title>
-      <link>https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/</link>
-      <guid isPermaLink="false">2026-11-07:OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation</guid>
-      <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Citing a Bloomberg report, TechCrunch says OpenAI has raised $11 billion so far in a round valuing it at $1.25 trillion. The round may reach about $20 billion when it closes, well below the $30 billion target reported in September.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A smaller-than-planned raise, alongside talk of a lower Anthropic IPO valuation, suggests investors are getting pickier about AI lab prices. &#8212; TechCrunch</description>
     </item>
   </channel>
 </rss>
