@@ -1,6 +1,51 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "days": [
+    {
+      "date": "2026-11-15",
+      "stories": [
+        {
+          "title": "Upcoming deprecation of selected GitHub Copilot models in December",
+          "source": "GitHub Changelog",
+          "published": "2026-11-13",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december",
+          "summary": "GitHub will retire several models from all Copilot experiences on December 14, 2026, including Claude Fable 5, Gemini 3.8 Flash and Grok 4.6. It lists suggested replacements, such as Claude Fable 5.2 and Gemini 4 Hydrogen.",
+          "why": "If your workflows pin a specific Copilot model, you have about a month to switch before it stops working."
+        },
+        {
+          "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
+          "source": "Hugging Face (IBM Granite)",
+          "published": "2026-11-12",
+          "kind": "Research",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+          "summary": "IBM released two experimental preview models trained to read and write LLMON, a tagged format that labels instructions, data and requirements. IBM says this separation makes the models mostly ignore prompt injections hidden in user data.",
+          "why": "Prompt injection is a main risk for agents that read untrusted content, so structured input is an approach worth watching. These are previews with IBM's own numbers."
+        },
+        {
+          "title": "ElevenLabs' new app combines meeting note-taking and dictation for teams",
+          "source": "TechCrunch",
+          "published": "2026-11-13",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/13/elevenlabs-new-app-combines-meeting-note-taking-and-dictation-for-teams/",
+          "summary": "ElevenLabs released ElevenAI, an experimental early-access app that records meetings, dictates text in over 90 languages, and connects to its agent platform for follow-up tasks. It targets teams rather than individuals.",
+          "why": "Voice AI companies are moving into the crowded notetaker space, so expect more tools bundling transcription with agent actions."
+        },
+        {
+          "title": "The AI graveyard: a running list of projects and startups that didn't make it",
+          "source": "TechCrunch",
+          "published": "2026-11-14",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+          "summary": "TechCrunch is keeping a running list of AI products and startups that shut down or pivoted, including Character.ai's bankruptcy filing and several discontinued OpenAI apps. It cites S&P Global data that about 42% of corporate AI initiatives are abandoned.",
+          "why": "A useful reality check: even well-funded AI products fail, so building on a single vendor's standalone app carries risk."
+        }
+      ]
+    },
     {
       "date": "2026-11-14",
       "stories": [

@@ -6,7 +6,39 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 14 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Upcoming deprecation of selected GitHub Copilot models in December</title>
+      <link>https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december</link>
+      <guid isPermaLink="false">2026-11-15:Upcoming deprecation of selected GitHub Copilot models in December</guid>
+      <pubDate>Fri, 13 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>GitHub will retire several models from all Copilot experiences on December 14, 2026, including Claude Fable 5, Gemini 3.8 Flash and Grok 4.6. It lists suggested replacements, such as Claude Fable 5.2 and Gemini 4 Hydrogen.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If your workflows pin a specific Copilot model, you have about a month to switch before it stops working. &#8212; GitHub Changelog</description>
+    </item>
+    <item>
+      <title>LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B</title>
+      <link>https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite</link>
+      <guid isPermaLink="false">2026-11-15:LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>IBM released two experimental preview models trained to read and write LLMON, a tagged format that labels instructions, data and requirements. IBM says this separation makes the models mostly ignore prompt injections hidden in user data.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Prompt injection is a main risk for agents that read untrusted content, so structured input is an approach worth watching. These are previews with IBM&#x27;s own numbers. &#8212; Hugging Face (IBM Granite)</description>
+    </item>
+    <item>
+      <title>ElevenLabs&#x27; new app combines meeting note-taking and dictation for teams [Reported]</title>
+      <link>https://techcrunch.com/2026/11/13/elevenlabs-new-app-combines-meeting-note-taking-and-dictation-for-teams/</link>
+      <guid isPermaLink="false">2026-11-15:ElevenLabs&#x27; new app combines meeting note-taking and dictation for teams</guid>
+      <pubDate>Fri, 13 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>ElevenLabs released ElevenAI, an experimental early-access app that records meetings, dictates text in over 90 languages, and connects to its agent platform for follow-up tasks. It targets teams rather than individuals.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Voice AI companies are moving into the crowded notetaker space, so expect more tools bundling transcription with agent actions. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>The AI graveyard: a running list of projects and startups that didn&#x27;t make it [Reported]</title>
+      <link>https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/</link>
+      <guid isPermaLink="false">2026-11-15:The AI graveyard: a running list of projects and startups that didn&#x27;t make it</guid>
+      <pubDate>Sat, 14 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>TechCrunch is keeping a running list of AI products and startups that shut down or pivoted, including Character.ai&#x27;s bankruptcy filing and several discontinued OpenAI apps. It cites S&amp;P Global data that about 42% of corporate AI initiatives are abandoned.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A useful reality check: even well-funded AI products fail, so building on a single vendor&#x27;s standalone app carries risk. &#8212; TechCrunch</description>
+    </item>
     <item>
       <title>llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem</title>
       <link>https://huggingface.co/blog/ggml-org/llama-cpp-v1</link>
@@ -214,38 +246,6 @@
       <pubDate>Sat, 07 Nov 2026 12:00:00 +0000</pubDate>
       <category>Build</category>
       <description>Vercel added a very fast DeepSeek model to its AI Gateway in public preview, served through Fireworks. It can produce over 1,000 tokens per second and has a 1M-token context window.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Speed at this level makes interactive tools and agent loops feel instant, and a gateway lets you try it by changing one model name. &#8212; Vercel Changelog</description>
-    </item>
-    <item>
-      <title>Your Experts Have Partners. There&#x27;s HOPE for Keeping Them Together</title>
-      <link>https://huggingface.co/blog/amazon/higher-order-pruning-experts</link>
-      <guid isPermaLink="false">2026-11-09:Your Experts Have Partners. There&#x27;s HOPE for Keeping Them Together</guid>
-      <pubDate>Mon, 09 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>Amazon researchers describe HOPE, a way to shrink Mixture-of-Experts models by removing experts while accounting for how pairs of experts work together. They report it beat other pruning methods at 50% pruning, including on coding tasks.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Smaller versions of big models are cheaper to run, so better pruning could make strong open models practical on modest hardware. &#8212; Hugging Face Blog (Amazon)</description>
-    </item>
-    <item>
-      <title>Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan&#x27;s Demographics and Financial Context</title>
-      <link>https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan</link>
-      <guid isPermaLink="false">2026-11-09:Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan&#x27;s Demographics and Financial Context</guid>
-      <pubDate>Mon, 09 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Elith and NVIDIA released a synthetic dataset of 9 million Japanese personas with financial details, built from official statistics and licensed CC BY 4.0. A companion personal-data model for Japanese launched the same day.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Synthetic, openly licensed data lets teams test and tune finance tools for a specific country without touching real customer records. &#8212; Hugging Face Blog (NVIDIA)</description>
-    </item>
-    <item>
-      <title>Crusoe sells troubled Wyoming data center project to Google</title>
-      <link>https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/</link>
-      <guid isPermaLink="false">2026-11-08:Crusoe sells troubled Wyoming data center project to Google</guid>
-      <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Data center developer Crusoe confirmed it sold an unfinished Wyoming campus to Google, which reportedly had concerns about cost and timing under Crusoe. Google did not say what it paid but plans to invest $17 billion in the site. Crusoe is still building another data center for Google in Texas.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It shows how hard it is for independent builders to deliver giant AI campuses on time, which shapes who ends up controlling compute capacity. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo [Reported]</title>
-      <link>https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/</link>
-      <guid isPermaLink="false">2026-11-08:Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo</guid>
-      <pubDate>Sat, 07 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>Media reports describe a memo, reportedly based on US intelligence, claiming an executive at Singapore-based Megaspeed was recruited by Chinese intelligence to spy on Nvidia CEO Jensen Huang. Nvidia says it shares no classified information with customers. A separate report questioned a Chinese firm cleared to buy advanced Nvidia chips.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; The memo&#x27;s claims are unverified, but stories like this feed pressure for tighter controls on who can buy advanced AI chips. &#8212; TechCrunch</description>
     </item>
   </channel>
 </rss>
