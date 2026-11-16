@@ -1,6 +1,51 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "days": [
+    {
+      "date": "2026-11-16",
+      "stories": [
+        {
+          "title": "US tightens AI chip export controls to deter Chinese companies from accessing compute remotely",
+          "source": "TechCrunch",
+          "published": "2026-11-16",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/",
+          "summary": "A new Commerce Department interim rule would require licenses to ship AI chips to large data centers that could serve China or other restricted countries. TechCrunch says it also adds license requirements for several Southeast Asian countries and Brazil, and gives existing operators 90 days.",
+          "why": "Where AI compute can legally be hosted affects cloud capacity and pricing for builders, so watch how providers respond."
+        },
+        {
+          "title": "Apple launches new app to study how people use AI for health",
+          "source": "TechCrunch",
+          "published": "2026-11-15",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/",
+          "summary": "Apple released a US research app, built with OpenEvidence, that answers health questions from clinical sources. It aims to enroll up to 200,000 participants, and Apple says the data is anonymized and not used to train models.",
+          "why": "A big platform company is running a large study on AI health answers, which could shape how trust and privacy are handled in health apps."
+        },
+        {
+          "title": "Qwen4-Max now available on AI Gateway",
+          "source": "Vercel Changelog",
+          "published": "2026-11-15",
+          "kind": "Build",
+          "status": "reported",
+          "url": "https://vercel.com/changelog/qwen4-max-now-available-on-ai-gateway",
+          "summary": "Vercel says Alibaba's Qwen4-Max can now be called through AI Gateway. It is described as a reasoning model with built-in vision and a 1M-token context window, aimed at coding and long-running agent tasks.",
+          "why": "Another strong model behind one gateway makes it easy to compare options without changing your code; check pricing and quality yourself."
+        },
+        {
+          "title": "Gemini 4 Hydrogen in GitHub Copilot",
+          "source": "GitHub Changelog",
+          "published": "2026-11-13",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot",
+          "summary": "GitHub says Google's Gemini 4 Hydrogen, a fast Flash-class model, is generally available in Copilot for paid plans. It is built for agentic coding and tool use, and rolls out gradually with admin controls for business accounts.",
+          "why": "Faster, cheaper models in your editor change which tasks are worth delegating to an agent."
+        }
+      ]
+    },
     {
       "date": "2026-11-15",
       "stories": [

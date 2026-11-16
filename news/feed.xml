@@ -6,7 +6,39 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>US tightens AI chip export controls to deter Chinese companies from accessing compute remotely [Reported]</title>
+      <link>https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/</link>
+      <guid isPermaLink="false">2026-11-16:US tightens AI chip export controls to deter Chinese companies from accessing compute remotely</guid>
+      <pubDate>Mon, 16 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>A new Commerce Department interim rule would require licenses to ship AI chips to large data centers that could serve China or other restricted countries. TechCrunch says it also adds license requirements for several Southeast Asian countries and Brazil, and gives existing operators 90 days.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Where AI compute can legally be hosted affects cloud capacity and pricing for builders, so watch how providers respond. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Apple launches new app to study how people use AI for health [Reported]</title>
+      <link>https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/</link>
+      <guid isPermaLink="false">2026-11-16:Apple launches new app to study how people use AI for health</guid>
+      <pubDate>Sun, 15 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Apple released a US research app, built with OpenEvidence, that answers health questions from clinical sources. It aims to enroll up to 200,000 participants, and Apple says the data is anonymized and not used to train models.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A big platform company is running a large study on AI health answers, which could shape how trust and privacy are handled in health apps. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Qwen4-Max now available on AI Gateway [Reported]</title>
+      <link>https://vercel.com/changelog/qwen4-max-now-available-on-ai-gateway</link>
+      <guid isPermaLink="false">2026-11-16:Qwen4-Max now available on AI Gateway</guid>
+      <pubDate>Sun, 15 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Vercel says Alibaba&#x27;s Qwen4-Max can now be called through AI Gateway. It is described as a reasoning model with built-in vision and a 1M-token context window, aimed at coding and long-running agent tasks.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Another strong model behind one gateway makes it easy to compare options without changing your code; check pricing and quality yourself. &#8212; Vercel Changelog</description>
+    </item>
+    <item>
+      <title>Gemini 4 Hydrogen in GitHub Copilot</title>
+      <link>https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot</link>
+      <guid isPermaLink="false">2026-11-16:Gemini 4 Hydrogen in GitHub Copilot</guid>
+      <pubDate>Fri, 13 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>GitHub says Google&#x27;s Gemini 4 Hydrogen, a fast Flash-class model, is generally available in Copilot for paid plans. It is built for agentic coding and tool use, and rolls out gradually with admin controls for business accounts.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Faster, cheaper models in your editor change which tasks are worth delegating to an agent. &#8212; GitHub Changelog</description>
+    </item>
     <item>
       <title>Upcoming deprecation of selected GitHub Copilot models in December</title>
       <link>https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december</link>
@@ -214,38 +246,6 @@
       <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
       <category>Build</category>
       <description>At its MAX event Adobe announced new AI features across its creative apps and a local MCP server that lets chatbots like ChatGPT, Claude and Gemini use Creative Cloud features. Firefly also gets a prototyping tool in private beta.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; MCP support means mainstream creative software can now be driven by AI assistants, which opens room for custom workflows. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Cyberattacks threaten to make open-source AI a little less open, Hugging Face exec warns [Reported]</title>
-      <link>https://techcrunch.com/2026/11/10/cyberattacks-threaten-to-make-open-source-ai-a-little-less-open-hugging-face-exec-warns/</link>
-      <guid isPermaLink="false">2026-11-10:Cyberattacks threaten to make open-source AI a little less open, Hugging Face exec warns</guid>
-      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>Hugging Face&#x27;s chief policy officer said recent attacks on AI platforms could push open-source hubs toward tighter controls such as identity checks or developer vetting. Hugging Face says it is rotating admin tokens more often and adding stricter network controls.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If open model hubs add more checks, sharing and downloading models may get slower. Developers should secure their API keys and tokens. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Google broadens its AI hardware portfolio with two new specialized chips [Reported]</title>
-      <link>https://techcrunch.com/2026/11/10/google-broadens-its-ai-hardware-portfolio-with-two-new-specialized-chips/</link>
-      <guid isPermaLink="false">2026-11-10:Google broadens its AI hardware portfolio with two new specialized chips</guid>
-      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Google unveiled two eighth-generation TPU variants. TPU 8tx supports confidential training and inference, and TPU 8i Max packs more memory and bandwidth for large inference workloads.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; More custom chips from cloud providers give AI builders alternatives to Nvidia hardware, which may affect cloud pricing and availability. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Automattic debuts a platform to deploy vibe coding apps amid a changing internet [Reported]</title>
-      <link>https://techcrunch.com/2026/11/09/automattic-debuts-a-platform-to-deploy-vibe-coding-apps-amid-a-changing-internet/</link>
-      <guid isPermaLink="false">2026-11-09:Automattic debuts a platform to deploy vibe coding apps amid a changing internet</guid>
-      <pubDate>Mon, 09 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Automattic, the company behind WordPress.com, launched Spacefast, a service for hosting apps made with AI coding tools. It bundles databases, sign-in, file uploads, email and analytics, and competes with Lovable and Emergent.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; AI-built apps still need somewhere to run; hosting with the basics included lowers the barrier for non-developers shipping real projects. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>DeepSeek V4.1 Flash 1017 Ultrafast now available on AI Gateway</title>
-      <link>https://vercel.com/changelog/deepseek-v4-1-flash-1017-ultrafast-now-available-on-ai-gateway</link>
-      <guid isPermaLink="false">2026-11-09:DeepSeek V4.1 Flash 1017 Ultrafast now available on AI Gateway</guid>
-      <pubDate>Sat, 07 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Vercel added a very fast DeepSeek model to its AI Gateway in public preview, served through Fireworks. It can produce over 1,000 tokens per second and has a 1M-token context window.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Speed at this level makes interactive tools and agent loops feel instant, and a gateway lets you try it by changing one model name. &#8212; Vercel Changelog</description>
     </item>
   </channel>
 </rss>
