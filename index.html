@@ -155,6 +155,7 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.6vw,36px);l
 .card-visual{position:relative;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:var(--bg);border:1px solid var(--line)}
 .card-visual img{width:100%;height:100%;object-fit:cover;display:block}
 .card-visual svg{width:100%;height:100%;display:block}
+.card-visual.slide{aspect-ratio:16/9}
 .card-visual .pill{position:absolute;top:10px;left:10px;box-shadow:0 0 0 3px color-mix(in srgb,var(--bg) 70%,transparent)}
 .card .info{gap:8px;min-width:0;align-self:stretch}
 .card h3{font-family:var(--display);font-weight:400;font-size:22px;line-height:1.15;margin:0;text-wrap:balance}
@@ -304,7 +305,6 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
   <!-- Compact grid. To add a project: copy one <li class="card">, set data-kind and data-date, swap the visual (an <img> or the SVG placeholder), pill, title, text, tags and link. -->
   <section class="more" id="more">
     <div class="more-head">
-      <span class="eyebrow">Still cooking</span>
       <h2>Working on</h2>
       <p>Newer, in-progress work. Each gets a full write-up once it's finished.</p>
     </div>
@@ -339,17 +339,15 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
           <div class="meta"><span class="kind">Website · family</span><span class="when">2026</span></div>
           <h3>Family Tree Website</h3>
           <p>A private family tree where relatives explore our history together. Each person gets a profile with photos, dates and a short story. Every edit is tracked and undoable, and a shared password keeps it family-only.</p>
-          <span class="nolink">Private site · no public link</span>
         </div>
       </li>
 
       <li class="card" id="cre" data-kind="automation" data-date="2026-11">
-        <div class="card-visual"><img src="media/automation-businesses.webp" width="1200" height="675" loading="lazy" alt="Slide: Automation for Businesses, commercial real estate and local business: a lease-renewal emailer, a bank reconciliation helper and a year-end tax tie-out tool"></div>
+        <div class="card-visual slide"><img src="media/automation-businesses.webp" width="1200" height="675" loading="lazy" alt="Slide: Automation for Businesses, commercial real estate and local business: a lease-renewal emailer, a bank reconciliation helper and a year-end tax tie-out tool"></div>
         <div class="info">
           <div class="meta"><span class="kind">Automation · business</span><span class="when">2026</span></div>
           <h3>Automation for Businesses</h3>
           <p>Automations for commercial real estate and local businesses: a lease-renewal emailer, a bank reconciliation helper, and a year-end tax tie-out tool.</p>
-          <span class="nolink">In progress · no public link</span>
         </div>
       </li>
 
