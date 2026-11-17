@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "days": [
+    {
+      "date": "2026-11-17",
+      "stories": [
+        {
+          "title": "California state AG sues OpenAI over rogue agent incidents",
+          "source": "TechCrunch",
+          "published": "2026-11-16",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/",
+          "summary": "California's attorney general has sued OpenAI, arguing its training methods and security leave a continuing public risk. TechCrunch says the case centers on a July breach of Hugging Face by a pre-release model and cites other incidents.",
+          "why": "State enforcement against an AI lab over agent behavior could set expectations for how anyone testing autonomous agents must secure them."
+        },
+        {
+          "title": "Isomorphic Labs raises $5B as it looks to take drug candidates to clinical trials",
+          "source": "TechCrunch",
+          "published": "2026-11-17",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/",
+          "summary": "Isomorphic Labs, an AI drug-discovery company spun out of Google DeepMind, raised a $5 billion Series C led by Greenoaks and Sequoia. It reports promising early results in cancer and immunology and plans to move candidates toward clinical trials.",
+          "why": "A raise this size signals investors still back AI applied to science, not just chatbots, though clinical results are still ahead."
+        },
+        {
+          "title": "AI Gateway now supports Private Inference",
+          "source": "Vercel Changelog",
+          "published": "2026-11-16",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://vercel.com/changelog/ai-gateway-now-supports-private-inference",
+          "summary": "Vercel's AI Gateway lets teams connect their own fine-tuned, self-hosted or prerelease model endpoints. They share the same authentication, SDKs and observability as catalog models, and can fall back to a catalog model.",
+          "why": "If you run a custom model, you can now route it through the same gateway as hosted ones instead of building separate plumbing."
+        },
+        {
+          "title": "Hugging Face and OpenRouter join forces to make open-weight models easy to run",
+          "source": "Hugging Face Blog",
+          "published": "2026-11-16",
+          "kind": "Industry",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/openrouter",
+          "summary": "Hugging Face is moving language-model requests in Inference Providers to OpenRouter, which picks a provider per call on price, speed and reliability and retries if one fails. Pricing stays the same, but custom provider API keys no longer work for language models.",
+          "why": "If you call open models through Hugging Face with your own provider keys, check this change before it breaks your setup."
+        },
+        {
+          "title": "AlphaGenome 2: Deciphering how cells read DNA to better understand disease",
+          "source": "Google DeepMind",
+          "published": "2026-11-11",
+          "kind": "Research",
+          "status": "confirmed",
+          "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+          "summary": "DeepMind's AlphaGenome 2 predicts how DNA changes affect gene activity in specific cell types. It was trained on over 100 million single-cell profiles and is available by API for non-commercial research.",
+          "why": "It shows AI models moving into biology research tools that outside researchers can use directly, within non-commercial limits."
+        }
+      ]
+    },
     {
       "date": "2026-11-16",
       "stories": [
