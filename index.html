@@ -122,6 +122,10 @@ main{padding-block:16px 64px}
 .visual canvas{width:100%;height:100%;display:block}
 .visual.wide{aspect-ratio:1200/630}
 .visual.flow{aspect-ratio:320/300}
+.visual.slide{aspect-ratio:16/9}
+.card-visual.flow{aspect-ratio:320/300}
+.card-visual.flow text{font-family:var(--mono);font-size:11.5px;fill:var(--ink)}
+.card-visual.flow .sub{fill:var(--muted);font-size:10px}
 .visual.flow text{font-family:var(--mono);font-size:11.5px;fill:var(--ink)}
 .visual.flow .sub{fill:var(--muted);font-size:10px}
 .info{min-width:0;display:flex;flex-direction:column;gap:12px}
@@ -290,13 +294,12 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
       </div>
     </li>
 
-    <li class="proj" id="jobsearch" data-kind="automation" data-date="2026-10">
-      <div class="visual flow"><svg viewBox="0 0 320 300" role="img" aria-label="Pipeline: my goals go to Claude, which splits the search among 26 search agents; 5 agents structure each role; a Python script scores it; a recheck and audit loop corrects it; the result is a ranked list of 829 roles."><rect x="10" y="8" width="252" height="32" rx="7" fill="var(--bg)" stroke="var(--line)" stroke-width="1.5"/><text x="20" y="22" font-weight="600">You</text><text class="sub" x="20" y="34">Background + goals</text><path d="M136 40v8" stroke="var(--muted)" stroke-width="1.5"/><path d="M132 44l4 4 4-4" fill="none" stroke="var(--muted)" stroke-width="1.5"/><rect x="10" y="48" width="252" height="32" rx="7" fill="var(--bg)" stroke="var(--line)" stroke-width="1.5"/><text x="20" y="62" font-weight="600">Claude</text><text class="sub" x="20" y="74">Splits the search into segments</text><path d="M136 80v8" stroke="var(--muted)" stroke-width="1.5"/><path d="M132 84l4 4 4-4" fill="none" stroke="var(--muted)" stroke-width="1.5"/><rect x="10" y="88" width="252" height="32" rx="7" fill="var(--bg)" stroke="var(--line)" stroke-width="1.5"/><text x="20" y="102" font-weight="600">26 search agents</text><text class="sub" x="20" y="114">8 rounds, in parallel</text><path d="M136 120v8" stroke="var(--muted)" stroke-width="1.5"/><path d="M132 124l4 4 4-4" fill="none" stroke="var(--muted)" stroke-width="1.5"/><rect x="10" y="128" width="252" height="32" rx="7" fill="var(--bg)" stroke="var(--line)" stroke-width="1.5"/><text x="20" y="142" font-weight="600">5 structuring agents</text><text class="sub" x="20" y="154">25 fields per role</text><path d="M136 160v8" stroke="var(--muted)" stroke-width="1.5"/><path d="M132 164l4 4 4-4" fill="none" stroke="var(--muted)" stroke-width="1.5"/><rect x="10" y="168" width="252" height="32" rx="7" fill="var(--bg)" stroke="var(--line)" stroke-width="1.5"/><text x="20" y="182" font-weight="600">Python script</text><text class="sub" x="20" y="194">Scores each role 0–100</text><path d="M136 200v8" stroke="var(--muted)" stroke-width="1.5"/><path d="M132 204l4 4 4-4" fill="none" stroke="var(--muted)" stroke-width="1.5"/><rect x="10" y="208" width="252" height="32" rx="7" fill="var(--bg)" stroke="var(--line)" stroke-width="1.5"/><text x="20" y="222" font-weight="600">Recheck + audit</text><text class="sub" x="20" y="234">73 scores fixed, 20 removed</text><path d="M136 240v8" stroke="var(--muted)" stroke-width="1.5"/><path d="M132 244l4 4 4-4" fill="none" stroke="var(--muted)" stroke-width="1.5"/><rect x="10" y="248" width="252" height="32" rx="7" fill="var(--accent)" fill-opacity=".14" stroke="var(--accent)" stroke-width="1.5"/><text x="20" y="262" font-weight="600">Ranked list</text><text class="sub" x="20" y="274">829 roles, 30 deadlines</text><path d="M262 224h26V104h-26" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M266 100l-4 4 4 4" fill="none" stroke="var(--accent)" stroke-width="1.5"/><text class="sub" x="294" y="168" transform="rotate(90 294 168)" text-anchor="middle">fixes loop back</text></svg></div>
+    <li class="proj" id="cre" data-kind="automation" data-date="2026-11">
+      <div class="visual slide"><img src="media/automation-businesses.webp" width="1200" height="675" loading="lazy" alt="Slide: Automation for Businesses, commercial real estate and local business: a lease-renewal emailer, a bank reconciliation helper and a year-end tax tie-out tool"></div>
       <div class="info">
-        <div class="meta"><span class="kind">AI agents · research</span><span class="when">Oct 2026</span></div>
-        <h2>AI Job Search Pipeline</h2>
-        <p>I directed Claude to run a team of 37 AI agents that found, double-checked and ranked 829 job listings in under a day. A Python script scores each role 0&ndash;100, a second agent audited the scores, and a one-page dashboard lists the deadlines. I set up the agents to do the hard part of the search, and woke up with a list of jobs ready to apply to.</p>
-        <a class="link" href="jobsearch.html">Read the full write-up →</a>
+        <div class="meta"><span class="kind">Automation · business</span><span class="when">2026</span></div>
+        <h2>Automation for Businesses</h2>
+        <p>Automations for commercial real estate and local businesses: a lease-renewal emailer, a bank reconciliation helper, and a year-end tax tie-out tool.</p>
       </div>
     </li>
 
@@ -342,12 +345,23 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
         </div>
       </li>
 
-      <li class="card" id="cre" data-kind="automation" data-date="2026-11">
-        <div class="card-visual slide"><img src="media/automation-businesses.webp" width="1200" height="675" loading="lazy" alt="Slide: Automation for Businesses, commercial real estate and local business: a lease-renewal emailer, a bank reconciliation helper and a year-end tax tie-out tool"></div>
+    </ul>
+  </section>
+
+  <section class="more" id="lab">
+    <div class="more-head">
+      <h2>The Lab</h2>
+      <p>Experiments with AI agents, each with a full write-up.</p>
+    </div>
+    <ul class="cards">
+
+      <li class="card" id="jobsearch" data-kind="automation" data-date="2026-10">
+        <div class="card-visual flow"><svg viewBox="0 0 320 300" role="img" aria-label="Pipeline: my goals go to Claude, which splits the search among 26 search agents; 5 agents structure each role; a Python script scores it; a recheck and audit loop corrects it; the result is a ranked list of 829 roles."><rect x="10" y="8" width="252" height="32" rx="7" fill="var(--bg)" stroke="var(--line)" stroke-width="1.5"/><text x="20" y="22" font-weight="600">You</text><text class="sub" x="20" y="34">Background + goals</text><path d="M136 40v8" stroke="var(--muted)" stroke-width="1.5"/><path d="M132 44l4 4 4-4" fill="none" stroke="var(--muted)" stroke-width="1.5"/><rect x="10" y="48" width="252" height="32" rx="7" fill="var(--bg)" stroke="var(--line)" stroke-width="1.5"/><text x="20" y="62" font-weight="600">Claude</text><text class="sub" x="20" y="74">Splits the search into segments</text><path d="M136 80v8" stroke="var(--muted)" stroke-width="1.5"/><path d="M132 84l4 4 4-4" fill="none" stroke="var(--muted)" stroke-width="1.5"/><rect x="10" y="88" width="252" height="32" rx="7" fill="var(--bg)" stroke="var(--line)" stroke-width="1.5"/><text x="20" y="102" font-weight="600">26 search agents</text><text class="sub" x="20" y="114">8 rounds, in parallel</text><path d="M136 120v8" stroke="var(--muted)" stroke-width="1.5"/><path d="M132 124l4 4 4-4" fill="none" stroke="var(--muted)" stroke-width="1.5"/><rect x="10" y="128" width="252" height="32" rx="7" fill="var(--bg)" stroke="var(--line)" stroke-width="1.5"/><text x="20" y="142" font-weight="600">5 structuring agents</text><text class="sub" x="20" y="154">25 fields per role</text><path d="M136 160v8" stroke="var(--muted)" stroke-width="1.5"/><path d="M132 164l4 4 4-4" fill="none" stroke="var(--muted)" stroke-width="1.5"/><rect x="10" y="168" width="252" height="32" rx="7" fill="var(--bg)" stroke="var(--line)" stroke-width="1.5"/><text x="20" y="182" font-weight="600">Python script</text><text class="sub" x="20" y="194">Scores each role 0–100</text><path d="M136 200v8" stroke="var(--muted)" stroke-width="1.5"/><path d="M132 204l4 4 4-4" fill="none" stroke="var(--muted)" stroke-width="1.5"/><rect x="10" y="208" width="252" height="32" rx="7" fill="var(--bg)" stroke="var(--line)" stroke-width="1.5"/><text x="20" y="222" font-weight="600">Recheck + audit</text><text class="sub" x="20" y="234">73 scores fixed, 20 removed</text><path d="M136 240v8" stroke="var(--muted)" stroke-width="1.5"/><path d="M132 244l4 4 4-4" fill="none" stroke="var(--muted)" stroke-width="1.5"/><rect x="10" y="248" width="252" height="32" rx="7" fill="var(--accent)" fill-opacity=".14" stroke="var(--accent)" stroke-width="1.5"/><text x="20" y="262" font-weight="600">Ranked list</text><text class="sub" x="20" y="274">829 roles, 30 deadlines</text><path d="M262 224h26V104h-26" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M266 100l-4 4 4 4" fill="none" stroke="var(--accent)" stroke-width="1.5"/><text class="sub" x="294" y="168" transform="rotate(90 294 168)" text-anchor="middle">fixes loop back</text></svg></div>
         <div class="info">
-          <div class="meta"><span class="kind">Automation · business</span><span class="when">2026</span></div>
-          <h3>Automation for Businesses</h3>
-          <p>Automations for commercial real estate and local businesses: a lease-renewal emailer, a bank reconciliation helper, and a year-end tax tie-out tool.</p>
+          <div class="meta"><span class="kind">AI agents · research</span><span class="when">Oct 2026</span></div>
+          <h3>AI Job Search Pipeline</h3>
+          <p>I directed Claude to run a team of 37 AI agents that found, double-checked and ranked 829 job listings in under a day. A Python script scores each role 0&ndash;100, a second agent audited the scores, and a one-page dashboard lists the deadlines.</p>
+          <a class="link" href="jobsearch.html">Read the full write-up →</a>
         </div>
       </li>
 
