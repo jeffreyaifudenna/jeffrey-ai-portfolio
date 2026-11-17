@@ -13,7 +13,7 @@ I'm looking for my next role. This site is the work: websites that publish thems
 - Cool Moves Reel: Short Viggle clips cut into a reel. In the blog.
 - Remixed photos with AI: Camping photos re-imagined with Gemini, next to the real picture. In the blog.
 - [Experimenting with simple games](https://jeffrey-ai-portfolio.vercel.app/games.html): Working on. Six small browser games built with Claude to learn and have fun, often with a 5-year-old, with screenshots. Nov 2026.
-- [The Lab](https://jeffrey-ai-portfolio.vercel.app/lab.html): The agents and automations I run on a schedule (AI Daily News, Email Scanner, Daily Kaizen, The Infinite Buddha), plus the AI job search pipeline. Nov 2026.
+- [The Lab](https://jeffrey-ai-portfolio.vercel.app/lab.html): The agents and automations I run on a schedule (AI Daily News, Email Scanner, Daily Kaizen, The Infinite Buddha), plus the AI job search pipeline, each with a copyable setup prompt. Plain-text version: https://jeffrey-ai-portfolio.vercel.app/lab.txt. Nov 2026.
 - Family Tree Website: Private, password-protected, with edit history. No public link.
 
 ## Blog
