@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>GPT‑6.2 Astra and GPT‑6.2 Sol [Reported]</title>
+      <link>https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/</link>
+      <guid isPermaLink="false">2026-11-18:GPT‑6.2 Astra and GPT‑6.2 Sol</guid>
+      <pubDate>Tue, 17 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>OpenAI released two models in the API: Astra for hard projects and Sol for efficient everyday work. Willison notes Astra now costs 80% of the prior Astra, Sol&#x27;s price is unchanged, and early reviews are mixed.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Cheaper frontier pricing changes the cost math for apps built on these models, but mixed benchmark reports mean testing on your own tasks first. &#8212; Simon Willison&#x27;s Weblog</description>
+    </item>
+    <item>
+      <title>GitHub Copilot Evals is now in public preview</title>
+      <link>https://github.blog/changelog/2026-11-17-github-copilot-evals-is-now-in-public-preview</link>
+      <guid isPermaLink="false">2026-11-18:GitHub Copilot Evals is now in public preview</guid>
+      <pubDate>Tue, 17 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>GitHub added a way to run repeatable tests on the skills, custom agents and MCP tools in a Copilot setup, and compare runs to see whether a change helped. It works through a VS Code extension, a Copilot CLI plugin or the Copilot app.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Agent setups are usually tuned by feel; repeatable tests let builders check that a tweak actually improved results. &#8212; GitHub Changelog</description>
+    </item>
+    <item>
+      <title>Nvidia clarifies when it will — and won&#x27;t —keep financing neoclouds [Reported]</title>
+      <link>https://techcrunch.com/2026/11/18/nvidia-clarifies-when-it-will-and-wont-keep-financing-neoclouds/</link>
+      <guid isPermaLink="false">2026-11-18:Nvidia clarifies when it will — and won&#x27;t —keep financing neoclouds</guid>
+      <pubDate>Wed, 18 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Nvidia&#x27;s interim CEO said its loan guarantees apply only after a customer has secured financing and built a facility with Nvidia products. She signaled the company will be choosier about future financing without leaving data center funding.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Compute capacity depends on this kind of financing, so tighter terms could slow how fast new AI cloud capacity comes online. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>UK MPs want AI watchdog with power to pull the plug on dangerous models [Reported]</title>
+      <link>https://theregister.com/ai-and-ml/2026/11/18/uk-mps-want-ai-watchdog-with-power-to-pull-the-plug-on-dangerous-models/5310567</link>
+      <guid isPermaLink="false">2026-11-18:UK MPs want AI watchdog with power to pull the plug on dangerous models</guid>
+      <pubDate>Wed, 18 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>A UK parliamentary committee wants a new AI safety bill creating a regulator that could halt risky training, block deployments or suspend services. It also urges mandatory incident reporting and whistleblower protections. The advice is not binding.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It shows where regulation may head, but nothing changes for developers unless the government commits to legislation. &#8212; The Register</description>
+    </item>
+    <item>
+      <title>OpenAI study finds scientists lean on ChatGPT for reading, writing and code [Reported]</title>
+      <link>https://www.therundown.ai/news/openai-study-scientists-chatgpt-reading-writing-code</link>
+      <guid isPermaLink="false">2026-11-18:OpenAI study finds scientists lean on ChatGPT for reading, writing and code</guid>
+      <pubDate>Tue, 17 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>OpenAI studied 1,819 scientists in its free academic pilot. Reading and writing were over half of their science-related messages, and fully autonomous research requests were rare. The time-savings estimate is self-reported.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It suggests AI is mostly an assistant for everyday research tasks, not a replacement, though the evidence comes from users&#x27; own estimates. &#8212; The Rundown AI</description>
+    </item>
     <item>
       <title>California state AG sues OpenAI over rogue agent incidents [Reported]</title>
       <link>https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/</link>
@@ -206,46 +246,6 @@
       <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
       <category>Industry</category>
       <description>A breach at a cloud provider used by AI hosting company Fireworks gave an attacker access to a development system, exposing some customers&#x27; billing details and datasets. Notion says about 1% of its customers were affected, including AI chat transcripts.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If your app sends user data to a third-party AI host, that host&#x27;s security becomes your risk too, so check what you share and with whom. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>OpenAI, Anthropic face new oversight as New York&#x27;s AI safety law takes effect [Reported]</title>
-      <link>https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/</link>
-      <guid isPermaLink="false">2026-11-12:OpenAI, Anthropic face new oversight as New York&#x27;s AI safety law takes effect</guid>
-      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>New York opened a registration portal under its RAISE Act. Frontier AI developers with over $500M in revenue must register by January 1, 2027, publish safety plans and report incidents within 72 hours, with fines up to $1M.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; State rules like this are becoming a real compliance factor for large AI labs, and may shape what smaller builders who rely on them can expect. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Token Pooling-Aware Training for Multi-Vector Embedding Models</title>
-      <link>https://huggingface.co/blog/token-pooling</link>
-      <guid isPermaLink="false">2026-11-12:Token Pooling-Aware Training for Multi-Vector Embedding Models</guid>
-      <pubDate>Wed, 11 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>Multi-vector search indexes can be shrunk by merging similar token vectors. Training the model with pooling in mind kept 97.8% of unpooled quality at a 4x reduction, versus 94.6% without. It ships in Sentence Transformers.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Smaller search indexes mean lower storage and serving cost for anyone building retrieval features, with only a small quality loss. &#8212; Hugging Face Blog</description>
-    </item>
-    <item>
-      <title>Anthropic launches roadshow for proposed initial public offering</title>
-      <link>https://www.anthropic.com/news/roadshow-launch</link>
-      <guid isPermaLink="false">2026-11-11:Anthropic launches roadshow for proposed initial public offering</guid>
-      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Anthropic has started the roadshow for a proposed IPO of 825 million Class A shares, with an expected price of $70 to $78 each. It has applied to list on the Nasdaq under the symbol ANT.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A public Anthropic would disclose far more about costs and revenue, which matters if you build on Claude. &#8212; Anthropic</description>
-    </item>
-    <item>
-      <title>Gemini 4 Carbon in GitHub Copilot</title>
-      <link>https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot</link>
-      <guid isPermaLink="false">2026-11-11:Gemini 4 Carbon in GitHub Copilot</guid>
-      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Google&#x27;s Gemini 4 Carbon is now generally available in GitHub Copilot for Pro+, Max, Business and Enterprise users. It targets demanding coding and agentic work, and is rolling out gradually.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Another frontier model inside Copilot means you can compare models on your own code without switching tools. &#8212; GitHub Changelog</description>
-    </item>
-    <item>
-      <title>OpenAI&#x27;s quarterly revenue reportedly crosses $10B for the first time [Reported]</title>
-      <link>https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/</link>
-      <guid isPermaLink="false">2026-11-11:OpenAI&#x27;s quarterly revenue reportedly crosses $10B for the first time</guid>
-      <pubDate>Wed, 11 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Citing anonymous sources, Bloomberg reported that OpenAI&#x27;s quarterly revenue passed $10 billion, up nearly 50% from the prior quarter. The same report points to heavy operating losses.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Shows demand is still growing fast, but the figures come from anonymous sources and are not confirmed by OpenAI. &#8212; TechCrunch</description>
     </item>
   </channel>
 </rss>
