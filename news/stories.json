@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "days": [
+    {
+      "date": "2026-11-19",
+      "stories": [
+        {
+          "title": "Anthropic's IPO puts AI's circular financing boom to the test",
+          "source": "TechCrunch",
+          "published": "2026-11-19",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test/",
+          "summary": "Anthropic's IPO priced at $83 a share, with Amazon and Google holding stakes worth about $308 billion combined. Chip and cloud suppliers also committed $26 billion in a private placement, which analysts describe as circular financing, since the money returns to them as compute spending.",
+          "why": "The listing shows how much frontier AI depends on its own suppliers. The source says the main risk is losing the frontier lead to rivals or cheaper open-weight models."
+        },
+        {
+          "title": "External sandboxes for coding agents",
+          "source": "Simon Willison's Weblog",
+          "published": "2026-11-17",
+          "kind": "Build",
+          "status": "reported",
+          "url": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
+          "summary": "Simon Willison describes an external sandbox pattern where the agent stays outside and only the code it runs executes in a sandbox. He released three server implementations with a shared localhost API, an optional allow-list proxy, and credential replacement so the agent never holds secrets.",
+          "why": "It offers a practical way to try local models and coding agents with less risk from mistakes or prompt injection. Any agent that can call a localhost API could use it."
+        },
+        {
+          "title": "Uncensored AI models are thriving on code hosting platforms",
+          "source": "The Register",
+          "published": "2026-11-19",
+          "kind": "Research",
+          "status": "reported",
+          "url": "https://www.theregister.com/ai-and-ml/2026/11/19/uncensored-ai-models-are-thriving-on-code-hosting-platforms/5310891",
+          "summary": "Researchers from UIUC and Nanyang Technological University studied 22,096 uncensored LLMs across five hosting platforms. Only about 13 percent carried moderation warnings, and the models were more likely to comply with harmful requests. Monthly additions grew from about 100 in May 2023 to over 1,000.",
+          "why": "The study measures how widely safeguard-free models are available and how lightly they are labeled. It used public metadata and tested text output only."
+        },
+        {
+          "title": "More banks say customers using AI agents are on their own — even if they get hacked",
+          "source": "TechCrunch",
+          "published": "2026-11-18",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/",
+          "summary": "Citibank updated its user agreement so customers who give third-party AI tools account access are responsible for what those agents do, including after a leak or hack. JPMorgan and Bank of America announced similar terms in October, and PNC and Citizens have followed.",
+          "why": "These are company terms of service, not law, and the article cites no regulator. They still decide who bears the loss when an AI agent touches a bank account."
+        },
+        {
+          "title": "European Commission scrambles to contain AI-assisted cyberattack",
+          "source": "The Register",
+          "published": "2026-11-19",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://www.theregister.com/cyber-crime/2026/11/19/european-commission-scrambles-to-contain-ai-assisted-cyberattack/5311103",
+          "summary": "Attackers used an AI-powered penetration testing framework against European Commission internal systems, and staff portals have been disrupted for over 10 days. The Commission has not said whether data was stolen. CERT-EU and the FBI had earlier warned about the same tool.",
+          "why": "This is a high-profile case of a publicly available AI security tool used against a government body. The source does not confirm a data breach."
+        }
+      ]
+    },
     {
       "date": "2026-11-18",
       "stories": [

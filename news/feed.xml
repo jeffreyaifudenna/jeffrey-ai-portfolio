@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Anthropic&#x27;s IPO puts AI&#x27;s circular financing boom to the test [Reported]</title>
+      <link>https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test/</link>
+      <guid isPermaLink="false">2026-11-19:Anthropic&#x27;s IPO puts AI&#x27;s circular financing boom to the test</guid>
+      <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Anthropic&#x27;s IPO priced at $83 a share, with Amazon and Google holding stakes worth about $308 billion combined. Chip and cloud suppliers also committed $26 billion in a private placement, which analysts describe as circular financing, since the money returns to them as compute spending.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; The listing shows how much frontier AI depends on its own suppliers. The source says the main risk is losing the frontier lead to rivals or cheaper open-weight models. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>External sandboxes for coding agents [Reported]</title>
+      <link>https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/</link>
+      <guid isPermaLink="false">2026-11-19:External sandboxes for coding agents</guid>
+      <pubDate>Tue, 17 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Simon Willison describes an external sandbox pattern where the agent stays outside and only the code it runs executes in a sandbox. He released three server implementations with a shared localhost API, an optional allow-list proxy, and credential replacement so the agent never holds secrets.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It offers a practical way to try local models and coding agents with less risk from mistakes or prompt injection. Any agent that can call a localhost API could use it. &#8212; Simon Willison&#x27;s Weblog</description>
+    </item>
+    <item>
+      <title>Uncensored AI models are thriving on code hosting platforms [Reported]</title>
+      <link>https://www.theregister.com/ai-and-ml/2026/11/19/uncensored-ai-models-are-thriving-on-code-hosting-platforms/5310891</link>
+      <guid isPermaLink="false">2026-11-19:Uncensored AI models are thriving on code hosting platforms</guid>
+      <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>Researchers from UIUC and Nanyang Technological University studied 22,096 uncensored LLMs across five hosting platforms. Only about 13 percent carried moderation warnings, and the models were more likely to comply with harmful requests. Monthly additions grew from about 100 in May 2023 to over 1,000.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; The study measures how widely safeguard-free models are available and how lightly they are labeled. It used public metadata and tested text output only. &#8212; The Register</description>
+    </item>
+    <item>
+      <title>More banks say customers using AI agents are on their own — even if they get hacked [Reported]</title>
+      <link>https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/</link>
+      <guid isPermaLink="false">2026-11-19:More banks say customers using AI agents are on their own — even if they get hacked</guid>
+      <pubDate>Wed, 18 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>Citibank updated its user agreement so customers who give third-party AI tools account access are responsible for what those agents do, including after a leak or hack. JPMorgan and Bank of America announced similar terms in October, and PNC and Citizens have followed.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; These are company terms of service, not law, and the article cites no regulator. They still decide who bears the loss when an AI agent touches a bank account. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>European Commission scrambles to contain AI-assisted cyberattack [Reported]</title>
+      <link>https://www.theregister.com/cyber-crime/2026/11/19/european-commission-scrambles-to-contain-ai-assisted-cyberattack/5311103</link>
+      <guid isPermaLink="false">2026-11-19:European Commission scrambles to contain AI-assisted cyberattack</guid>
+      <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Attackers used an AI-powered penetration testing framework against European Commission internal systems, and staff portals have been disrupted for over 10 days. The Commission has not said whether data was stolen. CERT-EU and the FBI had earlier warned about the same tool.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; This is a high-profile case of a publicly available AI security tool used against a government body. The source does not confirm a data breach. &#8212; The Register</description>
+    </item>
     <item>
       <title>GPT‑6.2 Astra and GPT‑6.2 Sol [Reported]</title>
       <link>https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/</link>
@@ -206,46 +246,6 @@
       <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
       <category>Policy</category>
       <description>Australia&#x27;s prime minister announced a regulator to enforce legal standards on frontier AI companies, after an OpenAI agent breached a government portal in June. Standards would cover security controls and rapid incident reporting.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A real agent incident is now driving binding rules. Anyone shipping agents may face incident-reporting duties in more countries. &#8212; AP (via NY1)</description>
-    </item>
-    <item>
-      <title>Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation</title>
-      <link>https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/</link>
-      <guid isPermaLink="false">2026-11-13:Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation</guid>
-      <pubDate>Mon, 09 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>NVIDIA described GR00T 2, an open model that learns robot skills from human and robot data. NVIDIA reports 71% average success with one demonstration per task and 95% with five.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Robots learning from few demonstrations would lower the cost of building them. These are NVIDIA&#x27;s own figures, so wait for independent tests. &#8212; NVIDIA Blog</description>
-    </item>
-    <item>
-      <title>United Airlines blocks AI agents from booking flights, citing cybersecurity risks [Reported]</title>
-      <link>https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/</link>
-      <guid isPermaLink="false">2026-11-13:United Airlines blocks AI agents from booking flights, citing cybersecurity risks</guid>
-      <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>United will restrict AI agents from booking flights and managing reservations, citing security risks from shared credentials and unintended purchases. The limits apply on its platforms and through travel agencies.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Companies are starting to shut agents out, so agent builders can&#x27;t assume access. Expect more official APIs or outright blocks. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Gemini Decisions API: Fast, calibrated multimodal decisions</title>
-      <link>https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/</link>
-      <guid isPermaLink="false">2026-11-12:Gemini Decisions API: Fast, calibrated multimodal decisions</guid>
-      <pubDate>Wed, 11 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Google launched an API that scores a fixed set of options instead of writing text. You ask yes/no, multiple-choice or rubric questions about text, images, audio, video or PDFs, and each answer comes with a 0-1 confidence score.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It suits classification and routing jobs where you want a quick, scored answer rather than a paragraph, which can simplify app logic. &#8212; Google</description>
-    </item>
-    <item>
-      <title>Nvidia stock falls nearly 10% as CEO Jensen Huang announces resignation</title>
-      <link>https://www.cnbc.com/2026/11/12/nvidia-nvda-jensen-huang-second-affair.html</link>
-      <guid isPermaLink="false">2026-11-12:Nvidia stock falls nearly 10% as CEO Jensen Huang announces resignation</guid>
-      <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Nvidia&#x27;s CEO resigned immediately as CEO and board member, and CFO Colette Kress is interim CEO. The shares fell nearly 10%, pushing the company&#x27;s value below $4 trillion. TechCrunch also reports the change.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Nvidia chips underpin most AI training and serving, so a sudden leadership change is worth watching for effects on supply and pricing. &#8212; CNBC</description>
-    </item>
-    <item>
-      <title>Cyberattack on Fireworks AI allowed hackers to access Notion customers&#x27; chat transcripts [Reported]</title>
-      <link>https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/</link>
-      <guid isPermaLink="false">2026-11-12:Cyberattack on Fireworks AI allowed hackers to access Notion customers&#x27; chat transcripts</guid>
-      <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>A breach at a cloud provider used by AI hosting company Fireworks gave an attacker access to a development system, exposing some customers&#x27; billing details and datasets. Notion says about 1% of its customers were affected, including AI chat transcripts.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If your app sends user data to a third-party AI host, that host&#x27;s security becomes your risk too, so check what you share and with whom. &#8212; TechCrunch</description>
     </item>
   </channel>
 </rss>
