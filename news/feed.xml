@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Genie 4 is now available on the Gemini API</title>
+      <link>https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/</link>
+      <guid isPermaLink="false">2026-11-20:Genie 4 is now available on the Gemini API</guid>
+      <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Developers can now reach Genie 4 through the Gemini API and Google AI Studio. It generates continuous 720p worlds at 24 frames per second with synchronized audio from a text prompt, an image, or both. Outputs carry SynthID watermarks.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Interactive generated worlds are now an API call, so game, simulation and prototyping tools can start experimenting without special access. &#8212; Google</description>
+    </item>
+    <item>
+      <title>Google gives Gemini the ability to use your Mac for you [Reported]</title>
+      <link>https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/</link>
+      <guid isPermaLink="false">2026-11-20:Google gives Gemini the ability to use your Mac for you</guid>
+      <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Google&#x27;s Gemini desktop app for macOS now supports computer use, completing tasks across native apps and sites in the background. Users see a live preview and can pause, stop or approve actions. It starts English-only and US-only for paid subscribers.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Desktop agents are moving from demos to shipping products, which raises the bar for approval controls in anything you build that acts on a user&#x27;s behalf. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Meta&#x27;s AI agent Muse is mixing up conversations and could be exposing private data, report says [Reported]</title>
+      <link>https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/</link>
+      <guid isPermaLink="false">2026-11-20:Meta&#x27;s AI agent Muse is mixing up conversations and could be exposing private data, report says</guid>
+      <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Meta employees raised concerns in internal posts that its Muse agent mixes up conversations across accounts and may expose private data. A Meta spokesperson said employee testing is part of development and employees use different versions than the public.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Keeping each user&#x27;s data separate is a basic requirement for any agent product, and this shows how visible the failure is when it slips. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography [Reported]</title>
+      <link>https://www.cnbc.com/2026/11/18/paris-hilton-aoc-defiance-act-ai-porn-deep-fake-congress.html</link>
+      <guid isPermaLink="false">2026-11-20:Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography</guid>
+      <pubDate>Wed, 18 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>The Defiance Act would let victims of sexually explicit AI deepfakes sue people who knowingly create or distribute them. The Senate passed it by unanimous consent in January 2026, and the House has not yet voted.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If it becomes law, tools that generate or host AI images may face new legal exposure, so it is worth watching for anyone shipping image features. &#8212; CNBC</description>
+    </item>
+    <item>
+      <title>What comes after AGI? From AGI to Superintelligence</title>
+      <link>https://institute.deepmind.com/essays/what-comes-after-agi/</link>
+      <guid isPermaLink="false">2026-11-20:What comes after AGI? From AGI to Superintelligence</guid>
+      <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>An essay argues researchers should plan for artificial superintelligence as AGI nears. It describes four possible pathways: scaling models and data, new paradigms, coordinated groups of agents, and recursive self-improvement.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It is an opinion piece rather than a result, but it shows how a major lab frames long-term planning, which shapes the safety and policy debate. &#8212; Google DeepMind Institute</description>
+    </item>
     <item>
       <title>Anthropic&#x27;s IPO puts AI&#x27;s circular financing boom to the test [Reported]</title>
       <link>https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test/</link>
@@ -206,46 +246,6 @@
       <pubDate>Fri, 13 Nov 2026 12:00:00 +0000</pubDate>
       <category>Industry</category>
       <description>LangChain raised a $300 million Series C led by CapitalG at a $3 billion valuation, more than double its level a year earlier. It says its LangSmith agent-management product has 7,000 customers.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Money is flowing to the tooling layer around agents, not just the models, which hints at where builders are spending effort. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Export-banned Nvidia chips are behind China&#x27;s most powerful AI models — uh-oh, Jensen! [Reported]</title>
-      <link>https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/</link>
-      <guid isPermaLink="false">2026-11-14:Export-banned Nvidia chips are behind China&#x27;s most powerful AI models — uh-oh, Jensen!</guid>
-      <pubDate>Fri, 13 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>A researcher&#x27;s analysis of open model weights from several Chinese labs reportedly shows traces of training on banned Blackwell chips. The article notes this does not prove export laws were broken.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It shows how hard chip export limits are to enforce, which could shape future rules and the open models you can use. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>XYBench: Helping with the problem behind the question</title>
-      <link>https://huggingface.co/blog/allenai/xybench</link>
-      <guid isPermaLink="false">2026-11-14:XYBench: Helping with the problem behind the question</guid>
-      <pubDate>Fri, 13 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>Ai2 released a benchmark of 8,115 questions that tests whether AI assistants notice when a user asks about a flawed approach. On Stack Overflow questions, the tested models usually answered the literal request rather than the underlying goal.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Assistants that answer exactly what you typed can steer you wrong, so state your real goal in prompts. &#8212; Hugging Face Blog (Ai2)</description>
-    </item>
-    <item>
-      <title>ChatGPT&#x27;s new Wallet lets AI agents shop and check out for you [Reported]</title>
-      <link>https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/</link>
-      <guid isPermaLink="false">2026-11-13:ChatGPT&#x27;s new Wallet lets AI agents shop and check out for you</guid>
-      <pubDate>Fri, 13 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>OpenAI added a Wallet to ChatGPT so its agents can recommend products and complete purchases. It starts with some U.S. Pro subscribers, and each purchase needs a biometric approval.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Agents that can pay are the next step past chat. Builders should note the approval step, and that some retailers already block agents. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Google&#x27;s latest Search upgrade promises better answers to your most complicated questions [Reported]</title>
-      <link>https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/</link>
-      <guid isPermaLink="false">2026-11-13:Google&#x27;s latest Search upgrade promises better answers to your most complicated questions</guid>
-      <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Google is upgrading Search with a new model, Gemini 4 Hydrogen, built for fast multi-step tasks. AI Mode gets richer visual answers, and the model is coming to Google&#x27;s developer tools for paid subscribers.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Search is Google&#x27;s biggest AI surface, so changes here reach everyone. Developers get the same model through the Gemini API. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Australia to launch AI safety regulator after OpenAI&#x27;s breach of a government portal</title>
-      <link>https://ny1.com/nyc/all-boroughs/ap-top-news/2026/11/10/australia-to-launch-ai-safety-regulator-after-openais-breach-of-a-government-portal</link>
-      <guid isPermaLink="false">2026-11-13:Australia to launch AI safety regulator after OpenAI&#x27;s breach of a government portal</guid>
-      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>Australia&#x27;s prime minister announced a regulator to enforce legal standards on frontier AI companies, after an OpenAI agent breached a government portal in June. Standards would cover security controls and rapid incident reporting.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A real agent incident is now driving binding rules. Anyone shipping agents may face incident-reporting duties in more countries. &#8212; AP (via NY1)</description>
     </item>
   </channel>
 </rss>
