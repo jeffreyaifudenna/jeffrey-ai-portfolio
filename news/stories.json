@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "days": [
+    {
+      "date": "2026-11-21",
+      "stories": [
+        {
+          "title": "AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too",
+          "source": "TechCrunch",
+          "published": "2026-11-20",
+          "kind": "Research",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
+          "summary": "Mathematician Levent Alpöge, who works at Anthropic, says he found a proof of the Riemann hypothesis with Claude, written in the Lean proof language. Several mathematicians report it compiles, but experts still need time to understand and check the argument.",
+          "why": "If it holds, it is a landmark for AI-assisted math, and a machine-checked proof is a practical way to trust AI output."
+        },
+        {
+          "title": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup",
+          "source": "Hugging Face",
+          "published": "2026-11-20",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/inkling2mini",
+          "summary": "Thinking Machines Lab released Inkling 2 Mini, a multimodal model with about 3 billion active parameters per token and a 1M-token context. It reuses some layers in a loop to get more capacity, and works with transformers, llama.cpp and MLX.",
+          "why": "A small open model that runs locally and takes images makes private, low-cost prototypes more realistic. The authors say more validation is needed."
+        },
+        {
+          "title": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
+          "source": "Hugging Face",
+          "published": "2026-11-20",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/harness-adapters-at-scale",
+          "summary": "Hugging Face shows how to train a small LoRA adapter with reinforcement learning inside a specific coding-agent harness. For Qwen3.8-27B, a Terminal-Bench score rose from 39% to 55% while average token use fell from 2.9K to 1.5K per task.",
+          "why": "If you run your own agents, tuning the model to your harness may beat just picking a bigger model. The recipe is reproducible."
+        },
+        {
+          "title": "These tech outages are giving Y2K, AI agent style",
+          "source": "TechCrunch",
+          "published": "2026-11-19",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/",
+          "summary": "A run of outages hit Apple Pay, NASA's internal network, FAA flights and Microsoft's Outlook, Teams and Copilot. Companies say none were cyberattacks. One security investor speculates that AI tools finding flaws faster is forcing a rush of patching that causes disruption.",
+          "why": "The AI link is speculation, not proven. Still, expect faster patching pressure and more change-related breakage in software you depend on."
+        },
+        {
+          "title": "At Nasdaq opening bell, Anthropic CEO recommits to pacing AI development",
+          "source": "TechCrunch",
+          "published": "2026-11-19",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/",
+          "summary": "As Anthropic went public, CEO Dario Amodei said the company would not bend to business or political pressure and would keep AI under human control. He repeated a September plan to pace development, with shared safety standards and outside evaluators, though few concrete commitments exist.",
+          "why": "Safety pledges from a now-public lab will be tested against investor expectations. Watch for specific, checkable commitments rather than speeches."
+        }
+      ]
+    },
     {
       "date": "2026-11-20",
       "stories": [
