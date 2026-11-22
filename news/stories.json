@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "days": [
+    {
+      "date": "2026-11-22",
+      "stories": [
+        {
+          "title": "Muru",
+          "source": "Simon Willison's Weblog",
+          "published": "2026-11-21",
+          "kind": "Build",
+          "status": "reported",
+          "url": "https://simonwillison.net/2026/Nov/21/muru/",
+          "summary": "Simon Willison points to Muru, a new Rust server for running Python web apps in development and production. Its author, Graham Dumpleton, who created mod_wsgi, has written 19 detailed posts on building it with AI help over three weeks.",
+          "why": "A worked, well-documented example of building serious infrastructure with AI assistance, useful if you want to see what that process looks like in practice."
+        },
+        {
+          "title": "Signal restricts mobile screenshots as it confronts 'existential threat' of AI surveillance",
+          "source": "TechCrunch",
+          "published": "2026-11-21",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
+          "summary": "Signal added screenshot limits to its Android and iOS apps, after already doing so on Windows. It says AI agents built into operating systems can read screen content, undermining private messaging. Users can switch the limit off.",
+          "why": "OS-level AI agents that can see your screen are becoming a privacy question for any app handling sensitive data."
+        },
+        {
+          "title": "Vercel Functions now support request bodies up to 20MiB",
+          "source": "Vercel Changelog",
+          "published": "2026-11-20",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://vercel.com/changelog/vercel-functions-now-support-request-bodies-up-to-20mib",
+          "summary": "Vercel Functions can now accept request bodies up to 20MiB, up from 4.5MB, in public beta. It needs an environment variable and the 4GB memory setting. Edge runtime functions keep the old limit.",
+          "why": "Larger uploads, such as documents or images sent to an AI endpoint, no longer need a workaround on Vercel's Node.js runtime."
+        },
+        {
+          "title": "Running a 180B MoE Model on a 32 GB Mac with Transformers Expert Streaming",
+          "source": "Hugging Face Blog",
+          "published": "2026-11-18",
+          "kind": "Research",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/moe-expert-streaming",
+          "summary": "Hugging Face describes loading only the experts a mixture-of-experts model selects from SSD, using a bounded cache. A 180B-parameter model runs on a 32 GB MacBook at about 14 tokens per second, though the author calls it too slow for coding agents.",
+          "why": "Shows how far local inference of very large models can be stretched on ordinary hardware, and where speed still limits it."
+        },
+        {
+          "title": "How the Midterm Results Could Reshape AI and Data Center Regulations, and More Developments",
+          "source": "Faegre Drinker",
+          "published": "2026-11-16",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://www.faegredrinker.com/zh/insights/publications/2026/11/how-the-midterm-results-could-reshape-ai-and-data-center-regulations-and-more-developments",
+          "summary": "A law-firm briefing expects Democratic gains in Congress to bring oversight hearings before sweeping AI legislation. It says broad federal preemption of state AI laws now looks unlikely, and some governors-elect campaigned on pausing data center development.",
+          "why": "State-level AI rules are likely to stay in force, so builders may keep facing a patchwork of requirements."
+        }
+      ]
+    },
     {
       "date": "2026-11-21",
       "stories": [
