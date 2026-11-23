@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "days": [
+    {
+      "date": "2026-11-23",
+      "stories": [
+        {
+          "title": "Nvidia reverses course and brings Jensen Huang back as CEO",
+          "source": "TechCrunch",
+          "published": "2026-11-23",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/23/nvidia-reverses-course-and-brings-jensen-huang-back-as-ceo/",
+          "summary": "Nvidia's board reinstated Jensen Huang as CEO less than two weeks after he resigned, saying it consulted senior US officials and found no national security risk. Shares opened roughly 30% higher.",
+          "why": "Leadership at the biggest AI chip supplier affects pricing, supply and roadmap confidence for anyone building on GPUs."
+        },
+        {
+          "title": "Perplexity and Intelligence",
+          "source": "OpenAI",
+          "published": "2026-11-22",
+          "kind": "Policy",
+          "status": "confirmed",
+          "url": "https://openai.com/index/perplexity-and-intelligence/",
+          "summary": "OpenAI's chief scientist proposes perplexity on held-out data as a shared yardstick for comparing AI developers and setting safety standards. OpenAI says it will publish its internal pretraining perplexity numbers and floats industry-wide limits.",
+          "why": "A common, checkable metric could become the basis for safety rules, so it is worth watching whether other labs adopt it."
+        },
+        {
+          "title": "Can AI help scientists identify promising drug candidates?",
+          "source": "OpenAI",
+          "published": "2026-11-20",
+          "kind": "Research",
+          "status": "confirmed",
+          "url": "https://openai.com/index/introducing-medchembench/",
+          "summary": "OpenAI introduced MedChemBench, 99 medicinal chemistry problems drawn from published papers and patents. Its best model scored 84.5% of available credit, strongest at rebuilding molecule structures and weaker at ranking compounds and predicting properties.",
+          "why": "It shows where models are already useful in chemistry and where they are not. OpenAI itself says it does not prove drug discovery ability."
+        },
+        {
+          "title": "How to build and maintain an agentic evaluation",
+          "source": "Hugging Face Blog",
+          "published": "2026-11-23",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/agentic-evals",
+          "summary": "A walkthrough of adapting a Terminal-Bench task into a narrower lab evaluation. The authors found a shortcut script could pass the first version, so they added per-step checks, and several models passed every run, so the set could not rank them.",
+          "why": "A practical lesson for anyone testing agents: weak checks and tasks that are too easy give you results that mean little."
+        },
+        {
+          "title": "AI Gateway now runs canary ZDR audits",
+          "source": "Vercel Changelog",
+          "published": "2026-11-23",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://vercel.com/changelog/ai-gateway-now-runs-canary-zdr-audits",
+          "summary": "Vercel's AI Gateway now tests inference providers with unique canary URLs placed in prompts, logging any request to them. This checks whether prompt content is read outside the inference path when Zero Data Retention is requested.",
+          "why": "Useful if you send sensitive data to models: it is a technical check on providers, though Vercel says it does not replace contracts or audits."
+        }
+      ]
+    },
     {
       "date": "2026-11-22",
       "stories": [
