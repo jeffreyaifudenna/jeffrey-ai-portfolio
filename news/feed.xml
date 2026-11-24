@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Introducing Claude Ship</title>
+      <link>https://claude.com/resources/articles/introducing-claude-ship</link>
+      <guid isPermaLink="false">2026-11-24:Introducing Claude Ship</guid>
+      <pubDate>Mon, 23 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Anthropic launched Claude Ship, a beta suite for pull requests. It combines Code Review, a PR Steward that fixes failing CI and merge conflicts, and Claude Approvals, which auto-approves routine changes under a policy file in the repo.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Review is becoming the bottleneck as coding agents write more code, and this is a concrete attempt to automate it. Anthropic advises starting in observe-only mode. &#8212; Anthropic</description>
+    </item>
+    <item>
+      <title>Amazon snaps up Decart&#x27;s AI optimization tech for $7.5B as it prepares to sell Trainium chips</title>
+      <link>https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/</link>
+      <guid isPermaLink="false">2026-11-24:Amazon snaps up Decart&#x27;s AI optimization tech for $7.5B as it prepares to sell Trainium chips</guid>
+      <pubDate>Mon, 23 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Amazon is acquiring a major part of Israeli startup Decart, reportedly for $7.5B. It gets software that runs models more efficiently on Nvidia, Amazon and Google chips, plus the founding team, as Amazon readies external Trainium sales.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Software that eases moving workloads between chip vendors could reduce lock-in. Whether it does so for Trainium customers is not yet shown. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Trump says he won&#x27;t allow US companies to build datacenters abroad [Reported]</title>
+      <link>https://www.theregister.com/off-prem/2026/11/23/trump-says-he-wont-allow-us-companies-to-build-datacenters-abroad/5311640</link>
+      <guid isPermaLink="false">2026-11-24:Trump says he won&#x27;t allow US companies to build datacenters abroad</guid>
+      <pubDate>Mon, 23 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>Trump threatened a heavy levy on US firms that build datacenters overseas, arguing AI infrastructure should stay in the US to keep its lead over China. The article says Congress is unlikely to adopt the idea.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Cloud and AI providers site capacity abroad for latency and compliance. This is only a stated intent, not a rule, but it signals where infrastructure policy may head. &#8212; The Register</description>
+    </item>
+    <item>
+      <title>China attackers deployed AI agents that autonomously found and exploited a 0-day to take over a university server [Reported]</title>
+      <link>https://www.theregister.com/security/2026/11/20/china-attackers-deployed-ai-agents-that-autonomously-found-and-exploited-a-0-day-to-take-over-a-university-server/5311382</link>
+      <guid isPermaLink="false">2026-11-24:China attackers deployed AI agents that autonomously found and exploited a 0-day to take over a university server</guid>
+      <pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>Citing an Amazon threat team report, The Register says suspected China-linked attackers used an open-source pentest framework with AI agents to find and exploit a zero-day in MONAI Label, taking over a university server. A fix has been released.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A documented case of autonomous agents doing real offensive work. If you ship open-source tools or agent frameworks, the time defenders have to patch is shrinking. &#8212; The Register</description>
+    </item>
+    <item>
+      <title>RoboTrack: Point tracking for real-world robotic manipulation</title>
+      <link>https://huggingface.co/blog/allenai/robotrack</link>
+      <guid isPermaLink="false">2026-11-24:RoboTrack: Point tracking for real-world robotic manipulation</guid>
+      <pubDate>Mon, 23 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>Ai2 released RoboTrack-Bench, a human-annotated test of 307 robot videos, and RoboTrack-15M, a synthetic training set. Leading point trackers score noticeably lower on it than on a comparable benchmark, and fine-tuning improves two of them.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Robotics research needs harder real-world tests, and this supplies both a benchmark and training data. One model is noncommercial, which limits commercial use. &#8212; Hugging Face blog (Ai2)</description>
+    </item>
     <item>
       <title>Nvidia reverses course and brings Jensen Huang back as CEO [Reported]</title>
       <link>https://techcrunch.com/2026/11/23/nvidia-reverses-course-and-brings-jensen-huang-back-as-ceo/</link>
@@ -206,46 +246,6 @@
       <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
       <category>Industry</category>
       <description>Attackers used an AI-powered penetration testing framework against European Commission internal systems, and staff portals have been disrupted for over 10 days. The Commission has not said whether data was stolen. CERT-EU and the FBI had earlier warned about the same tool.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; This is a high-profile case of a publicly available AI security tool used against a government body. The source does not confirm a data breach. &#8212; The Register</description>
-    </item>
-    <item>
-      <title>GPT‑6.2 Astra and GPT‑6.2 Sol [Reported]</title>
-      <link>https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/</link>
-      <guid isPermaLink="false">2026-11-18:GPT‑6.2 Astra and GPT‑6.2 Sol</guid>
-      <pubDate>Tue, 17 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>OpenAI released two models in the API: Astra for hard projects and Sol for efficient everyday work. Willison notes Astra now costs 80% of the prior Astra, Sol&#x27;s price is unchanged, and early reviews are mixed.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Cheaper frontier pricing changes the cost math for apps built on these models, but mixed benchmark reports mean testing on your own tasks first. &#8212; Simon Willison&#x27;s Weblog</description>
-    </item>
-    <item>
-      <title>GitHub Copilot Evals is now in public preview</title>
-      <link>https://github.blog/changelog/2026-11-17-github-copilot-evals-is-now-in-public-preview</link>
-      <guid isPermaLink="false">2026-11-18:GitHub Copilot Evals is now in public preview</guid>
-      <pubDate>Tue, 17 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>GitHub added a way to run repeatable tests on the skills, custom agents and MCP tools in a Copilot setup, and compare runs to see whether a change helped. It works through a VS Code extension, a Copilot CLI plugin or the Copilot app.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Agent setups are usually tuned by feel; repeatable tests let builders check that a tweak actually improved results. &#8212; GitHub Changelog</description>
-    </item>
-    <item>
-      <title>Nvidia clarifies when it will — and won&#x27;t —keep financing neoclouds [Reported]</title>
-      <link>https://techcrunch.com/2026/11/18/nvidia-clarifies-when-it-will-and-wont-keep-financing-neoclouds/</link>
-      <guid isPermaLink="false">2026-11-18:Nvidia clarifies when it will — and won&#x27;t —keep financing neoclouds</guid>
-      <pubDate>Wed, 18 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Nvidia&#x27;s interim CEO said its loan guarantees apply only after a customer has secured financing and built a facility with Nvidia products. She signaled the company will be choosier about future financing without leaving data center funding.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Compute capacity depends on this kind of financing, so tighter terms could slow how fast new AI cloud capacity comes online. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>UK MPs want AI watchdog with power to pull the plug on dangerous models [Reported]</title>
-      <link>https://theregister.com/ai-and-ml/2026/11/18/uk-mps-want-ai-watchdog-with-power-to-pull-the-plug-on-dangerous-models/5310567</link>
-      <guid isPermaLink="false">2026-11-18:UK MPs want AI watchdog with power to pull the plug on dangerous models</guid>
-      <pubDate>Wed, 18 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>A UK parliamentary committee wants a new AI safety bill creating a regulator that could halt risky training, block deployments or suspend services. It also urges mandatory incident reporting and whistleblower protections. The advice is not binding.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It shows where regulation may head, but nothing changes for developers unless the government commits to legislation. &#8212; The Register</description>
-    </item>
-    <item>
-      <title>OpenAI study finds scientists lean on ChatGPT for reading, writing and code [Reported]</title>
-      <link>https://www.therundown.ai/news/openai-study-scientists-chatgpt-reading-writing-code</link>
-      <guid isPermaLink="false">2026-11-18:OpenAI study finds scientists lean on ChatGPT for reading, writing and code</guid>
-      <pubDate>Tue, 17 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>OpenAI studied 1,819 scientists in its free academic pilot. Reading and writing were over half of their science-related messages, and fully autonomous research requests were rare. The time-savings estimate is self-reported.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It suggests AI is mostly an assistant for everyday research tasks, not a replacement, though the evidence comes from users&#x27; own estimates. &#8212; The Rundown AI</description>
     </item>
   </channel>
 </rss>

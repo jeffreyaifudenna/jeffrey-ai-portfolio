@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "days": [
+    {
+      "date": "2026-11-24",
+      "stories": [
+        {
+          "title": "Introducing Claude Ship",
+          "source": "Anthropic",
+          "published": "2026-11-23",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://claude.com/resources/articles/introducing-claude-ship",
+          "summary": "Anthropic launched Claude Ship, a beta suite for pull requests. It combines Code Review, a PR Steward that fixes failing CI and merge conflicts, and Claude Approvals, which auto-approves routine changes under a policy file in the repo.",
+          "why": "Review is becoming the bottleneck as coding agents write more code, and this is a concrete attempt to automate it. Anthropic advises starting in observe-only mode."
+        },
+        {
+          "title": "Amazon snaps up Decart's AI optimization tech for $7.5B as it prepares to sell Trainium chips",
+          "source": "TechCrunch",
+          "published": "2026-11-23",
+          "kind": "Industry",
+          "status": "confirmed",
+          "url": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/",
+          "summary": "Amazon is acquiring a major part of Israeli startup Decart, reportedly for $7.5B. It gets software that runs models more efficiently on Nvidia, Amazon and Google chips, plus the founding team, as Amazon readies external Trainium sales.",
+          "why": "Software that eases moving workloads between chip vendors could reduce lock-in. Whether it does so for Trainium customers is not yet shown."
+        },
+        {
+          "title": "Trump says he won't allow US companies to build datacenters abroad",
+          "source": "The Register",
+          "published": "2026-11-23",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://www.theregister.com/off-prem/2026/11/23/trump-says-he-wont-allow-us-companies-to-build-datacenters-abroad/5311640",
+          "summary": "Trump threatened a heavy levy on US firms that build datacenters overseas, arguing AI infrastructure should stay in the US to keep its lead over China. The article says Congress is unlikely to adopt the idea.",
+          "why": "Cloud and AI providers site capacity abroad for latency and compliance. This is only a stated intent, not a rule, but it signals where infrastructure policy may head."
+        },
+        {
+          "title": "China attackers deployed AI agents that autonomously found and exploited a 0-day to take over a university server",
+          "source": "The Register",
+          "published": "2026-11-20",
+          "kind": "Research",
+          "status": "reported",
+          "url": "https://www.theregister.com/security/2026/11/20/china-attackers-deployed-ai-agents-that-autonomously-found-and-exploited-a-0-day-to-take-over-a-university-server/5311382",
+          "summary": "Citing an Amazon threat team report, The Register says suspected China-linked attackers used an open-source pentest framework with AI agents to find and exploit a zero-day in MONAI Label, taking over a university server. A fix has been released.",
+          "why": "A documented case of autonomous agents doing real offensive work. If you ship open-source tools or agent frameworks, the time defenders have to patch is shrinking."
+        },
+        {
+          "title": "RoboTrack: Point tracking for real-world robotic manipulation",
+          "source": "Hugging Face blog (Ai2)",
+          "published": "2026-11-23",
+          "kind": "Research",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/allenai/robotrack",
+          "summary": "Ai2 released RoboTrack-Bench, a human-annotated test of 307 robot videos, and RoboTrack-15M, a synthetic training set. Leading point trackers score noticeably lower on it than on a comparable benchmark, and fine-tuning improves two of them.",
+          "why": "Robotics research needs harder real-world tests, and this supplies both a benchmark and training data. One model is noncommercial, which limits commercial use."
+        }
+      ]
+    },
     {
       "date": "2026-11-23",
       "stories": [
