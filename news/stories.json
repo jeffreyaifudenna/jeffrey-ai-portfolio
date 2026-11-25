@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "days": [
+    {
+      "date": "2026-11-25",
+      "stories": [
+        {
+          "title": "OpenAI and Cisco introduce Shirudo",
+          "source": "OpenAI",
+          "published": "2026-11-23",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://openai.com/index/introducing-shirudo/",
+          "summary": "OpenAI and Cisco released Shirudo, an open-source eBPF runtime that blocks the specific code path an exploit uses on a running Linux service while a proper patch is prepared. Operators test and approve each signed shield before it is enforced, with no restart needed.",
+          "why": "It points to AI-written stopgap defenses for live systems. Anyone running Linux services can try it now under a BSD license, though the design is still described as in development."
+        },
+        {
+          "title": "Agents can now manage AI Gateway through Vercel MCP",
+          "source": "Vercel",
+          "published": "2026-11-24",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://vercel.com/changelog/agents-can-now-manage-ai-gateway-through-vercel-mcp",
+          "summary": "Coding agents can now set up Vercel AI Gateway in plain language through Vercel MCP. They can create reusable virtual model IDs with saved settings, add team-wide routing rules, and set spending budgets for teams, projects and members.",
+          "why": "Virtual model IDs let you switch the model behind an app without redeploying, and budgets put a cap on agent spending, which matters more as agents manage their own infrastructure."
+        },
+        {
+          "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+          "source": "OpenAI",
+          "published": "2026-11-24",
+          "kind": "Research",
+          "status": "confirmed",
+          "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
+          "summary": "OpenAI says its GPT-6 models designed proteins using reasoning and code alone, and lab tests with partner Onava found about 11 percent of small binder designs attached to their targets. OpenAI notes the models still trail specialized tools at predicting structure.",
+          "why": "General-purpose models are starting to do work that used to need specialized biology software. The results are self-reported by OpenAI, so independent replication is the thing to watch."
+        },
+        {
+          "title": "UK warns AI-driven cyberattacks are exposing years of weak security",
+          "source": "TechCrunch",
+          "published": "2026-11-24",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/24/uk-warns-ai-driven-cyberattacks-are-exposing-years-of-weak-security/",
+          "summary": "The UK National Cyber Security Centre reports a marked rise since September in attacks using autonomous AI hacking tools. The flaws being exploited are old ones, such as weak passwords and exposed developer API endpoints, but AI makes the attacks much faster.",
+          "why": "Basic hygiene now matters more, not less. If you ship apps with exposed endpoints or default credentials, automated agents will find them sooner than a human attacker would."
+        },
+        {
+          "title": "Tidal to ban and remove millions of AI-generated tracks as AI slop inundates music streaming",
+          "source": "TechCrunch",
+          "published": "2026-11-24",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/24/tidal-to-ban-and-remove-millions-of-ai-generated-tracks-as-ai-slop-inundates-music-streaming/",
+          "summary": "Tidal will ban fully AI-generated songs and start removing more than 29 million of them on December 9. It says over 43 percent of recent uploads were AI-made and almost none of those tracks get streams. Songs made with AI assistance are still allowed.",
+          "why": "It is a clear line between AI-assisted and fully AI-generated content that other platforms may copy, and it shows how quickly low-effort AI output can swamp an open upload system."
+        }
+      ]
+    },
     {
       "date": "2026-11-24",
       "stories": [

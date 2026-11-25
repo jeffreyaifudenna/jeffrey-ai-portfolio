@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>OpenAI and Cisco introduce Shirudo</title>
+      <link>https://openai.com/index/introducing-shirudo/</link>
+      <guid isPermaLink="false">2026-11-25:OpenAI and Cisco introduce Shirudo</guid>
+      <pubDate>Mon, 23 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>OpenAI and Cisco released Shirudo, an open-source eBPF runtime that blocks the specific code path an exploit uses on a running Linux service while a proper patch is prepared. Operators test and approve each signed shield before it is enforced, with no restart needed.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It points to AI-written stopgap defenses for live systems. Anyone running Linux services can try it now under a BSD license, though the design is still described as in development. &#8212; OpenAI</description>
+    </item>
+    <item>
+      <title>Agents can now manage AI Gateway through Vercel MCP</title>
+      <link>https://vercel.com/changelog/agents-can-now-manage-ai-gateway-through-vercel-mcp</link>
+      <guid isPermaLink="false">2026-11-25:Agents can now manage AI Gateway through Vercel MCP</guid>
+      <pubDate>Tue, 24 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Coding agents can now set up Vercel AI Gateway in plain language through Vercel MCP. They can create reusable virtual model IDs with saved settings, add team-wide routing rules, and set spending budgets for teams, projects and members.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Virtual model IDs let you switch the model behind an app without redeploying, and budgets put a cap on agent spending, which matters more as agents manage their own infrastructure. &#8212; Vercel</description>
+    </item>
+    <item>
+      <title>GPT-6 models demonstrate intrinsic protein-design capabilities</title>
+      <link>https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/</link>
+      <guid isPermaLink="false">2026-11-25:GPT-6 models demonstrate intrinsic protein-design capabilities</guid>
+      <pubDate>Tue, 24 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>OpenAI says its GPT-6 models designed proteins using reasoning and code alone, and lab tests with partner Onava found about 11 percent of small binder designs attached to their targets. OpenAI notes the models still trail specialized tools at predicting structure.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; General-purpose models are starting to do work that used to need specialized biology software. The results are self-reported by OpenAI, so independent replication is the thing to watch. &#8212; OpenAI</description>
+    </item>
+    <item>
+      <title>UK warns AI-driven cyberattacks are exposing years of weak security [Reported]</title>
+      <link>https://techcrunch.com/2026/11/24/uk-warns-ai-driven-cyberattacks-are-exposing-years-of-weak-security/</link>
+      <guid isPermaLink="false">2026-11-25:UK warns AI-driven cyberattacks are exposing years of weak security</guid>
+      <pubDate>Tue, 24 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>The UK National Cyber Security Centre reports a marked rise since September in attacks using autonomous AI hacking tools. The flaws being exploited are old ones, such as weak passwords and exposed developer API endpoints, but AI makes the attacks much faster.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Basic hygiene now matters more, not less. If you ship apps with exposed endpoints or default credentials, automated agents will find them sooner than a human attacker would. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Tidal to ban and remove millions of AI-generated tracks as AI slop inundates music streaming [Reported]</title>
+      <link>https://techcrunch.com/2026/11/24/tidal-to-ban-and-remove-millions-of-ai-generated-tracks-as-ai-slop-inundates-music-streaming/</link>
+      <guid isPermaLink="false">2026-11-25:Tidal to ban and remove millions of AI-generated tracks as AI slop inundates music streaming</guid>
+      <pubDate>Tue, 24 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Tidal will ban fully AI-generated songs and start removing more than 29 million of them on December 9. It says over 43 percent of recent uploads were AI-made and almost none of those tracks get streams. Songs made with AI assistance are still allowed.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It is a clear line between AI-assisted and fully AI-generated content that other platforms may copy, and it shows how quickly low-effort AI output can swamp an open upload system. &#8212; TechCrunch</description>
+    </item>
     <item>
       <title>Introducing Claude Ship</title>
       <link>https://claude.com/resources/articles/introducing-claude-ship</link>
@@ -206,46 +246,6 @@
       <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
       <category>Research</category>
       <description>An essay argues researchers should plan for artificial superintelligence as AGI nears. It describes four possible pathways: scaling models and data, new paradigms, coordinated groups of agents, and recursive self-improvement.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It is an opinion piece rather than a result, but it shows how a major lab frames long-term planning, which shapes the safety and policy debate. &#8212; Google DeepMind Institute</description>
-    </item>
-    <item>
-      <title>Anthropic&#x27;s IPO puts AI&#x27;s circular financing boom to the test [Reported]</title>
-      <link>https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test/</link>
-      <guid isPermaLink="false">2026-11-19:Anthropic&#x27;s IPO puts AI&#x27;s circular financing boom to the test</guid>
-      <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Anthropic&#x27;s IPO priced at $83 a share, with Amazon and Google holding stakes worth about $308 billion combined. Chip and cloud suppliers also committed $26 billion in a private placement, which analysts describe as circular financing, since the money returns to them as compute spending.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; The listing shows how much frontier AI depends on its own suppliers. The source says the main risk is losing the frontier lead to rivals or cheaper open-weight models. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>External sandboxes for coding agents [Reported]</title>
-      <link>https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/</link>
-      <guid isPermaLink="false">2026-11-19:External sandboxes for coding agents</guid>
-      <pubDate>Tue, 17 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Simon Willison describes an external sandbox pattern where the agent stays outside and only the code it runs executes in a sandbox. He released three server implementations with a shared localhost API, an optional allow-list proxy, and credential replacement so the agent never holds secrets.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It offers a practical way to try local models and coding agents with less risk from mistakes or prompt injection. Any agent that can call a localhost API could use it. &#8212; Simon Willison&#x27;s Weblog</description>
-    </item>
-    <item>
-      <title>Uncensored AI models are thriving on code hosting platforms [Reported]</title>
-      <link>https://www.theregister.com/ai-and-ml/2026/11/19/uncensored-ai-models-are-thriving-on-code-hosting-platforms/5310891</link>
-      <guid isPermaLink="false">2026-11-19:Uncensored AI models are thriving on code hosting platforms</guid>
-      <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>Researchers from UIUC and Nanyang Technological University studied 22,096 uncensored LLMs across five hosting platforms. Only about 13 percent carried moderation warnings, and the models were more likely to comply with harmful requests. Monthly additions grew from about 100 in May 2023 to over 1,000.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; The study measures how widely safeguard-free models are available and how lightly they are labeled. It used public metadata and tested text output only. &#8212; The Register</description>
-    </item>
-    <item>
-      <title>More banks say customers using AI agents are on their own — even if they get hacked [Reported]</title>
-      <link>https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/</link>
-      <guid isPermaLink="false">2026-11-19:More banks say customers using AI agents are on their own — even if they get hacked</guid>
-      <pubDate>Wed, 18 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>Citibank updated its user agreement so customers who give third-party AI tools account access are responsible for what those agents do, including after a leak or hack. JPMorgan and Bank of America announced similar terms in October, and PNC and Citizens have followed.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; These are company terms of service, not law, and the article cites no regulator. They still decide who bears the loss when an AI agent touches a bank account. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>European Commission scrambles to contain AI-assisted cyberattack [Reported]</title>
-      <link>https://www.theregister.com/cyber-crime/2026/11/19/european-commission-scrambles-to-contain-ai-assisted-cyberattack/5311103</link>
-      <guid isPermaLink="false">2026-11-19:European Commission scrambles to contain AI-assisted cyberattack</guid>
-      <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Attackers used an AI-powered penetration testing framework against European Commission internal systems, and staff portals have been disrupted for over 10 days. The Commission has not said whether data was stolen. CERT-EU and the FBI had earlier warned about the same tool.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; This is a high-profile case of a publicly available AI security tool used against a government body. The source does not confirm a data breach. &#8212; The Register</description>
     </item>
   </channel>
 </rss>
