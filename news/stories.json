@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "days": [
+    {
+      "date": "2026-11-26",
+      "stories": [
+        {
+          "title": "OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work",
+          "source": "TechCrunch",
+          "published": "2026-11-25",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
+          "summary": "OpenAI is rolling out a combined Chat and Work experience to a small group of Pro subscribers, with both sharing one usage meter. Instant model chats stay unlimited. OpenAI says most users will not notice, but the heaviest users may hit limits sooner, with wider rollout planned for December.",
+          "why": "If you lean on ChatGPT's advanced reasoning models daily, your effective capacity may shrink without a price change, so it is worth watching your usage."
+        },
+        {
+          "title": "Character.AI's plan to auction off users' private chats challenged by state AGs",
+          "source": "TechCrunch",
+          "published": "2026-11-25",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/",
+          "summary": "A coalition of 42 state attorneys general is stepping into Character.ai's bankruptcy to block the sale of user data, including private chat histories from over 21 million US accounts, more than 2 million of them minors. An auction is set for December 1 with one disclosed bidder.",
+          "why": "It shows chatbot conversation logs are now treated as a sellable asset, and that a privacy policy may not protect users once a company goes bankrupt."
+        },
+        {
+          "title": "Want to buy your kid an AI toy this Christmas? Not in New York",
+          "source": "TechCrunch",
+          "published": "2026-11-25",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york/",
+          "summary": "Governor Kathy Hochul signed a law banning the making and sale of toys with built-in AI chatbots in New York for five years, making it the second state after California. A Common Sense Media study the same week found tested AI toys failed many basic safety checks.",
+          "why": "State-level bans on specific AI products are spreading, so anyone building consumer AI for kids now faces a growing patchwork of rules."
+        },
+        {
+          "title": "Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems",
+          "source": "Hugging Face",
+          "published": "2026-11-26",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/training-swarms",
+          "summary": "Hugging Face starts a series on training teams of small AI agents together. In a sorting task, four agents sharing a tiny Qwen model went from about 7% to over 80% success while using roughly a third fewer tokens. The walkthrough is reproducible for an estimated $50 of GPU time.",
+          "why": "It is a cheap, hands-on way to learn multi-agent training, and it suggests coordination can be learned rather than only prompted."
+        },
+        {
+          "title": "Searching for distant planets with Astra",
+          "source": "OpenAI",
+          "published": "2026-11-24",
+          "kind": "Research",
+          "status": "confirmed",
+          "url": "https://openai.com/index/searching-for-distant-planets-with-astra/",
+          "summary": "Two amateur astronomers used Codex and Astra to scan public Kepler and TESS telescope data for planet signals. One search flagged over 200 signals, including two that a SETI Institute astronomer also found independently. One candidate was sent to NASA TESS researchers and is awaiting review.",
+          "why": "It shows AI coding tools letting non-specialists do real research on open scientific data, though none of the candidates are confirmed planets yet."
+        }
+      ]
+    },
     {
       "date": "2026-11-25",
       "stories": [

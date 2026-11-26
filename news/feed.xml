@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work [Reported]</title>
+      <link>https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/</link>
+      <guid isPermaLink="false">2026-11-26:OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work</guid>
+      <pubDate>Wed, 25 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>OpenAI is rolling out a combined Chat and Work experience to a small group of Pro subscribers, with both sharing one usage meter. Instant model chats stay unlimited. OpenAI says most users will not notice, but the heaviest users may hit limits sooner, with wider rollout planned for December.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If you lean on ChatGPT&#x27;s advanced reasoning models daily, your effective capacity may shrink without a price change, so it is worth watching your usage. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Character.AI&#x27;s plan to auction off users&#x27; private chats challenged by state AGs [Reported]</title>
+      <link>https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/</link>
+      <guid isPermaLink="false">2026-11-26:Character.AI&#x27;s plan to auction off users&#x27; private chats challenged by state AGs</guid>
+      <pubDate>Wed, 25 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>A coalition of 42 state attorneys general is stepping into Character.ai&#x27;s bankruptcy to block the sale of user data, including private chat histories from over 21 million US accounts, more than 2 million of them minors. An auction is set for December 1 with one disclosed bidder.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It shows chatbot conversation logs are now treated as a sellable asset, and that a privacy policy may not protect users once a company goes bankrupt. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Want to buy your kid an AI toy this Christmas? Not in New York [Reported]</title>
+      <link>https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york/</link>
+      <guid isPermaLink="false">2026-11-26:Want to buy your kid an AI toy this Christmas? Not in New York</guid>
+      <pubDate>Wed, 25 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>Governor Kathy Hochul signed a law banning the making and sale of toys with built-in AI chatbots in New York for five years, making it the second state after California. A Common Sense Media study the same week found tested AI toys failed many basic safety checks.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; State-level bans on specific AI products are spreading, so anyone building consumer AI for kids now faces a growing patchwork of rules. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems</title>
+      <link>https://huggingface.co/blog/training-swarms</link>
+      <guid isPermaLink="false">2026-11-26:Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems</guid>
+      <pubDate>Thu, 26 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Hugging Face starts a series on training teams of small AI agents together. In a sorting task, four agents sharing a tiny Qwen model went from about 7% to over 80% success while using roughly a third fewer tokens. The walkthrough is reproducible for an estimated $50 of GPU time.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It is a cheap, hands-on way to learn multi-agent training, and it suggests coordination can be learned rather than only prompted. &#8212; Hugging Face</description>
+    </item>
+    <item>
+      <title>Searching for distant planets with Astra</title>
+      <link>https://openai.com/index/searching-for-distant-planets-with-astra/</link>
+      <guid isPermaLink="false">2026-11-26:Searching for distant planets with Astra</guid>
+      <pubDate>Tue, 24 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>Two amateur astronomers used Codex and Astra to scan public Kepler and TESS telescope data for planet signals. One search flagged over 200 signals, including two that a SETI Institute astronomer also found independently. One candidate was sent to NASA TESS researchers and is awaiting review.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It shows AI coding tools letting non-specialists do real research on open scientific data, though none of the candidates are confirmed planets yet. &#8212; OpenAI</description>
+    </item>
     <item>
       <title>OpenAI and Cisco introduce Shirudo</title>
       <link>https://openai.com/index/introducing-shirudo/</link>
@@ -206,46 +246,6 @@
       <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
       <category>Policy</category>
       <description>As Anthropic went public, CEO Dario Amodei said the company would not bend to business or political pressure and would keep AI under human control. He repeated a September plan to pace development, with shared safety standards and outside evaluators, though few concrete commitments exist.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Safety pledges from a now-public lab will be tested against investor expectations. Watch for specific, checkable commitments rather than speeches. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Genie 4 is now available on the Gemini API</title>
-      <link>https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/</link>
-      <guid isPermaLink="false">2026-11-20:Genie 4 is now available on the Gemini API</guid>
-      <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Developers can now reach Genie 4 through the Gemini API and Google AI Studio. It generates continuous 720p worlds at 24 frames per second with synchronized audio from a text prompt, an image, or both. Outputs carry SynthID watermarks.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Interactive generated worlds are now an API call, so game, simulation and prototyping tools can start experimenting without special access. &#8212; Google</description>
-    </item>
-    <item>
-      <title>Google gives Gemini the ability to use your Mac for you [Reported]</title>
-      <link>https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/</link>
-      <guid isPermaLink="false">2026-11-20:Google gives Gemini the ability to use your Mac for you</guid>
-      <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Google&#x27;s Gemini desktop app for macOS now supports computer use, completing tasks across native apps and sites in the background. Users see a live preview and can pause, stop or approve actions. It starts English-only and US-only for paid subscribers.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Desktop agents are moving from demos to shipping products, which raises the bar for approval controls in anything you build that acts on a user&#x27;s behalf. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Meta&#x27;s AI agent Muse is mixing up conversations and could be exposing private data, report says [Reported]</title>
-      <link>https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/</link>
-      <guid isPermaLink="false">2026-11-20:Meta&#x27;s AI agent Muse is mixing up conversations and could be exposing private data, report says</guid>
-      <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>Meta employees raised concerns in internal posts that its Muse agent mixes up conversations across accounts and may expose private data. A Meta spokesperson said employee testing is part of development and employees use different versions than the public.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Keeping each user&#x27;s data separate is a basic requirement for any agent product, and this shows how visible the failure is when it slips. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography [Reported]</title>
-      <link>https://www.cnbc.com/2026/11/18/paris-hilton-aoc-defiance-act-ai-porn-deep-fake-congress.html</link>
-      <guid isPermaLink="false">2026-11-20:Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography</guid>
-      <pubDate>Wed, 18 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>The Defiance Act would let victims of sexually explicit AI deepfakes sue people who knowingly create or distribute them. The Senate passed it by unanimous consent in January 2026, and the House has not yet voted.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If it becomes law, tools that generate or host AI images may face new legal exposure, so it is worth watching for anyone shipping image features. &#8212; CNBC</description>
-    </item>
-    <item>
-      <title>What comes after AGI? From AGI to Superintelligence</title>
-      <link>https://institute.deepmind.com/essays/what-comes-after-agi/</link>
-      <guid isPermaLink="false">2026-11-20:What comes after AGI? From AGI to Superintelligence</guid>
-      <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>An essay argues researchers should plan for artificial superintelligence as AGI nears. It describes four possible pathways: scaling models and data, new paradigms, coordinated groups of agents, and recursive self-improvement.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It is an opinion piece rather than a result, but it shows how a major lab frames long-term planning, which shapes the safety and policy debate. &#8212; Google DeepMind Institute</description>
     </item>
   </channel>
 </rss>
