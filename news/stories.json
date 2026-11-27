@@ -1,6 +1,61 @@
 {
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "days": [
+    {
+      "date": "2026-11-27",
+      "stories": [
+        {
+          "title": "Nvidia hits pause on chip shipments to Southeast Asia",
+          "source": "TechCrunch",
+          "published": "2026-11-26",
+          "kind": "Industry",
+          "status": "reported",
+          "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
+          "summary": "Citing a Wall Street Journal report, TechCrunch says Nvidia told partners such as Dell and Super Micro to pause server shipments to Malaysia, Singapore, Thailand and Indonesia with no end date. Nvidia is reportedly checking whether partners there meet US export rules after Chinese firms used data centers in the region to reach its chips remotely.",
+          "why": "Remote access through overseas data centers was a major route for Chinese AI compute, so tighter enforcement could shift GPU supply and cloud pricing across Asia."
+        },
+        {
+          "title": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
+          "source": "Hugging Face (ggml-org)",
+          "published": "2026-11-26",
+          "kind": "Build",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+          "summary": "The llama.cpp team launched a public dashboard that tracks prompt-processing and text-generation speed for local models on two AMD Radeon chips. It compares quantizations, follows results across weekly builds, and shows how speed changes as context grows, with the raw data in an open Hugging Face bucket.",
+          "why": "If you run models locally on AMD hardware, you can check real speeds for a given model and quantization before downloading, instead of guessing from forum posts."
+        },
+        {
+          "title": "AI is straining America's open records systems",
+          "source": "MIT Technology Review",
+          "published": "2026-11-25",
+          "kind": "Policy",
+          "status": "reported",
+          "url": "https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/",
+          "summary": "Data startups are filing huge volumes of public records requests to build products, while individuals use chatbots to write longer, broader requests. Small towns and counties are struggling to keep up, and states including California and Indiana have passed laws that let agencies push back on automated or AI-generated requests.",
+          "why": "Anyone building on public data should expect tighter access rules, and new limits aimed at bulk AI requests could also slow journalists and researchers."
+        },
+        {
+          "title": "Where scientists draw the line on AI agents",
+          "source": "Ai2 (Hugging Face blog)",
+          "published": "2026-11-25",
+          "kind": "Research",
+          "status": "confirmed",
+          "url": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+          "summary": "Ai2 interviewed 17 US scientists about using AI agents in their work. Most welcomed help with data processing, coding and routine writing, but many resisted handing over idea generation or peer review, and all wanted ways to check sources and what data an agent touched.",
+          "why": "It is a small study, but it gives agent builders a clear checklist for research users: show your sources, stay inside allowed files, and let people verify the work."
+        },
+        {
+          "title": "Three LLM inflection points in twelve months",
+          "source": "Simon Willison's Weblog",
+          "published": "2026-11-24",
+          "kind": "Build",
+          "status": "reported",
+          "url": "https://simonwillison.net/2026/Nov/24/llm-inflection-points/",
+          "summary": "Simon Willison expands on a recent keynote, arguing coding agents took three big leaps this past year. Late 2025 models made agents reliably useful for daily coding, mid-2026 models became far more proactive with tools, and recent models got good at 3D modeling and game code.",
+          "why": "A practical builder's view of when agents crossed from novelty to daily tool, useful for judging which tasks are now worth handing to an agent."
+        }
+      ]
+    },
     {
       "date": "2026-11-26",
       "stories": [

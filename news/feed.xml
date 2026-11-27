@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 26 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Nvidia hits pause on chip shipments to Southeast Asia [Reported]</title>
+      <link>https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/</link>
+      <guid isPermaLink="false">2026-11-27:Nvidia hits pause on chip shipments to Southeast Asia</guid>
+      <pubDate>Thu, 26 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Citing a Wall Street Journal report, TechCrunch says Nvidia told partners such as Dell and Super Micro to pause server shipments to Malaysia, Singapore, Thailand and Indonesia with no end date. Nvidia is reportedly checking whether partners there meet US export rules after Chinese firms used data centers in the region to reach its chips remotely.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Remote access through overseas data centers was a major route for Chinese AI compute, so tighter enforcement could shift GPU supply and cloud pricing across Asia. &#8212; TechCrunch</description>
+    </item>
+    <item>
+      <title>Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon</title>
+      <link>https://huggingface.co/blog/ggml-org/llamacpp-amd-bench</link>
+      <guid isPermaLink="false">2026-11-27:Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon</guid>
+      <pubDate>Thu, 26 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>The llama.cpp team launched a public dashboard that tracks prompt-processing and text-generation speed for local models on two AMD Radeon chips. It compares quantizations, follows results across weekly builds, and shows how speed changes as context grows, with the raw data in an open Hugging Face bucket.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If you run models locally on AMD hardware, you can check real speeds for a given model and quantization before downloading, instead of guessing from forum posts. &#8212; Hugging Face (ggml-org)</description>
+    </item>
+    <item>
+      <title>AI is straining America&#x27;s open records systems [Reported]</title>
+      <link>https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/</link>
+      <guid isPermaLink="false">2026-11-27:AI is straining America&#x27;s open records systems</guid>
+      <pubDate>Wed, 25 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>Data startups are filing huge volumes of public records requests to build products, while individuals use chatbots to write longer, broader requests. Small towns and counties are struggling to keep up, and states including California and Indiana have passed laws that let agencies push back on automated or AI-generated requests.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Anyone building on public data should expect tighter access rules, and new limits aimed at bulk AI requests could also slow journalists and researchers. &#8212; MIT Technology Review</description>
+    </item>
+    <item>
+      <title>Where scientists draw the line on AI agents</title>
+      <link>https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents</link>
+      <guid isPermaLink="false">2026-11-27:Where scientists draw the line on AI agents</guid>
+      <pubDate>Wed, 25 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Research</category>
+      <description>Ai2 interviewed 17 US scientists about using AI agents in their work. Most welcomed help with data processing, coding and routine writing, but many resisted handing over idea generation or peer review, and all wanted ways to check sources and what data an agent touched.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; It is a small study, but it gives agent builders a clear checklist for research users: show your sources, stay inside allowed files, and let people verify the work. &#8212; Ai2 (Hugging Face blog)</description>
+    </item>
+    <item>
+      <title>Three LLM inflection points in twelve months [Reported]</title>
+      <link>https://simonwillison.net/2026/Nov/24/llm-inflection-points/</link>
+      <guid isPermaLink="false">2026-11-27:Three LLM inflection points in twelve months</guid>
+      <pubDate>Tue, 24 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Simon Willison expands on a recent keynote, arguing coding agents took three big leaps this past year. Late 2025 models made agents reliably useful for daily coding, mid-2026 models became far more proactive with tools, and recent models got good at 3D modeling and game code.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A practical builder&#x27;s view of when agents crossed from novelty to daily tool, useful for judging which tasks are now worth handing to an agent. &#8212; Simon Willison&#x27;s Weblog</description>
+    </item>
     <item>
       <title>OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work [Reported]</title>
       <link>https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/</link>
@@ -206,46 +246,6 @@
       <pubDate>Mon, 16 Nov 2026 12:00:00 +0000</pubDate>
       <category>Policy</category>
       <description>A law-firm briefing expects Democratic gains in Congress to bring oversight hearings before sweeping AI legislation. It says broad federal preemption of state AI laws now looks unlikely, and some governors-elect campaigned on pausing data center development.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; State-level AI rules are likely to stay in force, so builders may keep facing a patchwork of requirements. &#8212; Faegre Drinker</description>
-    </item>
-    <item>
-      <title>AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too [Reported]</title>
-      <link>https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/</link>
-      <guid isPermaLink="false">2026-11-21:AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too</guid>
-      <pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>Mathematician Levent Alpöge, who works at Anthropic, says he found a proof of the Riemann hypothesis with Claude, written in the Lean proof language. Several mathematicians report it compiles, but experts still need time to understand and check the argument.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If it holds, it is a landmark for AI-assisted math, and a machine-checked proof is a practical way to trust AI output. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup</title>
-      <link>https://huggingface.co/blog/inkling2mini</link>
-      <guid isPermaLink="false">2026-11-21:Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup</guid>
-      <pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Thinking Machines Lab released Inkling 2 Mini, a multimodal model with about 3 billion active parameters per token and a 1M-token context. It reuses some layers in a loop to get more capacity, and works with transformers, llama.cpp and MLX.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A small open model that runs locally and takes images makes private, low-cost prototypes more realistic. The authors say more validation is needed. &#8212; Hugging Face</description>
-    </item>
-    <item>
-      <title>Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost</title>
-      <link>https://huggingface.co/blog/harness-adapters-at-scale</link>
-      <guid isPermaLink="false">2026-11-21:Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost</guid>
-      <pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Hugging Face shows how to train a small LoRA adapter with reinforcement learning inside a specific coding-agent harness. For Qwen3.8-27B, a Terminal-Bench score rose from 39% to 55% while average token use fell from 2.9K to 1.5K per task.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; If you run your own agents, tuning the model to your harness may beat just picking a bigger model. The recipe is reproducible. &#8212; Hugging Face</description>
-    </item>
-    <item>
-      <title>These tech outages are giving Y2K, AI agent style [Reported]</title>
-      <link>https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/</link>
-      <guid isPermaLink="false">2026-11-21:These tech outages are giving Y2K, AI agent style</guid>
-      <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Industry</category>
-      <description>A run of outages hit Apple Pay, NASA&#x27;s internal network, FAA flights and Microsoft&#x27;s Outlook, Teams and Copilot. Companies say none were cyberattacks. One security investor speculates that AI tools finding flaws faster is forcing a rush of patching that causes disruption.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; The AI link is speculation, not proven. Still, expect faster patching pressure and more change-related breakage in software you depend on. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>At Nasdaq opening bell, Anthropic CEO recommits to pacing AI development [Reported]</title>
-      <link>https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/</link>
-      <guid isPermaLink="false">2026-11-21:At Nasdaq opening bell, Anthropic CEO recommits to pacing AI development</guid>
-      <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>As Anthropic went public, CEO Dario Amodei said the company would not bend to business or political pressure and would keep AI under human control. He repeated a September plan to pace development, with shared safety standards and outside evaluators, though few concrete commitments exist.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Safety pledges from a now-public lab will be tested against investor expectations. Watch for specific, checkable commitments rather than speeches. &#8212; TechCrunch</description>
     </item>
   </channel>
 </rss>
