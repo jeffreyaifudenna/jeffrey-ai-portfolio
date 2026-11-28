@@ -6,7 +6,47 @@
     <atom:link href="https://jeffrey-ai-portfolio.vercel.app/news/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A short daily digest of AI news, researched and written each morning by an AI task. Every story links to its source.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>German software firm SAP is reportedly cutting at least 10,000 jobs in AI push [Reported]</title>
+      <link>https://www.cnbc.com/2026/11/27/sap-job-cuts-ai-restructuring.html</link>
+      <guid isPermaLink="false">2026-11-28:German software firm SAP is reportedly cutting at least 10,000 jobs in AI push</guid>
+      <pubDate>Fri, 27 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Citing a Bloomberg report, CNBC says SAP is preparing to cut at least 10,000 jobs as it reshapes its software business around AI, with product, engineering and sales most affected. SAP says no decisions have been made.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; One of the largest enterprise software makers is reportedly reorganizing around AI, a strong signal of where big-company budgets and hiring are heading. &#8212; CNBC</description>
+    </item>
+    <item>
+      <title>Microsoft: Hackers in China, N Korea using ARTEX AI tool to break into global tech systems [Reported]</title>
+      <link>https://www.theregister.com/security/2026/11/26/microsoft-hackers-in-china-n-korea-using-artex-ai-tool-to-break-into-global-tech-systems/5312433</link>
+      <guid isPermaLink="false">2026-11-28:Microsoft: Hackers in China, N Korea using ARTEX AI tool to break into global tech systems</guid>
+      <pubDate>Thu, 26 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <description>Microsoft says state-backed groups from China and North Korea are using ARTEX, an open-source AI penetration-testing framework, to automate reconnaissance and break-ins, sometimes gaining privileged access within hours. The original repository was removed, but many copies remain.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Open-source AI security tools cut both ways. The danger here is speed rather than new techniques, so fast detection and log monitoring matter more. &#8212; The Register</description>
+    </item>
+    <item>
+      <title>AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth [Reported]</title>
+      <link>https://www.cnbc.com/2026/11/27/ai-shopping-agents-retailer-blocks.html</link>
+      <guid isPermaLink="false">2026-11-28:AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth</guid>
+      <pubDate>Fri, 27 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>Shopping agents from Meta, OpenAI, Google and others are spreading, but retailers are split: Walmart and Sephora allow them while Amazon, eBay and others limit or block them. Agents still fail often in tests, and who pays for their mistakes is unsettled.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Anyone building agents that act on the web should expect sites to push back, and should plan for blocks, errors and liability questions early. &#8212; CNBC</description>
+    </item>
+    <item>
+      <title>Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference</title>
+      <link>https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin</link>
+      <guid isPermaLink="false">2026-11-28:Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference</guid>
+      <pubDate>Thu, 26 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>NVIDIA released open synthetic datasets for charts, tables and multilingual OCR, plus a fine-tuning recipe, for its small Nemotron 3.5 Parse model that turns page images into structured text. A new speculative decoder makes it several times faster.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Turning PDFs and scans into clean text is a common bottleneck in RAG apps. A small, fast parser with open training data and a tuning recipe is easier to adapt. &#8212; Hugging Face (NVIDIA)</description>
+    </item>
+    <item>
+      <title>Workflow is 10x faster, again</title>
+      <link>https://vercel.com/changelog/workflows-speculative-execution</link>
+      <guid isPermaLink="false">2026-11-28:Workflow is 10x faster, again</guid>
+      <pubDate>Wed, 25 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Build</category>
+      <description>Vercel&#x27;s Workflow SDK 5.8 has a rebuilt engine that cuts the overhead between steps from about 85 ms to 7 ms. Much of the gain comes from running steps speculatively, so steps should be safe to repeat.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Agent loops chain many steps, so lower per-step overhead adds up. If you upgrade, make your steps idempotent first. &#8212; Vercel</description>
+    </item>
     <item>
       <title>Nvidia hits pause on chip shipments to Southeast Asia [Reported]</title>
       <link>https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/</link>
@@ -206,46 +246,6 @@
       <pubDate>Mon, 23 Nov 2026 12:00:00 +0000</pubDate>
       <category>Build</category>
       <description>Vercel&#x27;s AI Gateway now tests inference providers with unique canary URLs placed in prompts, logging any request to them. This checks whether prompt content is read outside the inference path when Zero Data Retention is requested.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Useful if you send sensitive data to models: it is a technical check on providers, though Vercel says it does not replace contracts or audits. &#8212; Vercel Changelog</description>
-    </item>
-    <item>
-      <title>Muru [Reported]</title>
-      <link>https://simonwillison.net/2026/Nov/21/muru/</link>
-      <guid isPermaLink="false">2026-11-22:Muru</guid>
-      <pubDate>Sat, 21 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Simon Willison points to Muru, a new Rust server for running Python web apps in development and production. Its author, Graham Dumpleton, who created mod_wsgi, has written 19 detailed posts on building it with AI help over three weeks.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; A worked, well-documented example of building serious infrastructure with AI assistance, useful if you want to see what that process looks like in practice. &#8212; Simon Willison&#x27;s Weblog</description>
-    </item>
-    <item>
-      <title>Signal restricts mobile screenshots as it confronts &#x27;existential threat&#x27; of AI surveillance [Reported]</title>
-      <link>https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/</link>
-      <guid isPermaLink="false">2026-11-22:Signal restricts mobile screenshots as it confronts &#x27;existential threat&#x27; of AI surveillance</guid>
-      <pubDate>Sat, 21 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>Signal added screenshot limits to its Android and iOS apps, after already doing so on Windows. It says AI agents built into operating systems can read screen content, undermining private messaging. Users can switch the limit off.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; OS-level AI agents that can see your screen are becoming a privacy question for any app handling sensitive data. &#8212; TechCrunch</description>
-    </item>
-    <item>
-      <title>Vercel Functions now support request bodies up to 20MiB</title>
-      <link>https://vercel.com/changelog/vercel-functions-now-support-request-bodies-up-to-20mib</link>
-      <guid isPermaLink="false">2026-11-22:Vercel Functions now support request bodies up to 20MiB</guid>
-      <pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Build</category>
-      <description>Vercel Functions can now accept request bodies up to 20MiB, up from 4.5MB, in public beta. It needs an environment variable and the 4GB memory setting. Edge runtime functions keep the old limit.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Larger uploads, such as documents or images sent to an AI endpoint, no longer need a workaround on Vercel&#x27;s Node.js runtime. &#8212; Vercel Changelog</description>
-    </item>
-    <item>
-      <title>Running a 180B MoE Model on a 32 GB Mac with Transformers Expert Streaming</title>
-      <link>https://huggingface.co/blog/moe-expert-streaming</link>
-      <guid isPermaLink="false">2026-11-22:Running a 180B MoE Model on a 32 GB Mac with Transformers Expert Streaming</guid>
-      <pubDate>Wed, 18 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Research</category>
-      <description>Hugging Face describes loading only the experts a mixture-of-experts model selects from SSD, using a bounded cache. A 180B-parameter model runs on a 32 GB MacBook at about 14 tokens per second, though the author calls it too slow for coding agents.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; Shows how far local inference of very large models can be stretched on ordinary hardware, and where speed still limits it. &#8212; Hugging Face Blog</description>
-    </item>
-    <item>
-      <title>How the Midterm Results Could Reshape AI and Data Center Regulations, and More Developments [Reported]</title>
-      <link>https://www.faegredrinker.com/zh/insights/publications/2026/11/how-the-midterm-results-could-reshape-ai-and-data-center-regulations-and-more-developments</link>
-      <guid isPermaLink="false">2026-11-22:How the Midterm Results Could Reshape AI and Data Center Regulations, and More Developments</guid>
-      <pubDate>Mon, 16 Nov 2026 12:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <description>A law-firm briefing expects Democratic gains in Congress to bring oversight hearings before sweeping AI legislation. It says broad federal preemption of state AI laws now looks unlikely, and some governors-elect campaigned on pausing data center development.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Why it matters&lt;/b&gt; State-level AI rules are likely to stay in force, so builders may keep facing a patchwork of requirements. &#8212; Faegre Drinker</description>
     </item>
   </channel>
 </rss>
